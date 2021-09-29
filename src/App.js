@@ -1,9 +1,13 @@
+import { Fragment } from 'react';
 import './App.css';
-import { Usp } from './components/common';
+import { Header, Usp } from './components/common';
 
 function App() {
   return (
+    <Fragment>
       <Usp />
+      <Header />
+    </Fragment>
   );
 }
 
