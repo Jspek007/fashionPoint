@@ -1,0 +1,19 @@
+.usp {
+  background-color: hsl(0, 0%, 0);
+  color: hsl(0, 0%, 100%);
+  height: 30px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.usp-item {
+  padding-left: 40px;
+  font-weight: 400;
+}
+
+.usp-icon {
+  height: auto;
+  width: 12px;
+}
