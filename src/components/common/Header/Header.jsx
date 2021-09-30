@@ -1,4 +1,5 @@
 import React from "react";
+import { LoginButton, SignupButton } from "../Form/Buttons";
 import "./Header.scss";
 
 function Header() {
@@ -24,8 +25,8 @@ function Header() {
         </section>
 
         <section className="right-header-section">
-          <button className="sign-up-action-button">Aanmelden</button>
-          <button className="login-action-button">Inloggen</button>
+          <SignupButton />
+          <LoginButton />
         </section>
       </header>
     </div>
