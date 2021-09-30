@@ -1,13 +1,9 @@
-import { Fragment } from 'react';
 import './App.css';
-import { Header, Usp } from './components/common';
+import Home from './pages/Homepage/Home';
 
 function App() {
   return (
-    <Fragment>
-      <Usp />
-      <Header />
-    </Fragment>
+    <Home />
   );
 }
 

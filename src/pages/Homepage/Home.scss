@@ -1,0 +1,111 @@
+.homepage-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  padding: 100px 20vw;
+}
+
+.wave-container {
+  position: relative;
+  background-color: hsl(0, 0%, 0);
+  height: 1000px;
+  margin-top: 20px;
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(185% + -500px);
+  height: 700px;
+}
+
+.wave .shape-fill {
+  fill: hsl(0, 0%, 100);
+}
+
+.homepage-actions {
+  position: relative;
+  top: 550px;
+  left: 300px;
+  right: 60px;
+  animation: homepage-actionmenu 3s;
+}
+
+.sign-up-action-button-content {
+  height: 65px;
+  width: 250px;
+  background-color: hsl(0, 0%, 100);
+  color: hsl(0, 0%, 0);
+  border: 1px solid hsl(0, 0%, 0);
+  border-radius: 5%;
+  font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
+  margin-right: 30px;
+}
+
+.login-action-button-content {
+  height: 65px;
+  width: 250px;
+  background-color: hsl(0, 0%, 100);
+  color: hsl(0, 0%, 0);
+  border: 1px solid hsl(0, 0%, 0);
+  border-radius: 5%;
+  font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
+}
+
+.action-text-main,
+.action-text-secondairy {
+  color: hsl(0, 0%, 100);
+  margin-bottom: 10px;
+  font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
+}
+
+.action-text-main {
+  font-size: 30px;
+}
+
+.action-text-secondairy {
+  font-size: 18px;
+}
+
+.homepage-media {
+  position: absolute;
+  right: 60px;
+  top: 60px;
+  border-radius: 20%;
+  animation: homepage-media 4s;
+}
+
+@keyframes homepage-media {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes homepage-actionmenu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.main-area-content {
+  width: 600px;
+  height: auto;
+  border-radius: 20%;
+}
