@@ -1,0 +1,15 @@
+fieldset {
+  border: none;
+}
+
+.email-input,
+.password-input {
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+}
+
+.email-input:focus,
+.password-input:focus {
+  outline: none;
+}
