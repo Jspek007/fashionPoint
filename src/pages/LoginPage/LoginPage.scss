@@ -43,13 +43,39 @@
   margin: 40px 0;
 }
 
+.third-party-login-buttons {
+  padding: 5px;
+}
+
 .third-party-methods,
 .email-form-login {
-  width: 100%;
+  width: 300px;
 }
 
 .facebook-button-login,
 .google-button-login {
-  height: 50px;
-  width: 100%;
+  height: 55px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+}
+
+.facebook-button-login {
+  margin-bottom: 15px;
+  background-color: hsl(220, 46%, 48%);
+  color: hsl(0, 0, 95%);
+}
+
+.facebook-button-icon,
+.google-button-icon {
+  font-size: 40px;
+  padding-right: 20px;
+}
+
+.google-button-icon {
+  padding-right: 40px;
 }
