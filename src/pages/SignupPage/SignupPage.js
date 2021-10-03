@@ -1,7 +1,13 @@
 import React from "react";
 import { Fragment } from "react";
 import { NavLink } from "react-router-dom";
-import { Footer, Header, PaymentMethods, Usp } from "../../components/common";
+import {
+  Footer,
+  Header,
+  LegalTermsBanner,
+  PaymentMethods,
+  Usp,
+} from "../../components/common";
 import DeliveryInformation from "../../components/common/DeliveryInformation";
 import EmailLoginButton from "../../components/common/Form/Buttons/EmailLoginButton";
 import FacebookLoginButton from "../../components/common/Form/Buttons/FacebookLoginButton";
@@ -44,6 +50,7 @@ function SignupPage() {
       <PaymentMethods />
       <DeliveryInformation />
       <Footer />
+      <LegalTermsBanner />
     </Fragment>
   );
 }

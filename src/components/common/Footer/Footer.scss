@@ -13,12 +13,13 @@
   display: flex;
   justify-content: space-between;
   width: 60%;
-  color: hsl(0, 0, 90);
+  color: rgb(167, 161, 161);
   margin-top: 35px;
 }
 
 .footer-header {
   font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
+  color: hsl(0, 0, 90);
 }
 
 .footer-section {
@@ -38,5 +39,5 @@
 
 .social-icon {
   margin: 5px;
-  font-size: 20px;
+  font-size: 30px;
 }
