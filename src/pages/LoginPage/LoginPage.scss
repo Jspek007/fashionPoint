@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: hsl(0, 0, 95%);
 }
 
 .form-header {
@@ -12,7 +13,7 @@
 .welcome-message {
   font-size: 42px;
   font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
-  margin-bottom: 10px;
+  margin: 5px 0 10px 0;
   display: flex;
   justify-content: center;
 }
@@ -39,10 +40,16 @@
 
 .login-method-container {
   display: flex;
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 .third-party-methods,
 .email-form-login {
-  width: 50%;
+  width: 100%;
+}
+
+.facebook-button-login,
+.google-button-login {
+  height: 50px;
+  width: 100%;
 }

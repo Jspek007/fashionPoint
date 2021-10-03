@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import './App.css';
 import Home from './pages/Homepage/Home';
 import { Usp, Header } from './components/common';

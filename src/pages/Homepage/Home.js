@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { Usp, Header } from "../../components/common";
 import "./Home.scss";
 import HomepageImage from "../../assets/images/mainImage.jpg";
 

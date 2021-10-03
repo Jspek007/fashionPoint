@@ -1,12 +1,7 @@
 import React from "react";
 import { LoginButton, SignupButton } from "../Form/Buttons";
 import "./Header.scss";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  NavLink,
-} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (

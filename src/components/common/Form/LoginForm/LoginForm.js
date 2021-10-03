@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 import "./LoginForm.scss";
-import { useForm } from "react-hook-form";
+import SubmitLoginButton from "../Buttons/SubmitLoginButton";
 
 function LoginForm() {
   return (
@@ -11,7 +10,7 @@ function LoginForm() {
             className="email-input"
             type="text"
             id="email-adress"
-            placeholder="E-mail adress"
+            placeholder="Email"
           />
         </label>
       </fieldset>
@@ -26,6 +25,10 @@ function LoginForm() {
           />
         </label>
       </fieldset>
+
+      <section className="submit-login">
+        <SubmitLoginButton />
+      </section>
     </form>
   );
 }

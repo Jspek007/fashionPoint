@@ -33,3 +33,22 @@
   background: hsl(0, 0%, 85);
   border-color: hsl(0, 0%, 85);
 }
+
+.submit-login-button {
+  height: 50px;
+  width: 220px;
+  font-size: 18px;
+  background-color: hsl(0, 0, 0);
+  color: hsl(0, 0, 100);
+  border: none;
+  cursor: pointer;
+  transition: all 1s ease;
+  transform: scale(1);
+  margin-left: 5px;
+}
+
+.submit-login-button:hover {
+  transition: all 1s ease;
+  transform: scale(1.01);
+  background-color: hsl(0, 0%, 15);
+}
