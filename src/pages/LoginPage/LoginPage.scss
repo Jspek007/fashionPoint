@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 
 .form-header {
@@ -51,4 +52,9 @@
 .email-form-login {
   width: 300px;
   padding-left: 20px;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
 }

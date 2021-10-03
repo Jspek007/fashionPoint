@@ -1,19 +1,16 @@
-import './App.css';
-import Home from './pages/Homepage/Home';
-import { Usp, Header } from './components/common';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Customerservice from './pages/CustomerService/Customerservice';
-import AboutUs from './pages/AboutUs/AboutUs';
-import CollectionPage from './pages/CollectionPage/CollectionPage';
-import LoginPage from './pages/LoginPage/LoginPage';
-import SignupPage from './pages/SignupPage/SignupPage';
+import "./App.css";
+import Home from "./pages/Homepage/Home";
+import { Usp, Header } from "./components/common";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Customerservice from "./pages/CustomerService/Customerservice";
+import AboutUs from "./pages/AboutUs/AboutUs";
+import CollectionPage from "./pages/CollectionPage/CollectionPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import SignupPage from "./pages/SignupPage/SignupPage";
 
 function App() {
   return (
     <Router>
-      <Usp />
-      <Header />
-      
       <Switch>
         <Route exact path="/">
           <Home />
@@ -38,9 +35,8 @@ function App() {
         <Route exact path="/aanmelden">
           <SignupPage />
         </Route>
-
       </Switch>
-      </Router>
+    </Router>
   );
 }
 
