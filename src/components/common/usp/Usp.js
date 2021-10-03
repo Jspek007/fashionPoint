@@ -4,7 +4,7 @@ import { GiCheckMark } from "react-icons/gi";
 
 function Usp() {
   return (
-    <div id="usp-banner" className="usp">
+    <section id="usp-banner" className="usp">
       <span className="usp-item">
         <GiCheckMark className="usp-icon" /> Snelle levering
       </span>
@@ -14,7 +14,7 @@ function Usp() {
       <span className="usp-item">
         <GiCheckMark className="usp-icon" /> Gratis retouren binnen 45 dagen
       </span>
-    </div>
+    </section>
   );
 }
 

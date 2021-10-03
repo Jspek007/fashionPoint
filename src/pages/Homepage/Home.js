@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import "./Home.scss";
 import HomepageImage from "../../assets/images/mainImage.jpg";
 import { NavLink } from "react-router-dom";
-import { Usp, Header } from "../../components/common";
+import { Usp, Header, Footer, PaymentMethods } from "../../components/common";
 
 function Home() {
   return (
@@ -54,6 +54,8 @@ function Home() {
           </NavLink>
         </section>
       </section>
+      <PaymentMethods />
+      <Footer />
     </Fragment>
   );
 }
