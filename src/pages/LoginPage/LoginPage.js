@@ -27,12 +27,12 @@ function LoginPage() {
           <section className="email-form-login">
             <h2 className="email-login">Of per email</h2>
             <LoginForm />
-            <p className="register-container">
-              Toch nog geen account?{" "}
-              <NavLink to="/aanmelden"> Aanmelden</NavLink>
-            </p>
           </section>
         </section>
+        <p className="alternative-register-container">
+          Toch nog geen account?{" "}
+          <NavLink to="/aanmelden">&nbsp;&nbsp;Aanmelden</NavLink>
+        </p>
       </section>
     </Fragment>
   );

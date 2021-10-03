@@ -30,14 +30,18 @@
 }
 
 .informations-container {
-  width: 25%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .terms-information-container,
 .already-customer-container {
-  max-width: 25%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.terms-information-container {
+  margin-top: 25px;
+  font-size: 12px;
+  font-style: italic;
 }
