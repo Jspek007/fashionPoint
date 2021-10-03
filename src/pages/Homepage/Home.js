@@ -1,14 +1,10 @@
-import React from "react";
-import { Usp, Header } from "../../components/common";
+import React, { Fragment } from "react";
 import "./Home.scss";
 import HomepageImage from "../../assets/images/mainImage.jpg";
 
 function Home() {
   return (
-    <>
-      <Usp />
-      <Header />
-
+    <Fragment>
       <section className="wave-container">
         <section class="wave">
           <svg
@@ -47,7 +43,7 @@ function Home() {
           <button className="login-action-button-content">Meld mij aan</button>
         </section>
       </section>
-    </>
+    </Fragment>
   );
 }
 

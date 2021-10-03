@@ -1,0 +1,82 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0, 95%);
+}
+
+.form-header {
+  margin: 0;
+}
+
+.welcome-message {
+  font-size: 42px;
+  font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
+  margin: 5px 0 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.secondary-text {
+  font-size: 18px;
+  font-family: "Roboto Italic", Arial, Helvetica, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.email-form-login {
+  border-left: 0.5px solid hsl(0, 0, 25%);
+}
+
+.third-party-methods {
+  padding-right: 12px;
+}
+
+.email-login {
+  padding-left: 12px;
+}
+
+.login-method-container {
+  display: flex;
+  margin: 40px 0;
+}
+
+.third-party-login-buttons {
+  padding: 5px;
+}
+
+.third-party-methods,
+.email-form-login {
+  width: 300px;
+  padding-left: 20px;
+}
+
+.facebook-button-login,
+.google-button-login {
+  height: 55px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+}
+
+.facebook-button-login {
+  margin-bottom: 15px;
+  background-color: hsl(220, 46%, 48%);
+  color: hsl(0, 0, 95%);
+}
+
+.facebook-button-icon,
+.google-button-icon {
+  font-size: 40px;
+  padding-right: 20px;
+}
+
+.google-button-icon {
+  padding-right: 40px;
+}

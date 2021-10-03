@@ -1,21 +1,24 @@
 import React from "react";
 import { LoginButton, SignupButton } from "../Form/Buttons";
 import "./Header.scss";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
-    <div className="header-container">
+    <div className="header-container" id="sticky-header">
       <header className="main-header">
         <section className="left-header-section">
-          <a href="/" className="left-header-section-item">
+          <NavLink to="/klantenservice" className="left-header-section-item">
             Klantenservice
-          </a>
-          <a href="/" className="left-header-section-item">
+          </NavLink>
+
+          <NavLink to="/over-ons" className="left-header-section-item">
             Over ons
-          </a>
-          <a href="/" className="left-header-section-item">
+          </NavLink>
+
+          <NavLink to="/collectie" className="left-header-section-item">
             Collectie
-          </a>
+          </NavLink>
         </section>
 
         <section className="main-header-logo">
