@@ -1,68 +1,39 @@
 import React, { Fragment } from "react";
 import LoginForm from "../../components/common/Form/LoginForm";
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
-import GoogleLogin from 'react-google-login';
 import "./LoginPage.scss";
-import { FaFacebook } from 'react-icons/fa'
-import { FcGoogle } from 'react-icons/fc'
-
-const facebookResponse = (response) => {
-  console.log(response)
-}
-
-const googleResponse = (response) => {
-  console.log(response)
-}
+import FacebookLoginButton from "../../components/common/Form/Buttons/FacebookLoginButton";
+import GoogleLoginButton from "../../components/common/Form/Buttons/GoogleLoginButton/GoogleLoginButton";
+import { Header, Usp } from "../../components/common";
+import { NavLink } from "react-router-dom";
 
 function LoginPage() {
   return (
     <Fragment>
+      <Usp />
+      <Header />
       <section className="login-container">
         <section className="form-header">
-          <h1 className="welcome-message">Welkom terug!</h1>
-          <h5 className="secondary-text">Login met je favoriete methode</h5>
+          <h1 className="welcome-message">Fijn dat je er weer bent</h1>
+          <h5 className="secondary-text">Login op je eigen manier</h5>
         </section>
 
         <section className="login-method-container">
           <section className="third-party-methods">
-            <h2 className="third-party-login-text">Eenvoudig inloggen</h2>
-           <section className="third-party-login-buttons">
-            <FacebookLogin 
-              appId="" //Unknown for now
-              autoLoad
-              callback={facebookResponse}
-              render={renderProps => (
-                <button onClick={renderProps.onClick}
-                        className="facebook-button-login"
-                >
-                  <FaFacebook className="facebook-button-icon" />
-                  Login met Facebook
-                </button>
-              )} 
-            />
-
-            <GoogleLogin
-              clientId="" //Unknown for now
-              buttonText="Login met Google"
-              onSuccess={googleResponse}
-              onFailure={googleResponse}
-              cookiePolicy={'single_host_origin'}
-              render={renderProps => (
-                <button onClick={renderProps.onClick}
-                        className="google-button-login"
-                        >
-                        <FcGoogle className="google-button-icon" />
-                        Login met Google   
-                        </button>
-              )}
-            />
-</section>
+            <h2 className="third-party-login-text">Kies voor eenvoud</h2>
+            <section className="third-party-login-buttons">
+              <FacebookLoginButton />
+              <GoogleLoginButton />
+            </section>
           </section>
           <section className="email-form-login">
-            <h2 className="email-login">E-mail</h2>
+            <h2 className="email-login">Of per email</h2>
             <LoginForm />
           </section>
         </section>
+        <p className="alternative-register-container">
+          Toch nog geen account?{" "}
+          <NavLink to="/aanmelden">&nbsp;&nbsp;Aanmelden</NavLink>
+        </p>
       </section>
     </Fragment>
   );

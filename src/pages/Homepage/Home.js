@@ -1,10 +1,14 @@
 import React, { Fragment } from "react";
 import "./Home.scss";
 import HomepageImage from "../../assets/images/mainImage.jpg";
+import { NavLink } from "react-router-dom";
+import { Usp, Header } from "../../components/common";
 
 function Home() {
   return (
     <Fragment>
+      <Usp />
+      <Header />
       <section className="wave-container">
         <section class="wave">
           <svg
@@ -37,10 +41,17 @@ function Home() {
           <section className="action-text-secondairy">
             Met kortingen tot wel 70%
           </section>
-          <button className="sign-up-action-button-content">
-            Ik heb al een account
-          </button>
-          <button className="login-action-button-content">Meld mij aan</button>
+          <NavLink exact to="/login">
+            <button className="sign-up-action-button-content">
+              Ik heb al een account
+            </button>
+          </NavLink>
+
+          <NavLink exact to="/aanmelden">
+            <button className="login-action-button-content">
+              Meld mij aan
+            </button>
+          </NavLink>
         </section>
       </section>
     </Fragment>
