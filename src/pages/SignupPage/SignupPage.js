@@ -1,7 +1,14 @@
 import React from "react";
 import { Fragment } from "react";
 import { NavLink } from "react-router-dom";
-import { Header, Usp } from "../../components/common";
+import {
+  Footer,
+  Header,
+  LegalTermsBanner,
+  PaymentMethods,
+  Usp,
+} from "../../components/common";
+import DeliveryInformation from "../../components/common/DeliveryInformation";
 import EmailLoginButton from "../../components/common/Form/Buttons/EmailLoginButton";
 import FacebookLoginButton from "../../components/common/Form/Buttons/FacebookLoginButton";
 import GoogleLoginButton from "../../components/common/Form/Buttons/GoogleLoginButton/GoogleLoginButton";
@@ -10,7 +17,6 @@ import "./SignupPage.scss";
 function SignupPage() {
   return (
     <Fragment>
-      <Usp />
       <Header />
       <section className="signup-container">
         <section className="signup-message-container">
@@ -41,6 +47,10 @@ function SignupPage() {
           </section>
         </section>
       </section>
+      <PaymentMethods />
+      <DeliveryInformation />
+      <Footer />
+      <LegalTermsBanner />
     </Fragment>
   );
 }

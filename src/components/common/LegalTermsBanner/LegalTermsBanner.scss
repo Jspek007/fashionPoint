@@ -1,0 +1,23 @@
+.legal-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(0, 0, 10);
+  width: 100%;
+  height: 60px;
+}
+
+.legal-container-item {
+  color: rgb(167, 161, 161);
+}
+
+.legal-item-left {
+  margin-left: 20%;
+}
+
+.legal-item-right {
+  margin-right: 20%;
+}
+
+.legal-row-items {
+  margin-right: 10px;
+}

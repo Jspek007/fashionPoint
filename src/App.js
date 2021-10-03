@@ -7,6 +7,7 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import CollectionPage from "./pages/CollectionPage/CollectionPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
+import Footer from "./components/common/Footer";
 
 function App() {
   return (

@@ -1,0 +1,14 @@
+.payment-methods-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: hsl(0, 0%, 20%);
+  border-bottom: 1px solid hsl(0, 0, 100);
+  height: 65px;
+}
+
+.container-item {
+  width: 100px;
+  height: auto;
+  padding: 0px 20px;
+}
