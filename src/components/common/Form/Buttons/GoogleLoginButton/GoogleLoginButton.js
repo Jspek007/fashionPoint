@@ -21,7 +21,7 @@ function GoogleLoginButton() {
                   className="google-button-login"
                   >
                   <FcGoogle className="google-button-icon" />
-                  Login met Google   
+                  Google 
                   </button>
         )}
       />

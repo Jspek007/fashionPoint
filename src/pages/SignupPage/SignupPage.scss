@@ -1,0 +1,42 @@
+.signup-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1264px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signup-text {
+  font-size: 42px;
+  font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
+  font-style: italic;
+  margin: 5px 0 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.signup-message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.actions-container {
+  display: flex;
+  justify-content: center;
+}
+
+.informations-container {
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.terms-information-container,
+.already-customer-container {
+  max-width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}

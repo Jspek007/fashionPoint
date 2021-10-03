@@ -20,7 +20,7 @@ function FacebookLoginButton() {
                   className="facebook-button-login"
           >
             <FaFacebook className="facebook-button-icon" />
-            Login met Facebook
+            Facebook
           </button>
         )} 
       />

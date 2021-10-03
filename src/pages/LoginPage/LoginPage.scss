@@ -3,8 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsl(0, 0, 95%);
-  margin-top: 40px;
 }
 
 .form-header {
@@ -14,6 +12,7 @@
 .welcome-message {
   font-size: 42px;
   font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
+  font-style: italic;
   margin: 5px 0 10px 0;
   display: flex;
   justify-content: center;
@@ -53,4 +52,3 @@
   width: 300px;
   padding-left: 20px;
 }
-

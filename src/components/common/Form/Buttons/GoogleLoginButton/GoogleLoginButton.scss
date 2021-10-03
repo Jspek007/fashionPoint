@@ -1,4 +1,3 @@
-.facebook-button-login,
 .google-button-login {
   height: 55px;
   width: 250px;
@@ -8,16 +7,10 @@
   border: none;
   border-radius: 25px;
   font-size: 18px;
+  margin-bottom: 15px;
 }
 
-.facebook-button-icon,
 .google-button-icon {
   font-size: 40px;
-  padding-right: 20px;
-}
-
-.facebook-button-login {
-  margin-bottom: 15px;
-  background-color: hsl(220, 46%, 48%);
-  color: hsl(0, 0, 95%);
+  padding-right: 40px;
 }
