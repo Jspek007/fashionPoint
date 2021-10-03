@@ -1,7 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
 import { NavLink } from "react-router-dom";
-import { Usp } from "../../components/common";
+import { Header, Usp } from "../../components/common";
 import EmailLoginButton from "../../components/common/Form/Buttons/EmailLoginButton";
 import FacebookLoginButton from "../../components/common/Form/Buttons/FacebookLoginButton";
 import GoogleLoginButton from "../../components/common/Form/Buttons/GoogleLoginButton/GoogleLoginButton";
@@ -11,6 +11,7 @@ function SignupPage() {
   return (
     <Fragment>
       <Usp />
+      <Header />
       <section className="signup-container">
         <section className="signup-message-container">
           <h2 className="signup-text">Aanmelden</h2>

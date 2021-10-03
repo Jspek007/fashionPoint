@@ -3,13 +3,14 @@ import LoginForm from "../../components/common/Form/LoginForm";
 import "./LoginPage.scss";
 import FacebookLoginButton from "../../components/common/Form/Buttons/FacebookLoginButton";
 import GoogleLoginButton from "../../components/common/Form/Buttons/GoogleLoginButton/GoogleLoginButton";
-import { Usp } from "../../components/common";
+import { Header, Usp } from "../../components/common";
 import { NavLink } from "react-router-dom";
 
 function LoginPage() {
   return (
     <Fragment>
       <Usp />
+      <Header />
       <section className="login-container">
         <section className="form-header">
           <h1 className="welcome-message">Fijn dat je er weer bent</h1>
