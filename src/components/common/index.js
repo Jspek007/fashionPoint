@@ -1,7 +1,5 @@
 import Usp from "./Usp";
-import Header from "./Header"
+import Header from "./Header";
+import PaymentMethods from "./PaymentMethods";
 
-export {
-    Usp,
-    Header,
-}
+export { Usp, Header, PaymentMethods };
