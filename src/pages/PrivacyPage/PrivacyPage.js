@@ -14,7 +14,7 @@ function PrivacyPage() {
 
         <section className="privacy-content">
           <p>
-            <b>Privacybeleid FashionPoint</b>
+            <strong>Privacybeleid FashionPoint</strong>
             <br />
             Versie 2.1
             <br />
@@ -30,23 +30,23 @@ function PrivacyPage() {
           </p>
           <p>
             Dit privacybeleid is van toepassing op de diensten van
-            [FashionPoint]. U dient zich ervan bewust te zijn dat [FashionPoint]
+            FashionPoint. U dient zich ervan bewust te zijn dat FashionPoint
             niet verantwoordelijk is voor het privacybeleid van andere sites en
             bronnen. Door gebruik te maken van deze website geeft u aan het
             privacy beleid te accepteren.
           </p>
           <p>
-            [FashionPoint] respecteert de privacy van alle gebruikers van haar
+            FashionPoint respecteert de privacy van alle gebruikers van haar
             site en draagt er zorg voor dat de persoonlijke informatie die u ons
             verschaft vertrouwelijk wordt behandeld.
           </p>
           <p>
-            <b>
+            <strong>
               <i>Ons gebruik van verzamelde gegevens</i>
-            </b>
+            </strong>
           </p>
           <p>
-            <b>Gebruik van onze diensten</b>
+            <strong>Gebruik van onze diensten</strong>
             <br />
             Wanneer u zich aanmeldt voor een van onze diensten vragen we u om
             persoonsgegevens te verstrekken. Deze gegevens worden gebruikt om de
@@ -56,7 +56,7 @@ function PrivacyPage() {
             gegevens waarover wij beschikken.
           </p>
           <p>
-            <b>Communicatie</b>
+            <strong>Communicatie</strong>
             <br />
             Wanneer u e-mail of andere berichten naar ons verzendt, is het
             mogelijk dat we die berichten bewaren. Soms vragen wij u naar uw
@@ -68,7 +68,7 @@ function PrivacyPage() {
             waarover wij beschikken.
           </p>
           <p>
-            <b>Cookies</b>
+            <strong>Cookies</strong>
             <br />
             Wij verzamelen gegevens voor onderzoek om zo een beter inzicht te
             krijgen in onze klanten, zodat wij onze diensten hierop kunnen
@@ -86,14 +86,14 @@ function PrivacyPage() {
             website-activiteit en internetgebruik.
           </p>
           <p>
-            <b>Doeleinden</b>
+            <strong>Doeleinden</strong>
             <br />
             We verzamelen of gebruiken geen informatie voor andere doeleinden
             dan de doeleinden die worden beschreven in dit privacybeleid tenzij
             we van tevoren uw toestemming hiervoor hebben verkregen.
           </p>
           <p>
-            <b>Derden</b>
+            <strong>Derden</strong>
             <br />
             De informatie wordt niet met derden gedeeld met uitzondering van
             webapplicaties welke wij gebruiken ten behoeve van onze webwinkel.
@@ -105,7 +105,7 @@ function PrivacyPage() {
             gegevens te respecteren.
           </p>
           <p>
-            <b>Veranderingen</b>
+            <strong>Veranderingen</strong>
             <br />
             Deze privacyverklaring is afgestemd op het gebruik van en de
             mogelijkheden op deze site. Eventuele aanpassingen en/of
@@ -114,27 +114,27 @@ function PrivacyPage() {
             privacyverklaring te raadplegen.
           </p>
           <p>
-            <b>Keuzes voor persoonsgegevens</b>
+            <strong>Keuzes voor persoonsgegevens</strong>
             <br />
             Wij bieden alle bezoekers de mogelijkheid tot het inzien,
             veranderen, of verwijderen van alle persoonlijke informatie die op
             moment aan ons is verstrekt.
           </p>
           <p>
-            <b>Aanpassen/uitschrijven dienst nieuwsbrief</b>
+            <strong>Aanpassen/uitschrijven dienst nieuwsbrief</strong>
             <br />
             Onderaan iedere mailing vindt u de mogelijkheid om uw gegevens aan
             te passen of om u af te melden.
           </p>
           <p>
-            <b>Aanpassen/uitschrijven communicatie</b>
+            <strong>Aanpassen/uitschrijven communicatie</strong>
             <br />
             Als u uw gegevens aan wilt passen of uzelf uit onze bestanden wilt
             laten halen, kunt u contact met ons op nemen. Zie onderstaande
             contactgegevens.
           </p>
           <p>
-            <b>Cookies uitzetten</b>
+            <strong>Cookies uitzetten</strong>
             <br />
             De meeste browsers zijn standaard ingesteld om cookies te
             accepteren, maar u kunt uw browser opnieuw instellen om alle cookies
@@ -144,7 +144,7 @@ function PrivacyPage() {
             uitgeschakeld in uw browser.
           </p>
           <p>
-            <b>Vragen en feedback</b>
+            <strong>Vragen en feedback</strong>
           </p>
           <p>
             We controleren regelmatig of we aan dit privacybeleid voldoen. Als u
