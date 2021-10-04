@@ -3,3 +3,9 @@
 body {
     font-family: 'Roboto Standard', Arial, Helvetica, sans-serif;
 }
+
+.link, .link:visited {
+    text-decoration: none;
+    color: black;
+    font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
+}

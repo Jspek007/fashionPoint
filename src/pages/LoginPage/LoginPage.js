@@ -31,7 +31,7 @@ function LoginPage() {
         </section>
         <p className="alternative-register-container">
           Toch nog geen account?{" "}
-          <NavLink to="/aanmelden">&nbsp;&nbsp;Aanmelden</NavLink>
+          <NavLink to="/aanmelden" className="link">&nbsp;&nbsp;Aanmelden</NavLink>
         </p>
       </section>
       <Footer />

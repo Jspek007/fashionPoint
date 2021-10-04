@@ -27,7 +27,7 @@ function SignupPage() {
         </section>
         <p className="terms-information-container">
           Door u aan te melden, gaat u akkoord met onze{" "}
-          <NavLink to="/algemene-voorwaarden" className="link-to-terms">
+          <NavLink to="/algemene-voorwaarden" className="link">
             algemene voorwaarden
           </NavLink>
         </p>
@@ -35,7 +35,10 @@ function SignupPage() {
         <section className="already-customer-container">
           <section>
             <p>
-              Al wel een account? <NavLink to="/login">Inloggen</NavLink>
+              Al wel een account?{" "}
+              <NavLink to="/login" className="link">
+                Inloggen
+              </NavLink>
             </p>
           </section>
         </section>
