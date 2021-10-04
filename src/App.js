@@ -6,7 +6,6 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import CollectionPage from "./pages/CollectionPage/CollectionPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
-import ScrollToTop from "./helpers/ScrollToTop/ScrollToTop";
 import PrivacyPage from "./pages/PrivacyPage/PrivacyPage";
 import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
 
@@ -34,7 +33,7 @@ function App() {
         </Route>
 
         <Route path="/algemene-voorwaarden">
-            <TermsAndConditions />
+          <TermsAndConditions />
         </Route>
 
         <Route exact path="/privacy">
