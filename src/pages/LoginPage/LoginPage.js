@@ -3,14 +3,8 @@ import LoginForm from "../../components/common/Form/LoginForm";
 import "./LoginPage.scss";
 import FacebookLoginButton from "../../components/common/Form/Buttons/FacebookLoginButton";
 import GoogleLoginButton from "../../components/common/Form/Buttons/GoogleLoginButton/GoogleLoginButton";
-import {
-  Header,
-  PaymentMethods,
-  Footer,
-  LegalTermsBanner,
-} from "../../components/common";
+import { Header, Footer } from "../../components/common";
 import { NavLink } from "react-router-dom";
-import DeliveryInformation from "../../components/common/DeliveryInformation";
 
 function LoginPage() {
   return (
@@ -40,10 +34,7 @@ function LoginPage() {
           <NavLink to="/aanmelden">&nbsp;&nbsp;Aanmelden</NavLink>
         </p>
       </section>
-      <PaymentMethods />
-      <DeliveryInformation />
       <Footer />
-      <LegalTermsBanner />
     </Fragment>
   );
 }

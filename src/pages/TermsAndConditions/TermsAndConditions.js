@@ -807,7 +807,6 @@ function TermsAndConditions() {
               Bij klachten dient een consument zich allereerst te wenden tot de
               ondernemer.
             </li>
-            <li></li>
             <li>
               Tevens is het mogelijk om klachten aan te melden via het Europees
               ODR platform (

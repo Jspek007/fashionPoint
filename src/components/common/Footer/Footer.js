@@ -4,10 +4,12 @@ import { GrInstagram, GrFacebook, GrYoutube } from "react-icons/gr";
 import LegalTermsBanner from "../LegalTermsBanner";
 import { Fragment } from "react";
 import PaymentMethods from "../PaymentMethods";
+import DeliveryInformation from "../DeliveryInformation";
 
 function Footer() {
   return (
     <Fragment>
+      <DeliveryInformation />
       <PaymentMethods />
       <section className="footer-container">
         <section className="footer-items">
