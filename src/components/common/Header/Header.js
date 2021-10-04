@@ -22,7 +22,7 @@ function Header() {
         </section>
 
         <section className="main-header-logo">
-          <a href="/" draggable="false">
+          <a href="/" draggable="false" className="main-header-logo">
             FashionPoint
           </a>
         </section>
