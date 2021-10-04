@@ -154,7 +154,7 @@ function PrivacyPage() {
             FashionPoint
             <br />
             <br />
-            Fashionlaan 11,
+            Fashionlaan 11
             <br /> 1032KA <br />
             te Amsterdam
             <br />
