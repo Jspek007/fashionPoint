@@ -25,11 +25,6 @@ function LegalTermsBanner() {
         >
           <span className="legal-row-items">Algemene voorwaarden</span>
         </NavLink>
-
-        <ScrollToTop />
-        <NavLink to="/cookie-policy" draggable="false" className="footer-link">
-          <span className="legal-row-items">Cookies</span>
-        </NavLink>
       </section>
     </section>
   );
