@@ -5,7 +5,6 @@ import FacebookLoginButton from "../../components/common/Form/Buttons/FacebookLo
 import GoogleLoginButton from "../../components/common/Form/Buttons/GoogleLoginButton/GoogleLoginButton";
 import {
   Header,
-  Usp,
   PaymentMethods,
   Footer,
   LegalTermsBanner,

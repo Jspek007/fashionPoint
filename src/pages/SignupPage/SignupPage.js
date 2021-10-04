@@ -6,7 +6,6 @@ import {
   Header,
   LegalTermsBanner,
   PaymentMethods,
-  Usp,
 } from "../../components/common";
 import DeliveryInformation from "../../components/common/DeliveryInformation";
 import EmailLoginButton from "../../components/common/Form/Buttons/EmailLoginButton";
