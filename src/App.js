@@ -1,13 +1,12 @@
 import "./App.css";
 import Home from "./pages/Homepage/Home";
-import { Usp, Header } from "./components/common";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Customerservice from "./pages/CustomerService/Customerservice";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import CollectionPage from "./pages/CollectionPage/CollectionPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
-import Footer from "./components/common/Footer";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 function App() {
   return (
@@ -17,9 +16,9 @@ function App() {
           <Home />
         </Route>
 
-        <Route exact path="/klantenservice">
+        <Switch exact path="/klantenservice">
           <Customerservice />
-        </Route>
+        </Switch>
 
         <Route exact path="/over-ons">
           <AboutUs />
@@ -35,6 +34,10 @@ function App() {
 
         <Route exact path="/aanmelden">
           <SignupPage />
+        </Route>
+
+        <Route exact path="/algemene-voorwaarden">
+          <TermsAndConditions />
         </Route>
       </Switch>
     </Router>

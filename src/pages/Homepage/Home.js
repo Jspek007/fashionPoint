@@ -60,9 +60,7 @@ function Home() {
           </NavLink>
         </section>
       </section>
-      <PaymentMethods />
       <Footer />
-      <LegalTermsBanner />
     </Fragment>
   );
 }
