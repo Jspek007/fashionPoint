@@ -23,14 +23,6 @@ function CategoryBanner() {
           </section>
         </NavLink>
       </section>
-      {/* <section className="category-item-stand-alone">
-        <img
-          src={Jewellery}
-          alt="Sieraden Collectie"
-          className="category-image jewellery-fashion-image"
-          draggable="false"
-        />
-      </section> */}
     </section>
   );
 }
