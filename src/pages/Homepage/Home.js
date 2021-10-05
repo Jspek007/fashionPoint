@@ -3,6 +3,7 @@ import "./Home.scss";
 import HomepageImage from "../../assets/images/mainImage.jpg";
 import { NavLink } from "react-router-dom";
 import { Usp, Header, Footer } from "../../components/common";
+import CategoryBanner from "../../components/common/CategoryBanner";
 
 function Home() {
   return (
@@ -54,6 +55,7 @@ function Home() {
           </NavLink>
         </section>
       </section>
+      <CategoryBanner />
       <Footer />
     </Fragment>
   );
