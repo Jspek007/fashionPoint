@@ -1,0 +1,25 @@
+
+.category-action-button {
+  width: 80%;
+}
+
+.category-button {
+  background-color: hsl(0, 0, 0);
+  color: hsl(0, 0, 100);
+  position: relative;
+  width: 60%;
+  height: 50px;
+  border: none;
+  transform: skewX(-30deg);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.category-button-text {
+  transform: skewX(30deg);
+}
+
+.category-button:hover {
+  background-color: hsl(0, 0, 30);
+  cursor: pointer;
+}

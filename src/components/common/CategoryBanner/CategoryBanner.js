@@ -1,7 +1,7 @@
 import React from "react";
 import "./CategoryBanner.scss";
-import Jewellery from "../../../assets/images/categoryImages/jewellery.jpg";
 import { NavLink } from "react-router-dom";
+import CategoryActionButton from "../../Form/Buttons/CategoryActionButton";
 
 function CategoryBanner() {
   return (
@@ -11,6 +11,7 @@ function CategoryBanner() {
           <section className="category-item category-item-left">
             <h2 className="category-text category-text-left" draggable="false">
               Alles voor heren
+                <CategoryActionButton />
             </h2>
           </section>
         </NavLink>
@@ -19,6 +20,7 @@ function CategoryBanner() {
           <section className="category-item category-item-right">
             <h2 className="category-text category-text-right" draggable="false">
               Alles voor dames
+                <CategoryActionButton />
             </h2>
           </section>
         </NavLink>

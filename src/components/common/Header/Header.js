@@ -1,5 +1,5 @@
 import React from "react";
-import { LoginButton, SignupButton } from "../Form/Buttons";
+import { LoginButton, SignupButton } from "../../Form/Buttons";
 import "./Header.scss";
 import { NavLink } from "react-router-dom";
 

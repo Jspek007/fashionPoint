@@ -2,9 +2,9 @@ import React from "react";
 import { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import { Footer, Header } from "../../components/common";
-import EmailLoginButton from "../../components/common/Form/Buttons/EmailLoginButton";
-import FacebookLoginButton from "../../components/common/Form/Buttons/FacebookLoginButton";
-import GoogleLoginButton from "../../components/common/Form/Buttons/GoogleLoginButton/GoogleLoginButton";
+import EmailLoginButton from "../../components/Form/Buttons/EmailLoginButton";
+import FacebookLoginButton from "../../components/Form/Buttons/FacebookLoginButton";
+import GoogleLoginButton from "../../components/Form/Buttons/GoogleLoginButton/GoogleLoginButton";
 import "./SignupPage.scss";
 
 function SignupPage() {
