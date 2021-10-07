@@ -9,3 +9,7 @@ body {
     color: black;
     font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
 }
+
+.nav-link {
+    text-decoration: none;
+}

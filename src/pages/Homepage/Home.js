@@ -2,7 +2,7 @@ import React, {Fragment} from "react";
 import "./Home.scss";
 import HomepageImage from "../../assets/images/mainImage.jpg";
 import {NavLink} from "react-router-dom";
-import {Usp, Header, Footer} from "../../components/common";
+import {Usp, Header, Footer, BrandSlider} from "../../components/common";
 import CategoryBanner from "../../components/common/CategoryBanner";
 
 function Home() {
@@ -57,6 +57,7 @@ function Home() {
             </section>
             <CategoryBanner/>
             <Footer/>
+            <BrandSlider />
         </Fragment>
     );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Fragment } from "react";
-import { NavLink } from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import { Footer, Header } from "../../components/common";
 import EmailLoginButton from "../../components/Form/Buttons/EmailLoginButton";
 import FacebookLoginButton from "../../components/Form/Buttons/FacebookLoginButton";
@@ -22,7 +22,9 @@ function SignupPage() {
           <section className="action-buttons-container">
             <FacebookLoginButton />
             <GoogleLoginButton />
-            <EmailLoginButton />
+              <Link to="/email-register" className="nav-link">
+                  <EmailLoginButton />
+              </Link>
           </section>
         </section>
         <p className="terms-information-container">
