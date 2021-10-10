@@ -2,14 +2,13 @@ import React, {Fragment} from "react";
 import "./Home.scss";
 import HomepageImage from "../../assets/images/mainImage.jpg";
 import {NavLink} from "react-router-dom";
-import {Usp, Header, Footer, BrandSlider} from "../../components/common";
+import {Usp, BrandSlider} from "../../components/common";
 import CategoryBanner from "../../components/common/CategoryBanner";
 
 function Home() {
     return (
         <Fragment>
             <Usp/>
-            <Header/>
             <section className="wave-container">
                 <section class="wave">
                     <svg
@@ -19,9 +18,9 @@ function Home() {
                         preserveAspectRatio="none"
                     >
                         <path
-                            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                            class="shape-fill"
-                        ></path>
+    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+    class="shape-fill"
+    />
                     </svg>
                 </section>
 
@@ -56,7 +55,6 @@ function Home() {
                 </section>
             </section>
             <CategoryBanner/>
-            <Footer/>
             <BrandSlider />
         </Fragment>
     );

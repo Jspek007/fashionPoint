@@ -1,6 +1,6 @@
 import React from "react";
 import { Fragment } from "react";
-import {Link, NavLink} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Footer, Header } from "../../components/common";
 import EmailLoginButton from "../../components/Form/Buttons/EmailLoginButton";
 import FacebookLoginButton from "../../components/Form/Buttons/FacebookLoginButton";
@@ -29,18 +29,18 @@ function SignupPage() {
         </section>
         <p className="terms-information-container">
           Door u aan te melden, gaat u akkoord met onze{" "}
-          <NavLink to="/algemene-voorwaarden" className="link">
+          <Link to="/algemene-voorwaarden" className="link">
             algemene voorwaarden
-          </NavLink>
+          </Link>
         </p>
 
         <section className="already-customer-container">
           <section>
             <p>
               Al wel een account?{" "}
-              <NavLink to="/login" className="link">
+              <Link to="/login" className="link">
                 Inloggen
-              </NavLink>
+              </Link>
             </p>
           </section>
         </section>

@@ -1,0 +1,16 @@
+.email-signup-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.email-signup-button {
+  height: 47px;
+  width: 90%;
+  cursor: pointer;
+  background: hsl(0, 0%, 0);
+  color: hsl(0, 0%, 100);
+  font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+}

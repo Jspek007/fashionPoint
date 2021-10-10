@@ -1,5 +1,5 @@
 import "./EmailRegisterForm.scss";
-import SubmitLoginButton from "../Buttons/SubmitLoginButton";
+import EmailSignupButton from "../Buttons/EmailSignupButton";
 
 function EmailRegisterForm() {
   return (
@@ -32,13 +32,13 @@ function EmailRegisterForm() {
             className="password-input"
             type="password"
             id="password"
-            placeholder="Wachtwoord"
+            placeholder="Wachtwoord bevestigen"
           />
         </label>
       </fieldset>
 
       <section className="submit-register">
-        <SubmitLoginButton />
+        <EmailSignupButton />
       </section>
     </form>
   );
