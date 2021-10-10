@@ -3,7 +3,6 @@ import LoginForm from "../../components/Form/LoginForm";
 import "./LoginPage.scss";
 import FacebookLoginButton from "../../components/Form/Buttons/FacebookLoginButton";
 import GoogleLoginButton from "../../components/Form/Buttons/GoogleLoginButton/GoogleLoginButton";
-import { Header, Footer } from "../../components/common";
 import { NavLink } from "react-router-dom";
 
 function LoginPage() {

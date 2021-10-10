@@ -1,7 +1,6 @@
 import React from "react";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { Footer, Header } from "../../components/common";
 import EmailLoginButton from "../../components/Form/Buttons/EmailLoginButton";
 import FacebookLoginButton from "../../components/Form/Buttons/FacebookLoginButton";
 import GoogleLoginButton from "../../components/Form/Buttons/GoogleLoginButton/GoogleLoginButton";
@@ -10,7 +9,6 @@ import "./SignupPage.scss";
 function SignupPage() {
   return (
     <Fragment>
-      <Header />
       <section className="signup-container">
         <section className="signup-message-container">
           <h2 className="signup-text">Aanmelden</h2>
@@ -45,7 +43,6 @@ function SignupPage() {
           </section>
         </section>
       </section>
-      <Footer />
     </Fragment>
   );
 }

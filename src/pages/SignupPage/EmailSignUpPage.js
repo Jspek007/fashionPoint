@@ -1,6 +1,5 @@
 import React from "react";
 import {Fragment} from "react";
-import {Footer, Header} from "../../components/common";
 import EmailRegisterForm from "../../components/Form/EmailRegisterForm/EmailRegisterForm";
 import "./EmailSignUpPage.scss";
 import {Link} from "react-router-dom";
@@ -8,7 +7,6 @@ import {Link} from "react-router-dom";
 function EmailSignUpPage() {
     return (
         <Fragment>
-            <Header/>
             <section className="email-register-container">
                 <section className="form-header">
                     <h1 className="welcome-message">Registreer via email</h1>
@@ -36,7 +34,6 @@ function EmailSignUpPage() {
                     </section>
                 </section>
             </section>
-            <Footer/>
         </Fragment>
     );
 }

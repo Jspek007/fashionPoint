@@ -1,12 +1,10 @@
 import React from "react";
 import { Fragment } from "react";
 import "./PrivacyPage.scss";
-import { Footer, Header } from "../../components/common";
 
 function PrivacyPage() {
   return (
     <Fragment>
-      <Header />
       <section className="privacy-container">
         <h3 className="privacy-header">
           <strong>Privacy Policy </strong>
@@ -169,7 +167,6 @@ function PrivacyPage() {
           </p>
         </section>
       </section>
-      <Footer />
     </Fragment>
   );
 }
