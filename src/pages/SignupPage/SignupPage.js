@@ -1,7 +1,6 @@
 import React from "react";
 import { Fragment } from "react";
-import { NavLink } from "react-router-dom";
-import { Footer, Header } from "../../components/common";
+import { Link } from "react-router-dom";
 import EmailLoginButton from "../../components/Form/Buttons/EmailLoginButton";
 import FacebookLoginButton from "../../components/Form/Buttons/FacebookLoginButton";
 import GoogleLoginButton from "../../components/Form/Buttons/GoogleLoginButton/GoogleLoginButton";
@@ -10,7 +9,6 @@ import "./SignupPage.scss";
 function SignupPage() {
   return (
     <Fragment>
-      <Header />
       <section className="signup-container">
         <section className="signup-message-container">
           <h2 className="signup-text">Aanmelden</h2>
@@ -22,28 +20,29 @@ function SignupPage() {
           <section className="action-buttons-container">
             <FacebookLoginButton />
             <GoogleLoginButton />
-            <EmailLoginButton />
+              <Link to="/email-register" className="nav-link">
+                  <EmailLoginButton />
+              </Link>
           </section>
         </section>
         <p className="terms-information-container">
           Door u aan te melden, gaat u akkoord met onze{" "}
-          <NavLink to="/algemene-voorwaarden" className="link">
+          <Link to="/algemene-voorwaarden" className="link">
             algemene voorwaarden
-          </NavLink>
+          </Link>
         </p>
 
         <section className="already-customer-container">
           <section>
             <p>
               Al wel een account?{" "}
-              <NavLink to="/login" className="link">
+              <Link to="/login" className="link">
                 Inloggen
-              </NavLink>
+              </Link>
             </p>
           </section>
         </section>
       </section>
-      <Footer />
     </Fragment>
   );
 }

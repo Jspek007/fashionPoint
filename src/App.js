@@ -8,10 +8,13 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import PrivacyPage from "./pages/PrivacyPage/PrivacyPage";
 import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
+import EmailSignUpPage from "./pages/SignupPage/EmailSignUpPage";
+import {Footer, Header} from "./components/common";
 
 function App() {
   return (
     <Router>
+        <Header />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -31,6 +34,9 @@ function App() {
         <Route exact path="/aanmelden">
           <SignupPage />
         </Route>
+        <Route exact path="/email-register">
+          <EmailSignUpPage />
+        </Route>
 
         <Route path="/algemene-voorwaarden">
           <TermsAndConditions />
@@ -40,6 +46,7 @@ function App() {
           <PrivacyPage />
         </Route>
       </Switch>
+        <Footer />
     </Router>
   );
 }

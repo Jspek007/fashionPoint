@@ -3,13 +3,11 @@ import LoginForm from "../../components/Form/LoginForm";
 import "./LoginPage.scss";
 import FacebookLoginButton from "../../components/Form/Buttons/FacebookLoginButton";
 import GoogleLoginButton from "../../components/Form/Buttons/GoogleLoginButton/GoogleLoginButton";
-import { Header, Footer } from "../../components/common";
 import { NavLink } from "react-router-dom";
 
 function LoginPage() {
   return (
     <Fragment>
-      <Header />
       <section className="login-container">
         <section className="form-header">
           <h1 className="welcome-message">Fijn dat je er weer bent</h1>
@@ -34,7 +32,6 @@ function LoginPage() {
           <NavLink to="/aanmelden" className="link">&nbsp;&nbsp;Aanmelden</NavLink>
         </p>
       </section>
-      <Footer />
     </Fragment>
   );
 }
