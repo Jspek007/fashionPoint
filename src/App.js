@@ -8,6 +8,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import PrivacyPage from "./pages/PrivacyPage/PrivacyPage";
 import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
+import EmailSignUpPage from "./pages/SignupPage/EmailSignUpPage";
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route exact path="/aanmelden">
           <SignupPage />
+        </Route>
+        <Route exact path="/email-register">
+          <EmailSignUpPage />
         </Route>
 
         <Route path="/algemene-voorwaarden">

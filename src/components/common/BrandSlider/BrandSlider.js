@@ -12,6 +12,8 @@ import Supreme from "../../../assets/images/brandImages/supreme.jpg"
 
 
 function BrandSlider() {
+
+
     return (
         <section className="slider-container">
             <section className="slider-item">
