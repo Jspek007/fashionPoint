@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Roboto Standard', Arial, Helvetica, sans-serif;
+    overflow: initial;
 }
 
 .link, .link:visited {

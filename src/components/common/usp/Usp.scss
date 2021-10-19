@@ -7,6 +7,9 @@
   justify-content: center;
   align-items: center;
   user-select: none;
+  position: absolute;
+  top: 0;
+  z-index: 25;
 }
 
 .usp-item {
