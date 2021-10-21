@@ -1,13 +1,15 @@
 .payment-methods-container {
   display: flex;
   justify-content: center;
-  background-color: hsl(0, 0%, 20%);
-  border-top: 1px solid hsl(0, 0, 100);
+  background-color: var(--color-dimmed-primary);
+  border-top: 1px solid var(--color-secondary);
+  border-bottom: 1px solid var(--color-secondary);
   height: 65px;
+
 }
 
 .container-item {
   width: 100px;
   height: auto;
-  padding: 0px 20px;
+  padding: 0 20px;
 }
