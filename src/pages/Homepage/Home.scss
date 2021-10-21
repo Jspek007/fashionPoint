@@ -9,7 +9,7 @@
 
 .wave-container {
   position: relative;
-  background-color: hsl(0, 0%, 0);
+  background: var(--color-primary);
   height: 1000px;
   margin-top: 20px;
 }
@@ -31,7 +31,7 @@
 }
 
 .wave .shape-fill {
-  fill: hsl(0, 0%, 100);
+  fill: var(--color-secondary);
 }
 
 .homepage-actions {
@@ -47,11 +47,11 @@
 .login-action-button-content {
   height: 65px;
   width: 250px;
-  background-color: hsl(0, 0%, 100);
-  color: hsl(0, 0%, 0);
-  border: 1px solid hsl(0, 0%, 0);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border: none;
   border-radius: 10px;
-  font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-bold);
   cursor: pointer;
 }
 
@@ -61,9 +61,9 @@
 
 .action-text-main,
 .action-text-secondairy {
-  color: hsl(0, 0%, 100);
+  color: var(--color-secondary);
   margin-bottom: 10px;
-  font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-bold);
 }
 
 .action-text-main {

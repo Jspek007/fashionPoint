@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import "./Home.scss";
+import styles from "./Home.scss";
 import HomepageImage from "../../assets/images/mainImage.jpg";
 import {NavLink} from "react-router-dom";
 import {Usp, BrandSlider} from "../../components/common";
