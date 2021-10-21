@@ -2,13 +2,12 @@ import React, {Fragment} from "react";
 import "./Home.scss";
 import HomepageImage from "../../assets/images/mainImage.jpg";
 import {Link} from "react-router-dom";
-import {Usp, BrandSlider} from "../../components/common";
+import {BrandSlider} from "../../components/common";
 import CategoryBanner from "../../components/common/CategoryBanner";
 
 function Home() {
     return (
         <Fragment>
-            <Usp/>
             <section className="wave-container">
                 <section class="wave">
                     <svg

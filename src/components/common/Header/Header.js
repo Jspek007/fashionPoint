@@ -12,11 +12,11 @@ function Header() {
             Klantenservice
           </NavLink>
 
-          <NavLink to="/over-ons" className="left-header-section-item">
+          <NavLink to="/over-ons" className="left-header-section-item section-item">
             Over ons
           </NavLink>
 
-          <NavLink to="/collectie" className="left-header-section-item">
+          <NavLink to="/collectie" className="left-header-section-item section-item">
             Collectie
           </NavLink>
         </section>
