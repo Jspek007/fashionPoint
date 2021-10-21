@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import {Link} from "react-router-dom";
 import ScrollToTop from "../../../helpers/ScrollToTop/ScrollToTop";
 import "./LegalTermsBanner.scss";
 
@@ -11,20 +11,20 @@ function LegalTermsBanner() {
       </section>
       <section className="legal-container-item legal-item-right">
         <ScrollToTop />
-        <NavLink to="/privacy" draggable="false" className="footer-link">
+        <Link to="/privacy" draggable="false" className="footer-link">
           <span className="legal-row-items" draggable="false">
             Privacy
           </span>
-        </NavLink>
+        </Link>
 
         <ScrollToTop />
-        <NavLink
+        <Link
           to="/algemene-voorwaarden"
           draggable="false"
           className="footer-link"
         >
           <span className="legal-row-items">Algemene voorwaarden</span>
-        </NavLink>
+        </Link>
       </section>
     </section>
   );
