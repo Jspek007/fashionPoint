@@ -6,7 +6,6 @@ import { Footer, Header } from "../../components/common";
 function TermsAndConditions() {
   return (
     <Fragment>
-      <Header />
       <section className="terms-container">
         <h3 className="terms-header">
           <strong>Algemene Voorwaarden </strong>
@@ -852,7 +851,6 @@ function TermsAndConditions() {
           </p>
         </section>
       </section>
-      <Footer />
     </Fragment>
   );
 }

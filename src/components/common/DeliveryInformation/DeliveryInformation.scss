@@ -2,10 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(0, 0%, 20%);
-  color: hsl(0, 0%, 100%);
+  background-color: var(--color-dimmed-primary);
+  color: var(--color-secondary);
   height: 65px;
-  font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-bold);
 }
 
 .usp-icon-footer {

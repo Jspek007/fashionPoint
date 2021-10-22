@@ -1,11 +1,11 @@
 .sign-up-action-button {
   height: 47px;
   width: 112.25px;
-  background-color: rgb(0, 0, 0);
-  color: hsl(0, 0%, 100);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
   border: none;
   border-radius: 10px;
-  font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-bold);
   cursor: pointer;
   transition: all 1s ease;
   transform: scale(1);
@@ -19,11 +19,11 @@
 .login-action-button {
   height: 47px;
   width: 112.25px;
-  background-color: hsl(0, 0%, 100);
-  color: hsla(346, 100%, 4%, 1);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
   border: 1px solid hsla(346, 100%, 4%, 1);
   border-radius: 10px;
-  font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-bold);
   transition: all 1s ease;
   transform: scale(1);
 }
@@ -38,8 +38,8 @@
   height: 50px;
   width: 220px;
   font-size: 18px;
-  background-color: hsla(346, 100%, 4%, 1);
-  color: hsl(0, 0, 100);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
   border: none;
   cursor: pointer;
   transition: all 1s ease;

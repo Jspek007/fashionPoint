@@ -1,13 +1,12 @@
 .legal-container {
   display: flex;
   justify-content: space-between;
-  background-color: hsl(0, 0, 10);
-  width: 100%;
+  background-color: var(--color-primary);
   height: 60px;
 }
 
 .legal-container-item {
-  color: rgb(167, 161, 161);
+  color: var(--color-accent);
 }
 
 .legal-item-left {
@@ -24,7 +23,7 @@
 }
 
 .footer-link {
-  color: rgb(167, 161, 161);
+  color: var(--color-accent);
   font-weight: normal;
   text-decoration: none;
 }
