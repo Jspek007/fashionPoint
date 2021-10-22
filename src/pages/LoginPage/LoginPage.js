@@ -3,7 +3,7 @@ import LoginForm from "../../components/Form/LoginForm";
 import "./LoginPage.scss";
 import FacebookLoginButton from "../../components/Form/Buttons/FacebookLoginButton";
 import GoogleLoginButton from "../../components/Form/Buttons/GoogleLoginButton/GoogleLoginButton";
-import { NavLink } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 function LoginPage() {
   return (
@@ -29,7 +29,7 @@ function LoginPage() {
         </section>
         <p className="alternative-register-container">
           Toch nog geen account?{" "}
-          <NavLink to="/aanmelden" className="link">&nbsp;&nbsp;Aanmelden</NavLink>
+          <Link to="/aanmelden" className="link">&nbsp;&nbsp;Aanmelden</Link>
         </p>
       </section>
     </Fragment>
