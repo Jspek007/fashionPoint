@@ -45,3 +45,7 @@
   justify-content: space-between;
 }
 
+.section-item-active {
+  font-family: var(--font-family-bold);
+  border-bottom: 1px solid var(--color-primary);
+}

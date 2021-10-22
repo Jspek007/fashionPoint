@@ -8,15 +8,15 @@ function Header() {
     <div className="header-container" id="sticky-header">
       <header className="main-header">
         <section className="left-header-section">
-          <NavLink to="/klantenservice" className="left-header-section-item">
+          <NavLink to="/klantenservice" className="left-header-section-item" activeClassName="section-item-active">
             Klantenservice
           </NavLink>
 
-          <NavLink to="/over-ons" className="left-header-section-item section-item">
+          <NavLink to="/over-ons" className="left-header-section-item section-item" activeClassName="section-item-active">
             Over ons
           </NavLink>
 
-          <NavLink to="/collectie" className="left-header-section-item section-item">
+          <NavLink to="/collectie" className="left-header-section-item section-item" activeClassName="section-item-active">
             Collectie
           </NavLink>
         </section>
