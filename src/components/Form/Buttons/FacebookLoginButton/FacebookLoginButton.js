@@ -1,29 +1,32 @@
 import React from 'react'
 import "./FacebookLoginButton.scss";
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import { FaFacebook } from 'react-icons/fa'
+import { useHistory, useLocation } from "react-router";
+import { useAuth } from "../../../../contexts/AuthContext";
 
 function FacebookLoginButton() {
+    const history = useHistory();
+    const location = useLocation();
+    const {signInWithFacebook} = useAuth();
 
-    const facebookResponse = (response) => {
-        console.log(response)
-      }
-
+    function handleRedirectToOrBack() {
+        history.replace(location.state?.from ?? '/profile')
+    }
 
     return (
-        <FacebookLogin 
-        appId="" //Unknown for now
-        autoLoad
-        callback={facebookResponse}
-        render={renderProps => (
-          <button onClick={renderProps.onClick}
-                  className="facebook-button-login"
-          >
-            <FaFacebook className="facebook-button-icon" />
+        <button onClick={() => {
+            signInWithFacebook()
+                .then(user => {
+                    handleRedirectToOrBack()
+                    console.log(user)
+                })
+                .catch(e => console.log(e.message))
+        }}
+                className="facebook-button-login"
+        >
+            <FaFacebook className="facebook-button-icon"/>
             Facebook
-          </button>
-        )} 
-      />
+        </button>
     )
 }
 

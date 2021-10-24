@@ -1,14 +1,13 @@
 import React from 'react'
 import "./GoogleLoginButton.scss";
 import {FcGoogle} from 'react-icons/fc'
-import GoogleLogin from 'react-google-login';
 import {useAuth} from "../../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
 
 function GoogleLoginButton() {
     const history = useHistory();
     const location = useLocation();
-    const {signInWithGoogle, login} = useAuth();
+    const {signInWithGoogle} = useAuth();
 
     function handleRedirectToOrBack() {
         history.replace(location.state?.from ?? '/profile')

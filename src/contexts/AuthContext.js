@@ -7,6 +7,7 @@ import {
     onAuthStateChanged,
     signInWithPopup,
     GoogleAuthProvider,
+    FacebookAuthProvider,
     signOut,
     confirmPasswordReset
 } from "firebase/auth";
@@ -14,6 +15,7 @@ import {
 const AuthContext = createContext({
     currentUser: null,
     signInWithGoogle: () => Promise,
+    signInWithFacebook: () => Promise,
     login: () => Promise,
     register: () => Promise,
     logout: () => Promise,
@@ -66,9 +68,15 @@ export default function AuthContextProvider({ children }) {
         return signInWithPopup(auth, provider);
     }
 
+    function signInWithFacebook() {
+        const provider = new FacebookAuthProvider()
+        return signInWithPopup(auth, provider);
+    }
+
     const value = {
         currentUser,
         signInWithGoogle,
+        signInWithFacebook,
         login,
         register,
         logout,
