@@ -1,39 +1,20 @@
 import React from "react";
-import { LoginButton, SignupButton } from "../../Form/Buttons";
 import "./Header.scss";
-import { NavLink } from "react-router-dom";
+import Navigation from "./HeaderComponents/Navigation/Navigation";
+import HeaderActionMenu from "./HeaderComponents/HeaderActionMenu/HeaderActionMenu";
 
 function Header() {
-  return (
-    <div className="header-container" id="sticky-header">
-      <header className="main-header">
-        <section className="left-header-section">
-          <NavLink to="/klantenservice" className="left-header-section-item" activeClassName="section-item-active">
-            Klantenservice
-          </NavLink>
 
-          <NavLink to="/over-ons" className="left-header-section-item section-item" activeClassName="section-item-active">
-            Over ons
-          </NavLink>
-
-          <NavLink to="/collectie" className="left-header-section-item section-item" activeClassName="section-item-active">
-            Collectie
-          </NavLink>
-        </section>
-
-        <section className="main-header-logo">
-          <a href="/" draggable="false" className="main-header-logo">
-            FashionPoint
-          </a>
-        </section>
-
-        <section className="right-header-section">
-          <SignupButton />
-          <LoginButton />
-        </section>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <div className="header-container" id="sticky-header">
+                <Navigation/>
+                <section className="right-header-section">
+                    <HeaderActionMenu/>
+                </section>
+            </div>
+        </>
+    );
 }
 
 export default Header;

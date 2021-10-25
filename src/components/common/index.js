@@ -4,6 +4,7 @@ import PaymentMethods from "./PaymentMethods";
 import Footer from "./Footer";
 import LegalTermsBanner from "./LegalTermsBanner";
 import BrandSlider from "./BrandSlider";
+import SignedInMenu from "./SignedInMenu/SignedInMenu";
 
 export {
     Usp,
@@ -11,5 +12,6 @@ export {
     PaymentMethods,
     Footer,
     LegalTermsBanner,
-    BrandSlider
+    BrandSlider,
+    SignedInMenu,
 };

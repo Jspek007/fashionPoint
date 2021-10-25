@@ -1,5 +1,5 @@
-import LoginButton from "./LoginButton";
-import SignupButton from "./SignupButton";
+import LoginButton from "./UserControlButtons/LoginButton";
+import SignupButton from "./UserControlButtons/SignupButton";
 
 export {
     LoginButton,

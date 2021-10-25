@@ -1,5 +1,5 @@
 import "./LoginForm.scss";
-import SubmitLoginButton from "../Buttons/SubmitLoginButton";
+import SubmitLoginButton from "../Buttons/UserControlButtons/SubmitLoginButton";
 
 function LoginForm() {
   return (
