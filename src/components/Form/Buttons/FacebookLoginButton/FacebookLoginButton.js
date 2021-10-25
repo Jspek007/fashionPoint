@@ -10,7 +10,7 @@ function FacebookLoginButton() {
     const {signInWithFacebook} = useAuth();
 
     function handleRedirectToOrBack() {
-        history.replace(location.state?.from ?? '/profile')
+        history.replace(location.state?.from ?? '/')
     }
 
     return (
