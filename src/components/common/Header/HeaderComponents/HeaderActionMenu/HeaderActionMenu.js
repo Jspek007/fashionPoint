@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {SignedInMenu} from "../../../index";
 import {LoginButton, SignupButton} from "../../../../Form/Buttons";
 import {useAuth} from "../../../../../contexts/AuthContext";
@@ -9,7 +9,7 @@ function HeaderActionMenu() {
 
     return (
         <>
-            {auth.currentUser && (
+            {auth.currentUser &&  (
                 <SignedInMenu/>
             )}
 
