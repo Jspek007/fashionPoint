@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 
-function Navigation(props) {
+function Navigation() {
     return (
 
             <header className="main-header">

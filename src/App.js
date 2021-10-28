@@ -11,8 +11,9 @@ import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
 import EmailSignUpPage from "./pages/SignupPage/EmailSignUpPage";
 import {Footer, Header} from "./components/common";
 import AuthContextProvider from "./contexts/AuthContext";
+import MensCollection from "./pages/CollectionsPage/MensCollection/MensCollection";
 
-function App(props) {
+function App() {
     return (
         <AuthContextProvider>
             <Router>
@@ -30,6 +31,11 @@ function App(props) {
                     <Route exact path="/collectie">
                         <CollectionPage/>
                     </Route>
+
+                    <Route exact path="/heren-collectie">
+                        <MensCollection />
+                    </Route>
+
                     <Route exact path="/login">
                         <LoginPage/>
                     </Route>

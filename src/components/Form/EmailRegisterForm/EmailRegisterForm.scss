@@ -19,3 +19,31 @@ fieldset {
   display: flex;
   justify-content: center;
 }
+
+.text-danger {
+  top: 5px;
+  position: relative;
+  color: var(--color-error-text);
+}
+
+.email-signup-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.email-signup-button {
+  height: 47px;
+  width: 90%;
+  cursor: pointer;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  font-family: var(--font-family-bold);
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+}
+
+.email-signup-button:disabled {
+  background: var(--color-disabled-button);
+  cursor: auto;
+}
