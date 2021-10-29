@@ -64,8 +64,7 @@ function EmailRegisterForm() {
     const signUp = async (event) => {
         event.preventDefault();
         register(email, password)
-            .then((user) => {
-                console.log(user);
+            .then(() => {
                 handleRedirectToOrBack();
             })
             .catch((error) => {
