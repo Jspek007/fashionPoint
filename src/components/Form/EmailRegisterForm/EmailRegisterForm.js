@@ -16,6 +16,7 @@ function EmailRegisterForm() {
     const [passwordError, setPasswordError] = useState('');
     const [confirmationError, setConfirmationError] = useState('');
     const [disabled, setDisabled] = useState(true);
+    const [submitError, setSubmitError] = useState('');
 
     function handleRedirectToOrBack() {
         history.replace(location.state?.from ?? '/')
@@ -60,17 +61,33 @@ function EmailRegisterForm() {
         }
     }
 
-    const signUp = (event) => {
+    const signUp = async (event) => {
         event.preventDefault();
-
-        try {
-            const user = register(email, password)
-            console.log("user", user)
-        }
-        catch (error) {
-            console.log("error", error);
-        }
+        register(email, password)
+            .then((user) => {
+                console.log(user);
+                handleRedirectToOrBack();
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                setSubmitError(errorMessage);
+            })
     }
+
+    // const signUp = (event) => {
+    //     event.preventDefault();
+    //
+    //     try {
+    //         const user = register(email, password)
+    //         if (user) {
+    //             handleRedirectToOrBack();
+    //         }
+    //     }
+    //     catch (error) {
+    //         console.error(error);
+    //         setSubmitError(error.message)
+    //     }
+    // }
 
 
 
@@ -137,6 +154,7 @@ function EmailRegisterForm() {
                             Creëer een account
                         </button>
                     </section>
+                    <span className="text-danger">{submitError}</span>
                 </section>
             </form>
         </AuthContextProvider>

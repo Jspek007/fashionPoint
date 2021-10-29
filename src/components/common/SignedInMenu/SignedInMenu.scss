@@ -44,8 +44,7 @@
 }
 
 .user-icon {
-  font-size: 15px;
-  margin-right: 10px;
+  font-size: 25px;
 }
 
 .menu-trigger {
@@ -67,8 +66,8 @@
 }
 
 .menu-trigger span {
-  font-weight: 700;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
   font-size: 14px;
   margin: 0 10px;
 }

@@ -46,7 +46,7 @@ export default function AuthContextProvider({ children }) {
     }
 
     function register(email, password) {
-        createUserWithEmailAndPassword(auth, email, password);
+        return createUserWithEmailAndPassword(auth, email, password);
     }
 
     function forgotPassword(email) {

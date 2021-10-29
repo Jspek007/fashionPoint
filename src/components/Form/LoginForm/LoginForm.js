@@ -1,7 +1,18 @@
 import "./LoginForm.scss";
 import SubmitLoginButton from "../Buttons/UserControlButtons/SubmitLoginButton";
+import {useAuth} from "../../../contexts/AuthContext";
+import {useHistory, useLocation} from "react-router";
+import {useState} from "react";
 
 function LoginForm() {
+
+    const {login} = useAuth();
+    const history = useHistory();
+    const location = useLocation();
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
   return (
     <form>
       <fieldset>
