@@ -16,9 +16,8 @@ function GoogleLoginButton() {
     return (
         <button onClick={() =>
             signInWithGoogle()
-                .then(user => {
+                .then(() => {
                     handleRedirectToOrBack()
-                    console.log(user)
                 })
                 .catch(e => console.log(e.message))
         }

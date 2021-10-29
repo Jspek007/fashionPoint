@@ -8,7 +8,6 @@ import {useDetectOutsideClick} from "../../../helpers/UseDetectOutsideClick/UseD
 function SignedInMenu() {
     const auth = useAuth();
     const user = auth.currentUser;
-    const displayName = user.displayName;
     const {logout} = useAuth();
 
     const dropdownRef = useRef(null);
@@ -20,7 +19,6 @@ function SignedInMenu() {
             <button onClick={onClick} className="menu-trigger">
                <span>
                    <FaUser className="user-icon"/>
-                   {displayName}
                </span>
             </button>
             <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>

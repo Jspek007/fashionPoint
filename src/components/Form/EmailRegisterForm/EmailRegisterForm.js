@@ -12,7 +12,6 @@ function EmailRegisterForm() {
 
 
     const [firstname, setFirstName] = useState('');
-    const [lastname, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
@@ -21,7 +20,6 @@ function EmailRegisterForm() {
     const [confirmationError, setConfirmationError] = useState('');
     const [disabled, setDisabled] = useState(true);
     const [submitError, setSubmitError] = useState('');
-    const setDisplayName = (firstname + " " + lastname);
 
     function handleRedirectToOrBack() {
         history.replace(location.state?.from ?? '/')
@@ -66,26 +64,11 @@ function EmailRegisterForm() {
         }
     }
 
-    const setDisplayNameOnEmailRegister = () => {
-        const auth = getAuth();
-        onAuthStateChanged(auth, user => {
-            if (user) {
-                updateProfile(auth.currentUser, {
-                    displayName: setDisplayName
-                })
-                handleRedirectToOrBack();
-            }
-        })
-            .catch((error) => {
-                console.error(error);
-            })
-    }
-
     const signUp = async (event) => {
         event.preventDefault();
         register(email, password)
             .then(() => {
-                setDisplayNameOnEmailRegister();
+                handleRedirectToOrBack();
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -93,55 +76,11 @@ function EmailRegisterForm() {
             })
     }
 
-    // const signUp = (event) => {
-    //     event.preventDefault();
-    //
-    //     try {
-    //         const user = register(email, password)
-    //         if (user) {
-    //             handleRedirectToOrBack();
-    //         }
-    //     }
-    //     catch (error) {
-    //         console.error(error);
-    //         setSubmitError(error.message)
-    //     }
-    // }
-
-
     return (
         <AuthContextProvider>
             <form
                 onKeyUp={formValidationCheck}
             >
-                <fieldset>
-                    <label className="email-label" htmlFor="email-adress">
-                        <input
-                            className="email-input"
-                            type="text"
-                            id="first-name"
-                            placeholder="Voornaam"
-                            value={firstname}
-                            onChange={(event) => setFirstName(event.target.value)}
-                        />
-                        <span className="text-danger">{emailError}</span>
-                    </label>
-                </fieldset>
-
-                <fieldset>
-                    <label className="email-label" htmlFor="email-adress">
-                        <input
-                            className="email-input"
-                            type="text"
-                            id="lastname"
-                            placeholder="Achternaam"
-                            value={lastname}
-                            onChange={(event) => setLastName(event.target.value)}
-                        />
-                        <span className="text-danger">{emailError}</span>
-                    </label>
-                </fieldset>
-
                 <fieldset>
                     <label className="email-label" htmlFor="email-adress">
                         <input
