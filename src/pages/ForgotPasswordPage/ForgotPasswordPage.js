@@ -1,17 +1,9 @@
 import React, {useState} from 'react';
 import "./ForgotPasswordPage.scss";
 import ResetPasswordButton from "../../components/Form/Buttons/ResetPasswordButton";
-import {useAuth} from "../../contexts/AuthContext";
 
 function ForgotPasswordPage() {
-    const auth = useAuth();
     const [email, setEmail] = useState('');
-
-    const checkEmailBeforeSubmit = (email) => {
-        if (email) {
-            return true;
-        }
-    }
 
     return (
         <section className="forgotten-password-container">
@@ -40,7 +32,7 @@ function ForgotPasswordPage() {
                         </label>
                     </fieldset>
                 </form>
-                <ResetPasswordButton email={email} auth={auth}/>
+                <ResetPasswordButton email={email}/>
             </section>
 
         </section>

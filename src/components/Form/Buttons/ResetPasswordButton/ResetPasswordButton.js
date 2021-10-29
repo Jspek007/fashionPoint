@@ -2,22 +2,23 @@ import React, {useState} from 'react';
 import {FiMail} from "react-icons/fi";
 import "./ResetPasswordButton.scss";
 import {useAuth} from "../../../../contexts/AuthContext";
+import {useHistory} from "react-router";
 
 function ResetPasswordButton({email}) {
 
     const {forgotPassword} = useAuth();
-    const [notice, setNotice] = useState('');
-    const [disabled, setDisabled] = useState(true);
+    const [error, setError] = useState('');
+    const history = useHistory();
 
     const submitPasswordResetMail = (event) => {
         event.preventDefault();
         forgotPassword(email)
             .then(() => {
-                setNotice("Uw email is onderweg.")
+                history.push("/send-successfully");
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                setNotice(errorMessage);
+                setError(errorMessage);
             })
     }
 
@@ -27,12 +28,11 @@ function ResetPasswordButton({email}) {
         <section className="reset-button-container">
             <button className="email-login-button email-reset-button"
                     onClick={submitPasswordResetMail}
-                    // disabled={disabled}
             >
                 <FiMail className="email-button-icon reset-email-icon"/>
                 Wachtwoord resetten
             </button>
-            <span className="reset-text-danger">{notice}</span>
+            <span className="reset-text-danger">{error}</span>
         </section>
     );
 }

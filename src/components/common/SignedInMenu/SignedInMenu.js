@@ -6,8 +6,6 @@ import {Link} from "react-router-dom";
 import {useDetectOutsideClick} from "../../../helpers/UseDetectOutsideClick/UseDetectOutsideClick";
 
 function SignedInMenu() {
-    const auth = useAuth();
-    const user = auth.currentUser;
     const {logout} = useAuth();
 
     const dropdownRef = useRef(null);
