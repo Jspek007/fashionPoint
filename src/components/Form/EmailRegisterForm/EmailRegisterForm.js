@@ -2,7 +2,6 @@ import "./EmailRegisterForm.scss";
 import React, {useState} from "react";
 import AuthContextProvider, {useAuth} from "../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
-import {getAuth, onAuthStateChanged, updateProfile} from "firebase/auth";
 
 function EmailRegisterForm() {
 
@@ -10,8 +9,6 @@ function EmailRegisterForm() {
     const history = useHistory();
     const location = useLocation();
 
-
-    const [firstname, setFirstName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');

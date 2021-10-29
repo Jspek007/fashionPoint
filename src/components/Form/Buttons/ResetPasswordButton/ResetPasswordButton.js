@@ -7,7 +7,6 @@ function ResetPasswordButton({email}) {
 
     const {forgotPassword} = useAuth();
     const [notice, setNotice] = useState('');
-    const [disabled, setDisabled] = useState(true);
 
     const submitPasswordResetMail = (event) => {
         event.preventDefault();
@@ -27,7 +26,6 @@ function ResetPasswordButton({email}) {
         <section className="reset-button-container">
             <button className="email-login-button email-reset-button"
                     onClick={submitPasswordResetMail}
-                    // disabled={disabled}
             >
                 <FiMail className="email-button-icon reset-email-icon"/>
                 Wachtwoord resetten

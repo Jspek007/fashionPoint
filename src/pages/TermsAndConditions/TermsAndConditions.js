@@ -1,7 +1,6 @@
 import React from "react";
 import { Fragment } from "react";
 import "./TermsAndConditions.scss";
-import { Footer, Header } from "../../components/common";
 
 function TermsAndConditions() {
   return (
