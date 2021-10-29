@@ -27,6 +27,9 @@ function LoginPage() {
             <LoginForm />
           </section>
         </section>
+          <p className="alternative-register-container">
+              Wachtwoord vergeten? <Link to="/wachtwoord-vergeten" className="link">&nbsp;&nbsp;Klik hier</Link>
+          </p>
         <p className="alternative-register-container">
           Toch nog geen account?{" "}
           <Link to="/aanmelden" className="link">&nbsp;&nbsp;Aanmelden</Link>

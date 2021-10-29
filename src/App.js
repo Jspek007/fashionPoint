@@ -12,6 +12,7 @@ import EmailSignUpPage from "./pages/SignupPage/EmailSignUpPage";
 import {Footer, Header} from "./components/common";
 import AuthContextProvider from "./contexts/AuthContext";
 import MensCollection from "./pages/CollectionsPage/MensCollection/MensCollection";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage/ForgotPasswordPage";
 
 function App() {
     return (
@@ -44,6 +45,10 @@ function App() {
                     </Route>
                     <Route exact path="/email-register">
                         <EmailSignUpPage/>
+                    </Route>
+
+                    <Route exact path="/wachtwoord-vergeten">
+                        <ForgotPasswordPage />
                     </Route>
 
                     <Route path="/algemene-voorwaarden">
