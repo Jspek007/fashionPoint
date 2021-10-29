@@ -1,15 +1,8 @@
 import "./LoginForm.scss";
 import SubmitLoginButton from "../Buttons/UserControlButtons/SubmitLoginButton";
-import {useAuth} from "../../../contexts/AuthContext";
-import {useHistory, useLocation} from "react-router";
 import {useState} from "react";
 
 function LoginForm() {
-
-    const {login} = useAuth();
-    const history = useHistory();
-    const location = useLocation();
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -22,6 +15,8 @@ function LoginForm() {
             type="text"
             id="email-adress"
             placeholder="Email"
+            value={email}
+            onChange={(event => setEmail(event.target.value))}
           />
         </label>
       </fieldset>
@@ -33,12 +28,14 @@ function LoginForm() {
             type="password"
             id="password"
             placeholder="Wachtwoord"
+            value={password}
+            onChange={(event => setPassword(event.target.value))}
           />
         </label>
       </fieldset>
 
       <section className="submit-login">
-        <SubmitLoginButton />
+        <SubmitLoginButton email={email} password={password} />
       </section>
     </form>
   );
