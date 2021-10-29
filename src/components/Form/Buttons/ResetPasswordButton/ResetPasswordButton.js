@@ -14,7 +14,7 @@ function ResetPasswordButton({email}) {
         event.preventDefault();
         forgotPassword(email)
             .then(() => {
-                history.push("/send-successfully");
+                history.push("/email-is-verzonden");
             })
             .catch((error) => {
                 const errorMessage = error.message;
