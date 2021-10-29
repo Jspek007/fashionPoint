@@ -1,30 +1,31 @@
 import React from 'react'
 import "./GoogleLoginButton.scss";
-import { FcGoogle } from 'react-icons/fc'
-import GoogleLogin from 'react-google-login';
+import {FcGoogle} from 'react-icons/fc'
+import {useAuth} from "../../../../contexts/AuthContext";
+import {useHistory, useLocation} from "react-router";
 
 function GoogleLoginButton() {
+    const history = useHistory();
+    const location = useLocation();
+    const {signInWithGoogle} = useAuth();
 
-    const googleResponse = (response) => {
-        console.log(response)
-      }
+    function handleRedirectToOrBack() {
+        history.replace(location.state?.from ?? '/')
+    }
 
     return (
-        <GoogleLogin
-        clientId="" //Unknown for now
-        buttonText="Login met Google"
-        onSuccess={googleResponse}
-        onFailure={googleResponse}
-        cookiePolicy={'single_host_origin'}
-        render={renderProps => (
-          <button onClick={renderProps.onClick}
-                  className="google-button-login"
-                  >
-                  <FcGoogle className="google-button-icon" />
-                  Google 
-                  </button>
-        )}
-      />
+        <button onClick={() =>
+            signInWithGoogle()
+                .then(() => {
+                    handleRedirectToOrBack()
+                })
+                .catch(e => console.log(e.message))
+        }
+                className="google-button-login"
+        >
+            <FcGoogle className="google-button-icon"/>
+            Google
+        </button>
     )
 }
 

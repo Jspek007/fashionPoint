@@ -5,7 +5,7 @@ import { FiMail } from 'react-icons/fi'
 function EmailLoginButton() {
     return (
         <button className="email-login-button">
-            <FiMail className="email-button-icon" />
+            <FiMail className="email-button-icon"/>
             Email
         </button>
     )

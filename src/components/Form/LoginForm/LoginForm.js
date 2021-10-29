@@ -1,7 +1,11 @@
 import "./LoginForm.scss";
-import SubmitLoginButton from "../Buttons/SubmitLoginButton";
+import SubmitLoginButton from "../Buttons/UserControlButtons/SubmitLoginButton";
+import {useState} from "react";
 
 function LoginForm() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
   return (
     <form>
       <fieldset>
@@ -11,6 +15,8 @@ function LoginForm() {
             type="text"
             id="email-adress"
             placeholder="Email"
+            value={email}
+            onChange={(event => setEmail(event.target.value))}
           />
         </label>
       </fieldset>
@@ -22,12 +28,14 @@ function LoginForm() {
             type="password"
             id="password"
             placeholder="Wachtwoord"
+            value={password}
+            onChange={(event => setPassword(event.target.value))}
           />
         </label>
       </fieldset>
 
       <section className="submit-login">
-        <SubmitLoginButton />
+        <SubmitLoginButton email={email} password={password} />
       </section>
     </form>
   );
