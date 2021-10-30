@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import LegalTermsBanner from "./LegalTermsBanner";
 import BrandSlider from "./BrandSlider";
 import SignedInMenu from "./SignedInMenu/SignedInMenu";
+import ProductCards from "./ProductCards";
 
 export {
     Usp,
@@ -14,4 +15,5 @@ export {
     LegalTermsBanner,
     BrandSlider,
     SignedInMenu,
+    ProductCards,
 };
