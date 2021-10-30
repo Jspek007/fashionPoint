@@ -1,5 +1,5 @@
 .product-list-grid {
-  height: 55vh;
+  height: 450px;
   overflow: auto;
   display: flex;
   justify-content: center;
@@ -18,25 +18,40 @@
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 35px;
+  margin: 35px;
+  border-radius: 15px;
+  height: 300px;
+  border: 1px solid black;
+
 }
 
 .product-item-title {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
   position: absolute;
-  height: 20px;
   bottom: 0;
+  height: auto;
+  text-align: center;
+}
+
+.item-title {
+  font-size: 12px;
+  font-family: var(--font-family-italic);
+  margin: 0;
+  height: auto;
 }
 
 .product-item-image-container {
-  display: flex;
-  justify-content: center;
+  height: 200px;
   width: auto;
 }
 
 .product-item-image {
-  width: 200px;
-  height: auto;
+  height: 200px;
+  width: auto;
+}
+
+.product-item-price {
+  position: absolute;
+  bottom: 0;
+  height: 75px;
+  font-family: var(--font-family-italic);
 }

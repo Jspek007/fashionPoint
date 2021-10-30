@@ -5,14 +5,17 @@ function ProductCards({productData}) {
     return (
         <section className="product-list-grid">
             <section className="product-container">
-                {productData.map((item, index) => {
+                {productData.map((item) => {
                     return (
                         <section className="product-item-container">
                             <section className="product-item-image-container">
                                 <img src={item.image} className="product-item-image"/>
                             </section>
+                            <section className="product-item-price">
+                                <p>€{item.price}</p>
+                            </section>
                             <section className="product-item-title">
-                                <h5>{item.title}</h5>
+                                <h5 className="item-title">{item.title}</h5>
                             </section>
                         </section>
                     );
