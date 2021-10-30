@@ -1,5 +1,6 @@
 import React from "react";
 import "./ProductCards.scss";
+import ViewProductDetailsButton from "../../Form/ProductButtons/ViewProductDetailsButton";
 
 function ProductCards({productData}) {
     return (

@@ -1,11 +1,10 @@
 import React from "react";
 import "./CollectionPage.scss";
+import CategoryBanner from "../../../components/common/CategoryBanner";
 
 function CollectionPage() {
   return (
-    <div>
-      <h1>Onze collectie</h1>
-    </div>
+      <CategoryBanner />
   );
 }
 
