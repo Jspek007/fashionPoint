@@ -1,0 +1,18 @@
+.category-banner-container {
+  margin: 15px 20%;
+  background-color: var(--color-dimmed-secondary);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.category-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.category-description {
+  display: flex;
+  justify-content: center;
+}

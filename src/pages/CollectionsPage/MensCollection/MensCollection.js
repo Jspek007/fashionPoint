@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import "./MensCollection.scss";
 import axios from "axios";
-import {ProductCards} from "../../../components/common";
+import {CategoryBanners, ProductCards} from "../../../components/common";
 
 function MensCollection() {
     const [loading, setLoading] = useState(null);
@@ -27,6 +27,7 @@ function MensCollection() {
 
     return (
         <>
+            <CategoryBanners index={0} />
             <ProductCards productData={productData}/>
             <ProductCards productData={productData}/>
             <ProductCards productData={productData}/>
