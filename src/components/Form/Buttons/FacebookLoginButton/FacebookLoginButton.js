@@ -1,23 +1,20 @@
 import React from 'react'
 import "./FacebookLoginButton.scss";
-import { FaFacebook } from 'react-icons/fa'
-import { useHistory, useLocation } from "react-router";
-import { useAuth } from "../../../../contexts/AuthContext";
+import {FaFacebook} from 'react-icons/fa'
+import {useHistory, useLocation} from "react-router";
+import {useAuth} from "../../../../contexts/AuthContext";
+import {HandleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
 
 function FacebookLoginButton() {
     const history = useHistory();
     const location = useLocation();
     const {signInWithFacebook} = useAuth();
 
-    function handleRedirectToOrBack() {
-        history.replace(location.state?.from ?? '/')
-    }
-
     return (
         <button onClick={() => {
             signInWithFacebook()
                 .then(user => {
-                    handleRedirectToOrBack()
+                    HandleRedirectToOrBack({history, location})
                     console.log(user)
                 })
                 .catch(e => console.log(e.message))

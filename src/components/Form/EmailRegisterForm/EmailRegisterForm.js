@@ -2,6 +2,7 @@ import "./EmailRegisterForm.scss";
 import React, {useState} from "react";
 import AuthContextProvider, {useAuth} from "../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
+import {HandleRedirectToOrBack} from "../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
 
 function EmailRegisterForm() {
 
@@ -17,10 +18,6 @@ function EmailRegisterForm() {
     const [confirmationError, setConfirmationError] = useState('');
     const [disabled, setDisabled] = useState(true);
     const [submitError, setSubmitError] = useState('');
-
-    function handleRedirectToOrBack() {
-        history.replace(location.state?.from ?? '/')
-    }
 
     const emailValidation = () => {
         const emailRegex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
@@ -65,7 +62,7 @@ function EmailRegisterForm() {
         event.preventDefault();
         register(email, password)
             .then(() => {
-                handleRedirectToOrBack();
+                HandleRedirectToOrBack({history, location})
             })
             .catch((error) => {
                 const errorMessage = error.message;

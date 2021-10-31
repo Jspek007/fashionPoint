@@ -3,7 +3,9 @@ import "./ViewProductDetailsButton.scss";
 
 function ViewProductDetailsButton() {
     return (
-        <div></div>
+        <button>
+            Bekijken
+        </button>
     );
 }
 

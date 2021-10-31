@@ -3,21 +3,18 @@ import "./GoogleLoginButton.scss";
 import {FcGoogle} from 'react-icons/fc'
 import {useAuth} from "../../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
+import {HandleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
 
 function GoogleLoginButton() {
     const history = useHistory();
     const location = useLocation();
     const {signInWithGoogle} = useAuth();
 
-    function handleRedirectToOrBack() {
-        history.replace(location.state?.from ?? '/')
-    }
-
     return (
         <button onClick={() =>
             signInWithGoogle()
                 .then(() => {
-                    handleRedirectToOrBack()
+                    HandleRedirectToOrBack({history, location})
                 })
                 .catch(e => console.log(e.message))
         }
