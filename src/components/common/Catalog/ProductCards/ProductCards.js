@@ -2,13 +2,13 @@ import React from "react";
 import "./ProductCards.scss";
 import {Link} from "react-router-dom";
 
-function ProductCards({productData}) {
+function ProductCards({data}) {
     return (
         <>
             <section className="product-list-container">
                 <section className="product-list-grid">
                     <section className="product-container">
-                        {productData.map((item) => {
+                        {data.map((item) => {
                             return (
                                 <Link key={item.id} className="product-link" exact to={`/heren/product/${item.id}`}>
                                     <section className="product-item-container">

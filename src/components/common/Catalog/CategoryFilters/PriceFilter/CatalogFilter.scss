@@ -1,0 +1,31 @@
+.page-sorter {
+  background-color: var(--color-secondary);
+  font-family: var(--font-family-italic);
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+}
+
+.sorter-select {
+  width: 150px;
+  height: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+}
+
+.sorter-select:hover {
+  cursor: pointer;
+}
+
+.filter-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+}
+
+.sorter-value {
+  visibility: hidden;
+}

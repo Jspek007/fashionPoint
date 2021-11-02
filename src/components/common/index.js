@@ -7,6 +7,7 @@ import BrandSlider from "./BrandSlider";
 import SignedInMenu from "./SignedInMenu/SignedInMenu";
 import ProductCards from "./Catalog/ProductCards";
 import CategoryBanners from "./Catalog/CategoryBanners";
+import CatalogFilter from "./Catalog/CategoryFilters/PriceFilter";
 
 export {
     Usp,
@@ -18,4 +19,5 @@ export {
     SignedInMenu,
     ProductCards,
     CategoryBanners,
+    CatalogFilter,
 };
