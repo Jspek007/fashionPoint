@@ -14,6 +14,7 @@ import AuthContextProvider from "./contexts/AuthContext";
 import MensCollection from "./pages/CollectionsPage/MensCollection/MensCollection";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage/ForgotPasswordPage";
 import SendSuccessfullyPage from "./pages/SuccessPage/SendSuccessfullyPage";
+import WomensCollection from "./pages/CollectionsPage/WomensCollection/WomensCollection";
 
 function App() {
     return (
@@ -36,6 +37,10 @@ function App() {
 
                     <Route exact path="/heren-collectie">
                         <MensCollection />
+                    </Route>
+
+                    <Route exact path="/dames-collectie">
+                        <WomensCollection />
                     </Route>
 
                     <Route exact path="/login">
