@@ -2,6 +2,7 @@ import React from "react";
 import "./Buttons.scss";
 import {useAuth} from "../../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
+import {HandleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
 
 function SubmitLoginButton({email, password}) {
 
@@ -9,15 +10,11 @@ function SubmitLoginButton({email, password}) {
     const history = useHistory();
     const location = useLocation();
 
-    function handleRedirectToOrBack() {
-        history.replace(location.state?.from ?? '/')
-    }
-
     const onSubmitLogin = async (event) => {
         event.preventDefault();
         login(email, password)
             .then(() => {
-                handleRedirectToOrBack();
+                HandleRedirectToOrBack({ history, location })
             })
             .catch((error) => {
                 const errorMessage = error.message;

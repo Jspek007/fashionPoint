@@ -3,7 +3,7 @@ import Home from "./pages/Homepage/Home";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Customerservice from "./pages/CustomerService/Customerservice";
 import AboutUs from "./pages/AboutUs/AboutUs";
-import CollectionPage from "./pages/CollectionPage/CollectionPage";
+import CollectionPage from "./pages/CollectionsPage/CollectionPage/CollectionPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import PrivacyPage from "./pages/PrivacyPage/PrivacyPage";
