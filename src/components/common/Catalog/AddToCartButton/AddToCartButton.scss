@@ -1,0 +1,20 @@
+
+
+.add-to-cart-button {
+  height: 50px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  border-radius: 10px;
+}
+
+.product-price,
+.add-to-cart-message {
+  font-size: 14px;
+  margin: 10px;
+}
+
+.add-to-cart-message {
+  padding-left: 25px;
+  font-family: var(--font-family-bold);
+}

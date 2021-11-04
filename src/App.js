@@ -15,6 +15,7 @@ import MensCollection from "./pages/CollectionsPage/MensCollection/MensCollectio
 import ForgotPasswordPage from "./pages/ForgotPasswordPage/ForgotPasswordPage";
 import SendSuccessfullyPage from "./pages/SuccessPage/SendSuccessfullyPage";
 import WomensCollection from "./pages/CollectionsPage/WomensCollection/WomensCollection";
+import ProductDetail from "./components/common/Catalog/ProductDetail";
 
 function App() {
     return (
@@ -41,6 +42,10 @@ function App() {
 
                     <Route exact path="/dames-collectie">
                         <WomensCollection />
+                    </Route>
+
+                    <Route path="/product/:productId">
+                        <ProductDetail />
                     </Route>
 
                     <Route exact path="/login">
