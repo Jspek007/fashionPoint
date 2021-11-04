@@ -33,7 +33,20 @@
   padding-top: 25px;
 }
 
-.add-to-cart-button-container {
+.bottom-detail-container {
+  display: flex;
   position: absolute;
   bottom: 0;
+}
+
+.product-rating-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  justify-content: center;
+}
+
+.rating > span:hover:before {
+  content: "\2605";
+  position: absolute;
 }

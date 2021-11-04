@@ -10,9 +10,9 @@ function ProductDetail() {
     const [productData, setProductData] = useState([]);
 
     const {productId} = useParams();
-    console.log(productId);
 
     const getSingleProductApi = `https://fakestoreapi.com/products/${productId}`
+
 
     useEffect(() => {
         const fetchSpecificProduct = async () => {
@@ -20,6 +20,7 @@ function ProductDetail() {
             try {
                 const result = await axios.get(getSingleProductApi);
                 setProductData(result.data);
+                console.log(productData)
             } catch (error) {
                 console.log(error);
             }
@@ -27,10 +28,11 @@ function ProductDetail() {
         fetchSpecificProduct().then(() => {
             setLoading(false);
         });
-    }, []);
+    }, [getSingleProductApi]);
 
 
     return (
+
         <section className="product-detail-container">
             <section className="product-image-container">
                 <img src={productData.image} className="product-image" alt={productData.title}/>
@@ -42,8 +44,13 @@ function ProductDetail() {
                 <section className="product-detail-description">
                     {productData.description}
                 </section>
-                <section className="add-to-cart-button-container">
-                    <AddToCartButton specificProductData={productData}/>
+                <section className="bottom-detail-container">
+                        <AddToCartButton specificProductData={productData}/>
+                    <section className="product-rating-container">
+                        <section className="rating">
+                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                        </section>
+                    </section>
                 </section>
             </section>
         </section>
