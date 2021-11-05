@@ -1,4 +1,3 @@
-import Usp from "./Usp";
 import Header from "./Header";
 import PaymentMethods from "./PaymentMethods";
 import Footer from "./Footer";
@@ -10,7 +9,6 @@ import CategoryBanners from "./Catalog/CategoryBanners";
 import CatalogFilter from "./Catalog/CategoryFilters/PriceFilter";
 
 export {
-    Usp,
     Header,
     PaymentMethods,
     Footer,
