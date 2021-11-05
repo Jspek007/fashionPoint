@@ -21,8 +21,8 @@ function SignedInMenu() {
             </button>
             <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
                 <ul>
-                    <li><Link exact to="/my-account">Mijn account</Link></li>
-                    <li><Link exact to="/my-account">Mijn account</Link></li>
+                    <li><Link exact to="/mijn-account" onClick={onClick}>Mijn account</Link></li>
+                    <li><Link exact to="/wishlist" onClick={onClick}>Wishlist</Link></li>
                     <li><Link exact to="/" onClick={logout}>Uitloggen</Link></li>
                 </ul>
             </nav>
