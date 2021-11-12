@@ -12,10 +12,11 @@
 .main-header {
   display: flex;
   justify-content: space-between;
-  margin: 0 100px;
-  width: 100%;
+  width: 50%;
+  margin-left: 100px;
   height: 70px;
   align-items: center;
+  column-count: 2;
 }
 
 .left-header-section-item,
@@ -30,12 +31,8 @@
 }
 
 .main-header-logo {
-  position: absolute;
-  left: 45%;
   font-size: 32px;
   font-family: var(--font-family-bold);
-  display: flex;
-  align-items: center;
 }
 
 .right-header-section {

@@ -1,0 +1,15 @@
+.my-account-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 50px 10px 30px;
+}
+
+.account-title {
+  width: 100%;
+  height: 25px;
+}
+
+.personal-information-container {
+  margin-left: 50px;
+}

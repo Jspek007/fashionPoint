@@ -1,0 +1,44 @@
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-75 {
+  flex: 75%;
+}
+
+.col-50 {
+  flex: 50%;
+}
+
+.col-25 {
+  flex: 25%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 10px;
+}
+
+.form-container {
+  background-color: var(--color-dimmed-secondary);
+  padding: 5px 20px 15px 20px;
+  max-width: 800px;
+}
+
+input[type=text] {
+  padding: 10px 20px;
+  margin-right: 20px;
+  width: 25%;
+  border: 1px solid var(--color-dimmed-primary);
+}
+
+.datepicker-section {
+  display: flex;
+  align-items: center;
+}
+
+.dateofbirth-label {
+  padding-right: 13px;
+}

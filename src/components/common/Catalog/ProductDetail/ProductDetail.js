@@ -20,7 +20,6 @@ function ProductDetail() {
             try {
                 const result = await axios.get(getSingleProductApi);
                 setProductData(result.data);
-                console.log(productData)
             } catch (error) {
                 console.log(error);
             }
