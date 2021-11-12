@@ -1,0 +1,29 @@
+.my-account-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 50px 10px 30px;
+}
+
+.accordion-container {
+  max-width: 650px;
+  height: 650px;
+  overflow: auto;
+}
+
+.my-account-accordion {
+  width: 600px;
+}
+
+.account-title {
+  width: 100%;
+  height: 25px;
+}
+
+.personal-information-container {
+  margin-left: 50px;
+}
+
+.accordion-content {
+
+}

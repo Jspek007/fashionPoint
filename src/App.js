@@ -16,6 +16,7 @@ import ForgotPasswordPage from "./pages/ForgotPasswordPage/ForgotPasswordPage";
 import SendSuccessfullyPage from "./pages/SuccessPage/SendSuccessfullyPage";
 import WomensCollection from "./pages/CollectionsPage/WomensCollection/WomensCollection";
 import ProductDetail from "./components/common/Catalog/ProductDetail";
+import MyAccountPage from "./pages/MyAccountPage/MyAccountPage";
 
 function App() {
     return (
@@ -26,40 +27,44 @@ function App() {
                     <Route exact path="/">
                         <Home/>
                     </Route>
+
                     <Switch exact path="/klantenservice">
                         <Customerservice/>
                     </Switch>
+
                     <Route exact path="/over-ons">
                         <AboutUs/>
                     </Route>
+
                     <Route exact path="/collectie">
                         <CollectionPage/>
                     </Route>
-
                     <Route exact path="/heren-collectie">
-                        <MensCollection />
+                        <MensCollection/>
                     </Route>
 
                     <Route exact path="/dames-collectie">
-                        <WomensCollection />
+                        <WomensCollection/>
                     </Route>
 
                     <Route path="/product/:productId">
-                        <ProductDetail />
+                        <ProductDetail/>
                     </Route>
 
                     <Route exact path="/login">
                         <LoginPage/>
                     </Route>
+
                     <Route exact path="/aanmelden">
                         <SignupPage/>
                     </Route>
+
                     <Route exact path="/email-register">
                         <EmailSignUpPage/>
                     </Route>
 
                     <Route exact path="/wachtwoord-vergeten">
-                        <ForgotPasswordPage />
+                        <ForgotPasswordPage/>
                     </Route>
 
                     <Route path="/algemene-voorwaarden">
@@ -71,7 +76,15 @@ function App() {
                     </Route>
 
                     <Route exact path="/email-is-verzonden">
-                        <SendSuccessfullyPage />
+                        <SendSuccessfullyPage/>
+                    </Route>
+
+                    <Route exact path="/mijn-account">
+                        <MyAccountPage />
+                    </Route>
+
+                    <Route exact path="/wishlist">
+                        Hello
                     </Route>
                 </Switch>
                 <Footer/>

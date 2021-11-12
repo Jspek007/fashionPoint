@@ -1,0 +1,73 @@
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-75 {
+  flex: 75%;
+}
+
+.col-50 {
+  flex: 50%;
+}
+
+.col-25 {
+  flex: 25%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 10px;
+}
+
+.form-container {
+  padding: 5px 20px 15px 20px;
+  max-width: 800px;
+}
+
+.form-row input[type=text] {
+  padding: 10px 20px;
+  margin-right: 20px;
+  width: 35%;
+  border: 1px solid var(--color-dimmed-primary);
+}
+
+.col-75 .personal-info, .col-75 .living-area-info {
+  display: flex;
+}
+
+.datepicker-section {
+  display: flex;
+  align-items: center;
+}
+
+.dateofbirth-label {
+  padding-right: 13px;
+}
+
+.gender-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gender-select {
+  width: 50%;
+}
+
+.gender-select {
+  height: 37px;
+}
+
+.street-section > input[type=text] {
+  width: 83%;
+}
+
+.street-section {
+  padding: 0 10px;
+}
+
+.gender-section, .city-input {
+  padding-left: 30px;
+}

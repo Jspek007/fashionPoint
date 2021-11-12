@@ -7,13 +7,6 @@
   border-radius: 10px;
   font-family: var(--font-family-bold);
   cursor: pointer;
-  transition: all 1s ease;
-  transform: scale(1);
-}
-
-.sign-up-action-button:hover {
-  cursor: pointer;
-  background: hsl(0, 0%, 25);
 }
 
 .login-action-button {
@@ -24,14 +17,6 @@
   border: 1px solid hsla(346, 100%, 4%, 1);
   border-radius: 10px;
   font-family: var(--font-family-bold);
-  transition: all 1s ease;
-  transform: scale(1);
-}
-
-.login-action-button:hover {
-  cursor: pointer;
-  background: hsl(0, 0%, 85);
-  border-color: hsl(0, 0%, 85);
 }
 
 .submit-login-button {
@@ -42,13 +27,11 @@
   color: var(--color-secondary);
   border: none;
   cursor: pointer;
-  transition: all 1s ease;
-  transform: scale(1);
   margin-left: 5px;
 }
 
-.submit-login-button:hover {
-  transition: all 1s ease;
-  transform: scale(1.01);
-  background-color: hsl(0, 0%, 15);
+.error-container {
+  position: absolute;
+  margin-top: 65px;
+  color: red;
 }
