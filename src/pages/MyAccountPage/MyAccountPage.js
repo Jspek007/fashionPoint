@@ -8,11 +8,13 @@ import Accordion from "../../components/Form/MyAccount/Accordion/Accordion"
 function MyAccountPage() {
     return (
         <section className="my-account-container">
-             <AccountMenu />
-            <section className="my-account-accordion">
-                {accordionData.map(({ title, content}) => (
-                    <Accordion title={title} content={content} />
-                ))}
+            <AccountMenu/>
+            <section className="accordion-container">
+                <section className="my-account-accordion">
+                    {accordionData.map(({title, content}) => (
+                        <Accordion title={title} content={content}/>
+                    ))}
+                </section>
             </section>
         </section>
     );

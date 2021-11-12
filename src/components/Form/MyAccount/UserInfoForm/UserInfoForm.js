@@ -16,7 +16,6 @@ function UserInfoForm() {
                     <form>
                         <section className="form-row">
                             <section className="col-75">
-                                <h2>Persoonlijke gegevens</h2>
                                 <p>Naam: </p>
                                 <input type="text" name="firstname" placeholder="Voornaam" />
                                 <input type="text" name="lastname" placeholder="Achternaam" />

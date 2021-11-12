@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Accordion.scss";
 
 const Accordion = ({ title, content }) => {
     
@@ -9,7 +10,7 @@ const Accordion = ({ title, content }) => {
             <section className="accordion-title"
                     onClick={() => setIsActive(!isActive)}>
                         <section>{title}</section>
-                        <section>{isActive ? '-' : '+'}</section>
+                        <section className="accordion-icon">{isActive ? '-' : '+'}</section>
                     </section>
                     {isActive && <section className="accordion-content">{content}</section>}
         </section>
