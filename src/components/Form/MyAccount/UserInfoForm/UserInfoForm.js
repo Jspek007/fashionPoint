@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./UserInfoForm.scss";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
+import nl from "date-fns/locale/nl";
 
 function UserInfoForm() {
   const [startDate, setStartDate] = useState(new Date());
@@ -25,6 +26,8 @@ function UserInfoForm() {
                           <DatePicker
                             selected={startDate}
                             onChange={date => setStartDate(date)}
+                            locale={nl}
+                            dateFormat="dd/MM/yyyy"
                           />
                           <section className="gender-section">
                               <p className="gender-label">Geslacht: </p>
