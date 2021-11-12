@@ -26,7 +26,7 @@
   max-width: 800px;
 }
 
-.form-row > input[type=text] {
+.form-row input[type=text] {
   padding: 10px 20px;
   margin-right: 20px;
   width: 35%;
@@ -64,14 +64,10 @@
   height: 37px;
 }
 
-.street-info-container {
-  width: 86%;
+.street-input > input[type=text] {
+  width: 85%;
 }
 
 .street-section {
   padding: 0 10px;
-}
-
-.street-section > input, .address-info {
-  width: 100%;
 }
