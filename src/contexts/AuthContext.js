@@ -9,7 +9,8 @@ import {
     GoogleAuthProvider,
     FacebookAuthProvider,
     signOut,
-    confirmPasswordReset
+    confirmPasswordReset,
+    updateEmail,
 } from "firebase/auth";
 
 const AuthContext = createContext({

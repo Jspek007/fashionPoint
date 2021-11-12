@@ -24,3 +24,17 @@ h5 {
   font-size: 18px;
   font-family: var(--font-family-bold);
 }
+
+.loading-spinner {
+  margin-right: 5px;
+  animation: loader-spin 1s infinite;
+}
+
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
