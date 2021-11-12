@@ -6,17 +6,16 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 
 .change-email-input {
-  margin-top: 10px;
-  height: 20px;
-  width: 75%;
+  margin-top: 15px;
+  height: 35px;
+  width: 50%;
 }
 
 .change-email-password-input {
-  width: 35%;
-  padding: 10px 20px;
   border: 1px solid;
+  height: 35px;
 }
