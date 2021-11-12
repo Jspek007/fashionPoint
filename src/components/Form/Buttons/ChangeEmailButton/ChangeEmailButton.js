@@ -17,7 +17,7 @@ function ChangeEmailButton({newEmailValue}) {
         updateEmail(auth.currentUser, newEmailValue)
             .then(() => {
                 // window.location.reload(true);
-            }, 5000)
+            })
             .catch((error) => {
                 const errorMessage = error.message;
                 console.log(errorMessage);

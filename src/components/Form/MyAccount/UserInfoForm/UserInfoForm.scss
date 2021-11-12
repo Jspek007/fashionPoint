@@ -37,10 +37,6 @@
   display: flex;
 }
 
-.form-date-picker {
-  width: 150%;
-}
-
 .datepicker-section {
   display: flex;
   align-items: center;
@@ -64,10 +60,14 @@
   height: 37px;
 }
 
-.street-input > input[type=text] {
-  width: 85%;
+.street-section > input[type=text] {
+  width: 83%;
 }
 
 .street-section {
   padding: 0 10px;
+}
+
+.gender-section, .city-input {
+  padding-left: 30px;
 }
