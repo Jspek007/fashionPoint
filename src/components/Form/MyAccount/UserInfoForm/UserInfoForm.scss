@@ -22,7 +22,6 @@
 }
 
 .form-container {
-  background-color: var(--color-dimmed-secondary);
   padding: 5px 20px 15px 20px;
   max-width: 800px;
 }
@@ -30,8 +29,16 @@
 input[type=text] {
   padding: 10px 20px;
   margin-right: 20px;
-  width: 25%;
+  width: 35%;
   border: 1px solid var(--color-dimmed-primary);
+}
+
+.col-75 .personal-info, .col-75 .living-area-info {
+  display: flex;
+}
+
+.form-date-picker {
+  width: 150%;
 }
 
 .datepicker-section {
@@ -41,4 +48,30 @@ input[type=text] {
 
 .dateofbirth-label {
   padding-right: 13px;
+}
+
+.gender-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gender-select {
+  width: 50%;
+}
+
+.gender-select {
+  height: 37px;
+}
+
+.street-info-container {
+  width: 86%;
+}
+
+.street-section {
+  padding: 0 10px;
+}
+
+.street-section > input, .address-info {
+  width: 100%;
 }
