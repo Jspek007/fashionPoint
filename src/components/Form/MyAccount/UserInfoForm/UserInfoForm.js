@@ -3,7 +3,6 @@ import "./UserInfoForm.scss";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 import nl from "date-fns/locale/nl";
-import moment from "moment";
 
 function UserInfoForm() {
     const [startDate, setStartDate] = useState(new Date());
@@ -32,7 +31,7 @@ function UserInfoForm() {
                                         onChange={date => setStartDate(date)}
                                         locale={nl}
                                         dateFormat="dd/MM/yyyy"
-                                        maxDate={moment().format("dd/MM/yyyy")}
+                                        maxDate={startDate}
                                     />
                                     </section>
                                 </section>
