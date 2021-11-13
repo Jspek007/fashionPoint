@@ -25,14 +25,14 @@ function ChangeEmailButton({newEmailValue}) {
     }
 
     return (
-        <section className="change-email-button-container">
-            <button className="change-email-button"
+        <section className="change-credentials-button-container">
+            <button className="change-credentials-button"
                     onClick={onSubmitChangeEmail}
                     disabled={loading}>
                 {loading && (
                     <FaSpinner className="loading-spinner" />
                 )}
-                {loading && <span>Email wordt gewijzigd</span>}
+                {loading && <span>Verwerken...</span>}
                 {!loading && <span>Email wijzigen</span>}
             </button>
         </section>
