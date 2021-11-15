@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ChangeEmailButton from "../../Buttons/ChangeEmailButton";
+import ChangeEmailButton from "../../Buttons/MyAccountButtons/ChangeEmailButton";
 import {useAuth} from "../../../../contexts/AuthContext";
 
 function ChangeEmailForm() {

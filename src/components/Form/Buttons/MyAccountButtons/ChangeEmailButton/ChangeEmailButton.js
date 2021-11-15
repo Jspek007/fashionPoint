@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import "./ChangeEmailButton.scss";
-import {useAuth} from "../../../../contexts/AuthContext";
+import {useAuth} from "../../../../../contexts/AuthContext";
 import {updateEmail} from "firebase/auth";
 import {FaSpinner} from "react-icons/fa";
+import "../MyAccountButtons.scss";
 
 function ChangeEmailButton({newEmailValue}) {
 
