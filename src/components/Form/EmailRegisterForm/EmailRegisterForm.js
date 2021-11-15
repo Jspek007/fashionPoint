@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import AuthContextProvider, {useAuth} from "../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
 import {HandleRedirectToOrBack} from "../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
+import {firebaseErrors} from "../../../utils/firebaseErrors";
 
 function EmailRegisterForm() {
 
@@ -65,8 +66,7 @@ function EmailRegisterForm() {
                 HandleRedirectToOrBack({history, location})
             })
             .catch((error) => {
-                const errorMessage = error.message;
-                setSubmitError(errorMessage);
+                setSubmitError(firebaseErrors[error.code]);
             })
     }
 
