@@ -10,7 +10,6 @@ import {
     FacebookAuthProvider,
     signOut,
     confirmPasswordReset,
-    updateEmail,
 } from "firebase/auth";
 
 const AuthContext = createContext({
