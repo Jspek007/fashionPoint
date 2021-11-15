@@ -4,6 +4,7 @@ import {useAuth} from "../../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
 import {HandleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
 import {FaSpinner} from "react-icons/fa";
+import {firebaseErrors} from "../../../../utils/firebaseErrors";
 
 function SubmitLoginButton({email, password}) {
 
@@ -21,10 +22,9 @@ function SubmitLoginButton({email, password}) {
                 HandleRedirectToOrBack({ history, location })
             })
             .catch((error) => {
-                const errorMessage = error.message;
-                console.log(errorMessage)
-                setError(errorMessage);
                 isLoading(false);
+                console.log(error.code);
+                setError(firebaseErrors[error.code]);
             })
     }
 

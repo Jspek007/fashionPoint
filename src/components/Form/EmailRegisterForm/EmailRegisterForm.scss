@@ -25,6 +25,8 @@
 }
 
 .text-danger {
+  display: flex;
+  justify-content: center;
   top: 5px;
   position: relative;
   color: var(--color-error-text);
