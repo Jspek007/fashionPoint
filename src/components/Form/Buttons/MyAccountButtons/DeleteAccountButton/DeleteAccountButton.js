@@ -15,14 +15,16 @@ function DeleteAccountButton(props) {
 
     const confirmDeleteUser = (event) => {
         event.preventDefault();
-        const userConfirmation = prompt("Weet u het zeker?")
-            if (userConfirmation === "yes") {
+        const userConfirmation = prompt("Weet u het zeker? Ja om verwijdering te bevestigen.")
+            if (userConfirmation === "Ja" || userConfirmation === "ja") {
+                isLoading(true);
                 deleteUser(auth.currentUser)
                     .finally(
                         history.push("/")
                     )
             }
             else {
+                isLoading(false);
                 return false;
             }
     }
@@ -38,7 +40,8 @@ function DeleteAccountButton(props) {
                     {loading && (
                         <FaSpinner className="loading-spinner"/>
                     )}
-                        Account verwijderen
+                    {loading && <span>Uw account wordt verwijderd</span>}
+                    {!loading && <span>Account verwijderen</span>}
                 </button>
             </section>
         </>
