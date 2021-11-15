@@ -1,14 +1,16 @@
 import React, {useState} from 'react';
-import "./ChangeEmailButton.scss";
-import {useAuth} from "../../../../contexts/AuthContext";
+import {useAuth} from "../../../../../contexts/AuthContext";
 import {updateEmail} from "firebase/auth";
 import {FaSpinner} from "react-icons/fa";
+import "../MyAccountButtons.scss";
+import {useHistory} from "react-router";
 
 function ChangeEmailButton({newEmailValue}) {
 
     const [loading, isLoading] = useState(false);
 
     const auth = useAuth();
+    const history = useHistory();
 
 
     const onSubmitChangeEmail = (event) => {
@@ -16,7 +18,8 @@ function ChangeEmailButton({newEmailValue}) {
         isLoading(true);
         updateEmail(auth.currentUser, newEmailValue)
             .then(() => {
-                // window.location.reload(true);
+                isLoading(false);
+                window.location.reload();
             })
             .catch((error) => {
                 const errorMessage = error.message;
