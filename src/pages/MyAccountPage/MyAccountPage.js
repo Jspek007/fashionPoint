@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import UserInfoForm from "../../components/Form/MyAccount/UserInfoForm";
+import React from 'react';
 import "./MyAccountPage.scss";
 import AccountMenu from "../../components/Form/MyAccount/AccountMenu";
 import {accordionData} from "./AccordionData";
@@ -11,8 +10,8 @@ function MyAccountPage() {
             <AccountMenu/>
             <section className="accordion-container">
                 <section className="my-account-accordion">
-                    {accordionData.map(({title, content}) => (
-                        <Accordion title={title} content={content}/>
+                    {accordionData.map(({ title, content}) => (
+                        <Accordion key={title} title={title} content={content}/>
                     ))}
                 </section>
             </section>
