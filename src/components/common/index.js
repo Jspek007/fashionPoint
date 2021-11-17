@@ -6,7 +6,7 @@ import BrandSlider from "./BrandSlider";
 import SignedInMenu from "./SignedInMenu/SignedInMenu";
 import ProductCards from "./Catalog/ProductCards";
 import CategoryBanners from "./Catalog/CategoryBanners";
-import CatalogFilter from "./Catalog/CategoryFilters/PriceFilter";
+import CatalogFilter from "./Catalog/CatalogFilter";
 
 export {
     Header,

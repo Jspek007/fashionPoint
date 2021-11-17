@@ -3,14 +3,13 @@ import axios from "axios";
 import {useParams} from "react-router";
 import "./ProductDetail.scss";
 import AddToCartButton from "../AddToCartButton";
+import ToggleWishlistIcon from "../ToggleWishlistIcon";
 
 function ProductDetail() {
 
     const [loading, setLoading] = useState(false);
     const [productData, setProductData] = useState([]);
-
     const {productId} = useParams();
-
     const getSingleProductApi = `https://fakestoreapi.com/products/${productId}`
 
 
@@ -34,6 +33,7 @@ function ProductDetail() {
 
         <section className="product-detail-container">
             <section className="product-image-container">
+                <ToggleWishlistIcon productData={productData} />
                 <img src={productData.image} className="product-image" alt={productData.title}/>
             </section>
             <section className="product-details">
