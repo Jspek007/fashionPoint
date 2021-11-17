@@ -10,19 +10,21 @@ function AddToWishlistIcon({productData}) {
     const checkItemInWishlist = () => {
         if (wishlistArray === null || wishlistArray === []) {
             setInWishlist(false);
-        }
-
-        let itemIsInWishlist = wishlistArray.includes(productData.title)
-        if (itemIsInWishlist) {
-            setInWishlist(true)
         } else {
-            setInWishlist(false);
+
+            let itemIsInWishlist = wishlistArray.includes(productData.title)
+
+            if (itemIsInWishlist) {
+                setInWishlist(true)
+            } else {
+                setInWishlist(false);
+            }
         }
     }
 
     useEffect(() => {
         checkItemInWishlist();
-    })
+    }, [])
 
     const addProductToLocalStorage = () => {
         setInWishlist(true);
@@ -39,10 +41,19 @@ function AddToWishlistIcon({productData}) {
         localStorage.setItem('wishlist', JSON.stringify(wishlistArray));
     }
 
+    const removeProductFromLocalStorage = () => {
+        wishlistArray = JSON.parse(localStorage.getItem('wishlist')) ?
+            JSON.parse(localStorage.getItem('wishlist')) : [];
+        const productPosition = wishlistArray.map(function (e) {return e.title}).indexOf(productData.title);
+        wishlistArray.splice(productPosition, 1);
+        localStorage.setItem(`wishlist`, JSON.stringify(wishlistArray));
+        setInWishlist(false);
+    }
+
     return (
         <section className="wishlist-icon-container">
             {!inWishlist && <FaRegHeart className="wishlist-icon" onClick={addProductToLocalStorage}/>}
-            {inWishlist && <FaHeart className="wishlist-icon"/>}
+            {inWishlist && <FaHeart className="wishlist-icon" onClick={removeProductFromLocalStorage}/>}
         </section>
     )
 }
