@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./CatalogFilter.scss";
-import { ProductCards } from "../../../index";
+import { ProductCards } from "../../index";
 
 function CatalogFilter({ productData }) {
   const [data, setData] = useState([]);
