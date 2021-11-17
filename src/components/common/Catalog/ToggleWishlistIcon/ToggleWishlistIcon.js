@@ -1,17 +1,17 @@
 import React, {useEffect, useState} from 'react';
-import "./AddToWishlistIcon.scss";
+import "./ToggleWishlistIcon.scss";
 import {FaRegHeart, FaHeart} from "react-icons/all";
 
-function AddToWishlistIcon({productData}) {
+function ToggleWishlistIcon({productData}) {
 
     const [inWishlist, setInWishlist] = useState(false);
     let wishlistArray = localStorage.getItem('wishlist');
 
-    const checkItemInWishlist = () => {
+    let checkItemInWishlist;
+    checkItemInWishlist = () => {
         if (wishlistArray === null || wishlistArray === []) {
             setInWishlist(false);
         } else {
-
             let itemIsInWishlist = wishlistArray.includes(productData.title)
 
             if (itemIsInWishlist) {
@@ -20,11 +20,11 @@ function AddToWishlistIcon({productData}) {
                 setInWishlist(false);
             }
         }
-    }
+    };
 
     useEffect(() => {
         checkItemInWishlist();
-    }, [])
+    }, [checkItemInWishlist])
 
     const addProductToLocalStorage = () => {
         setInWishlist(true);
@@ -34,7 +34,8 @@ function AddToWishlistIcon({productData}) {
         let newWishlistProduct = {
             title: productData.title,
             price: productData.price,
-            image: productData.image
+            image: productData.image,
+            id: productData.id
         }
 
         wishlistArray.push(newWishlistProduct);
@@ -58,4 +59,4 @@ function AddToWishlistIcon({productData}) {
     )
 }
 
-export default AddToWishlistIcon;
+export default ToggleWishlistIcon;

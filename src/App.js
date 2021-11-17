@@ -17,6 +17,7 @@ import SendSuccessfullyPage from "./pages/SuccessPage/SendSuccessfullyPage";
 import WomensCollection from "./pages/CollectionsPage/WomensCollection/WomensCollection";
 import ProductDetail from "./components/common/Catalog/ProductDetail";
 import MyAccountPage from "./pages/MyAccountPage/MyAccountPage";
+import Wishlist from "./pages/Wishlist/Wishlist";
 
 function App() {
     return (
@@ -84,7 +85,7 @@ function App() {
                     </Route>
 
                     <Route exact path="/wishlist">
-                        Hello
+                        <Wishlist />
                     </Route>
                 </Switch>
                 <Footer/>

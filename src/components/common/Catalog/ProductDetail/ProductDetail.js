@@ -3,7 +3,7 @@ import axios from "axios";
 import {useParams} from "react-router";
 import "./ProductDetail.scss";
 import AddToCartButton from "../AddToCartButton";
-import AddToWishlistIcon from "../AddToWishlistIcon";
+import ToggleWishlistIcon from "../ToggleWishlistIcon";
 
 function ProductDetail() {
 
@@ -33,7 +33,7 @@ function ProductDetail() {
 
         <section className="product-detail-container">
             <section className="product-image-container">
-                <AddToWishlistIcon productData={productData} />
+                <ToggleWishlistIcon productData={productData} />
                 <img src={productData.image} className="product-image" alt={productData.title}/>
             </section>
             <section className="product-details">
