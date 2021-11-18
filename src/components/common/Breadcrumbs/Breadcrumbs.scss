@@ -1,0 +1,27 @@
+.breadcrumbs {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+}
+
+.breadcrumb__item {
+  margin-right: 15px;
+  text-decoration: underline;
+  color: var(--color-dimmed-primary);
+  font-family: var(--font-family-italic);
+}
+
+.breadcrumb__item:after {
+  position: absolute;
+  content: '>';
+  margin-left: 5px;
+}
+
+.breadcrumb__active {
+  font-family: var(--font-family-bold);
+  text-decoration: none;
+}
