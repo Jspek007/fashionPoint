@@ -18,34 +18,44 @@ import WomensCollection from "./pages/CollectionsPage/WomensCollection/WomensCol
 import ProductDetail from "./components/common/Catalog/ProductDetail";
 import MyAccountPage from "./pages/MyAccountPage/MyAccountPage";
 import Wishlist from "./pages/Wishlist/Wishlist";
+import routes from "./routes/routes";
+import Breadcrumbs from "./components/common/Breadcrumbs/Breadcrumbs";
 
-const App = () => {
-    return (
-        <AuthContextProvider>
-            <Router>
-                <Header/>
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/klantenservice" component={Customerservice} />
-                    <Route exact path="/over-ons" component={AboutUs} />
-                    <Route exact path="/collectie" component={CollectionPage} />
-                    <Route exact path="/heren-collectie" component={MensCollection} />
-                    <Route exact path="/dames-collectie" component={WomensCollection} />
-                    <Route path="/product/:productId" component={ProductDetail} />
-                    <Route exact path="/login" component={LoginPage} />
-                    <Route exact path="/aanmelden" component={SignupPage} />
-                    <Route exact path="/email-register" component={EmailSignUpPage} />
-                    <Route exact path="/wachtwoord-vergeten" component={ForgotPasswordPage} />
-                    <Route path="/algemene-voorwaarden" component={TermsAndConditions} />
-                    <Route exact path="/privacy" component={PrivacyPage} />
-                    <Route exact path="/email-is-verzonden" component={SendSuccessfullyPage} />
-                    <Route exact path="/mijn-account" component={MyAccountPage} />
-                    <Route exact path="/wishlist" component={Wishlist} />
-                </Switch>
-                <Footer/>
-            </Router>
-        </AuthContextProvider>
-    );
-}
+const App = () => (
+    <Router>
+        <Switch>
+            {routes.map(({path, Component}, key) => (
+                <Route
+                    exact
+                    path={path}
+                    key={key}
+                    render={props => {
+                        const crumbs = routes.filter(({path}) => props.match.path.includes(path))
+                            .map(({path, ...rest}) => ({
+                                path: Object.keys(props.match.params).length
+                                    ? Object.keys(props.match.params).reduce(
+                                        (path, param) => path.replace(
+                                            `:${param}`, props.match.params[param]
+                                        ), path
+                                    )
+                                    : path,
+                                ...rest
+                            }));
+                        console.log(`generated crumbs for ${props.match.path}`);
+                        crumbs.map(({name, path}) => console.log({name, path}));
+
+                        return (
+                            <AuthContextProvider>
+                            <Header/>
+                                <Breadcrumbs crumbs={crumbs} />
+                                <Component {...props} />
+                                <Footer />
+                            </AuthContextProvider>
+                        )
+                    }}/>
+            ))}
+        </Switch>
+    </Router>
+);
 
 export default App;

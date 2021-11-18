@@ -11,7 +11,7 @@ function ProductCards({data}) {
                         {data.map((item) => {
                             return (
                                 <Link key={item.id} className="product-link"
-                                      exact="true" to={`/product/${item.id}`}>
+                                      exact="true" to={`/collectie/${item.category}/${item.id}`}>
                                     <section className="product-item-container">
                                         <section className="product-item-image-container">
                                             <img src={item.image} className="product-item-image" alt={`$item.title`}/>
