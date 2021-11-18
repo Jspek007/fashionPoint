@@ -19,74 +19,28 @@ import ProductDetail from "./components/common/Catalog/ProductDetail";
 import MyAccountPage from "./pages/MyAccountPage/MyAccountPage";
 import Wishlist from "./pages/Wishlist/Wishlist";
 
-function App() {
+const App = () => {
     return (
         <AuthContextProvider>
             <Router>
                 <Header/>
                 <Switch>
-                    <Route exact path="/">
-                        <Home/>
-                    </Route>
-
-                    <Switch exact path="/klantenservice">
-                        <Customerservice/>
-                    </Switch>
-
-                    <Route exact path="/over-ons">
-                        <AboutUs/>
-                    </Route>
-
-                    <Route exact path="/collectie">
-                        <CollectionPage/>
-                    </Route>
-                    <Route exact path="/heren-collectie">
-                        <MensCollection/>
-                    </Route>
-
-                    <Route exact path="/dames-collectie">
-                        <WomensCollection/>
-                    </Route>
-
-                    <Route path="/product/:productId">
-                        <ProductDetail/>
-                    </Route>
-
-                    <Route exact path="/login">
-                        <LoginPage/>
-                    </Route>
-
-                    <Route exact path="/aanmelden">
-                        <SignupPage/>
-                    </Route>
-
-                    <Route exact path="/email-register">
-                        <EmailSignUpPage/>
-                    </Route>
-
-                    <Route exact path="/wachtwoord-vergeten">
-                        <ForgotPasswordPage/>
-                    </Route>
-
-                    <Route path="/algemene-voorwaarden">
-                        <TermsAndConditions/>
-                    </Route>
-
-                    <Route exact path="/privacy">
-                        <PrivacyPage/>
-                    </Route>
-
-                    <Route exact path="/email-is-verzonden">
-                        <SendSuccessfullyPage/>
-                    </Route>
-
-                    <Route exact path="/mijn-account">
-                        <MyAccountPage />
-                    </Route>
-
-                    <Route exact path="/wishlist">
-                        <Wishlist />
-                    </Route>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/klantenservice" component={Customerservice} />
+                    <Route exact path="/over-ons" component={AboutUs} />
+                    <Route exact path="/collectie" component={CollectionPage} />
+                    <Route exact path="/heren-collectie" component={MensCollection} />
+                    <Route exact path="/dames-collectie" component={WomensCollection} />
+                    <Route path="/product/:productId" component={ProductDetail} />
+                    <Route exact path="/login" component={LoginPage} />
+                    <Route exact path="/aanmelden" component={SignupPage} />
+                    <Route exact path="/email-register" component={EmailSignUpPage} />
+                    <Route exact path="/wachtwoord-vergeten" component={ForgotPasswordPage} />
+                    <Route path="/algemene-voorwaarden" component={TermsAndConditions} />
+                    <Route exact path="/privacy" component={PrivacyPage} />
+                    <Route exact path="/email-is-verzonden" component={SendSuccessfullyPage} />
+                    <Route exact path="/mijn-account" component={MyAccountPage} />
+                    <Route exact path="/wishlist" component={Wishlist} />
                 </Switch>
                 <Footer/>
             </Router>
