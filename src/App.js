@@ -41,9 +41,6 @@ const App = () => (
                                     : path,
                                 ...rest
                             }));
-                        console.log(`generated crumbs for ${props.match.path}`);
-                        crumbs.map(({name, path}) => console.log({name, path}));
-
                         return (
                             <AuthContextProvider>
                             <Header/>
