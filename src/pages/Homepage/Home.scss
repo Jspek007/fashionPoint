@@ -36,27 +36,17 @@
 
 .homepage-actions {
   position: relative;
-  width: 50%;
+  width: 33%;
   top: 550px;
   left: 300px;
   right: 60px;
   animation: homepage-actionmenu 3s;
 }
 
-.sign-up-action-button-content,
-.login-action-button-content {
-  height: 65px;
-  width: 250px;
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  border: none;
-  border-radius: 10px;
-  font-family: var(--font-family-bold);
-  cursor: pointer;
-}
-
-.sign-up-action-button-content {
-  margin-right: 30px;
+.homepage-action-buttons {
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .action-text-main,
@@ -67,7 +57,7 @@
 }
 
 .action-text-main {
-  font-size: 30px;
+  font-size: 38px;
 }
 
 .action-text-secondairy {

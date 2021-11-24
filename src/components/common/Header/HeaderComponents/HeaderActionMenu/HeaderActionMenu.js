@@ -1,7 +1,8 @@
 import React from 'react';
 import {SignedInMenu} from "../../../index";
-import {LoginButton, SignupButton} from "../../../../Form/Buttons";
+import {UserControlButton} from "../../../../Form/Buttons";
 import {useAuth} from "../../../../../contexts/AuthContext";
+import {Link} from "react-router-dom";
 
 function HeaderActionMenu() {
 
@@ -15,8 +16,12 @@ function HeaderActionMenu() {
 
             {!auth.currentUser && (
                 <>
-                    <LoginButton/>
-                    <SignupButton/>
+                    <Link exact="true" to="/login">
+                        <UserControlButton callToAction="Inloggen"/>
+                    </Link>
+                    <Link exact="true" to="/aanmelden">
+                        <UserControlButton callToAction="Aanmelden" />
+                    </Link>
                 </>
             )}
         </>

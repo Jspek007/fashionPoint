@@ -37,10 +37,6 @@ export default function AuthContextProvider({ children }) {
         }
     }, [])
 
-    useEffect(() => {
-        console.log("The user is", currentUser)
-    }, [currentUser])
-
     function login(email, password) {
         return signInWithEmailAndPassword(auth, email, password);
     }

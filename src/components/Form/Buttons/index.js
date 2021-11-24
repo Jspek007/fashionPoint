@@ -1,7 +1,5 @@
-import LoginButton from "./UserControlButtons/LoginButton";
-import SignupButton from "./UserControlButtons/SignupButton";
+import UserControlButton from "./UserControlButton/UserControlButton";
 
 export {
-    LoginButton,
-    SignupButton,
+    UserControlButton,
 }
