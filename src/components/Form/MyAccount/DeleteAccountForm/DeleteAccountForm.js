@@ -33,7 +33,7 @@ function DeleteAccountForm() {
             <section className="change-credentials-form">
                 <p>Weet u zeker dat u uw account wilt verwijderen?</p>
             </section>
-            <section className="delete-account-button-container">
+            <section className="button-container">
                 <FunctionalButton clickHandler={confirmDeleteUser}>
                     {loading && (
                         <FaSpinner className="loading-spinner"/>
