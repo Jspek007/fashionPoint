@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import {BrandSlider} from "../../components/common";
 import CategoryBanner from "../../components/common/CategoryBanner";
 import {useAuth} from "../../contexts/AuthContext";
+import {UserControlButton} from "../../components/Form/Buttons";
 
 function Home() {
 
@@ -54,17 +55,15 @@ function Home() {
                                 <section className="action-text-secondairy">
                                     Met kortingen tot wel 70%
                                 </section>
-                                <Link exact="true" to="/login">
-                                    <button className="sign-up-action-button-content">
-                                        Ik heb al een account
-                                    </button>
-                                </Link>
 
-                                <Link exact="true" to="/aanmelden">
-                                    <button className="login-action-button-content">
-                                        Meld mij aan
-                                    </button>
-                                </Link>
+                                <section className="homepage-action-buttons">
+                                    <Link exact="true" to="/login">
+                                        <UserControlButton callToAction="Inloggen"/>
+                                    </Link>
+                                    <Link exact="true" to="/aanmelden">
+                                        <UserControlButton callToAction="Aanmelden"/>
+                                    </Link>
+                                </section>
                             </section>
                         </section>
                     </Fragment>

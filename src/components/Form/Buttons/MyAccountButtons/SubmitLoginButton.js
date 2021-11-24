@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./Buttons.scss";
+import "../UserControlButton/UserControlButton.scss";
 import {useAuth} from "../../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
 import {HandleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";

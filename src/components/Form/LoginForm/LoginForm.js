@@ -1,5 +1,5 @@
 import "./LoginForm.scss";
-import SubmitLoginButton from "../Buttons/UserControlButtons/SubmitLoginButton";
+import SubmitLoginButton from "../Buttons/MyAccountButtons/SubmitLoginButton";
 import {useState} from "react";
 
 function LoginForm() {
