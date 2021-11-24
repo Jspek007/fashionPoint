@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {FaSpinner} from "react-icons/fa";
 import {useAuth} from "../../../../../contexts/AuthContext";
 import { deleteUser } from 'firebase/auth';
-import "../MyAccountButtons.scss";
+import "../FunctionalButton.scss";
 import {useHistory} from "react-router";
 
 function DeleteAccountButton(props) {

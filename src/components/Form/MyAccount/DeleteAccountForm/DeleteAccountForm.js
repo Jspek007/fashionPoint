@@ -1,5 +1,5 @@
 import React from 'react';
-import DeleteAccountButton from "../../Buttons/MyAccountButtons/DeleteAccountButton";
+import DeleteAccountButton from "../../Buttons/MyAccountButton/DeleteAccountButton";
 
 function DeleteAccountForm() {
     return (

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ChangePasswordButton from "../../Buttons/MyAccountButtons/ChangePasswordButton";
+import ChangePasswordButton from "../../Buttons/MyAccountButton/ChangePasswordButton";
 
 function ChangePasswordForm() {
     const [currentPassword, setCurrentPassword ] = useState('');

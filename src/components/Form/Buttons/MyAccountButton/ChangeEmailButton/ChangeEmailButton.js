@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useAuth} from "../../../../../contexts/AuthContext";
 import {updateEmail} from "firebase/auth";
 import {FaSpinner} from "react-icons/fa";
-import "../MyAccountButtons.scss";
+import "../FunctionalButton.scss";
 import {useHistory} from "react-router";
 
 function ChangeEmailButton({newEmailValue}) {

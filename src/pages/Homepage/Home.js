@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import {BrandSlider} from "../../components/common";
 import CategoryBanner from "../../components/common/CategoryBanner";
 import {useAuth} from "../../contexts/AuthContext";
-import {UserControlButton} from "../../components/Form/Buttons";
+import {RedirectButton} from "../../components/Form/Buttons";
 
 function Home() {
 
@@ -58,10 +58,10 @@ function Home() {
 
                                 <section className="homepage-action-buttons">
                                     <Link exact="true" to="/login">
-                                        <UserControlButton callToAction="Inloggen"/>
+                                        <RedirectButton callToAction="Inloggen"/>
                                     </Link>
                                     <Link exact="true" to="/aanmelden">
-                                        <UserControlButton callToAction="Aanmelden"/>
+                                        <RedirectButton callToAction="Aanmelden"/>
                                     </Link>
                                 </section>
                             </section>

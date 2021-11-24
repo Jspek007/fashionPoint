@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useAuth} from "../../../../../contexts/AuthContext";
 import {FaSpinner} from "react-icons/fa";
 import {updatePassword} from "firebase/auth";
-import "../MyAccountButtons.scss";
+import "../FunctionalButton.scss";
 
 function ChangePasswordButton({newPasswordValue}) {
 
