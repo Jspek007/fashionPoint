@@ -1,9 +1,9 @@
 import React from "react";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
-import EmailLoginButton from "../../components/Form/Buttons/EmailLoginButton";
-import FacebookLoginButton from "../../components/Form/Buttons/FacebookLoginButton";
-import GoogleLoginButton from "../../components/Form/Buttons/GoogleLoginButton/GoogleLoginButton";
+import EmailLoginButton from "../../components/Form/Buttons/LoginProviderButtons/EmailLoginButton";
+import FacebookLoginButton from "../../components/Form/Buttons/LoginProviderButtons/FacebookLoginButton";
+import GoogleLoginButton from "../../components/Form/Buttons/LoginProviderButtons/GoogleLoginButton/GoogleLoginButton";
 import "./SignupPage.scss";
 
 function SignupPage() {
