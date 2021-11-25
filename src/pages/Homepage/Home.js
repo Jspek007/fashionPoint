@@ -85,7 +85,7 @@ function Home() {
                     <UspBanner imageSrc={MemberExclusive}
                                textTitle={"Exclusief voor leden"}
                                seoText={"Als FashionPoint lid geniet je naast zeer scherp geprijsde mode ook van een" +
-                               "snelle levering en eenvoudig retourproces. Daarnaast geven wij jou graag updates over" +
+                               "snelle levering en eenvoudig retourproces. Daarnaast geven wij jou graag updates over " +
                                "jou favoriete merken!"}
                     />
                 </>
