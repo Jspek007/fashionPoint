@@ -1,6 +1,6 @@
 import React from "react";
 import "./CollectionPage.scss";
-import CategoryBanner from "../../../components/common/CategoryBanner";
+import CategoryBanner from "../../../components/common/Content/CategoryBanner";
 
 function CollectionPage() {
   return (

@@ -1,13 +1,13 @@
 import React from 'react';
 import "./BrandSlider.scss";
-import Adidas from "../../../assets/images/brandImages/adidas.jpg"
-import Chanel from "../../../assets/images/brandImages/chanel.jpg"
-import Nike from "../../../assets/images/brandImages/nike.jpg"
-import NoLabel from "../../../assets/images/brandImages/nolabel.jpg"
-import Reiss from "../../../assets/images/brandImages/reiss.jpg"
-import Rivers from "../../../assets/images/brandImages/rivers.jpg"
-import StApe from "../../../assets/images/brandImages/st-ape.jpg"
-import Supreme from "../../../assets/images/brandImages/supreme.jpg"
+import Adidas from "../../../../assets/images/brandImages/adidas.jpg"
+import Chanel from "../../../../assets/images/brandImages/chanel.jpg"
+import Nike from "../../../../assets/images/brandImages/nike.jpg"
+import NoLabel from "../../../../assets/images/brandImages/nolabel.jpg"
+import Reiss from "../../../../assets/images/brandImages/reiss.jpg"
+import Rivers from "../../../../assets/images/brandImages/rivers.jpg"
+import StApe from "../../../../assets/images/brandImages/st-ape.jpg"
+import Supreme from "../../../../assets/images/brandImages/supreme.jpg"
 
 
 

@@ -19,18 +19,14 @@
 
 .category-item.category-item-left,
 .category-item.category-item.category-item-right {
-  background-image: url(../../../assets/images/categoryImages/mens-fashion.jpg);
+  background-image: url(../../../../assets/images/categoryImages/mens-fashion.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   filter: grayscale(60%);
 }
 
 .category-item.category-item.category-item-right {
-  background-image: url(../../../assets/images/categoryImages/womens-fashion.jpg);
-}
-
-.category-item-standalone {
-  background-image: url(../../../assets//images/categoryImages/jewellery.jpg);
+  background-image: url(../../../../assets/images/categoryImages/womens-fashion.jpg);
 }
 
 .category-item.category-item-left:hover {

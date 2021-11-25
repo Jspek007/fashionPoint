@@ -1,11 +1,11 @@
 import Header from "./Header";
-import PaymentMethods from "./PaymentMethods";
+import PaymentMethods from "./Content/PaymentMethods";
 import Footer from "./Footer";
 import LegalTermsBanner from "./LegalTermsBanner";
-import BrandSlider from "./BrandSlider";
+import BrandSlider from "./Content/BrandSlider";
 import SignedInMenu from "./SignedInMenu/SignedInMenu";
 import ProductCards from "./Catalog/ProductCards";
-import CategoryBanners from "./Catalog/CategoryBanners";
+import CategoryInformation from "./Catalog/CategoryInformation";
 import CatalogFilter from "./Catalog/CatalogFilter";
 
 export {
@@ -16,6 +16,6 @@ export {
     BrandSlider,
     SignedInMenu,
     ProductCards,
-    CategoryBanners,
+    CategoryInformation,
     CatalogFilter,
 };

@@ -3,7 +3,7 @@ import "./Footer.scss";
 import { GrInstagram, GrFacebook, GrYoutube } from "react-icons/gr";
 import LegalTermsBanner from "../LegalTermsBanner";
 import { Fragment } from "react";
-import PaymentMethods from "../PaymentMethods";
+import PaymentMethods from "../Content/PaymentMethods";
 import DeliveryInformation from "../DeliveryInformation";
 
 function Footer() {
