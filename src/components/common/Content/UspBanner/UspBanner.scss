@@ -1,7 +1,6 @@
 .usp__container {
   display: flex;
   padding: 20px 10rem;
-  background: var(--color-dimmed-secondary);
   opacity: 0;
   transform: scale(0.75);
   transition: 2s;
@@ -23,6 +22,8 @@
 .usp__image {
   max-height: 500px;
   width: auto;
+  box-shadow: 10px 10px 5px var(--color-accent);
+  border-radius: 15%;
 }
 
 .usp__text {
