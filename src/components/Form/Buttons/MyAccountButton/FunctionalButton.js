@@ -1,5 +1,6 @@
 import React from "react";
 import "../RedirectButton/RedirectButton.scss";
+import "./FunctionalButton.scss";
 
 function FunctionalButton(props) {
 

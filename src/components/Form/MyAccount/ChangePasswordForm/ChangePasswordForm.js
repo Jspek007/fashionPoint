@@ -6,7 +6,6 @@ import {FaSpinner} from "react-icons/fa";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
 
 function ChangePasswordForm() {
-    const [currentPassword, setCurrentPassword] = useState('');
     const [newPassword, setNewPassword] = useState('');
     const [loading, isLoading] = useState(false);
     const [succesMessage, setSuccesMessage] = useState('');
@@ -18,9 +17,8 @@ function ChangePasswordForm() {
     const formValidation = () => {
         if (!newPassword) {
             isDisabled(true);
-        }
-        else {
-        isDisabled(false);
+        } else {
+            isDisabled(false);
         }
     }
 
@@ -44,7 +42,6 @@ function ChangePasswordForm() {
             })
             .catch((error) => {
                 setError(firebaseErrors[error.code]);
-                console.log(error);
                 isLoading(false);
             })
     }
@@ -52,7 +49,6 @@ function ChangePasswordForm() {
     return (
         <section className="change-credentials-container">
             <section className="change-credentials-form">
-                <p className="my-account-item-title">Wijzig uw wachtwoord: </p>
                 <form className="my-account-form">
                     <input className="change-password-input" type="password" name="new-password"
                            placeholder="Nieuw wachtwoord"
@@ -75,7 +71,7 @@ function ChangePasswordForm() {
                         {loading && <span>Verwerken...</span>}
                         {!loading && <span>Wachtwoord wijzigen</span>}
                     </FunctionalButton>
-            </section>
+                </section>
             </section>
         </section>
     );
