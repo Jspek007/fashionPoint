@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import FunctionalButton from "../../Buttons/MyAccountButton/FunctionalButton";
+import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import {useAuth} from "../../../../contexts/AuthContext";
 import {useHistory} from "react-router";
 import {deleteUser} from "firebase/auth";

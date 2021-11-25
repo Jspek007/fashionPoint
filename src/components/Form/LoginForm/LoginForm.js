@@ -1,5 +1,5 @@
 import "./LoginForm.scss";
-import FunctionalButton from "../Buttons/MyAccountButton/FunctionalButton";
+import FunctionalButton from "../Buttons/FunctionalButton/FunctionalButton";
 import {useState} from "react";
 import {useAuth} from "../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
