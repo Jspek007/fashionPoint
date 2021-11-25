@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import LoginForm from "../../components/Form/LoginForm";
+import LoginForm from "../../components/Form/Forms/LoginForm";
 import "./LoginPage.scss";
 import FacebookLoginButton from "../../components/Form/Buttons/LoginProviderButtons/FacebookLoginButton";
 import GoogleLoginButton from "../../components/Form/Buttons/LoginProviderButtons/GoogleLoginButton/GoogleLoginButton";

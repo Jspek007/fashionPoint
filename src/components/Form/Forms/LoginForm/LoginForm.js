@@ -1,10 +1,10 @@
 import "./LoginForm.scss";
-import FunctionalButton from "../Buttons/FunctionalButton/FunctionalButton";
+import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import {useState} from "react";
-import {useAuth} from "../../../contexts/AuthContext";
+import {useAuth} from "../../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
-import {HandleRedirectToOrBack} from "../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
-import {firebaseErrors} from "../../../utils/firebaseErrors";
+import {HandleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
+import {firebaseErrors} from "../../../../utils/firebaseErrors";
 import {FaSpinner} from "react-icons/fa";
 
 function LoginForm() {

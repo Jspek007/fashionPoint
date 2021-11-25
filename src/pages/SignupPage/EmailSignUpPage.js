@@ -1,6 +1,6 @@
 import React from "react";
 import {Fragment} from "react";
-import EmailRegisterForm from "../../components/Form/EmailRegisterForm/EmailRegisterForm";
+import EmailRegisterForm from "../../components/Form/Forms/EmailRegisterForm/EmailRegisterForm";
 import "./EmailSignUpPage.scss";
 import {Link} from "react-router-dom";
 

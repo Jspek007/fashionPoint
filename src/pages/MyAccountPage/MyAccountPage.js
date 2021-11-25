@@ -1,8 +1,8 @@
 import React from 'react';
 import "./MyAccountPage.scss";
-import AccountMenu from "../../components/Form/MyAccount/AccountMenu";
+import AccountMenu from "../../components/Form/Forms/MyAccount/AccountMenu";
 import {accordionData} from "./AccordionData";
-import Accordion from "../../components/Form/MyAccount/Accordion/Accordion"
+import Accordion from "../../components/Form/Forms/MyAccount/Accordion/Accordion"
 
 function MyAccountPage() {
     return (

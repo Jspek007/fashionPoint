@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {useAuth} from "../../../../contexts/AuthContext";
+import {useAuth} from "../../../../../contexts/AuthContext";
 import {updateEmail} from "firebase/auth";
 import {FaSpinner} from "react-icons/fa";
-import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
-import {firebaseErrors} from "../../../../utils/firebaseErrors";
+import FunctionalButton from "../../../Buttons/FunctionalButton/FunctionalButton";
+import {firebaseErrors} from "../../../../../utils/firebaseErrors";
 
 function ChangeEmailForm() {
 
