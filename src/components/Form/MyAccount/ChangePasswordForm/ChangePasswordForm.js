@@ -1,25 +1,82 @@
-import React, {useState} from 'react';
-import ChangePasswordButton from "../../Buttons/MyAccountButton/ChangePasswordButton";
+import React, {useEffect, useState} from 'react';
+import FunctionalButton from "../../Buttons/MyAccountButton/FunctionalButton";
+import {useAuth} from "../../../../contexts/AuthContext";
+import {updatePassword, reauthenticateWithCredential} from "firebase/auth";
+import {FaSpinner} from "react-icons/fa";
+import {firebaseErrors} from "../../../../utils/firebaseErrors";
 
 function ChangePasswordForm() {
-    const [currentPassword, setCurrentPassword ] = useState('');
+    const [currentPassword, setCurrentPassword] = useState('');
     const [newPassword, setNewPassword] = useState('');
+    const [loading, isLoading] = useState(false);
+    const [succesMessage, setSuccesMessage] = useState('');
+    const [error, setError] = useState('');
+    const [disabled, isDisabled] = useState(true);
 
+    const auth = useAuth();
+
+    const formValidation = () => {
+        if (!newPassword) {
+            isDisabled(true);
+        }
+        else {
+        isDisabled(false);
+        }
+    }
+
+    useEffect(() => {
+        formValidation();
+    })
+
+    const handleNewPasswordChange = (event) => {
+        setNewPassword(event.target.value);
+        formValidation();
+    }
+
+    const changePassword = async (event) => {
+        event.preventDefault();
+        isLoading(true);
+        updatePassword(auth.currentUser, newPassword)
+            .then(() => {
+                setSuccesMessage("Uw wachtwoord is aangepast!")
+                isLoading(false);
+                console.log(succesMessage);
+            })
+            .catch((error) => {
+                setError(firebaseErrors[error.code]);
+                console.log(error);
+                isLoading(false);
+            })
+    }
 
     return (
         <section className="change-credentials-container">
             <section className="change-credentials-form">
-                <p>Wijzig uw wachtwoord: </p>
-                <input className="change-password-input" type="password" name="current-password"
-                       placeholder="Huidig wachtwoord"
-                       onChange={(event => setCurrentPassword(event.target.value))}
-
-                />
-                <input className="change-password-input" type="password" name="new-email" placeholder="Nieuw wachtwoord"
-                       onChange={(event => setNewPassword(event.target.value))}
-                />
+                <p className="my-account-item-title">Wijzig uw wachtwoord: </p>
+                <form className="my-account-form">
+                    <input className="change-password-input" type="password" name="new-password"
+                           placeholder="Nieuw wachtwoord"
+                           onChange={handleNewPasswordChange}
+                           autoComplete={"new-password"}
+                    />
+                </form>
+                <section className="error-container">
+                <span className="error-message">
+                    {error}
+                </span>
+                </section>
+                <section className="button-container">
+                    <FunctionalButton clickHandler={changePassword}
+                                      disabled={disabled}
+                    >
+                        {loading && (
+                            <FaSpinner className="loading-spinner"/>
+                        )}
+                        {loading && <span>Verwerken...</span>}
+                        {!loading && <span>Wachtwoord wijzigen</span>}
+                    </FunctionalButton>
             </section>
-            <ChangePasswordButton currentPasswordValue={currentPassword} newPasswordValue={newPassword} />
+            </section>
         </section>
     );
 }

@@ -4,7 +4,11 @@ import "../RedirectButton/RedirectButton.scss";
 function FunctionalButton(props) {
 
     return (
-            <button type="submit" className="functional-button" onClick={props.clickHandler}>
+            <button type="button"
+                    className="functional-button"
+                    onClick={props.clickHandler}
+                    disabled={props.disabled || false}
+            >
                 {props.children}
             </button>
     );

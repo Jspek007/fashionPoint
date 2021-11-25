@@ -23,26 +23,3 @@
 .personal-information-container {
   margin-left: 50px;
 }
-
-.change-email-input, .change-password-input {
-  margin-top: 15px;
-  height: 35px;
-  width: 75%;
-  border: 1px solid var(--color-primary);
-}
-
-.change-credentials-container {
-  padding: 5px 20px 15px 20px;
-}
-
-.change-credentials-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 10px 20px;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-}

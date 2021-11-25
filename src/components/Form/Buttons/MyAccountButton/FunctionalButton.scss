@@ -8,3 +8,8 @@
   cursor: pointer;
   border-radius: 10px;
 }
+
+.functional-button:disabled {
+  background: var(--color-disabled-button);
+  cursor: auto;
+}

@@ -8,8 +8,6 @@ import {FaSpinner} from "react-icons/fa";
 function DeleteAccountForm() {
 
     const [loading, isLoading] = useState(false);
-    const [disabled, setDisabled] = useState(true);
-    const [succesMessage, setSuccesMessage] = useState('');
     const auth = useAuth();
     const history = useHistory();
 
@@ -31,16 +29,18 @@ function DeleteAccountForm() {
     return (
         <section className="change-credentials-container">
             <section className="change-credentials-form">
-                <p>Weet u zeker dat u uw account wilt verwijderen?</p>
-            </section>
-            <section className="button-container">
-                <FunctionalButton clickHandler={confirmDeleteUser}>
-                    {loading && (
-                        <FaSpinner className="loading-spinner"/>
-                    )}
-                    {loading && <span>Uw account wordt verwijderd</span>}
-                    {!loading && <span>Account verwijderen</span>}
-                </FunctionalButton>
+                <form>
+                    <p className="my-account-item-title">Weet u zeker dat u uw account wilt verwijderen?</p>
+                    <section className="button-container">
+                        <FunctionalButton clickHandler={confirmDeleteUser}>
+                            {loading && (
+                                <FaSpinner className="loading-spinner"/>
+                            )}
+                            {loading && <span>Uw account wordt verwijderd</span>}
+                            {!loading && <span>Account verwijderen</span>}
+                        </FunctionalButton>
+                    </section>
+                </form>
             </section>
         </section>
     );
