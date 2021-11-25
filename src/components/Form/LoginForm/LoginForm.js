@@ -1,10 +1,34 @@
 import "./LoginForm.scss";
-import SubmitLoginButton from "../Buttons/MyAccountButtons/SubmitLoginButton";
+import FunctionalButton from "../Buttons/FunctionalButton/FunctionalButton";
 import {useState} from "react";
+import {useAuth} from "../../../contexts/AuthContext";
+import {useHistory, useLocation} from "react-router";
+import {HandleRedirectToOrBack} from "../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
+import {firebaseErrors} from "../../../utils/firebaseErrors";
+import {FaSpinner} from "react-icons/fa";
 
 function LoginForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const {login} = useAuth();
+    const history = useHistory();
+    const location = useLocation();
+    const [loading, isLoading] = useState(false);
+    const [error, setError] = useState('');
+
+    const onSubmitLogin = async (event) => {
+        event.preventDefault();
+        isLoading(true);
+        login(email, password)
+            .then(() => {
+                HandleRedirectToOrBack({ history, location })
+            })
+            .catch((error) => {
+                isLoading(false);
+                console.log(error.code);
+                setError(firebaseErrors[error.code]);
+            })
+    }
 
   return (
     <form>
@@ -35,8 +59,19 @@ function LoginForm() {
       </fieldset>
 
       <section className="submit-login">
-        <SubmitLoginButton email={email} password={password} />
+          <FunctionalButton clickHandler={onSubmitLogin}>
+              {loading && (
+                  <FaSpinner className="loading-spinner" />
+              )}
+              {loading && <span>U wordt ingelogd</span>}
+              {!loading && <span>Inloggen</span>}
+          </FunctionalButton>
       </section>
+        <section className="error-container">
+            <span className="error-message">
+                {error}
+            </span>
+        </section>
     </form>
   );
 }

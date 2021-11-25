@@ -1,7 +1,7 @@
 import React from "react";
-import "./UserControlButton.scss";
+import "./RedirectButton.scss";
 
-function UserControlButton(props) {
+function RedirectButton(props) {
   return (
       <button type="button" className="user-control-button">
           {props.callToAction}
@@ -9,4 +9,4 @@ function UserControlButton(props) {
   );
 }
 
-export default UserControlButton;
+export default RedirectButton;

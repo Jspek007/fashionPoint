@@ -1,5 +1,5 @@
-import UserControlButton from "./UserControlButton/UserControlButton";
+import RedirectButton from "./RedirectButton/RedirectButton";
 
 export {
-    UserControlButton,
+    RedirectButton,
 }
