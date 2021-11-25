@@ -1,9 +1,11 @@
 import "./EmailRegisterForm.scss";
 import React, {useState} from "react";
-import AuthContextProvider, {useAuth} from "../../../contexts/AuthContext";
+import {useAuth} from "../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
 import {HandleRedirectToOrBack} from "../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
 import {firebaseErrors} from "../../../utils/firebaseErrors";
+import FunctionalButton from "../Buttons/FunctionalButton/FunctionalButton";
+import {FaSpinner} from "react-icons/fa";
 
 function EmailRegisterForm() {
 
@@ -18,7 +20,8 @@ function EmailRegisterForm() {
     const [passwordError, setPasswordError] = useState('');
     const [confirmationError, setConfirmationError] = useState('');
     const [disabled, setDisabled] = useState(true);
-    const [submitError, setSubmitError] = useState('');
+    const [loading, isLoading] = useState(false);
+    const [error, setError] = useState('');
 
     const emailValidation = () => {
         const emailRegex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
@@ -61,17 +64,18 @@ function EmailRegisterForm() {
 
     const signUp = async (event) => {
         event.preventDefault();
+        isLoading(true);
         register(email, password)
             .then(() => {
                 HandleRedirectToOrBack({history, location})
             })
             .catch((error) => {
-                setSubmitError(firebaseErrors[error.code]);
+                setError(firebaseErrors[error.code]);
+                isLoading(false);
             })
     }
 
     return (
-        <AuthContextProvider>
             <form
                 onKeyUp={formValidationCheck}
             >
@@ -87,7 +91,7 @@ function EmailRegisterForm() {
                             onBlur={(event => emailValidation(event))}
                             onFocus={() => setEmailError('')}
                         />
-                        <span className="text-danger">{emailError}</span>
+                        <span className="error-message">{emailError}</span>
                     </label>
                 </fieldset>
 
@@ -103,7 +107,7 @@ function EmailRegisterForm() {
                             onBlur={(event => passwordValidation(event))}
                             onFocus={() => setPasswordError('')}
                         />
-                        <span className="text-danger">{passwordError}</span>
+                        <span className="error-message">{passwordError}</span>
                     </label>
                 </fieldset>
 
@@ -120,23 +124,27 @@ function EmailRegisterForm() {
 
                             onFocus={() => setConfirmationError('')}
                         />
-                        <span className="text-danger">{confirmationError}</span>
+                        <span className="error-message">{confirmationError}</span>
                     </label>
                 </fieldset>
-
-                <section className="submit-register">
-                    <section className="email-signup-button-container">
-                        <button
-                            onClick={signUp}
-                            className="email-signup-button"
-                            disabled={disabled}>
-                            Creëer een account
-                        </button>
-                    </section>
-                    <span className="text-danger">{submitError}</span>
+                <section className="error-container">
+                    <span className="error-message">
+                        {error}
+                    </span>
                 </section>
+
+                <section className="button-container">
+                        <FunctionalButton clickHandler={signUp}
+                                          disabled={disabled}
+                        >
+                            {loading && (
+                                <FaSpinner className="loading-spinner" />
+                            )}
+                            {loading && <span>Verwerken...</span>}
+                            {!loading && <span>Registreer</span>}
+                        </FunctionalButton>
+                    </section>
             </form>
-        </AuthContextProvider>
     );
 }
 
