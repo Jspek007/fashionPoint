@@ -1,8 +1,9 @@
 .full-width-banner-content {
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   flex: 1 1 0;
   background-color: rgba(228,215,207,255);
-  padding: 0 10%;
 }
 
 .full-width-left-container {
@@ -40,6 +41,26 @@
 
 .banner-image {
   display: flex;
-  height: 600px;
+  height: 800px;
   margin: 20px 10px;
+  animation: homepage-media 1.5s;
+  border-radius: 20%;
+}
+
+@keyframes homepage-media {
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes homepage-actionmenu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
