@@ -9,6 +9,17 @@
   cursor: pointer;
 }
 
+.user-control-button-signup {
+  height: 47px;
+  width: 112.25px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: 1px solid hsla(346, 100%, 4%, 1);
+  border-radius: 10px;
+  font-family: var(--font-family-bold);
+  cursor: pointer;
+}
+
 .submit-login-button {
   height: 50px;
   width: 220px;
