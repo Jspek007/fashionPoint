@@ -4,6 +4,8 @@ import {Footer, Header} from "./components/common";
 import AuthContextProvider from "./contexts/AuthContext";
 import routes from "./routes/routes";
 import Breadcrumbs from "./components/common/Breadcrumbs/Breadcrumbs";
+import PrivateRoute from "./routes/PrivateRoute";
+import CollectionPage from "./pages/Collections/CollectionPage/CollectionPage";
 
 const App = () => (
     <Router>
@@ -30,6 +32,7 @@ const App = () => (
                             <Header/>
                                 <Breadcrumbs crumbs={crumbs} />
                                 <Component {...props} />
+                                <PrivateRoute component={CollectionPage} path="/collectie" exact />
                                 <Footer />
                             </AuthContextProvider>
                         )
