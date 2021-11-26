@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./MensCollection.scss";
 import axios from "axios";
-import { CategoryBanners, CatalogFilter } from "../../../components/common";
+import { CategoryInformation, CatalogFilter } from "../../../components/common";
 
 function MensCollection() {
   const mensCollectionApi =
@@ -26,7 +26,7 @@ function MensCollection() {
 
   return (
     <>
-      <CategoryBanners index={0} />
+      <CategoryInformation index={0} />
       <CatalogFilter productData={productData} />
     </>
   );

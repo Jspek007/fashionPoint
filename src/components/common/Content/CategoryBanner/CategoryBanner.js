@@ -1,7 +1,7 @@
 import React from "react";
 import "./CategoryBanner.scss";
 import {Link} from "react-router-dom";
-import CategoryActionButton from "../../Form/Buttons/CategoryActionButton";
+import CategoryActionButton from "../../../Form/Buttons/CategoryActionButton";
 
 function CategoryBanner() {
   return (

@@ -1,11 +1,29 @@
 import React from "react";
 import "./RedirectButton.scss";
 
-function RedirectButton(props) {
+function RedirectButton({signup, callToAction}) {
+
+    const renderContent = () => {
+        if (!signup) {
+            return (
+                <button type="button" className="user-control-button">
+                    {callToAction}
+                </button>
+            )
+        }
+        else {
+            return (
+                <button type="button" className="user-control-button-signup">
+                    {callToAction}
+                </button>
+            )
+        }
+    }
+
   return (
-      <button type="button" className="user-control-button">
-          {props.callToAction}
-      </button>
+      <span>
+          {renderContent()}
+      </span>
   );
 }
 

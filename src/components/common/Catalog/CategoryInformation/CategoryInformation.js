@@ -1,8 +1,8 @@
 import React from 'react';
-import "./CategoryBanners.scss";
+import "./CategoryInformation.scss";
 import {CategoryData} from "./CategoryData";
 
-function CategoryBanners({ index }) {
+function CategoryInformation({ index }) {
 
     return (
         <section className="category-banner-container">
@@ -12,4 +12,4 @@ function CategoryBanners({ index }) {
     );
 }
 
-export default CategoryBanners;
+export default CategoryInformation;
