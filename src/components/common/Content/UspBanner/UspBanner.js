@@ -12,29 +12,37 @@ const UspBanner = ({imageSrc, textTitle, seoText, flipped}) => {
     const renderContent = () => {
         if (!flipped) {
             return (
+                <section className="usp-container">
                     <section className="usp__content-container">
-                        <img className="usp__image" src={imageSrc} alt="fashion-outlet"/>
+                        <section className="usp__image-container">
+                            <img className="usp__image" src={imageSrc} alt="fashion-outlet"/>
+                        </section>
                         <section className="usp__text">
                             <h2>{textTitle}</h2>
                             <p>{seoText}</p>
                         </section>
                     </section>
+                </section>
             );
         } else {
             return (
+                <section className="usp-container usp-container-flipped">
                     <section className="usp__content-container">
                         <section className="usp__text">
                             <h2>{textTitle}</h2>
                             <p>{seoText}</p>
                         </section>
-                        <img className="usp__image" src={imageSrc} alt="fashion-outlet"/>
+                        <section className="usp__image-container">
+                            <img className="usp__image" src={imageSrc} alt="fashion-outlet"/>
+                        </section>
                     </section>
+                </section>
             )
         }
     }
 
     return (
-        <div className={inView ? "usp__container usp__container--zoom" : "usp__container"} ref={ref}>
+        <div className={inView ? "usp-container usp__container--zoom" : "usp__container"} ref={ref}>
             {renderContent()}
         </div>
     )

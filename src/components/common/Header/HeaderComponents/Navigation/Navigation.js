@@ -1,18 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {useHistory, useLocation} from "react-router";
-import {HandleRedirectToOrBack} from "../../../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
 
 function Navigation() {
-
-    const history = useHistory();
-    const location = useLocation();
-
-    const logoRedirect = (event) => {
-        event.preventDefault();
-        HandleRedirectToOrBack({ history, location});
-    }
-
     return (
 
             <header className="main-header">
@@ -34,9 +23,7 @@ function Navigation() {
                 </section>
 
                 <section className="main-header-logo">
-                    <a href="/" draggable="false" className="main-header-logo"
-                        onClick={logoRedirect}
-                    >
+                    <a href="/" draggable="false" className="main-header-logo">
                         FashionPoint
                     </a>
                 </section>
