@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
+import "./Navigation.scss";
 
 function Navigation() {
     return (
@@ -21,7 +22,6 @@ function Navigation() {
                         Collectie
                     </NavLink>
                 </section>
-
                 <section className="main-header-logo">
                     <a href="/" draggable="false" className="main-header-logo">
                         FashionPoint

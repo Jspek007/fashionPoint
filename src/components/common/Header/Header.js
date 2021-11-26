@@ -7,7 +7,7 @@ function Header() {
 
     return (
         <>
-            <div className="header-container" id="sticky-header">
+            <div className="header-container">
                 <Navigation/>
                 <section className="right-header-section">
                     <HeaderActionMenu/>
