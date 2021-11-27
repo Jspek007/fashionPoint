@@ -5,9 +5,6 @@ import AuthContextProvider from "./contexts/AuthContext";
 import routes from "./routes/routes";
 import Breadcrumbs from "./components/common/Breadcrumbs/Breadcrumbs";
 import PrivateRoute from "./routes/PrivateRoute";
-import CollectionPage from "./pages/Collections/CollectionPage/CollectionPage";
-import MyAccountPage from "./pages/MyAccountPage/MyAccountPage";
-import Wishlist from "./pages/Wishlist/Wishlist";
 
 const App = () => (
     <Router>
