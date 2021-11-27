@@ -35,28 +35,34 @@ function Home() {
                             <RedirectButton callToAction="Inloggen"/>
                         </Link>
                         <Link exact="true" to="/aanmelden">
-                            <RedirectButton callToAction="Meld mij aan" signup />
+                            <RedirectButton callToAction="Meld mij aan" signup/>
                         </Link>
                     </FullWidthBanner>
 
-                    <UspBanner
-                        imageSrc={FashionImage}
-                        textTitle={"Honderden designer merken"}
-                        seoText={"Bij ons krijg je toegang tot honderden designer merken. Altijd jouw favoriete merk " +
-                        "aanwezig. En dat op één en de zelfde locatie."}
-                    />
-                    <UspBanner imageSrc={PriceImage}
-                               textTitle={"Onze prijzen..."}
-                               seoText={"Bij ons shop je eenvoudig afgeprijsde fashion. De kortingen lopen op tot wel " +
-                               "50%, waardoor wij voorraad een nieuw leven in blazen."}
-                               flipped
-                    />
-                    <UspBanner imageSrc={MemberExclusive}
-                               textTitle={"Exclusief voor leden"}
-                               seoText={"Als FashionPoint lid geniet je naast zeer scherp geprijsde mode ook van een" +
-                               "snelle levering en eenvoudig retourproces. Daarnaast geven wij jou graag updates over " +
-                               "jou favoriete merken!"}
-                    />
+                        <section className="main-content-container">
+                            <UspBanner
+                                imageSrc={FashionImage}
+                                textTitle={"Honderden designer merken"}
+                                seoText={"Bij ons krijg je toegang tot honderden designer merken. Altijd jouw favoriete merk " +
+                                "aanwezig. En dat op één en de zelfde locatie."}
+                            />
+                            <section className="main-content-container-flipped">
+                                <UspBanner imageSrc={PriceImage}
+                                           textTitle={"Onze prijzen..."}
+                                           seoText={"Bij ons shop je eenvoudig afgeprijsde fashion. De kortingen lopen op tot wel " +
+                                           "50%, waardoor wij voorraad een nieuw leven in blazen."}
+                                           flipped
+                                />
+                            </section>
+                            <section className="main-content-container">
+                                <UspBanner imageSrc={MemberExclusive}
+                                           textTitle={"Exclusief voor leden"}
+                                           seoText={"Als FashionPoint lid geniet je naast zeer scherp geprijsde mode ook van een" +
+                                           "snelle levering en eenvoudig retourproces. Daarnaast geven wij jou graag updates over " +
+                                           "jou favoriete merken!"}
+                                />
+                            </section>
+                        </section>
                 </>
             )}
         </>

@@ -60,3 +60,40 @@
   height: auto;
   border-radius: 20%;
 }
+
+.main-content-container {
+  position: relative;
+  background-color: var(--color-dimmed-primary);
+  color: var(--color-secondary);
+}
+
+.main-content-container-flipped:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: var(--color-dimmed-primary);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.main-content-container-flipped:before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: var(--color-dimmed-secondary);
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+.main-content-container-flipped {
+  position: relative;
+  background-color: var(--color-dimmed-secondary);
+  color: var(--color-primary);
+}
+
+
+
