@@ -6,11 +6,13 @@ import routes from "./routes/routes";
 import Breadcrumbs from "./components/common/Breadcrumbs/Breadcrumbs";
 import PrivateRoute from "./routes/PrivateRoute";
 import CollectionPage from "./pages/Collections/CollectionPage/CollectionPage";
+import MyAccountPage from "./pages/MyAccountPage/MyAccountPage";
+import Wishlist from "./pages/Wishlist/Wishlist";
 
 const App = () => (
     <Router>
         <Switch>
-            {routes.map(({path, Component}, key) => (
+            {routes.map(({path, Component, memberOnly}, key) => (
                 <Route
                     exact
                     path={path}
@@ -27,13 +29,18 @@ const App = () => (
                                     : path,
                                 ...rest
                             }));
+
                         return (
                             <AuthContextProvider>
-                            <Header/>
-                                <Breadcrumbs crumbs={crumbs} />
-                                <Component {...props} />
-                                <PrivateRoute component={CollectionPage} path="/collectie" exact />
-                                <Footer />
+                                <Header/>
+                                <Breadcrumbs crumbs={crumbs}/>
+                                {memberOnly && (
+                                    <PrivateRoute component={Component} />
+                                )}
+                                {!memberOnly && (
+                                    <Component {...props} />
+                                )}
+                                <Footer/>
                             </AuthContextProvider>
                         )
                     }}/>
