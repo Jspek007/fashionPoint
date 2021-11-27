@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
-import { auth } from "../utils/init-firebase";
+import React, {createContext, useContext, useEffect, useState} from "react";
+import {auth} from "../utils/init-firebase";
 import {
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
@@ -11,6 +11,7 @@ import {
     signOut,
     confirmPasswordReset,
 } from "firebase/auth";
+import LoadingGif from "../assets/loadingGif/6134707265a929f4cdfc1f6d_5.gif"
 
 const AuthContext = createContext({
     currentUser: null,
@@ -25,15 +26,18 @@ const AuthContext = createContext({
 
 export const useAuth = () => useContext(AuthContext);
 
-export default function AuthContextProvider({ children }) {
-    const [currentUser, setCurrentUser] = useState(null)
+export default function AuthContextProvider({children}) {
+    const [currentUser, setCurrentUser] = useState(null);
+    const [loading, isLoading] = useState(true);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, user => {
             setCurrentUser(user ? user : null)
+            isLoading(false);
         })
         return () => {
             unsubscribe();
+            isLoading(false);
         }
     }, [])
 
@@ -79,5 +83,12 @@ export default function AuthContextProvider({ children }) {
         forgotPassword,
         resetPassword,
     }
-    return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
+    return (
+        <AuthContext.Provider value={value}>
+            {loading
+                ? <img src={LoadingGif} alt="Working on your fashion outlet!"/>
+                : children
+            }
+        </AuthContext.Provider>
+    )
 }

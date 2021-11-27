@@ -4,11 +4,12 @@ import {Footer, Header} from "./components/common";
 import AuthContextProvider from "./contexts/AuthContext";
 import routes from "./routes/routes";
 import Breadcrumbs from "./components/common/Breadcrumbs/Breadcrumbs";
+import PrivateRoute from "./routes/PrivateRoute";
 
 const App = () => (
     <Router>
         <Switch>
-            {routes.map(({path, Component}, key) => (
+            {routes.map(({path, Component, memberOnly}, key) => (
                 <Route
                     exact
                     path={path}
@@ -25,12 +26,18 @@ const App = () => (
                                     : path,
                                 ...rest
                             }));
+
                         return (
                             <AuthContextProvider>
-                            <Header/>
-                                <Breadcrumbs crumbs={crumbs} />
-                                <Component {...props} />
-                                <Footer />
+                                <Header/>
+                                <Breadcrumbs crumbs={crumbs}/>
+                                {memberOnly && (
+                                    <PrivateRoute component={Component} />
+                                )}
+                                {!memberOnly && (
+                                    <Component {...props} />
+                                )}
+                                <Footer/>
                             </AuthContextProvider>
                         )
                     }}/>
