@@ -16,15 +16,28 @@ import MyAccountPage from "../pages/MyAccountPage/MyAccountPage";
 import Wishlist from "../pages/Wishlist/Wishlist";
 
 export default [
-    {path: "/", name: "Home", Component: Home, memberOnly: false,},
+    {
+        path: "/",
+        name: "Home",
+        Component: Home,
+        memberOnly: false,},
     {
         path: "/klantenservice",
         name: "Klantenservice",
         Component: Customerservice,
         memberOnly: false,
     },
-    {path: "/over-ons", name: "Over ons", Component: AboutUs},
-    {path: "/collectie", name: "Collectie", Component: CollectionPage, memberOnly: true},
+    {
+        path: "/over-ons",
+        name: "Over ons",
+        Component: AboutUs
+    },
+    {
+        path: "/collectie",
+        name: "Collectie",
+        Component: CollectionPage,
+        memberOnly: true
+    },
     {
         path: "/collectie/heren",
         name: "Heren",
@@ -43,9 +56,24 @@ export default [
         Component: ProductDetail,
         memberOnly: true,
     },
-    {path: "/login", name: "Login", Component: LoginPage, memberOnly: false,},
-    {path: "/aanmelden", name: "Aanmelden", Component: SignupPage, memberOnly: false,},
-    {path: "/email-register", name: "Registreren", Component: EmailSignUpPage, memberOnly: false,},
+    {
+        path: "/login",
+        name: "Login",
+        Component: LoginPage,
+        memberOnly: false,
+    },
+    {
+        path: "/aanmelden",
+        name: "Aanmelden",
+        Component: SignupPage,
+        memberOnly: false,
+    },
+    {
+        path: "/email-register",
+        name: "Registreren",
+        Component: EmailSignUpPage,
+        memberOnly: false,
+    },
     {
         path: "/wachtwoord-vergeten",
         name: "Wachtwoord vergeten",
@@ -58,13 +86,28 @@ export default [
         Component: TermsAndConditions,
         memberOnly: false,
     },
-    {path: "/privacy", name: "Privacy", Component: PrivacyPage, memberOnly: false},
+    {
+        path: "/privacy",
+        name: "Privacy",
+        Component: PrivacyPage,
+        memberOnly: false,
+    },
     {
         path: "/email-is-verzonden",
         name: "Email is verstuurd",
         Component: SendSuccessfullyPage,
         memberOnly: false,
     },
-    {path: "/mijn-account", name: "Mijn account", Component: MyAccountPage, memberOnly: true,},
-    {path: "/wishlist", name: "Wishlist", Component: Wishlist, memberOnly: true,},
+    {
+        path: "/mijn-account",
+        name: "Mijn account",
+        Component: MyAccountPage,
+        memberOnly: true,
+    },
+    {
+        path: "/wishlist",
+        name: "Wishlist",
+        Component: Wishlist,
+        memberOnly: true,
+    },
 ];
