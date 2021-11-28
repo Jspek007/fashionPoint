@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import "./CatalogFilter.scss";
 import {ProductCards} from "../../index";
 
-function CatalogFilter({productData}) {
+function CatalogFilter({productData, loading}) {
     const [data, setData] = useState([]);
     const [sortType, setSortType] = useState("aanbevolen");
 
@@ -43,7 +43,10 @@ function CatalogFilter({productData}) {
                     </option>
                 </select>
             </section>
-            <ProductCards data={data}/>
+
+            <section className="product-list-grid">
+                <ProductCards data={data}/>
+            </section>
         </>
     );
 }

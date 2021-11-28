@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import "./WomensCollection.scss";
 import axios from "axios";
 import { CategoryInformation, CatalogFilter } from "../../../components/common";
+import ProductCardSkeleton from "../../../components/common/SkeletonLoader/ProductCardSkeleton";
 
 function WomensCollection() {
 
@@ -28,6 +29,7 @@ function WomensCollection() {
         <>
             <CategoryInformation index={1} />
             <CatalogFilter productData={productData} />
+            {loading && <ProductCardSkeleton />}
         </>
     );
 }
