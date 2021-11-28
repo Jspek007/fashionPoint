@@ -43,7 +43,10 @@ function CatalogFilter({productData, loading}) {
                     </option>
                 </select>
             </section>
-            <ProductCards data={data} />
+
+            <section className="product-list-grid">
+                <ProductCards data={data}/>
+            </section>
         </>
     );
 }

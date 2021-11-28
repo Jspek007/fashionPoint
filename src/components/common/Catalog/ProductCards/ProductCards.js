@@ -4,8 +4,6 @@ import {Link} from "react-router-dom";
 
 function ProductCards({data}) {
     return (
-            <section className="product-list-container">
-                <section className="product-list-grid">
                     <section className="product-container">
                         {data.map((item) => {
                             return (
@@ -24,8 +22,6 @@ function ProductCards({data}) {
                             );
                         })}
                     </section>
-                </section>
-            </section>
     );
 }
 
