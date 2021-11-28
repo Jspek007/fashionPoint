@@ -1,8 +1,8 @@
 import React from 'react';
 import Skeleton from "react-loading-skeleton";
-import 'react-loading-skeleton/dist/skeleton.css'
+import 'react-loading-skeleton/dist/skeleton.css';
 
-const SkeletonCard = () => {
+const ProductCardSkeleton = () => {
     return (
         <section className="product-list-container">
             <section className="product-list-grid">
@@ -28,4 +28,4 @@ const SkeletonCard = () => {
     );
 };
 
-export default SkeletonCard;
+export default ProductCardSkeleton;

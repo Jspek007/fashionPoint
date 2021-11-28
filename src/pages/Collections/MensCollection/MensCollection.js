@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import "./MensCollection.scss";
 import axios from "axios";
 import {CategoryInformation, CatalogFilter} from "../../../components/common";
-import SkeletonCard from "../../../components/common/SkeletonLoader/SkeletonCard";
+import ProductCardSkeleton from "../../../components/common/SkeletonLoader/ProductCardSkeleton";
 
 function MensCollection() {
     const mensCollectionApi =
@@ -30,7 +30,7 @@ function MensCollection() {
         <>
             <CategoryInformation index={0}/>
             <CatalogFilter productData={productData}/>
-            {loading && <SkeletonCard />}
+            {loading && <ProductCardSkeleton />}
         </>
     )
 }

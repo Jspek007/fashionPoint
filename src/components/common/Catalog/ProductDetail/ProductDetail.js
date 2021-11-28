@@ -4,6 +4,7 @@ import {useParams} from "react-router";
 import "./ProductDetail.scss";
 import AddToCartButton from "../../../Form/Buttons/AddToCartButton";
 import ToggleWishlistIcon from "../ToggleWishlistIcon";
+import ProductDetailSkeleton from "../../SkeletonLoader/ProductDetailSkeleton";
 
 function ProductDetail() {
 
@@ -30,29 +31,33 @@ function ProductDetail() {
 
 
     return (
-
-        <section className="product-detail-container">
-            <section className="product-image-container">
-                <ToggleWishlistIcon productData={productData} />
-                <img src={productData.image} className="product-image" alt={productData.title}/>
-            </section>
-            <section className="product-details">
-                <section className="product-detail-title">
-                    {productData.title}
-                </section>
-                <section className="product-detail-description">
-                    {productData.description}
-                </section>
-                <section className="bottom-detail-container">
-                        <AddToCartButton specificProductData={productData}/>
-                    <section className="product-rating-container">
-                        <section className="rating">
-                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+        <>
+            {loading && <ProductDetailSkeleton />}
+            {!loading && (
+                <section className="product-detail-container">
+                    <section className="product-image-container">
+                        <ToggleWishlistIcon productData={productData}/>
+                        <img src={productData.image} className="product-image" alt={productData.title}/>
+                    </section>
+                    <section className="product-details">
+                        <section className="product-detail-title">
+                            {productData.title}
+                        </section>
+                        <section className="product-detail-description">
+                            {productData.description}
+                        </section>
+                        <section className="bottom-detail-container">
+                            <AddToCartButton specificProductData={productData}/>
+                            <section className="product-rating-container">
+                                <section className="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </section>
+                            </section>
                         </section>
                     </section>
                 </section>
-            </section>
-        </section>
+            )}
+        </>
     );
 }
 
