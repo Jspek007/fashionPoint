@@ -4,7 +4,7 @@ import { GrInstagram, GrFacebook, GrYoutube } from "react-icons/gr";
 import LegalTermsBanner from "../LegalTermsBanner";
 import { Fragment } from "react";
 import PaymentMethods from "../Content/PaymentMethods";
-import DeliveryInformation from "../DeliveryInformation";
+import DeliveryInformation from "../Content/DeliveryInformation";
 
 function Footer() {
   return (

@@ -17,11 +17,10 @@
 }
 
 .product-link {
-  width: 33%;
-  display: flex;
   justify-content: center;
   text-decoration: none;
   color: inherit;
+  margin: 10px 20px;
 }
 
 .product-link:visited, .product.link:hover, .product-link:focus {

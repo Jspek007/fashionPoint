@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {useParams} from "react-router";
 import "./ProductDetail.scss";
-import AddToCartButton from "../AddToCartButton";
+import AddToCartButton from "../../../Form/Buttons/AddToCartButton";
 import ToggleWishlistIcon from "../ToggleWishlistIcon";
 
 function ProductDetail() {
