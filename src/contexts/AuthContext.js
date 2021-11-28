@@ -12,6 +12,7 @@ import {
     confirmPasswordReset,
 } from "firebase/auth";
 import LoadingGif from "../assets/loadingGif/6134707265a929f4cdfc1f6d_5.gif"
+import LoadingPage from "../pages/StatusPages/LoadingPage/LoadingPage";
 
 const AuthContext = createContext({
     currentUser: null,
@@ -86,7 +87,7 @@ export default function AuthContextProvider({children}) {
     return (
         <AuthContext.Provider value={value}>
             {loading
-                ? <img src={LoadingGif} alt="Working on your fashion outlet!"/>
+                ? <LoadingPage />
                 : children
             }
         </AuthContext.Provider>

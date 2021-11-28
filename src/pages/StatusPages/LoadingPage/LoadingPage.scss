@@ -1,0 +1,15 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 75vh;
+}
+
+.loading-gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 25vh;
+  width: auto;
+}
