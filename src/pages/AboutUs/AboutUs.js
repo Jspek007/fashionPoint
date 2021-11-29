@@ -30,7 +30,7 @@ function AboutUs() {
                            sectionTitle="24/7 Klantenservice" textContent="Wij zijn pas tevreden als jij dat ook bent.
                            Dit vertaalt zich in een klantenservice die niet alleen 24/7 voor je klaar staat op de manier die jij prettig vind,
                            maar dit ook nog eens met veel passie doet!"/>
-            <GridRowBanner imageSrc={StyleAdvice} imgAlt="Getting you dressed!" flipped sectionTitle="Jouw styleadvies!"
+            <GridRowBanner imageSrc={StyleAdvice} imgAlt="Getting you dressed!" flipped sectionTitle="Jouw styleadvies"
                            textContent="
             De oude style catalogus is nauwelijks te vergelijken met het geen je tegenwoordig in je hand hebt op je device.
             Dit maakt het voor ons nog leuker onze Pointers een persoonlijk style advies te geven. Geef jouw voorkeur op,
