@@ -3,14 +3,16 @@ import {Fragment} from "react";
 import EmailRegisterForm from "../../components/Form/Forms/EmailRegisterForm/EmailRegisterForm";
 import "./EmailSignUpPage.scss";
 import {Link} from "react-router-dom";
+import Title from "../../components/common/Content/TextComponents/Title/Title";
+import SubTitle from "../../components/common/Content/TextComponents/SubTitle/SubTitle";
 
 function EmailSignUpPage() {
     return (
         <Fragment>
             <section className="email-register-container">
                 <section className="form-header">
-                    <h1 className="welcome-message">Registreer via email</h1>
-                    <h5 className="secondary-text">Krijg toegang tot honderden designer outlets</h5>
+                    <Title text="Registreer via email" />
+                    <SubTitle text="Krijg toegang tot honderden designer outlets" />
                 </section>
 
                 <section className="email-register-method">
