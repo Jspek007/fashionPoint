@@ -11,6 +11,7 @@ import {
     signOut,
     confirmPasswordReset,
 } from "firebase/auth";
+import {Footer, Header} from "../components/common";
 
 const AuthContext = createContext({
     currentUser: null,
@@ -85,7 +86,11 @@ export default function AuthContextProvider({children}) {
     return (
         <AuthContext.Provider value={value}>
             {loading
-                ? <section></section>
+                ? <>
+                    <section style={{height: '650px'}}>
+                    </section>
+                    <Footer />
+                </>
                 : children
             }
         </AuthContext.Provider>
