@@ -14,17 +14,6 @@ body {
     text-decoration: none;
 }
 
-h1 {
-  font-size: 42px;
-  font-family: var(--font-family-bold);
-  font-style: italic;
-}
-
-h5 {
-  font-size: 18px;
-  font-family: var(--font-family-bold);
-}
-
 .loading-spinner {
   margin-right: 5px;
   animation: loader-spin 1s infinite;

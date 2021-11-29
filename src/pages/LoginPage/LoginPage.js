@@ -4,14 +4,16 @@ import "./LoginPage.scss";
 import FacebookLoginButton from "../../components/Form/Buttons/LoginProviderButtons/FacebookLoginButton";
 import GoogleLoginButton from "../../components/Form/Buttons/LoginProviderButtons/GoogleLoginButton/GoogleLoginButton";
 import { Link } from "react-router-dom";
+import Title from "../../components/common/Content/TextComponents/Title/Title";
+import SubTitle from "../../components/common/Content/TextComponents/SubTitle/SubTitle";
 
 function LoginPage() {
   return (
     <Fragment>
       <section className="login-container">
         <section className="form-header">
-          <h1 className="welcome-message">Fijn dat je er weer bent</h1>
-          <h5 className="secondary-text">Login op je eigen manier</h5>
+            <Title text="Fijn dat je er weer bent!" />
+            <SubTitle text="Login op je eigen manier" />
         </section>
 
         <section className="login-method-container">

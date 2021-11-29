@@ -1,13 +1,14 @@
 import React from 'react';
 import "./FullWidthBanner.scss";
+import {SubTitle, Title} from "../TextComponents";
 
 const FullWidthBanner = (props) => {
     return (
         <section className="full-width-banner-content">
             <section className="full-width-left-container">
                 <section className="call-to-action-container">
-                    <h1 className="banner-text">{props.callToAction}</h1>
-                    <h2 className="banner-paragraph">{props.paragraph}</h2>
+                    <Title text={props.callToAction} />
+                    <SubTitle text={props.paragraph} />
                     <section className="buttons-container">
                         {props.children}
                     </section>
