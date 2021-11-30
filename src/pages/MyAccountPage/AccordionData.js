@@ -1,7 +1,7 @@
-import UserInfoForm from "../../components/Form/Forms/MyAccount/UserInfoForm/UserInfoForm";
-import ChangeEmailForm from "../../components/Form/Forms/MyAccount/ChangeEmailForm";
-import ChangePasswordForm from "../../components/Form/Forms/MyAccount/ChangePasswordForm";
-import DeleteAccountForm from "../../components/Form/Forms/MyAccount/DeleteAccountForm";
+import UserInfoForm from "../../components/common/MyAccount/UserInfoForm/UserInfoForm";
+import ChangeEmailForm from "../../components/common/MyAccount/ChangeEmailForm";
+import ChangePasswordForm from "../../components/common/MyAccount/ChangePasswordForm";
+import DeleteAccountForm from "../../components/common/MyAccount/DeleteAccountForm";
 
 export const accordionData = [
     {

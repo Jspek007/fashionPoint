@@ -1,0 +1,19 @@
+.section-title {
+  padding-left: 40px;
+}
+
+.question-container {
+  display: flex;
+  width: 100%;
+}
+
+.customer-questions {
+  width: 100%;
+}
+
+.customer-questions > li {
+  text-decoration: none;
+  list-style: none;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-accent);
+}
