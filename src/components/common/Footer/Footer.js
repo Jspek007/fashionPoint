@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.scss";
+import { Link } from "react-router-dom";
 import { GrInstagram, GrFacebook, GrYoutube } from "react-icons/gr";
 import LegalTermsBanner from "../LegalTermsBanner";
 import { Fragment } from "react";
@@ -16,7 +17,9 @@ function Footer() {
           <section className="footer-section footer-section-one">
             <h3 className="footer-header">FashionPoint</h3>
             <ul className="footer-list">
-              <li>Over ons</li>
+              <Link className="footer-link" exact to="/over-ons">
+                Over ons
+              </Link>
               <li>Blog</li>
               <li>Werken bij</li>
             </ul>
