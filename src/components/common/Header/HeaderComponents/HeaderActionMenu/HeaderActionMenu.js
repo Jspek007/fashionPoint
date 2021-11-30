@@ -13,8 +13,8 @@ function HeaderActionMenu() {
         <>
             {auth.currentUser && (
                 <>
-                    <SignedInMenu/>
                     <MinicartMenu />
+                    <SignedInMenu/>
                 </>
             )}
 

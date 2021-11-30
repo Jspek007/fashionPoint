@@ -1,11 +1,11 @@
 import React from 'react';
 import "./MinicartItems.scss";
 
-const MinicartItems = () => {
+const MinicartItems = (props) => {
     return (
-        <div>
-
-        </div>
+        <section className="items-container">
+            {props.children}
+        </section>
     );
 };
 
