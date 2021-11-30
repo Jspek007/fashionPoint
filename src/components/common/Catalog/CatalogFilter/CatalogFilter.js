@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import "./CatalogFilter.scss";
 import {ProductCards} from "../../index";
 
-function CatalogFilter({productData, loading}) {
+function CatalogFilter({productData}) {
     const [data, setData] = useState([]);
     const [sortType, setSortType] = useState("aanbevolen");
 

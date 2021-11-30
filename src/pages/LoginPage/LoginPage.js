@@ -18,14 +18,14 @@ function LoginPage() {
 
         <section className="login-method-container">
           <section className="third-party-methods">
-            <h2 className="third-party-login-text">Kies voor eenvoud</h2>
+            <SubTitle text="Kies voor eenvoud" />
             <section className="third-party-login-buttons">
               <FacebookLoginButton />
               <GoogleLoginButton />
             </section>
           </section>
           <section className="email-form-login">
-            <h2 className="email-login">Of per email</h2>
+            <SubTitle text="Of per email" />
             <LoginForm />
           </section>
         </section>
