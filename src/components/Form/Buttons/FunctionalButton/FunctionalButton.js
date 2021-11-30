@@ -5,7 +5,7 @@ import "./FunctionalButton.scss";
 function FunctionalButton(props) {
 
     return (
-            <button type="button"
+            <button type="submit"
                     className="functional-button"
                     onClick={props.clickHandler}
                     disabled={props.disabled || false}

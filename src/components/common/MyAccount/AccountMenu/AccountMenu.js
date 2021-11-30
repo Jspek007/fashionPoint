@@ -1,15 +1,17 @@
 import React from 'react';
 import "./AccountMenu.scss";
+import Link from "react-router-dom/es/Link";
+import {SubTitle} from "../../Content/TextComponents";
 
 function AccountMenu() {
     return (
         <section className="my-account-menu-container">
-            <h5 className="my-account-menu-title">Mijn Account</h5>
+            <SubTitle text="Mijn account" />
             <ul className="my-account-menu">
-                <li className="my-account-menu-item">Mijn profiel</li>
-                <li className="my-account-menu-item">Mijn bestellingen</li>
-                <li className="my-account-menu-item">Retourneren</li>
-                <li className="my-account-menu-item">Klantenservice</li>
+                <Link exact to="/mijn-account" className="my-account-menu-item">Mijn profiel</Link>
+                <Link exact to="/wishlist" className="my-account-menu-item">Mijn wishlist</Link>
+                <Link exact to="/klantenservice" className="my-account-menu-item">Klantenservice</Link>
+                <Link exact to="/klantenservice" className="my-account-menu-item">Retourneren</Link>
             </ul>
         </section>
     );
