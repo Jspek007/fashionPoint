@@ -20,7 +20,8 @@ export default [
         path: "/",
         name: "Home",
         Component: Home,
-        memberOnly: false,},
+        memberOnly: false,
+    },
     {
         path: "/klantenservice",
         name: "Klantenservice",
