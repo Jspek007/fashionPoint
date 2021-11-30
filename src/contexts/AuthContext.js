@@ -87,7 +87,7 @@ export default function AuthContextProvider({children}) {
         <AuthContext.Provider value={value}>
             {loading
                 ? <>
-                    <section style={{height: '650px'}}>
+                    <section style={{height: '750px'}}>
                     </section>
                     <Footer />
                 </>

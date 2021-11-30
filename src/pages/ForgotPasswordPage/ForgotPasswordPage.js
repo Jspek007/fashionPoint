@@ -35,7 +35,6 @@ function ForgotPasswordPage() {
         isLoading(true);
         forgotPassword(email)
             .then(() => {
-                console.log("HAllo")
                 history.push("/email-is-verzonden");
             })
             .catch((error) => {
