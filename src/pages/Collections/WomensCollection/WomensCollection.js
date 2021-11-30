@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import "./WomensCollection.scss";
 import axios from "axios";
 import { CategoryInformation, CatalogFilter } from "../../../components/common";
 import ProductCardSkeleton from "../../../components/common/SkeletonLoader/ProductCardSkeleton";
