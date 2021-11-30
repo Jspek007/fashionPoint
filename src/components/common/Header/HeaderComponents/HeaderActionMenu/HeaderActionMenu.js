@@ -3,7 +3,7 @@ import {SignedInMenu} from "../../../index";
 import {RedirectButton} from "../../../../Form/Buttons";
 import {useAuth} from "../../../../../contexts/AuthContext";
 import {Link} from "react-router-dom";
-import Minicart from "../../../Minicart";
+import MinicartMenu from "../../../Minicart/MinicartMenu";
 
 function HeaderActionMenu() {
 
@@ -14,7 +14,7 @@ function HeaderActionMenu() {
             {auth.currentUser && (
                 <>
                     <SignedInMenu/>
-                    <Minicart />
+                    <MinicartMenu />
                 </>
             )}
 
