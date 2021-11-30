@@ -9,6 +9,11 @@ function Header() {
         <>
             <div className="header-container">
                 <Navigation/>
+                <section className="main-header-logo">
+                    <a href="/" draggable="false" className="main-header-logo">
+                        FashionPoint
+                    </a>
+                </section>
                 <section className="right-header-section">
                     <HeaderActionMenu/>
                 </section>
