@@ -1,8 +1,8 @@
 import React from 'react';
-import "./Minicart.scss";
+import "./MinicartMenu.scss";
 import {FaShoppingCart} from "react-icons/fa"
 
-const Minicart = () => {
+const MinicartMenu = () => {
     return (
         <section className="menu-container">
             <button className="menu-trigger">
@@ -14,4 +14,4 @@ const Minicart = () => {
     );
 };
 
-export default Minicart;
+export default MinicartMenu;
