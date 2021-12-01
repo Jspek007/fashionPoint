@@ -1,0 +1,14 @@
+.cart-counter-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 190px;
+  top: 50px;
+  z-index: 25;
+  background: red;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  font-family: var(--font-family-bold);
+}
