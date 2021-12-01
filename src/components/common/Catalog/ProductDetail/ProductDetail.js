@@ -12,6 +12,9 @@ function ProductDetail() {
     const [productData, setProductData] = useState([]);
     const {productId} = useParams();
     const getSingleProductApi = `https://fakestoreapi.com/products/${productId}`
+    const [addToCartMessage, setAddToCartMessage] = useState('');
+
+    let cartArray = localStorage.getItem('currentCart');
 
 
     useEffect(() => {
@@ -28,6 +31,20 @@ function ProductDetail() {
             setLoading(false);
         });
     }, [getSingleProductApi]);
+
+    const addProductToCart = () => {
+        cartArray = JSON.parse(localStorage.getItem('currentCart')) ?
+            JSON.parse(localStorage.getItem('currentCart')) : [];
+        let newCartProduct = {
+            title: productData.title,
+            price: productData.price,
+            image: productData.image,
+            id: productData.id
+        }
+
+        cartArray.push(newCartProduct);
+        localStorage.setItem('currentCart', JSON.stringify(cartArray));
+    }
 
 
     return (
@@ -47,7 +64,7 @@ function ProductDetail() {
                             {productData.description}
                         </section>
                         <section className="bottom-detail-container">
-                            <AddToCartButton specificProductData={productData}/>
+                            <AddToCartButton clickHandler={addProductToCart} specificProductData={productData} />
                             <section className="product-rating-container">
                                 <section className="rating">
                                     <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
