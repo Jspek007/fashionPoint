@@ -24,11 +24,6 @@ function ForgotPasswordPage() {
         }
     }
 
-    const handleResetEmailChange = (event) => {
-        setEmail(event.target.value);
-        validateInputField();
-    }
-
     useEffect(() => {
         validateInputField();
     },)
