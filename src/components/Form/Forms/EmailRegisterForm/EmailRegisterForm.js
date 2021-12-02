@@ -6,6 +6,7 @@ import {HandleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
 import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import {FaSpinner} from "react-icons/fa";
+import InputField from "../InputField";
 
 function EmailRegisterForm() {
 
@@ -19,7 +20,6 @@ function EmailRegisterForm() {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [confirmationError, setConfirmationError] = useState('');
-    const [disabled, setDisabled] = useState(true);
     const [loading, isLoading] = useState(false);
     const [error, setError] = useState('');
 
@@ -52,22 +52,27 @@ function EmailRegisterForm() {
         return true;
     }
 
-    const formValidationCheck = () => {
+    const formValidationCheck = (event) => {
+        event.preventDefault();
+        isLoading(true);
+        emailValidation();
+        passwordValidation();
+        canConfirmPassword();
+
         if (emailValidation() && passwordValidation() && canConfirmPassword()) {
-            setDisabled(false);
-            return true;
+            signUp().then(() => {
+                isLoading(false);
+            })
         } else {
-            setDisabled(true);
-            return false;
+            isLoading(false);
         }
     }
 
-    const signUp = async (event) => {
-        event.preventDefault();
+    const signUp = async () => {
         isLoading(true);
         register(email, password)
             .then(() => {
-                HandleRedirectToOrBack({history, location})
+                HandleRedirectToOrBack({history, location});
             })
             .catch((error) => {
                 setError(firebaseErrors[error.code]);
@@ -76,75 +81,53 @@ function EmailRegisterForm() {
     }
 
     return (
-            <form
-                onKeyUp={formValidationCheck}
-            >
-                <fieldset>
-                    <label className="email-label" htmlFor="email-adress">
-                        <input
-                            className="email-input"
-                            type="text"
-                            id="email-adress"
-                            placeholder="Email"
-                            value={email}
-                            onChange={(event) => setEmail(event.target.value)}
-                            onBlur={(event => emailValidation(event))}
-                            onFocus={() => setEmailError('')}
-                        />
-                        <span className="error-message">{emailError}</span>
-                    </label>
-                </fieldset>
+        <form>
+            <InputField
+                labelName="email"
+                inputType="text"
+                idValue="email-adress"
+                placeholder="Email"
+                value={email}
+                eventHandler={(event) => setEmail(event.target.value)}
+                error={emailError}
+            />
+            <InputField
+                labelName="password"
+                inputType="password"
+                idValue="password"
+                placeholder="Wachtwoord"
+                value={password}
+                eventHandler={(event) => setPassword(event.target.value)}
+                error={passwordError}
+            />
+            <InputField
+                labelName="password-confirmation"
+                inputType="password"
+                idValue="password-confirmation"
+                placeholder="Wachtwoord bevestigen"
+                value={passwordConfirmation}
+                eventHandler={(event) => setPasswordConfirmation(event.target.value)}
+                error={confirmationError}
+            />
 
-                <fieldset>
-                    <label className="password-label" htmlFor="password">
-                        <input
-                            className="password-input"
-                            type="password"
-                            id="password"
-                            placeholder="Wachtwoord"
-                            value={password}
-                            onChange={(event => setPassword(event.target.value))}
-                            onBlur={(event => passwordValidation(event))}
-                            onFocus={() => setPasswordError('')}
-                        />
-                        <span className="error-message">{passwordError}</span>
-                    </label>
-                </fieldset>
-
-                <fieldset>
-                    <label className="password-confirmation-label" htmlFor="password">
-                        <input
-                            className="password-input"
-                            type="password"
-                            id="password"
-                            placeholder="Wachtwoord bevestigen"
-                            value={passwordConfirmation}
-                            onChange={(event => setPasswordConfirmation(event.target.value))}
-                            onBlur={(event => canConfirmPassword(event))}
-
-                            onFocus={() => setConfirmationError('')}
-                        />
-                        <span className="error-message">{confirmationError}</span>
-                    </label>
-                </fieldset>
+            {error && (
                 <section className="error-container">
-                    <span className="error-message">
-                        {error}
-                    </span>
+                            <span className="error-message">
+                                {error}
+                            </span>
                 </section>
+            )}
 
-                <section className="button-container">
-                        <FunctionalButton clickHandler={signUp}
-                                          disabled={disabled}
-                        >
-                            {loading && (
-                                <FaSpinner className="loading-spinner" />
-                            )}
-                            {loading && <span>Verwerken...</span>}
-                            {!loading && <span>Registreer</span>}
-                        </FunctionalButton>
-                    </section>
-            </form>
+            <section className="button-container">
+                <FunctionalButton clickHandler={formValidationCheck}>
+                    {loading && (
+                        <FaSpinner className="loading-spinner"/>
+                    )}
+                    {loading && <span>Verwerken...</span>}
+                    {!loading && <span>Registreer</span>}
+                </FunctionalButton>
+            </section>
+        </form>
     );
 }
 

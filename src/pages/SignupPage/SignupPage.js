@@ -20,7 +20,7 @@ function SignupPage() {
                     <section className="action-buttons-container">
                         <FacebookLoginButton/>
                         <GoogleLoginButton/>
-                        <Link to="/email-register" className="nav-link">
+                        <Link to="/email-doRegister" className="nav-link">
                             <EmailLoginButton/>
                         </Link>
                     </section>
