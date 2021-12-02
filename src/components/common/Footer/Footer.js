@@ -17,7 +17,7 @@ function Footer() {
           <section className="footer-section footer-section-one">
             <h3 className="footer-header">FashionPoint</h3>
             <ul className="footer-list">
-              <Link className="footer-link" exact to="/over-ons">
+              <Link className="footer-link" exact="true" to="/over-ons">
                 Over ons
               </Link>
               <li>Blog</li>
