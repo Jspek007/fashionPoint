@@ -1,11 +1,12 @@
 import "./LoginForm.scss";
 import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
-import {useState} from "react";
+import React, {useState} from "react";
 import {useAuth} from "../../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
 import {HandleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
 import {FaSpinner} from "react-icons/fa";
+import InputField from "../InputField";
 
 function LoginForm() {
     const [email, setEmail] = useState('');
@@ -32,33 +33,25 @@ function LoginForm() {
 
   return (
     <form>
-      <fieldset>
-        <label className="email-label" htmlFor="email-adress">
-          <input
-            className="email-input"
-            type="text"
-            id="email-adress"
+        <InputField
+            labelName="email"
+            inputType="text"
+            idValue="email-adress"
             placeholder="Email"
             value={email}
-            onChange={(event => setEmail(event.target.value))}
-          />
-        </label>
-      </fieldset>
+            eventHandler={(event) => setEmail(event.target.value)}
+        />
 
-      <fieldset>
-        <label className="password-label" htmlFor="password">
-          <input
-            className="password-input"
-            type="password"
-            id="password"
+        <InputField
+            labelName="password"
+            inputType="password"
+            idValue="password"
             placeholder="Wachtwoord"
             value={password}
-            onChange={(event => setPassword(event.target.value))}
-          />
-        </label>
-      </fieldset>
+            eventHandler={(event) => setPassword(event.target.value)}
+        />
 
-      <section className="submit-login">
+      <section className="button-container">
           <FunctionalButton clickHandler={onSubmitLogin}>
               {loading && (
                   <FaSpinner className="loading-spinner" />

@@ -1,8 +1,5 @@
-import "./EmailRegisterForm.scss";
 import React, {useState} from "react";
 import {useAuth} from "../../../../contexts/AuthContext";
-import {useHistory, useLocation} from "react-router";
-import {HandleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
 import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import {FaSpinner} from "react-icons/fa";
@@ -11,8 +8,6 @@ import InputField from "../InputField";
 function EmailRegisterForm() {
 
     const {register} = useAuth();
-    const history = useHistory();
-    const location = useLocation();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -72,7 +67,7 @@ function EmailRegisterForm() {
         isLoading(true);
         register(email, password)
             .then(() => {
-                HandleRedirectToOrBack({history, location});
+                isLoading(false);
             })
             .catch((error) => {
                 setError(firebaseErrors[error.code]);

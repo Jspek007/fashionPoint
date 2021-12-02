@@ -1,10 +1,10 @@
 import React from "react";
 import {Fragment} from "react";
-import EmailRegisterForm from "../../components/Form/Forms/EmailRegisterForm/EmailRegisterForm";
 import "./EmailSignUpPage.scss";
 import {Link} from "react-router-dom";
 import Title from "../../components/common/Content/TextComponents/Title/Title";
 import SubTitle from "../../components/common/Content/TextComponents/SubTitle/SubTitle";
+import EmailRegisterForm from "../../components/Form/Forms/EmailRegisterForm";
 
 function EmailSignUpPage() {
     return (
