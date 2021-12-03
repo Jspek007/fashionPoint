@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import FunctionalButton from "../../../Form/Buttons/FunctionalButton/FunctionalButton";
+import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import {useAuth} from "../../../../contexts/AuthContext";
 import {updatePassword, reauthenticateWithCredential} from "firebase/auth";
 import {FaSpinner} from "react-icons/fa";
