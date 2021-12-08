@@ -6,6 +6,8 @@ import {FaSpinner} from "react-icons/fa";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
 import InputField from "../FormComponents/InputField";
 import MyAccountForm from "../FormComponents/MyAccountForm";
+import FormErrorContainer from "../FormComponents/FormErrorContainer/FormErrorContainer";
+import FormButtonContainer from "../FormComponents/FormButtonContainer";
 
 function ChangePasswordForm() {
     const [newPassword, setNewPassword] = useState('');
@@ -50,21 +52,19 @@ function ChangePasswordForm() {
 
     return (
         <MyAccountForm>
-            <form className="my-account-form">
-                <InputField
-                    inputType="password"
-                    idValue="new-password"
-                    placeholder="Nieuw wachtwoord"
-                    eventHandler={handleNewPasswordChange}
-                    formSection="my-account"
-                />
-            </form>
-            <section className="error-container">
-                <span className="error-message">
-                    {error}
-                </span>
-            </section>
-            <section className="button-container">
+            <InputField
+                inputType="password"
+                idValue="new-password"
+                placeholder="Nieuw wachtwoord"
+                eventHandler={handleNewPasswordChange}
+                formSection="my-account"
+            />
+
+            <FormErrorContainer>
+                {error}
+            </FormErrorContainer>
+
+            <FormButtonContainer>
                 <FunctionalButton clickHandler={changePassword}
                                   disabled={disabled}
                 >
@@ -74,7 +74,7 @@ function ChangePasswordForm() {
                     {loading && <span>Verwerken...</span>}
                     {!loading && <span>Wachtwoord wijzigen</span>}
                 </FunctionalButton>
-            </section>
+            </FormButtonContainer>
         </MyAccountForm>
     );
 }

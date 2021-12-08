@@ -6,6 +6,8 @@ import {FaSpinner} from "react-icons/fa";
 import InputField from "../FormComponents/InputField";
 import {HandleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
 import {useHistory, useLocation} from "react-router";
+import FormButtonContainer from "../FormComponents/FormButtonContainer";
+import FormErrorContainer from "../FormComponents/FormErrorContainer/FormErrorContainer";
 
 function EmailRegisterForm() {
 
@@ -33,44 +35,42 @@ function EmailRegisterForm() {
     }
 
 
-return (
-    <form>
-        <InputField
-            labelName="email"
-            inputType="text"
-            idValue="email-adress"
-            placeholder="Email"
-            value={email}
-            eventHandler={(event) => setEmail(event.target.value)}
-        />
-        <InputField
-            labelName="password"
-            inputType="password"
-            idValue="password"
-            placeholder="Wachtwoord"
-            value={password}
-            eventHandler={(event) => setPassword(event.target.value)}
-        />
+    return (
+        <form>
+            <InputField
+                labelName="email"
+                inputType="text"
+                idValue="email-adress"
+                placeholder="Email"
+                value={email}
+                eventHandler={(event) => setEmail(event.target.value)}
+            />
+            <InputField
+                labelName="password"
+                inputType="password"
+                idValue="password"
+                placeholder="Wachtwoord"
+                value={password}
+                eventHandler={(event) => setPassword(event.target.value)}
+            />
 
-        {error && (
-            <section className="error-container">
-                            <span className="error-message">
-                                {error}
-                            </span>
-            </section>
-        )}
+            {error && (
+                <FormErrorContainer>
+                    {error}
+                </FormErrorContainer>
+            )}
 
-        <section className="button-container">
-            <FunctionalButton clickHandler={submitRegister}>
-                {loading && (
-                    <FaSpinner className="loading-spinner"/>
-                )}
-                {loading && <span>Verwerken...</span>}
-                {!loading && <span>Registreer</span>}
-            </FunctionalButton>
-        </section>
-    </form>
-);
+            <FormButtonContainer>
+                <FunctionalButton clickHandler={submitRegister}>
+                    {loading && (
+                        <FaSpinner className="loading-spinner"/>
+                    )}
+                    {loading && <span>Verwerken...</span>}
+                    {!loading && <span>Registreer</span>}
+                </FunctionalButton>
+            </FormButtonContainer>
+        </form>
+    );
 }
 
 export default EmailRegisterForm;

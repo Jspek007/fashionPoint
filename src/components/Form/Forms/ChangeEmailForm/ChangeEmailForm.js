@@ -6,6 +6,8 @@ import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
 import InputField from "../FormComponents/InputField";
 import MyAccountForm from "../FormComponents/MyAccountForm";
+import FormButtonContainer from "../FormComponents/FormButtonContainer";
+import FormErrorContainer from "../FormComponents/FormErrorContainer/FormErrorContainer";
 
 function ChangeEmailForm() {
 
@@ -75,22 +77,21 @@ function ChangeEmailForm() {
                 eventHandler={handleNewEmailChange}
                 formSection="my-account"
             />
-            <section className="error-container">
-                        <span className="error-message">
-                            {error}
-                        </span>
-            </section>
-            <section className="button-container">
+
+            <FormErrorContainer>
+                {error}
+            </FormErrorContainer>
+
+            <FormButtonContainer>
                 <FunctionalButton clickHandler={changeCurrentEmail}
-                                  disabled={disabled}
-                >
+                                  disabled={disabled}>
                     {loading && (
                         <FaSpinner className="loading-spinner"/>
                     )}
                     {loading && <span>Verwerken...</span>}
                     {!loading && <span>Email wijzigen</span>}
                 </FunctionalButton>
-            </section>
+            </FormButtonContainer>
         </MyAccountForm>
     );
 }
