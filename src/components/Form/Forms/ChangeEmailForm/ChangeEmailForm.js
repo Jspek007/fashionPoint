@@ -4,8 +4,8 @@ import {updateEmail} from "firebase/auth";
 import {FaSpinner} from "react-icons/fa";
 import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
-import InputField from "../InputField";
-import MyAccountForm from "../MyAccountForm";
+import InputField from "../FormComponents/InputField";
+import MyAccountForm from "../FormComponents/MyAccountForm";
 
 function ChangeEmailForm() {
 

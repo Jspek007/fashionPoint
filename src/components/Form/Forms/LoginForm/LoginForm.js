@@ -5,7 +5,7 @@ import {useHistory, useLocation} from "react-router";
 import {HandleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
 import {FaSpinner} from "react-icons/fa";
-import InputField from "../InputField";
+import InputField from "../FormComponents/InputField";
 
 function LoginForm() {
     const [email, setEmail] = useState('');

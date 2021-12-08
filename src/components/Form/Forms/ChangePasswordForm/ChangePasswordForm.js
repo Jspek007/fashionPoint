@@ -4,8 +4,8 @@ import {useAuth} from "../../../../contexts/AuthContext";
 import {updatePassword, reauthenticateWithCredential} from "firebase/auth";
 import {FaSpinner} from "react-icons/fa";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
-import InputField from "../InputField";
-import MyAccountForm from "../MyAccountForm";
+import InputField from "../FormComponents/InputField";
+import MyAccountForm from "../FormComponents/MyAccountForm";
 
 function ChangePasswordForm() {
     const [newPassword, setNewPassword] = useState('');

@@ -4,7 +4,7 @@ import {useAuth} from "../../../../contexts/AuthContext";
 import {useHistory} from "react-router";
 import {deleteUser} from "firebase/auth";
 import {FaSpinner} from "react-icons/fa";
-import MyAccountForm from "../MyAccountForm";
+import MyAccountForm from "../FormComponents/MyAccountForm";
 
 function DeleteAccountForm() {
 

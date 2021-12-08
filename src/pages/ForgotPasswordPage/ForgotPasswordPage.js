@@ -5,7 +5,7 @@ import {useAuth} from "../../contexts/AuthContext";
 import {useHistory} from "react-router";
 import {FaSpinner} from "react-icons/fa";
 import {firebaseErrors} from "../../utils/firebaseErrors";
-import InputField from "../../components/Form/Forms/InputField";
+import InputField from "../../components/Form/Forms/FormComponents/InputField";
 import {SubTitle, Title} from "../../components/common/Content/TextComponents";
 
 function ForgotPasswordPage() {
