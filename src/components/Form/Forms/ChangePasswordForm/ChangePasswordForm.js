@@ -5,6 +5,7 @@ import {updatePassword, reauthenticateWithCredential} from "firebase/auth";
 import {FaSpinner} from "react-icons/fa";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
 import InputField from "../InputField";
+import MyAccountForm from "../MyAccountForm";
 
 function ChangePasswordForm() {
     const [newPassword, setNewPassword] = useState('');
@@ -48,35 +49,33 @@ function ChangePasswordForm() {
     }
 
     return (
-        <section className="change-credentials-container">
-            <section className="change-credentials-form">
-                <form className="my-account-form">
-                    <InputField
-                        inputType="password"
-                        idValue="new-password"
-                        placeholder="Nieuw wachtwoord"
-                        eventHandler={handleNewPasswordChange}
-                        formSection="my-account"
-                    />
-                </form>
-                <section className="error-container">
+        <MyAccountForm>
+            <form className="my-account-form">
+                <InputField
+                    inputType="password"
+                    idValue="new-password"
+                    placeholder="Nieuw wachtwoord"
+                    eventHandler={handleNewPasswordChange}
+                    formSection="my-account"
+                />
+            </form>
+            <section className="error-container">
                 <span className="error-message">
                     {error}
                 </span>
-                </section>
-                <section className="button-container">
-                    <FunctionalButton clickHandler={changePassword}
-                                      disabled={disabled}
-                    >
-                        {loading && (
-                            <FaSpinner className="loading-spinner"/>
-                        )}
-                        {loading && <span>Verwerken...</span>}
-                        {!loading && <span>Wachtwoord wijzigen</span>}
-                    </FunctionalButton>
-                </section>
             </section>
-        </section>
+            <section className="button-container">
+                <FunctionalButton clickHandler={changePassword}
+                                  disabled={disabled}
+                >
+                    {loading && (
+                        <FaSpinner className="loading-spinner"/>
+                    )}
+                    {loading && <span>Verwerken...</span>}
+                    {!loading && <span>Wachtwoord wijzigen</span>}
+                </FunctionalButton>
+            </section>
+        </MyAccountForm>
     );
 }
 

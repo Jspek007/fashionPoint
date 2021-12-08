@@ -5,6 +5,7 @@ import {FaSpinner} from "react-icons/fa";
 import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
 import InputField from "../InputField";
+import MyAccountForm from "../MyAccountForm";
 
 function ChangeEmailForm() {
 
@@ -59,42 +60,38 @@ function ChangeEmailForm() {
     }
 
     return (
-        <section className="change-credentials-container">
-            <section className="change-credentials-form">
-                <form className="my-account-form">
-                    <InputField
-                        inputType="text"
-                        idValue="current-email"
-                        placeholder={checkCurrentEmail()}
-                        eventHandler={handleCurrentEmailChange}
-                        formSection="my-account"
-                    />
-                    <InputField
-                        inputType="text"
-                        idValue="new-email"
-                        placeholder="Nieuw email-adress"
-                        eventHandler={handleNewEmailChange}
-                        formSection="my-account"
-                    />
-                    <section className="error-container">
+        <MyAccountForm>
+            <InputField
+                inputType="text"
+                idValue="current-email"
+                placeholder={checkCurrentEmail()}
+                eventHandler={handleCurrentEmailChange}
+                formSection="my-account"
+            />
+            <InputField
+                inputType="text"
+                idValue="new-email"
+                placeholder="Nieuw email-adress"
+                eventHandler={handleNewEmailChange}
+                formSection="my-account"
+            />
+            <section className="error-container">
                         <span className="error-message">
                             {error}
                         </span>
-                    </section>
-                    <section className="button-container">
-                        <FunctionalButton clickHandler={changeCurrentEmail}
-                                          disabled={disabled}
-                        >
-                            {loading && (
-                                <FaSpinner className="loading-spinner"/>
-                            )}
-                            {loading && <span>Verwerken...</span>}
-                            {!loading && <span>Email wijzigen</span>}
-                        </FunctionalButton>
-                    </section>
-                </form>
             </section>
-        </section>
+            <section className="button-container">
+                <FunctionalButton clickHandler={changeCurrentEmail}
+                                  disabled={disabled}
+                >
+                    {loading && (
+                        <FaSpinner className="loading-spinner"/>
+                    )}
+                    {loading && <span>Verwerken...</span>}
+                    {!loading && <span>Email wijzigen</span>}
+                </FunctionalButton>
+            </section>
+        </MyAccountForm>
     );
 }
 

@@ -4,6 +4,7 @@ import {useAuth} from "../../../../contexts/AuthContext";
 import {useHistory} from "react-router";
 import {deleteUser} from "firebase/auth";
 import {FaSpinner} from "react-icons/fa";
+import MyAccountForm from "../MyAccountForm";
 
 function DeleteAccountForm() {
 
@@ -27,22 +28,20 @@ function DeleteAccountForm() {
     }
 
     return (
-        <section className="change-credentials-container">
-            <section className="change-credentials-form">
-                <form>
-                    <p className="my-account-item-title">Weet u zeker dat u uw account wilt verwijderen?</p>
-                    <section className="button-container">
-                        <FunctionalButton clickHandler={confirmDeleteUser}>
-                            {loading && (
-                                <FaSpinner className="loading-spinner"/>
-                            )}
-                            {loading && <span>Uw account wordt verwijderd</span>}
-                            {!loading && <span>Account verwijderen</span>}
-                        </FunctionalButton>
-                    </section>
-                </form>
-            </section>
-        </section>
+        <MyAccountForm>
+            <form>
+                <p className="my-account-item-title">Weet u zeker dat u uw account wilt verwijderen?</p>
+                <section className="button-container">
+                    <FunctionalButton clickHandler={confirmDeleteUser}>
+                        {loading && (
+                            <FaSpinner className="loading-spinner"/>
+                        )}
+                        {loading && <span>Uw account wordt verwijderd</span>}
+                        {!loading && <span>Account verwijderen</span>}
+                    </FunctionalButton>
+                </section>
+            </form>
+        </MyAccountForm>
     );
 }
 
