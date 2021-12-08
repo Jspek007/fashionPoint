@@ -4,6 +4,7 @@ import {updateEmail} from "firebase/auth";
 import {FaSpinner} from "react-icons/fa";
 import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
+import InputField from "../InputField";
 
 function ChangeEmailForm() {
 
@@ -61,12 +62,19 @@ function ChangeEmailForm() {
         <section className="change-credentials-container">
             <section className="change-credentials-form">
                 <form className="my-account-form">
-                    <input className="change-email-input" type="text" name="current-email"
-                           onChange={handleCurrentEmailChange}
-                           placeholder={checkCurrentEmail()}
+                    <InputField
+                        inputType="text"
+                        idValue="current-email"
+                        placeholder={checkCurrentEmail()}
+                        eventHandler={handleCurrentEmailChange}
+                        formSection="my-account"
                     />
-                    <input className="change-email-input" type="text" name="new-email" placeholder="Nieuw email-address"
-                           onChange={handleNewEmailChange}
+                    <InputField
+                        inputType="text"
+                        idValue="new-email"
+                        placeholder="Nieuw email-adress"
+                        eventHandler={handleNewEmailChange}
+                        formSection="my-account"
                     />
                     <section className="error-container">
                         <span className="error-message">

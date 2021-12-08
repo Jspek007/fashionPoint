@@ -56,8 +56,8 @@ function ChangePasswordForm() {
                         idValue="new-password"
                         placeholder="Nieuw wachtwoord"
                         eventHandler={handleNewPasswordChange}
-                        myAccount
-                        />
+                        formSection="my-account"
+                    />
                 </form>
                 <section className="error-container">
                 <span className="error-message">

@@ -1,11 +1,11 @@
 import React from 'react';
 import "./InputField.scss";
 
-const InputField = ({error, inputType, idValue, placeholder, eventHandler, value, myAccount }) => {
+const InputField = ({error, inputType, idValue, placeholder, eventHandler, value, formSection }) => {
     return (
         <fieldset>
                 <input
-                    className={`input-field ${myAccount}`}
+                    className={`input-field ${formSection}`}
                     type={inputType}
                     id={idValue}
                     placeholder={placeholder}
