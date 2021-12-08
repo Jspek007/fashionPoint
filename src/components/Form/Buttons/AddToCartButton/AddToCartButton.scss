@@ -1,11 +1,10 @@
-
-
 .add-to-cart-button {
   height: 50px;
   background-color: var(--color-primary);
   color: var(--color-secondary);
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .product-price,

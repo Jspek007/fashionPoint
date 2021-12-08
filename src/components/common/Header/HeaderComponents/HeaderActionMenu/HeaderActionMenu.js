@@ -4,7 +4,6 @@ import {RedirectButton} from "../../../../Form/Buttons";
 import {useAuth} from "../../../../../contexts/AuthContext";
 import {Link} from "react-router-dom";
 import MinicartMenu from "../../../Minicart/MinicartMenu";
-import MinicartItemCount from "../../../Minicart/MinicartItemCount/MinicartItemCount";
 
 function HeaderActionMenu() {
 
@@ -27,7 +26,6 @@ function HeaderActionMenu() {
             {auth.currentUser && (
                 <>
                     <MinicartMenu />
-                    <MinicartItemCount count={count} />
                     <SignedInMenu/>
                 </>
             )}
