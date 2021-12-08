@@ -8,18 +8,6 @@ import MinicartMenu from "../../../Minicart/MinicartMenu";
 function HeaderActionMenu() {
 
     const auth = useAuth();
-    const [count, setCount] = useState('');
-
-    const checkCurrentCart = () => {
-        let currentCart = JSON.parse(localStorage.getItem('currentCart'));
-        if (currentCart != null) {
-            setCount(currentCart.length);
-        }
-    }
-
-    useEffect(() => {
-        checkCurrentCart();
-    }, [])
 
     return (
         <>
