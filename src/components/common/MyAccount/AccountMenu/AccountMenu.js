@@ -1,6 +1,6 @@
 import React from 'react';
 import "./AccountMenu.scss";
-import Link from "react-router-dom/es/Link";
+import {Link} from "react-router-dom/";
 import {SubTitle} from "../../Content/TextComponents";
 
 function AccountMenu() {

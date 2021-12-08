@@ -11,7 +11,7 @@ import {
     signOut,
     confirmPasswordReset,
 } from "firebase/auth";
-import {Footer, Header} from "../components/common";
+import {Footer} from "../components/common";
 
 const AuthContext = createContext({
     currentUser: null,

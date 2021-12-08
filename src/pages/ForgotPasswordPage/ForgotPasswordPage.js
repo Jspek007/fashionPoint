@@ -5,6 +5,8 @@ import {useAuth} from "../../contexts/AuthContext";
 import {useHistory} from "react-router";
 import {FaSpinner} from "react-icons/fa";
 import {firebaseErrors} from "../../utils/firebaseErrors";
+import InputField from "../../components/Form/Forms/FormComponents/InputField";
+import {SubTitle, Title} from "../../components/common/Content/TextComponents";
 
 function ForgotPasswordPage() {
     const history = useHistory();
@@ -22,14 +24,9 @@ function ForgotPasswordPage() {
         }
     }
 
-    const handleResetEmailChange = (event) => {
-        setEmail(event.target.value);
-        validateInputField();
-    }
-
     useEffect(() => {
         validateInputField();
-    }, )
+    },)
 
     const submitPasswordResetMail = () => {
         isLoading(true);
@@ -45,30 +42,20 @@ function ForgotPasswordPage() {
 
     return (
         <section className="forgotten-password-container">
-            <section className="forgotten-password-header">
-                <h1 className="welcome-message">Klein beetje paniek?</h1>
-                <h5 className="secondary-text">Geen stress, wij helpen je!</h5>
-            </section>
-
-            <section className="forgotten-password-instructions">
+                <Title text="Klein beetje paniek?" />
+                <SubTitle text="Niet nodig! Wij helpen je." />
                 <h5 className="secondary-text instruction">Geef ons je email</h5>
                 <h5 className="secondary-text instruction">Wij geven een mailtje terug</h5>
-            </section>
-
             <section className="forgotten-password-input-container">
                 <form>
-                    <fieldset>
-                        <label className="email-label" htmlFor="email-adress">
-                            <input
-                                className="email-input"
-                                type="text"
-                                id="email-adress"
-                                placeholder="Email"
-                                value={email}
-                                onChange={handleResetEmailChange}
-                            />
-                        </label>
-                    </fieldset>
+                    <InputField
+                        labelName="email"
+                        inputType="text"
+                        idValue="email-adress"
+                        placeholder="Email"
+                        value={email}
+                        eventHandler={(event) => setEmail(event.target.value)}
+                        />
                 </form>
                 <section className="error-container">
                         <span className="error-message">

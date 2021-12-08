@@ -2,8 +2,12 @@ import React, {useEffect, useState} from 'react';
 import {useAuth} from "../../../../contexts/AuthContext";
 import {updateEmail} from "firebase/auth";
 import {FaSpinner} from "react-icons/fa";
-import FunctionalButton from "../../../Form/Buttons/FunctionalButton/FunctionalButton";
+import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
+import InputField from "../FormComponents/InputField";
+import MyAccountForm from "../FormComponents/MyAccountForm";
+import FormButtonContainer from "../FormComponents/FormButtonContainer";
+import FormErrorContainer from "../FormComponents/FormErrorContainer/FormErrorContainer";
 
 function ChangeEmailForm() {
 
@@ -58,35 +62,37 @@ function ChangeEmailForm() {
     }
 
     return (
-        <section className="change-credentials-container">
-            <section className="change-credentials-form">
-                <form className="my-account-form">
-                    <input className="change-email-input" type="text" name="current-email"
-                           onChange={handleCurrentEmailChange}
-                           placeholder={checkCurrentEmail()}
-                    />
-                    <input className="change-email-input" type="text" name="new-email" placeholder="Nieuw email-address"
-                           onChange={handleNewEmailChange}
-                    />
-                    <section className="error-container">
-                        <span className="error-message">
-                            {error}
-                        </span>
-                    </section>
-                    <section className="button-container">
-                        <FunctionalButton clickHandler={changeCurrentEmail}
-                                          disabled={disabled}
-                        >
-                            {loading && (
-                                <FaSpinner className="loading-spinner"/>
-                            )}
-                            {loading && <span>Verwerken...</span>}
-                            {!loading && <span>Email wijzigen</span>}
-                        </FunctionalButton>
-                    </section>
-                </form>
-            </section>
-        </section>
+        <MyAccountForm>
+            <InputField
+                inputType="text"
+                idValue="current-email"
+                placeholder={checkCurrentEmail()}
+                eventHandler={handleCurrentEmailChange}
+                formSection="my-account"
+            />
+            <InputField
+                inputType="text"
+                idValue="new-email"
+                placeholder="Nieuw email-adress"
+                eventHandler={handleNewEmailChange}
+                formSection="my-account"
+            />
+
+            <FormErrorContainer>
+                {error}
+            </FormErrorContainer>
+
+            <FormButtonContainer>
+                <FunctionalButton clickHandler={changeCurrentEmail}
+                                  disabled={disabled}>
+                    {loading && (
+                        <FaSpinner className="loading-spinner"/>
+                    )}
+                    {loading && <span>Verwerken...</span>}
+                    {!loading && <span>Email wijzigen</span>}
+                </FunctionalButton>
+            </FormButtonContainer>
+        </MyAccountForm>
     );
 }
 
