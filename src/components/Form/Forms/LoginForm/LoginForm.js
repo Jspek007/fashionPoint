@@ -1,4 +1,3 @@
-import "./LoginForm.scss";
 import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import React, {useState} from "react";
 import {useAuth} from "../../../../contexts/AuthContext";

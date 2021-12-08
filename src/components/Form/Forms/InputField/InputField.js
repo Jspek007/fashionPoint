@@ -1,19 +1,17 @@
 import React from 'react';
 import "./InputField.scss";
 
-const InputField = ({error, labelName, inputType, idValue, placeholder, eventHandler, value }) => {
+const InputField = ({error, inputType, idValue, placeholder, eventHandler, value, myAccount }) => {
     return (
         <fieldset>
-            <label htmlFor={labelName}>
                 <input
-                    className="input-field"
+                    className={`input-field ${myAccount}`}
                     type={inputType}
                     id={idValue}
                     placeholder={placeholder}
                     onChange={eventHandler}
                     value={value}
                 />
-            </label>
             {error && <span className="error-message">{error}</span>}
         </fieldset>
     );

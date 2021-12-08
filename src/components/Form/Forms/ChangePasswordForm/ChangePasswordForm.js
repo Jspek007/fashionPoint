@@ -4,6 +4,7 @@ import {useAuth} from "../../../../contexts/AuthContext";
 import {updatePassword, reauthenticateWithCredential} from "firebase/auth";
 import {FaSpinner} from "react-icons/fa";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
+import InputField from "../InputField";
 
 function ChangePasswordForm() {
     const [newPassword, setNewPassword] = useState('');
@@ -50,11 +51,13 @@ function ChangePasswordForm() {
         <section className="change-credentials-container">
             <section className="change-credentials-form">
                 <form className="my-account-form">
-                    <input className="change-password-input" type="password" name="new-password"
-                           placeholder="Nieuw wachtwoord"
-                           onChange={handleNewPasswordChange}
-                           autoComplete={"new-password"}
-                    />
+                    <InputField
+                        inputType="password"
+                        idValue="new-password"
+                        placeholder="Nieuw wachtwoord"
+                        eventHandler={handleNewPasswordChange}
+                        myAccount
+                        />
                 </form>
                 <section className="error-container">
                 <span className="error-message">
