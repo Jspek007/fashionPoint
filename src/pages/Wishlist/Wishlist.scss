@@ -2,3 +2,12 @@
   display: flex;
   justify-content: center;
 }
+
+.wishlist-content {
+  display: flex;
+  justify-content: center;
+}
+
+.wishlist-product-container, .wishlist-content {
+  height: 50vh;
+}
