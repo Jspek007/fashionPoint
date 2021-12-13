@@ -14,6 +14,7 @@ import PrivacyPage from "../pages/PrivacyPage/PrivacyPage";
 import SendSuccessfullyPage from "../pages/SuccessPage/SendSuccessfullyPage";
 import MyAccountPage from "../pages/MyAccountPage/MyAccountPage";
 import Wishlist from "../pages/Wishlist/Wishlist";
+import CartPage from "../pages/CartPage/CartPage";
 
 export default [
     {
@@ -111,4 +112,9 @@ export default [
         Component: Wishlist,
         memberOnly: true,
     },
+    {
+        path: "/winkelwagen",
+        name: "Winkelwagen",
+        Component: CartPage,
+    }
 ];

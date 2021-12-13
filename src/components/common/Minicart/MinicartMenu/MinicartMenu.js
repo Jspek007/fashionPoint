@@ -3,6 +3,9 @@ import "./MinicartMenu.scss";
 import {FaShoppingCart} from "react-icons/fa"
 import {useDetectOutsideClick} from "../../../../helpers/UseDetectOutsideClick/UseDetectOutsideClick";
 import MinicartItems from "../MinicartItems";
+import {RedirectButton} from "../../../Form/Buttons";
+import FormButtonContainer from "../../../Form/Forms/FormComponents/FormButtonContainer";
+import Link from "react-router-dom/es/Link";
 
 const MinicartMenu = () => {
 
@@ -23,7 +26,14 @@ const MinicartMenu = () => {
                         <h1>Uw winkelwagen is leeg!</h1>
                     )}
                     {cartItems && (
+                        <>
                             <MinicartItems cartData={cartItems}/>
+                            <FormButtonContainer>
+                                <Link exact to="/winkelwagen">
+                                    <RedirectButton primary callToAction="Winkelwagen"/>
+                                </Link>
+                            </FormButtonContainer>
+                        </>
                     )}
                 </section>
             </button>

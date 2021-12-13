@@ -24,7 +24,7 @@ function HeaderActionMenu() {
                         <RedirectButton callToAction="Inloggen"/>
                     </Link>
                     <Link exact="true" to="/aanmelden">
-                        <RedirectButton callToAction="Aanmelden" signup/>
+                        <RedirectButton callToAction="Aanmelden" primary/>
                     </Link>
                 </>
             )}
