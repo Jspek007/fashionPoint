@@ -116,5 +116,6 @@ export default [
         path: "/winkelwagen",
         name: "Winkelwagen",
         Component: CartPage,
+        memberOnly: true,
     }
 ];
