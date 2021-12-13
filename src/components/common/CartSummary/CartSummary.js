@@ -18,7 +18,8 @@ const CartSummary = ({productData}) => {
     }
 
     const getCartTotal = () => {
-        return getCartSubtotal() + getShippingTotal()
+        let cartTotal = (getCartSubtotal() + getShippingTotal());
+        return cartTotal.toFixed(2);
     }
 
 
@@ -42,11 +43,11 @@ const CartSummary = ({productData}) => {
                             <th>Verzending</th>
                         </tr>
                         <td>
-                            {getShippingTotal() == null && (
+                            {getCartSubtotal() >= 75 && (
                                 <span>Gratis</span>
                             )}
-                            {getShippingTotal() >= 0 && (
-                                <span>{getShippingTotal()}</span>
+                            {getCartSubtotal() <= 75 && (
+                                <span>€7.95</span>
                             )}
                         </td>
                     </table>
