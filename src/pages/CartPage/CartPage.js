@@ -11,16 +11,16 @@ const CartPage = () => {
 
     return (
         <section className="cart-container">
-            <section className="cart-header">
-                {!cartItems && (
-                    <SubTitle text="Uw winkelwagen is leeg."/>
-                )}
-            </section>
+            {!cartItems && (
+                <SubTitle text="Uw winkelwagen is leeg."/>
+            )}
 
             {cartItems && (
                 <>
-                    <SubTitle text="Winkelwagen"/>
-                    <RedirectButton primary callToAction="Afrekenen"/>
+                    <section className="cart-header">
+                        <SubTitle text="Winkelwagen"/>
+                        <RedirectButton primary callToAction="Afrekenen"/>
+                    </section>
                     <section className="cart-table-wrapper">
                         <table className="cart-item-table">
                             <thead>
