@@ -12,7 +12,6 @@ function ProductDetail() {
     const [productData, setProductData] = useState([]);
     const {productId} = useParams();
     const getSingleProductApi = `https://fakestoreapi.com/products/${productId}`
-    const [addToCartMessage, setAddToCartMessage] = useState('');
 
     let cartArray = localStorage.getItem('currentCart');
 

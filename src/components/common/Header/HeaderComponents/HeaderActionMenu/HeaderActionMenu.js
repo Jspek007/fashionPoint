@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {SignedInMenu} from "../../../index";
 import {RedirectButton} from "../../../../Form/Buttons";
 import {useAuth} from "../../../../../contexts/AuthContext";
