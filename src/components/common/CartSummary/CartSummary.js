@@ -51,7 +51,7 @@ const CartSummary = ({productData}) => {
                             )}
                         </td>
                     </table>
-                    <table className="cart-totals">
+                    <table className="cart-totals total">
                         <tr>
                             <th>Totaal</th>
                         </tr>
