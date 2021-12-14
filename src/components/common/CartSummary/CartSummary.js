@@ -2,10 +2,10 @@ import React from 'react';
 import "./CartSummary.scss";
 import {SubTitle} from "../Content/TextComponents";
 
-const CartSummary = ({productData}) => {
+const CartSummary = ({cartData}) => {
 
     const getCartSubtotal = () => {
-        return productData.map(item => item.price).reduce((prev, curr) => prev + curr, 0);
+        return cartData.map(item => item.price).reduce((prev, curr) => prev + curr, 0);
     }
 
     const getShippingTotal = () => {
@@ -29,37 +29,18 @@ const CartSummary = ({productData}) => {
                 <section className="summary-title">
                     <SubTitle text="Uw overzicht"/>
                 </section>
-                <section className="cart-summary-data">
-                    <table className="cart-totals">
-                        <tr>
-                            <th>Subtotaal</th>
-                        </tr>
-                        <td>
-                            <span>€{getCartSubtotal()}</span>
-                        </td>
-                    </table>
-                    <table className="cart-totals">
-                        <tr>
-                            <th>Verzending</th>
-                        </tr>
-                        <td>
-                            {getCartSubtotal() >= 75 && (
-                                <span>Gratis</span>
-                            )}
-                            {getCartSubtotal() <= 75 && (
-                                <span>€7.95</span>
-                            )}
-                        </td>
-                    </table>
-                    <table className="cart-totals total">
-                        <tr>
-                            <th>Totaal</th>
-                        </tr>
-                        <td>
-                            <span>€{getCartTotal()}</span>
-                        </td>
-                    </table>
-                </section>
+                    <section className="summary-row">
+                        <span>Subtotaal</span>
+                        <span>€{getCartSubtotal()}</span>
+                    </section>
+                    <section className="summary-row">
+                        <span>Verzending</span>
+                        <span>€{getShippingTotal()}</span>
+                    </section>
+                    <section className="summary-row total">
+                        <span>Totaal</span>
+                        <span>€{getCartTotal()}</span>
+                    </section>
             </section>
         </section>
     );

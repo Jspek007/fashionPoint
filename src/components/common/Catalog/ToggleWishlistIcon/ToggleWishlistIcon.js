@@ -27,7 +27,6 @@ function ToggleWishlistIcon({productData}) {
     }, [checkItemInWishlist])
 
     const addProductToLocalStorage = () => {
-        setInWishlist(true);
         wishlistArray = JSON.parse(localStorage.getItem('wishlist')) ?
             JSON.parse(localStorage.getItem('wishlist')) : [];
 
@@ -40,6 +39,7 @@ function ToggleWishlistIcon({productData}) {
 
         wishlistArray.push(newWishlistProduct);
         localStorage.setItem('wishlist', JSON.stringify(wishlistArray));
+        setInWishlist(true);
     }
 
     const removeProductFromLocalStorage = () => {

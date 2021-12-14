@@ -6,7 +6,7 @@ const ProductDetailSkeleton = () => {
     return (
         <section className="product-detail-container">
             <section className="product-image-container">
-                <Skeleton width={300} height={400} />
+                <Skeleton width={380} height={500} />
             </section>
             <section className="product-details">
                 <section className="product-detail-title">

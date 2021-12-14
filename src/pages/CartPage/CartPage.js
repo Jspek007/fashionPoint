@@ -1,21 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./CartPage.scss";
 import {SubTitle} from "../../components/common/Content/TextComponents";
 import {RedirectButton} from "../../components/Form/Buttons";
-import Link from "react-router-dom/es/Link";
 import CartSummary from "../../components/common/CartSummary";
+import CartItem from "../../components/common/Cart/CartItem/CartItem";
 
 const CartPage = () => {
 
-    let cartItems = JSON.parse(localStorage.getItem('currentCart'));
+    let cartArray = JSON.parse(localStorage.getItem('currentCart'));
 
     return (
         <section className="cart-container">
-            {!cartItems && (
-                <SubTitle text="Uw winkelwagen is leeg."/>
+            {cartArray.length === 0 && (
+                <section className="cart-title">
+                    <SubTitle text="Uw winkelwagen is leeg."/>
+                </section>
             )}
-
-            {cartItems && (
+            {cartArray.length > 0 && (
                 <>
                     <section className="cart-header">
                         <SubTitle text="Winkelwagen"/>
@@ -36,32 +37,14 @@ const CartPage = () => {
                                 </th>
                             </tr>
                             </thead>
-                            <tbody className="cart-item">
-                            {cartItems.map((item) => {
+                            {cartArray.map((item, i) => {
                                 return (
-                                    <tr className="item-info" key={item.id}>
-                                        <td>
-                                            <Link key={item.id} className="cart-link"
-                                                  exact="true" to={`/collectie/${item.category}/${item.id}`}>
-                                                <section className="cart-product-info">
-                                                    <img className="cart-image" src={item.image} alt={item.title}/>
-                                                    <span>{item.title}</span>
-                                                </section>
-                                            </Link>
-                                        </td>
-                                        <td className="table">
-                                            <span>€{item.price}</span>
-                                        </td>
-                                        <td className="table">
-                                            <span>€{item.price}</span>
-                                        </td>
-                                    </tr>
+                                    <CartItem cartData={cartArray} key={i}/>
                                 )
                             })}
-                            </tbody>
                         </table>
                     </section>
-                    <CartSummary productData={cartItems}/>
+                    <CartSummary cartData={cartArray}/>
                 </>
             )}
         </section>

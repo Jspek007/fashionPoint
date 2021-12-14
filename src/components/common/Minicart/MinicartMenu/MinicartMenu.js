@@ -6,6 +6,7 @@ import MinicartItems from "../MinicartItems";
 import {RedirectButton} from "../../../Form/Buttons";
 import FormButtonContainer from "../../../Form/Forms/FormComponents/FormButtonContainer";
 import Link from "react-router-dom/es/Link";
+import SubTitle from "../../Content/TextComponents/SubTitle/SubTitle";
 
 const MinicartMenu = () => {
 
@@ -16,16 +17,16 @@ const MinicartMenu = () => {
 
     return (
         <section className="menu-container">
-            <button className="menu-trigger" onClick={onClick}>
+            <section className="menu-trigger" onClick={onClick}>
                <span>
                    <FaShoppingCart className="user-icon"/>
                </span>
                 <section ref={dropdownRef} className={`minicart-menu ${isActive ? `active` : `inactive`}`}>
                     <h1>Jouw winkelwagen</h1>
-                    {!cartItems && (
-                        <h1>Uw winkelwagen is leeg!</h1>
+                    {cartItems.length === 0 && (
+                        <SubTitle text="Uw winkelwagen is leeg."/>
                     )}
-                    {cartItems && (
+                    {cartItems.length > 0 && (
                         <>
                             <MinicartItems cartData={cartItems}/>
                             <FormButtonContainer>
@@ -36,7 +37,7 @@ const MinicartMenu = () => {
                         </>
                     )}
                 </section>
-            </button>
+            </section>
         </section>
     );
 };

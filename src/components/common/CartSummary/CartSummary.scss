@@ -20,12 +20,12 @@
   text-align: end;
 }
 
-.cart-totals {
+.summary-row {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  padding: 10px;
 }
 
-.cart-totals.total {
+.total {
   font-family: var(--font-family-bold);
 }
