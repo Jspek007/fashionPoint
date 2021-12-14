@@ -22,7 +22,7 @@ const MinicartMenu = () => {
                    <FaShoppingCart className="user-icon"/>
                </span>
                 <section ref={dropdownRef} className={`minicart-menu ${isActive ? `active` : `inactive`}`}>
-                    <h1>Jouw winkelwagen</h1>
+                    <SubTitle text="Jouw winkelwagen" />
                     {(!cartItems || cartItems === []) && (
                         <SubTitle text="Uw winkelwagen is leeg."/>
                     )}
