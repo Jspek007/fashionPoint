@@ -35,7 +35,11 @@ const CartSummary = ({cartData}) => {
                     </section>
                     <section className="summary-row">
                         <span>Verzending</span>
-                        <span>€{getShippingTotal()}</span>
+                        <span>{getShippingTotal() == null && (
+                            "Gratis"
+                        )}
+                            {getShippingTotal()}
+                        </span>
                     </section>
                     <section className="summary-row total">
                         <span>Totaal</span>
