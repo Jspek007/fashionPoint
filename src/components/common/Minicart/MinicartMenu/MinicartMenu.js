@@ -5,7 +5,7 @@ import {useDetectOutsideClick} from "../../../../helpers/UseDetectOutsideClick/U
 import MinicartItems from "../MinicartItems";
 import {RedirectButton} from "../../../Form/Buttons";
 import FormButtonContainer from "../../../Form/Forms/FormComponents/FormButtonContainer";
-import Link from "react-router-dom/es/Link";
+import {Link} from "react-router-dom";
 import SubTitle from "../../Content/TextComponents/SubTitle/SubTitle";
 
 const MinicartMenu = () => {
@@ -30,7 +30,7 @@ const MinicartMenu = () => {
                         <>
                             <MinicartItems cartData={cartItems}/>
                             <FormButtonContainer>
-                                <Link exact to="/winkelwagen">
+                                <Link exact="true" to="/winkelwagen">
                                     <RedirectButton primary callToAction="Winkelwagen"/>
                                 </Link>
                             </FormButtonContainer>
