@@ -7,15 +7,28 @@
   margin: 10px;
 }
 
-.minicart-link {
+.minicart-link, .minicart-header {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   align-self: center;
   align-items: center;
+}
+
+.minicart-link {
   margin: 10px 5px;
   text-decoration: none;
   color: var(--color-dimmed-primary);
   border-bottom: 1px solid var(--color-accent);
+}
+
+.minicart-header {
+  width: 100%;
+}
+
+.minicart-header > span {
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-family-bold);
 }
 
 .minicart-product-image {
@@ -25,7 +38,7 @@
   padding-bottom: 5px;
 }
 
-.minicart-title {
+.minicart-info {
   width: 100%;
   font-family: var(--font-family-italic);
 }
