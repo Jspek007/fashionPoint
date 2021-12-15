@@ -14,6 +14,7 @@ const MinicartMenu = () => {
     const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef);
     const onClick = () => setIsActive(!isActive);
     let cartItems = JSON.parse(localStorage.getItem('currentCart'));
+    let cartArray = localStorage.getItem('currentCart');
 
     return (
         <section className="menu-container">
@@ -23,10 +24,10 @@ const MinicartMenu = () => {
                </span>
                 <section ref={dropdownRef} className={`minicart-menu ${isActive ? `active` : `inactive`}`}>
                     <SubTitle text="Jouw winkelwagen" />
-                    {(!cartItems || cartItems === []) && (
+                    {(!cartArray || cartArray === '[]') && (
                         <SubTitle text="Uw winkelwagen is leeg."/>
                     )}
-                    {cartItems && (
+                    {cartArray !== "[]" && (
                         <>
                             <MinicartItems cartData={cartItems}/>
                             <FormButtonContainer>

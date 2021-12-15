@@ -2,27 +2,28 @@ import React, {useState} from 'react';
 import "./CartPage.scss";
 import {SubTitle} from "../../components/common/Content/TextComponents";
 import {RedirectButton} from "../../components/Form/Buttons";
-import CartSummary from "../../components/common/CartSummary";
-import CartItem from "../../components/common/Cart/CartItem/CartItem";
+import CartSummary from "../../components/common/Cart/CartSummary";
+import {Link} from "react-router-dom";
+import RemoveProductIcon from "../../components/common/Cart/RemoveProductIcon/RemoveProductIcon";
 
 const CartPage = () => {
 
-    let cartArray = JSON.parse(localStorage.getItem('currentCart'));
+    const cartArray = localStorage.getItem('currentCart');
+    const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('currentCart')));
 
     return (
         <section className="cart-container">
-            {cartArray.length === 0 && (
+            {(!cartArray || cartArray === "[]") && (
                 <section className="cart-title">
                     <SubTitle text="Uw winkelwagen is leeg."/>
                 </section>
             )}
-            {cartArray.length > 0 && (
+            {cartArray !== "[]" && (
                 <>
                     <section className="cart-header">
                         <SubTitle text="Winkelwagen"/>
                         <RedirectButton primary callToAction="Afrekenen"/>
                     </section>
-                    <section className="cart-table-wrapper">
                         <table className="cart-item-table">
                             <thead>
                             <tr>
@@ -37,14 +38,36 @@ const CartPage = () => {
                                 </th>
                             </tr>
                             </thead>
-                            {cartArray.map((item, i) => {
-                                return (
-                                    <CartItem cartData={cartArray} key={i}/>
-                                )
-                            })}
+                            {cartItems.map((item) => {
+                                    return (
+                                        <tbody className="cart-item" key={item.id}>
+                                        <tr className="item-info">
+                                            <td>
+                                                <Link className="cart-link"
+                                                      exact="true" to={`/collectie/${item.category}/${item.id}`}>
+                                                    <section className="cart-product-info">
+                                                        <img className="cart-image" src={item.image} alt={item.title}/>
+                                                        <span>{item.title}</span>
+                                                    </section>
+                                                </Link>
+                                            </td>
+                                            <td className="table">
+                                                <span>€{item.price}</span>
+                                            </td>
+                                            <td className="table">
+                                                <span>€{item.price}</span>
+                                            </td>
+                                            <td className="table">
+                                                <RemoveProductIcon cartData={cartItems} specificProduct={item}
+                                                                   updateCart={setCartItems}/>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    )
+                                }
+                            )}
+                            <CartSummary cartData={cartItems}/>
                         </table>
-                    </section>
-                    <CartSummary cartData={cartArray}/>
                 </>
             )}
         </section>

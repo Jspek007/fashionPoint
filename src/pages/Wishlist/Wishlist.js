@@ -5,9 +5,10 @@ import {SubTitle, Title} from "../../components/common/Content/TextComponents";
 
 function Wishlist() {
 
-    let wishlistArray = JSON.parse(localStorage.getItem('wishlist'))
+    let wishlistArray = localStorage.getItem('wishlist');
+    let wishlistItems = JSON.parse(localStorage.getItem('wishlist'));
 
-    if (wishlistArray.length === 0) {
+    if (wishlistArray === '[]' || !wishlistArray) {
         return (
             <>
                 <section className="wishlist-title-container">
@@ -25,11 +26,8 @@ function Wishlist() {
                     <Title text="Mijn wishlist"/>
                 </section>
                 <section className="wishlist-product-container">
-                    {!wishlistArray && (
-                        <h1>Wishlist is leeg. Snel, voeg iets toe!</h1>
-                    )}
-                    {wishlistArray && (
-                        <ProductCards data={wishlistArray}/>
+                    {wishlistItems && (
+                        <ProductCards data={wishlistItems}/>
                     )}
                 </section>
             </>

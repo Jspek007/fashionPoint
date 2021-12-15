@@ -1,16 +1,10 @@
 .cart-summary-container {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: flex-end;
   padding-top: 25px;
   padding-bottom: 25px;
 }
 
 .cart-summary {
   background-color: var(--color-dimmed-secondary);
-  width: 50%;
   padding: 10px;
 }
 

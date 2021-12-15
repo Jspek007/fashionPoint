@@ -1,25 +1,28 @@
 import React from 'react';
 import "./CartSummary.scss";
-import {SubTitle} from "../Content/TextComponents";
+import {SubTitle} from "../../Content/TextComponents";
 
 const CartSummary = ({cartData}) => {
 
     const getCartSubtotal = () => {
         return cartData.map(item => item.price).reduce((prev, curr) => prev + curr, 0);
+
     }
 
     const getShippingTotal = () => {
-        if (getCartSubtotal() >= 75) {
+        if (getCartSubtotal() < 75) {
+            return 7.95
+        } else {
             return null;
-        }
-        else {
-            return 7.95;
         }
     }
 
     const getCartTotal = () => {
-        let cartTotal = (getCartSubtotal() + getShippingTotal());
-        return cartTotal.toFixed(2);
+        if (getShippingTotal() != null) {
+            return Number(getCartSubtotal()) + Number(getShippingTotal())
+        } else {
+            return Number(getCartSubtotal());
+        }
     }
 
 
@@ -31,19 +34,21 @@ const CartSummary = ({cartData}) => {
                 </section>
                     <section className="summary-row">
                         <span>Subtotaal</span>
-                        <span>€{getCartSubtotal()}</span>
+                        <span>€{getCartSubtotal().toFixed(2)}</span>
                     </section>
                     <section className="summary-row">
                         <span>Verzending</span>
                         <span>{getShippingTotal() == null && (
                             "Gratis"
                         )}
-                            {getShippingTotal()}
+                            {getShippingTotal() !== null && (
+                                "€" + getShippingTotal()
+                            )}
                         </span>
                     </section>
                     <section className="summary-row total">
                         <span>Totaal</span>
-                        <span>€{getCartTotal()}</span>
+                        <span>€{getCartTotal().toFixed(2)}</span>
                     </section>
             </section>
         </section>
