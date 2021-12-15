@@ -5,6 +5,7 @@ import {RedirectButton} from "../../components/Form/Buttons";
 import CartSummary from "../../components/common/Cart/CartSummary";
 import {Link} from "react-router-dom";
 import RemoveProductIcon from "../../components/common/Cart/RemoveProductIcon/RemoveProductIcon";
+import FormButtonContainer from "../../components/Form/Forms/FormComponents/FormButtonContainer";
 
 const CartPage = () => {
 
@@ -17,6 +18,11 @@ const CartPage = () => {
                 <section className="cart-title">
                     <Title text="Uw winkelwagen is leeg."/>
                 </section>
+                <FormButtonContainer>
+                    <Link exact="true" to="/collectie">
+                        <RedirectButton primary callToAction="Begin met winkelen"/>
+                    </Link>
+                </FormButtonContainer>
             </section>
         )
     } else {
