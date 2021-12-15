@@ -1,11 +1,12 @@
 .cart-summary-container {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  width: 100%;
+  padding: 25px 0;
 }
 
 .cart-summary {
   background-color: var(--color-dimmed-secondary);
   padding: 10px;
+  width: 50%;
 }
 
 .summary-title {

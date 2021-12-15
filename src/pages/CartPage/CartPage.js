@@ -31,7 +31,12 @@ const CartPage = () => {
                 <section className="cart-container">
                     <section className="cart-header">
                         <SubTitle text="Winkelwagen"/>
-                        <RedirectButton primary callToAction="Afrekenen"/>
+                        <section className="cart-action-buttons">
+                            <Link exact="true" to="/collectie">
+                                <RedirectButton callToAction="Verder winkelen"/>
+                            </Link>
+                            <RedirectButton primary callToAction="Afrekenen"/>
+                        </section>
                     </section>
                     <table className="cart-item-table">
                         <thead>
@@ -75,8 +80,10 @@ const CartPage = () => {
                                 )
                             }
                         )}
-                        <CartSummary cartData={cartItems}/>
                     </table>
+                    <section className="cart-footer">
+                        <CartSummary cartData={cartItems}/>
+                    </section>
                 </section>
             </>
         )
