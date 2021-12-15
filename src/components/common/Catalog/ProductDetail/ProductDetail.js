@@ -34,15 +34,25 @@ function ProductDetail() {
     const addProductToCart = () => {
         cartArray = JSON.parse(localStorage.getItem('currentCart')) ?
             JSON.parse(localStorage.getItem('currentCart')) : [];
-        let newCartProduct = {
-            title: productData.title,
-            price: productData.price,
-            image: productData.image,
-            id: productData.id
-        }
 
-        cartArray.push(newCartProduct);
-        localStorage.setItem('currentCart', JSON.stringify(cartArray));
+        let objectIndex = cartArray.findIndex((obj => obj.id === productData.id));
+        console.log(objectIndex)
+
+        if (objectIndex === -1) {
+            let newCartProduct = {
+                title: productData.title,
+                price: productData.price,
+                image: productData.image,
+                id: productData.id,
+                qty: 1,
+            }
+            cartArray.push(newCartProduct);
+            localStorage.setItem('currentCart', JSON.stringify(cartArray));
+        } else {
+            console.log(cartArray[objectIndex]);
+            cartArray[objectIndex].qty++;
+            localStorage.setItem('currentCart', JSON.stringify(cartArray));
+        }
     }
 
 
