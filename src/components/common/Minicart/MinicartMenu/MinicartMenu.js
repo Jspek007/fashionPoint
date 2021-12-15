@@ -16,18 +16,29 @@ const MinicartMenu = () => {
     let cartItems = JSON.parse(localStorage.getItem('currentCart'));
     let cartArray = localStorage.getItem('currentCart');
 
-    return (
-        <section className="menu-container">
-            <section className="menu-trigger" onClick={onClick}>
+    if (cartArray === '[]' || !cartArray) {
+        return (
+            <section className="menu-container">
+                <section className="menu-trigger" onClick={onClick}>
                <span>
                    <FaShoppingCart className="user-icon"/>
                </span>
-                <section ref={dropdownRef} className={`minicart-menu ${isActive ? `active` : `inactive`}`}>
-                    <SubTitle text="Jouw winkelwagen" />
-                    {(!cartArray || cartArray === '[]' ) && (
-                        <SubTitle text="Uw winkelwagen is leeg."/>
-                    )}
-                    {cartArray !== null && (
+                    <section ref={dropdownRef} className={`minicart-menu ${isActive ? `active` : `inactive`}`}>
+                        <SubTitle text="Jouw winkelwagen"/>
+                        <SubTitle text="Uw winkelwagen is leeg." />
+                    </section>
+                </section>
+            </section>
+        )
+    } else {
+        return (
+            <section className="menu-container">
+                <section className="menu-trigger" onClick={onClick}>
+               <span>
+                   <FaShoppingCart className="user-icon"/>
+               </span>
+                    <section ref={dropdownRef} className={`minicart-menu ${isActive ? `active` : `inactive`}`}>
+                        <SubTitle text="Jouw winkelwagen"/>
                         <>
                             <MinicartItems cartData={cartItems}/>
                             <FormButtonContainer>
@@ -36,11 +47,11 @@ const MinicartMenu = () => {
                                 </Link>
                             </FormButtonContainer>
                         </>
-                    )}
+                    </section>
                 </section>
             </section>
-        </section>
-    );
+        )
+    }
 };
 
 export default MinicartMenu;
