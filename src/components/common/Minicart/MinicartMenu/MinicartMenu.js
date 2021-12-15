@@ -24,10 +24,10 @@ const MinicartMenu = () => {
                </span>
                 <section ref={dropdownRef} className={`minicart-menu ${isActive ? `active` : `inactive`}`}>
                     <SubTitle text="Jouw winkelwagen" />
-                    {(!cartArray || cartArray === '[]') && (
+                    {(!cartArray || cartArray === '[]' ) && (
                         <SubTitle text="Uw winkelwagen is leeg."/>
                     )}
-                    {cartArray !== "[]" && (
+                    {cartArray !== null && (
                         <>
                             <MinicartItems cartData={cartItems}/>
                             <FormButtonContainer>

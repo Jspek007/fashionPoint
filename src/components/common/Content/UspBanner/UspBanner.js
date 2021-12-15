@@ -5,7 +5,7 @@ import {useInView} from "react-intersection-observer";
 const UspBanner = ({imageSrc, textTitle, seoText, flipped}) => {
 
     const {ref, inView} = useInView({
-        threshold: 0.6,
+        threshold: 0.2,
         triggerOnce: true,
     });
 

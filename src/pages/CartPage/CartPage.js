@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import "./CartPage.scss";
-import {SubTitle} from "../../components/common/Content/TextComponents";
+import {Title, SubTitle} from "../../components/common/Content/TextComponents";
 import {RedirectButton} from "../../components/Form/Buttons";
 import CartSummary from "../../components/common/Cart/CartSummary";
 import {Link} from "react-router-dom";
@@ -13,12 +13,12 @@ const CartPage = () => {
 
     return (
         <section className="cart-container">
-            {(!cartArray || cartArray === "[]") && (
+            {(!cartItems || cartItems === "[]") && (
                 <section className="cart-title">
-                    <SubTitle text="Uw winkelwagen is leeg."/>
+                    <Title text="Uw winkelwagen is leeg."/>
                 </section>
             )}
-            {cartArray !== "[]" && (
+            {cartItems !== "[]" && (
                 <>
                     <section className="cart-header">
                         <SubTitle text="Winkelwagen"/>
