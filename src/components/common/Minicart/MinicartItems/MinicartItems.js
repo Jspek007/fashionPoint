@@ -8,7 +8,6 @@ const MinicartItems = ({cartData}) => {
         <section className="items-container">
             <section className="minicart-header">
                 <span>Product</span>
-                <span>SKU</span>
                 <span>Prijs</span>
                 <span>Aantal</span>
             </section>
@@ -16,14 +15,14 @@ const MinicartItems = ({cartData}) => {
                 return (
                         <Link key={item.id} className="minicart-link"
                               exact="true" to={`/collectie/${item.category}/${item.id}`}>
-                            <img src={item.image} className="minicart-product-image" alt={item.title}/>
-                            <section className="minicart-title">
+                            <img src={item.image} className="minicart minicart-product-image" alt={item.title}/>
+                            <section className="minicart minicart-title">
                                 {item.title}
                             </section>
-                            <section className="minicart-price">
+                            <section className="minicart minicart-price">
                                 €{(item.price * item.qty)}
                             </section>
-                            <section className="minicart-qty">
+                            <section className="minicart minicart-qty">
                                 {item.qty}
                             </section>
                         </Link>

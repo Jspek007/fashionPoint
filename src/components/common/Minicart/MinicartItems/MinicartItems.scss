@@ -1,17 +1,18 @@
 .items-container {
   display: flex;
   flex-direction: column;
-  max-height: 35vh;
+  max-height: 300px;
   overflow: auto;
   padding: 5px 10px;
   margin: 10px;
 }
 
 .minicart-link, .minicart-header {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  align-self: center;
+  display: flex;
+  flex-flow: row;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .minicart-link {
@@ -22,13 +23,19 @@
 }
 
 .minicart-header {
-  width: 100%;
+  justify-content: flex-end;
 }
 
 .minicart-header > span {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  width: 25%;
   font-family: var(--font-family-bold);
+}
+
+.minicart {
+  width: 25%;
+  height: auto;
 }
 
 .minicart-product-image {
