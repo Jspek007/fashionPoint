@@ -18,7 +18,13 @@ const CartQtyController = ({increase, cartData, updateCart, specificProduct}) =>
             let newCart = JSON.parse(localStorage.getItem('currentCart'));
             updateCart(newCart);
         }
-        console.log(cartData[cartIndex]);
+    }
+
+    const increaseCartQty = () => {
+        cartData[cartIndex].qty++;
+        localStorage.setItem('currentCart', JSON.stringify(cartData));
+        let newCart = JSON.parse(localStorage.getItem('currentCart'));
+        updateCart(newCart);
     }
 
     if (!increase) {
@@ -31,7 +37,7 @@ const CartQtyController = ({increase, cartData, updateCart, specificProduct}) =>
     } else {
         return (
             <AiOutlinePlus className="cart-button"
-                           onClick={decreaseCartQty}
+                           onClick={increaseCartQty}
             />
         )
     }
