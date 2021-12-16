@@ -6,6 +6,7 @@ import CartSummary from "../../components/common/Cart/CartSummary";
 import {Link} from "react-router-dom";
 import RemoveProductIcon from "../../components/common/Cart/RemoveProductIcon/RemoveProductIcon";
 import FormButtonContainer from "../../components/Form/Forms/FormComponents/FormButtonContainer";
+import CartQtyController from "../../components/common/Cart/CartQtyController";
 
 const CartPage = () => {
 
@@ -66,7 +67,9 @@ const CartPage = () => {
                                             </Link>
                                         </td>
                                         <td className="table">
-                                            <span>{item.qty}</span>
+                                            <CartQtyController />
+                                            <span className="item-qty">{item.qty}</span>
+                                            <CartQtyController increase/>
                                         </td>
                                         <td className="table">
                                             <span>€{(item.price * item.qty)}</span>

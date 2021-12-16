@@ -39,11 +39,14 @@ table {
 
 .table {
   text-align: right;
-  padding: 15px;
+  padding: 25px;
+}
+
+.table.price {
+  padding-right: 30px;
 }
 
 .table.item {
-  width: 60%;
   text-align: left;
 }
 
