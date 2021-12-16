@@ -1,0 +1,33 @@
+.modal-container {
+  position: fixed;
+  z-index: 500;
+  background-color: var(--color-secondary);
+  width: 100%;
+  box-shadow: 1px 1px 1px black;
+  padding: 16px;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  animation: show .7s;
+  height: 150px;
+}
+.modal-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.modal-icon {
+  font-size: 24px;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

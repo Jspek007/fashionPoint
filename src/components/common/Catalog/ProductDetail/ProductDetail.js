@@ -5,15 +5,23 @@ import "./ProductDetail.scss";
 import AddToCartButton from "../../../Form/Buttons/AddToCartButton";
 import ToggleWishlistIcon from "../ToggleWishlistIcon";
 import ProductDetailSkeleton from "../../SkeletonLoader/ProductDetailSkeleton";
+import CartModal from "../../Modal/CartModal";
+import {SubTitle} from "../../Content/TextComponents";
+import {FaShoppingCart} from "react-icons/fa"
 
 function ProductDetail() {
 
     const [loading, setLoading] = useState(false);
     const [productData, setProductData] = useState([]);
     const {productId} = useParams();
-    const getSingleProductApi = `https://fakestoreapi.com/products/${productId}`
-
+    const getSingleProductApi = `https://fakestoreapi.com/products/${productId}`;
     let cartArray = localStorage.getItem('currentCart');
+    const [modal, setModal] = useState(false);
+
+    const toggleModal = () => {
+        setModal(true);
+        setTimeout(() => setModal(false), 3000);
+    }
 
 
     useEffect(() => {
@@ -53,6 +61,7 @@ function ProductDetail() {
             cartArray[objectIndex].qty++;
             localStorage.setItem('currentCart', JSON.stringify(cartArray));
         }
+        toggleModal();
     }
 
 
@@ -74,6 +83,12 @@ function ProductDetail() {
                         </section>
                         <section className="bottom-detail-container">
                             <AddToCartButton clickHandler={addProductToCart} specificProductData={productData} />
+                            <CartModal show={modal}>
+                                <section className="modal-content">
+                                    <FaShoppingCart className="modal-icon" />
+                                    <SubTitle text="Product is toegevoegd aan uw winkelwagen." />
+                                </section>
+                            </CartModal>
                             <section className="product-rating-container">
                                 <section className="rating">
                                     <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
