@@ -3,14 +3,11 @@ import "./CartModal.scss";
 
 const CartModal = (props) => {
     return (
-        <>
-            {props.show ?
-                <section className="modal-container">
-                    {props.children}
-                </section>
-                : null
-            }
-        </>
+        <section className={`modal-container ${props.show ? 'modal-container-shown' : `modal-container-hidden`}`}
+                 onTransitionEnd={() => props.handleModal(false)}
+        >
+            {props.children}
+        </section>
     );
 };
 

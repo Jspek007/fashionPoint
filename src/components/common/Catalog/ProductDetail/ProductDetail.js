@@ -18,12 +18,6 @@ function ProductDetail() {
     let cartArray = localStorage.getItem('currentCart');
     const [modal, setModal] = useState(false);
 
-    const toggleModal = () => {
-        setModal(true);
-        setTimeout(() => setModal(false), 3000);
-    }
-
-
     useEffect(() => {
         const fetchSpecificProduct = async () => {
             setLoading(true);
@@ -61,7 +55,7 @@ function ProductDetail() {
             cartArray[objectIndex].qty++;
             localStorage.setItem('currentCart', JSON.stringify(cartArray));
         }
-        toggleModal();
+        setModal(true);
     }
 
 
@@ -83,7 +77,7 @@ function ProductDetail() {
                         </section>
                         <section className="bottom-detail-container">
                             <AddToCartButton clickHandler={addProductToCart} specificProductData={productData} />
-                            <CartModal show={modal}>
+                            <CartModal show={modal} handleModal={setModal}>
                                 <section className="modal-content">
                                     <FaShoppingCart className="modal-icon" />
                                     <SubTitle text="Product is toegevoegd aan uw winkelwagen." />
