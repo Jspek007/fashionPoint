@@ -67,9 +67,9 @@ const CartPage = () => {
                                             </Link>
                                         </td>
                                         <td className="table">
-                                            <CartQtyController />
+                                            <CartQtyController cartData={cartItems} updateCart={setCartItems} specificProduct={item} />
                                             <span className="item-qty">{item.qty}</span>
-                                            <CartQtyController increase/>
+                                            <CartQtyController increase cartData={cartItems} updateCart={setCartItems} specificProduct={item}/>
                                         </td>
                                         <td className="table">
                                             <span>€{(item.price * item.qty)}</span>
