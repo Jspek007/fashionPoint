@@ -6,6 +6,7 @@ import CartSummary from "../../components/common/Cart/CartSummary";
 import {Link} from "react-router-dom";
 import RemoveProductIcon from "../../components/common/Cart/RemoveProductIcon/RemoveProductIcon";
 import FormButtonContainer from "../../components/Form/Forms/FormComponents/FormButtonContainer";
+import CartQtyController from "../../components/common/Cart/CartQtyController";
 
 const CartPage = () => {
 
@@ -31,7 +32,12 @@ const CartPage = () => {
                 <section className="cart-container">
                     <section className="cart-header">
                         <SubTitle text="Winkelwagen"/>
-                        <RedirectButton primary callToAction="Afrekenen"/>
+                        <section className="cart-action-buttons">
+                            <Link exact="true" to="/collectie">
+                                <RedirectButton callToAction="Verder winkelen"/>
+                            </Link>
+                            <RedirectButton primary callToAction="Afrekenen"/>
+                        </section>
                     </section>
                     <table className="cart-item-table">
                         <thead>
@@ -40,7 +46,7 @@ const CartPage = () => {
                                 <span>Product</span>
                             </th>
                             <th className="table price">
-                                <span>Prijs</span>
+                                <span>Aantal</span>
                             </th>
                             <th className="table subtotal">
                                 <span>Subtotaal</span>
@@ -61,10 +67,12 @@ const CartPage = () => {
                                             </Link>
                                         </td>
                                         <td className="table">
-                                            <span>€{item.price}</span>
+                                            <CartQtyController cartData={cartItems} updateCart={setCartItems} specificProduct={item} />
+                                            <span className="item-qty">{item.qty}</span>
+                                            <CartQtyController increase cartData={cartItems} updateCart={setCartItems} specificProduct={item}/>
                                         </td>
                                         <td className="table">
-                                            <span>€{item.price}</span>
+                                            <span>€{(item.price * item.qty)}</span>
                                         </td>
                                         <td className="table">
                                             <RemoveProductIcon cartData={cartItems} specificProduct={item}
@@ -75,8 +83,10 @@ const CartPage = () => {
                                 )
                             }
                         )}
-                        <CartSummary cartData={cartItems}/>
                     </table>
+                    <section className="cart-footer">
+                        <CartSummary cartData={cartItems}/>
+                    </section>
                 </section>
             </>
         )

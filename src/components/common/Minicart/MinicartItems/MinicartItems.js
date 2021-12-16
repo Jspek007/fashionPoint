@@ -6,21 +6,30 @@ const MinicartItems = ({cartData}) => {
 
     return (
         <section className="items-container">
+            <section className="minicart-header">
+                <span>Product</span>
+                <span>Prijs</span>
+                <span>Aantal</span>
+            </section>
             {cartData.map((item) => {
                 return (
-                    <Link key={item.id} className="minicart-link"
-                          exact="true" to={`/collectie/${item.category}/${item.id}`}>
-                        <img src={item.image} className="minicart-product-image" alt={item.title}/>
-                        <section className="minicart-title">
-                            {item.title}
-                        </section>
-                        <section className="minicart-price">
-                            €{item.price}
-                        </section>
-                    </Link>
+                        <Link key={item.id} className="minicart-link"
+                              exact="true" to={`/collectie/${item.category}/${item.id}`}>
+                            <img src={item.image} className="minicart minicart-product-image" alt={item.title}/>
+                            <section className="minicart minicart-title">
+                                {item.title}
+                            </section>
+                            <section className="minicart minicart-price">
+                                €{(item.price * item.qty)}
+                            </section>
+                            <section className="minicart minicart-qty">
+                                {item.qty}
+                            </section>
+                        </Link>
                 )
             })}
         </section>
+
     );
 };
 

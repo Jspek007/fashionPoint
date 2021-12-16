@@ -1,12 +1,13 @@
 import React from 'react';
 import "./CartSummary.scss";
 import {SubTitle} from "../../Content/TextComponents";
+import {RedirectButton} from "../../../Form/Buttons";
+import FormButtonContainer from "../../../Form/Forms/FormComponents/FormButtonContainer";
 
 const CartSummary = ({cartData}) => {
 
     const getCartSubtotal = () => {
-        return cartData.map(item => item.price).reduce((prev, curr) => prev + curr, 0);
-
+        return cartData.map(item => item.price * item.qty).reduce((prev, curr) => prev + curr, 0);
     }
 
     const getShippingTotal = () => {
@@ -32,24 +33,27 @@ const CartSummary = ({cartData}) => {
                 <section className="summary-title">
                     <SubTitle text="Uw overzicht"/>
                 </section>
-                    <section className="summary-row">
-                        <span>Subtotaal</span>
-                        <span>€{getCartSubtotal().toFixed(2)}</span>
-                    </section>
-                    <section className="summary-row">
-                        <span>Verzending</span>
-                        <span>{getShippingTotal() == null && (
-                            "Gratis"
+                <section className="summary-row">
+                    <span>Subtotaal</span>
+                    <span>€{getCartSubtotal().toFixed(2)}</span>
+                </section>
+                <section className="summary-row">
+                    <span>Verzending</span>
+                    <span>{getShippingTotal() == null && (
+                        "Gratis"
+                    )}
+                        {getShippingTotal() !== null && (
+                            "€" + getShippingTotal()
                         )}
-                            {getShippingTotal() !== null && (
-                                "€" + getShippingTotal()
-                            )}
                         </span>
-                    </section>
-                    <section className="summary-row total">
-                        <span>Totaal</span>
-                        <span>€{getCartTotal().toFixed(2)}</span>
-                    </section>
+                </section>
+                <section className="summary-row total">
+                    <span>Totaal</span>
+                    <span>€{getCartTotal().toFixed(2)}</span>
+                </section>
+                <FormButtonContainer>
+                    <RedirectButton primary callToAction="Afrekenen"/>
+                </FormButtonContainer>
             </section>
         </section>
     );
