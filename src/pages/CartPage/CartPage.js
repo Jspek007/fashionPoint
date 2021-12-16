@@ -72,7 +72,7 @@ const CartPage = () => {
                                             <CartQtyController increase cartData={cartItems} updateCart={setCartItems} specificProduct={item}/>
                                         </td>
                                         <td className="table">
-                                            <span>€{(item.price * item.qty)}</span>
+                                            <span>€{(item.price * item.qty).toFixed(2)}</span>
                                         </td>
                                         <td className="table">
                                             <RemoveProductIcon cartData={cartItems} specificProduct={item}

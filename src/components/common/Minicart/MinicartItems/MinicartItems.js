@@ -20,7 +20,7 @@ const MinicartItems = ({cartData}) => {
                                 {item.title}
                             </section>
                             <section className="minicart minicart-price">
-                                €{(item.price * item.qty)}
+                                €{(item.price * item.qty).toFixed(2)}
                             </section>
                             <section className="minicart minicart-qty">
                                 {item.qty}
