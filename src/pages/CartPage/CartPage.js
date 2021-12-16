@@ -45,7 +45,7 @@ const CartPage = () => {
                                 <span>Product</span>
                             </th>
                             <th className="table price">
-                                <span>Prijs</span>
+                                <span>Aantal</span>
                             </th>
                             <th className="table subtotal">
                                 <span>Subtotaal</span>
@@ -66,10 +66,10 @@ const CartPage = () => {
                                             </Link>
                                         </td>
                                         <td className="table">
-                                            <span>€{item.price}</span>
+                                            <span>{item.qty}</span>
                                         </td>
                                         <td className="table">
-                                            <span>€{item.price}</span>
+                                            <span>€{(item.price * item.qty)}</span>
                                         </td>
                                         <td className="table">
                                             <RemoveProductIcon cartData={cartItems} specificProduct={item}

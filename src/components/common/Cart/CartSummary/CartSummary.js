@@ -7,8 +7,7 @@ import FormButtonContainer from "../../../Form/Forms/FormComponents/FormButtonCo
 const CartSummary = ({cartData}) => {
 
     const getCartSubtotal = () => {
-        return cartData.map(item => item.price).reduce((prev, curr) => prev + curr, 0);
-
+        return cartData.map(item => item.price * item.qty).reduce((prev, curr) => prev + curr, 0);
     }
 
     const getShippingTotal = () => {
