@@ -1,12 +1,12 @@
 import React, {useRef} from 'react';
 import "./MinicartMenu.scss";
 import {FaShoppingCart} from "react-icons/fa"
-import {useDetectOutsideClick} from "../../../../helpers/UseDetectOutsideClick/UseDetectOutsideClick";
+import {useDetectOutsideClick} from "../../../../../helpers/UseDetectOutsideClick/UseDetectOutsideClick";
 import MinicartItems from "../MinicartItems";
-import {RedirectButton} from "../../../Form/Buttons";
-import FormButtonContainer from "../../../Form/Forms/FormComponents/FormButtonContainer";
+import {RedirectButton} from "../../../../Form/Buttons";
+import FormButtonContainer from "../../../../Form/Forms/FormComponents/FormButtonContainer";
 import {Link} from "react-router-dom";
-import SubTitle from "../../Content/TextComponents/SubTitle/SubTitle";
+import SubTitle from "../../../Content/TextComponents/SubTitle/SubTitle";
 
 const MinicartMenu = () => {
 
@@ -18,7 +18,7 @@ const MinicartMenu = () => {
 
     if (cartArray === '[]' || !cartArray) {
         return (
-            <section className="menu-container">
+            <section className="menu-container-cart">
                 <section className="menu-trigger" onClick={onClick}>
                <span>
                    <FaShoppingCart className="user-icon"/>
@@ -32,7 +32,7 @@ const MinicartMenu = () => {
         )
     } else {
         return (
-            <section className="menu-container">
+            <section className="menu-container-cart">
                 <section className="menu-trigger" onClick={onClick}>
                <span>
                    <FaShoppingCart className="user-icon"/>

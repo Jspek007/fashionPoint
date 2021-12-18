@@ -7,8 +7,10 @@ const FullWidthBanner = (props) => {
         <section className="full-width-banner-content">
             <section className="full-width-left-container">
                 <section className="call-to-action-container">
-                    <Title text={props.callToAction} />
-                    <SubTitle text={props.paragraph} />
+                    <section className="text-container">
+                        <Title text={props.callToAction}/>
+                        <SubTitle text={props.paragraph}/>
+                    </section>
                     <section className="buttons-container">
                         {props.children}
                     </section>
