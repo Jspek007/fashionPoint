@@ -1,9 +1,9 @@
-.menu-container.menu {
+.menu-container.user {
   display: none;
 }
 
 @media screen and (min-width: 1280px) {
-  .menu-container {
+  .menu-container-user, .menu-container-cart {
     display: flex;
     justify-content: center;
     position: relative;

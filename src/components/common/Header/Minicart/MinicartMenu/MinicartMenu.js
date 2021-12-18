@@ -18,7 +18,7 @@ const MinicartMenu = () => {
 
     if (cartArray === '[]' || !cartArray) {
         return (
-            <section className="menu-container cart">
+            <section className="menu-container-cart">
                 <section className="menu-trigger" onClick={onClick}>
                <span>
                    <FaShoppingCart className="user-icon"/>
@@ -32,7 +32,7 @@ const MinicartMenu = () => {
         )
     } else {
         return (
-            <section className="menu-container cart">
+            <section className="menu-container-cart">
                 <section className="menu-trigger" onClick={onClick}>
                <span>
                    <FaShoppingCart className="user-icon"/>

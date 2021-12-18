@@ -13,7 +13,7 @@ function SignedInMenu() {
     const onClick = () => setIsActive(!isActive);
 
     return (
-        <section className="menu-container menu">
+        <section className="menu-container-user">
             <button onClick={onClick} className="menu-trigger">
                <span>
                    <FaUser className="user-icon"/>
