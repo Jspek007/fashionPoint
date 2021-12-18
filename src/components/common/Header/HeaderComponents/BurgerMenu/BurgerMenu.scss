@@ -1,7 +1,7 @@
 .navbar {
-  display: flex;
-  align-items: center;
-  width: 33.3%;
+  position: absolute;
+  left: 25px;
+  font-size: 25px;
 }
 
 .menu-bars {
@@ -9,12 +9,13 @@
   font-size: 2rem;
   background: none;
   top: 5px;
+  color: var(--color-primary);
 }
 
 .nav-menu {
   background-color: #ffffff;
   width: 250px;
-  height: auto;
+  height: 100vh;
   display: flex;
   justify-content: center;
   position: fixed;

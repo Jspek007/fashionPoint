@@ -1,11 +1,19 @@
+.header-container {
+  display: flex;
+  padding: 10px 15px 5px 15px;
+  justify-content: center;
+  flex: 1 1;
+}
+
 .main-header {
-  visibility: hidden;
+  display: none;
   width: 100%;
 }
 
 .main-header-logo {
   display: flex;
   justify-content: center;
+  padding-left: 25px;
 }
 
 .right-header-section {
