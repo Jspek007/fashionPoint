@@ -11,48 +11,49 @@
   margin: 0;
 }
 
-.welcome-message {
-  margin: 5px 0 10px 0;
+.third-party-methods, .email-form-login {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
-.secondary-text {
-  font-size: 18px;
+ .email-form-login form {
+   width: 100%;
+ }
+
+.alternative-register-container a {
   font-family: var(--font-family-bold);
-  margin: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.email-form-login {
-  border-left: 0.5px solid var(--color-accent);
-}
+@media screen and (min-width: 1280px) {
+  .email-form-login {
+    border-left: 0.5px solid var(--color-accent);
+  }
 
-.third-party-methods {
-  padding-right: 12px;
-}
+  .third-party-methods {
+    padding-right: 12px;
+  }
 
-.email-login {
-  padding-left: 12px;
-}
+  .email-login {
+    padding-left: 12px;
+  }
 
-.login-method-container {
-  margin: 40px 0;
-  display: flex;
-}
+  .login-method-container {
+    margin: 40px 0;
+    display: flex;
+  }
 
-.third-party-login-buttons {
-  padding: 5px;
-}
+  .third-party-login-buttons {
+    padding: 5px;
+  }
 
-.third-party-methods,
-.email-form-login {
-  width: 300px;
-  padding-left: 20px;
-}
-
-.alternative-register-container {
-  display: flex;
-  justify-content: center;
+  .third-party-methods,
+  .email-form-login {
+    width: 300px;
+    padding-left: 20px;
+  }
 }
