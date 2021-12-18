@@ -12,6 +12,16 @@
   color: var(--color-primary);
 }
 
+.navbar a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.menu-bars a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
 .nav-menu {
   background-color: #ffffff;
   width: 250px;
@@ -62,7 +72,8 @@
 
 .nav-menu-items {
   width: 100%;
-  padding-right: 25px;
+  padding-right: 15px;
+  padding-left: 10px;
 }
 
 .navbar-toggle {
