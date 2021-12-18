@@ -3,7 +3,7 @@ import {SignedInMenu} from "../../../index";
 import {RedirectButton} from "../../../../Form/Buttons";
 import {useAuth} from "../../../../../contexts/AuthContext";
 import {Link} from "react-router-dom";
-import MinicartMenu from "../../../Minicart/MinicartMenu";
+import MinicartMenu from "../../Minicart/MinicartMenu";
 
 function HeaderActionMenu() {
 

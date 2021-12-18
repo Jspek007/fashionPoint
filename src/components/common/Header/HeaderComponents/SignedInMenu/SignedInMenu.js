@@ -1,9 +1,9 @@
 import React, {useRef} from 'react';
 import "./SignedInMenu.scss";
-import {useAuth} from "../../../contexts/AuthContext";
+import {useAuth} from "../../../../../contexts/AuthContext";
 import {FaUser} from "react-icons/fa";
 import {Link} from "react-router-dom";
-import {useDetectOutsideClick} from "../../../helpers/UseDetectOutsideClick/UseDetectOutsideClick";
+import {useDetectOutsideClick} from "../../../../../helpers/UseDetectOutsideClick/UseDetectOutsideClick";
 
 function SignedInMenu() {
     const {logout} = useAuth();
@@ -13,7 +13,7 @@ function SignedInMenu() {
     const onClick = () => setIsActive(!isActive);
 
     return (
-        <section className="menu-container">
+        <section className="menu-container menu">
             <button onClick={onClick} className="menu-trigger">
                <span>
                    <FaUser className="user-icon"/>
