@@ -1,9 +1,15 @@
-.usp__container {
+.main-content-container {
   display: none;
 }
 
 @media screen and (min-width: 1280px) {
+
+  .main-content-container {
+    display: block;
+  }
+
   .usp__container {
+    display: flex;
     padding: 20px 10rem;
     opacity: 0;
     transform: scale(0.75);

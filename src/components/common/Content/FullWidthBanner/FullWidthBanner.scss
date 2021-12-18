@@ -1,10 +1,9 @@
 .full-width-banner-content {
   background-image: url(../../../../assets/images/contentImages/homepageMainImage.jpeg);
-  height: 450px;
+  height: 500px;
   width: auto;
   background-size: cover;
   position: relative;
-  padding-top: 25px;
 }
 
 .full-width-left-container {
@@ -30,9 +29,10 @@
 
 .buttons-container {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   display: flex;
   justify-content: center;
+  padding-bottom: 15px;
 }
 
 @media screen and (min-width: 1280px) {
