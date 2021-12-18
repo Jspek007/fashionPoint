@@ -1,15 +1,9 @@
 .breadcrumbs {
-  height: 30px;
   display: flex;
-  align-items: center;
-  max-width: 1020px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 14px;
+  padding-left: 25px;
 }
 
 .breadcrumb__item {
-  margin-right: 15px;
   text-decoration: underline;
   color: var(--color-dimmed-primary);
   font-family: var(--font-family-italic);
@@ -24,4 +18,21 @@
 .breadcrumb__active {
   font-family: var(--font-family-bold);
   text-decoration: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .breadcrumbs {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+  }
+
+  .breadcrumb__item {
+      margin-right: 15px;
+  }
+
 }
