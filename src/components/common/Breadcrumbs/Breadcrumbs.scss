@@ -1,12 +1,14 @@
 .breadcrumbs {
   display: flex;
   padding-left: 25px;
+  font-size: 12px;
 }
 
 .breadcrumb__item {
   text-decoration: underline;
   color: var(--color-dimmed-primary);
   font-family: var(--font-family-italic);
+  padding: 0 8px;
 }
 
 .breadcrumb__item:after {
@@ -18,6 +20,7 @@
 .breadcrumb__active {
   font-family: var(--font-family-bold);
   text-decoration: none;
+  margin-left: 8px;
 }
 
 @media screen and (min-width: 1280px) {
