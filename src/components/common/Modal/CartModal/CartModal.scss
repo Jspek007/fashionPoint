@@ -1,4 +1,4 @@
-.modal-container {
+.cart-modal-container {
   position: fixed;
   z-index: 500;
   background-color: var(--color-secondary);
@@ -8,16 +8,16 @@
   top: 0;
   left: 0;
   box-sizing: border-box;
-  height: 150px;
+  height: 200px;
 }
 
-.modal-container-shown {
+.cart-modal-container-shown {
   top: 0;
   transition: all 250ms linear;
 }
 
-.modal-container-hidden {
-  top: -150px;
+.cart-modal-container-hidden {
+  top: -250px;
   transition: all 500ms linear 2s;
 }
 

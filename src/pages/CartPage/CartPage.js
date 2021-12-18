@@ -7,11 +7,22 @@ import {Link} from "react-router-dom";
 import RemoveProductIcon from "../../components/common/Cart/RemoveProductIcon/RemoveProductIcon";
 import FormButtonContainer from "../../components/Form/Forms/FormComponents/FormButtonContainer";
 import CartQtyController from "../../components/common/Cart/CartQtyController";
+import Modal from "../../components/common/Modal/Modal";
 
 const CartPage = () => {
 
     const cartArray = localStorage.getItem('currentCart');
     const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('currentCart')));
+    const [modalOpen, setModalOpen] = useState(false);
+    const [remove, doRemove] = useState(false);
+
+    const preventRemoveFromCart = () => {
+        doRemove(false)
+    }
+
+    const doRemoveFromCart = () => {
+        doRemove(true);
+    }
 
     if (cartArray === '[]' || !cartArray) {
         return (
@@ -28,7 +39,6 @@ const CartPage = () => {
         )
     } else {
         return (
-            <>
                 <section className="cart-container">
                     <section className="cart-header">
                         <SubTitle text="Winkelwagen"/>
@@ -75,8 +85,12 @@ const CartPage = () => {
                                             <span>€{(item.price * item.qty).toFixed(2)}</span>
                                         </td>
                                         <td className="table">
-                                            <RemoveProductIcon cartData={cartItems} specificProduct={item}
-                                                               updateCart={setCartItems}/>
+                                            <RemoveProductIcon cartData={cartItems}
+                                                               specificProduct={item}
+                                                               updateCart={setCartItems}
+                                                               toggleModal={setModalOpen}
+                                                               doRemove={remove}
+                                            />
                                         </td>
                                     </tr>
                                     </tbody>
@@ -88,7 +102,6 @@ const CartPage = () => {
                         <CartSummary cartData={cartItems}/>
                     </section>
                 </section>
-            </>
         )
     }
 };
