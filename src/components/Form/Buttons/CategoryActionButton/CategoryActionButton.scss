@@ -1,17 +1,10 @@
-
-.category-action-button {
-  width: 80%;
-}
-
 .category-button {
-  background-color: var(--color-primary);
+  background-color: var(--color-dimmed-primary);
   color: var(--color-secondary);
   position: relative;
-  width: 60%;
   height: 50px;
   border: none;
   transform: skewX(-30deg);
-  cursor: pointer;
   margin-top: 10px;
 }
 
@@ -19,7 +12,15 @@
   transform: skewX(30deg);
 }
 
-.category-button:hover {
-  background-color: var(--color-accent);
-  cursor: pointer;
+@media screen and (min-width: 1280px) {
+  .category-button {
+    background-color: var(--color-primary);
+    cursor: pointer;
+  }
+
+
+  .category-button:hover {
+    background-color: var(--color-accent);
+    cursor: pointer;
+  }
 }
