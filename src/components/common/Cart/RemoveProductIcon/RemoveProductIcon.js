@@ -3,7 +3,6 @@ import "./RemoveProductIcon.scss";
 import {RiDeleteBin6Fill} from "react-icons/ri";
 import Modal from "../../Modal/Modal";
 import {RedirectButton} from "../../../Form/Buttons";
-import FormButtonContainer from "../../../Form/Forms/FormComponents/FormButtonContainer";
 
 const RemoveProductIcon = ({cartData, specificProduct, updateCart}) => {
 
