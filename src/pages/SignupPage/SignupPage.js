@@ -25,22 +25,19 @@ function SignupPage() {
                         </Link>
                     </section>
                 </section>
-                <p className="terms-information-container">
-                    Door u aan te melden, gaat u akkoord met onze{" "}
-                    <Link to="/algemene-voorwaarden" className="link">
-                        algemene voorwaarden
-                    </Link>
-                </p>
-
-                <section className="already-customer-container">
-                    <section>
-                        <p>
-                            Al wel een account?{" "}
-                            <Link to="/login" className="link">
-                                Inloggen
-                            </Link>
-                        </p>
-                    </section>
+                <section className="info-section">
+                    <p>
+                        Lees eerst onze{" "}
+                        <Link to="/algemene-voorwaarden" className="link">
+                            algemene voorwaarden
+                        </Link>
+                    </p>
+                    <p>
+                        Al wel een account?{" "}
+                        <Link to="/login" className="link">
+                            Inloggen
+                        </Link>
+                    </p>
                 </section>
             </section>
         </Fragment>
