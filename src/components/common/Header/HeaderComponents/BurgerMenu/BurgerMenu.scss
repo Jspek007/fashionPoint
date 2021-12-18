@@ -24,7 +24,7 @@
 
 .nav-menu {
   background-color: #ffffff;
-  width: 250px;
+  width: 65vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -63,6 +63,7 @@
   border-radius: 4px;
   outline: none;
   border: 1px solid black;
+  box-shadow: 1px 1px 2px;
 }
 
 .nav-text a:hover {
@@ -87,6 +88,14 @@
 
 span {
   margin-left: 16px;
+}
+
+.menu-action-logout {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 10px;
+  font-family: var(--font-family-bold);
 }
 
 @media only screen and (min-width: 768px) {

@@ -1,5 +1,9 @@
 @import "../src/assets/fonts/fonts.css";
 
+#root {
+  overflow: hidden;
+}
+
 body {
     font-family: 'Roboto Standard', Arial, Helvetica, sans-serif;
 }

@@ -1,7 +1,13 @@
 .category-banner-container {
-  margin: 15px 20%;
-  background-color: var(--color-dimmed-secondary);
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
+  background-color: var(--color-dimmed-secondary);
+  margin: 15px 0;
+}
+
+@media screen and (min-width: 1280px) {
+  .category-banner-container {
+    margin: 15px 20%;
+  }
 }

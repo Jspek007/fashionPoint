@@ -4,14 +4,12 @@ import 'react-loading-skeleton/dist/skeleton.css';
 
 const ProductCardSkeleton = () => {
     return (
-        <section className="product-list-container">
-            <section className="product-list-grid">
                 <section className="product-container">
                     {Array(6)
                         .fill()
                         .map((item, index) => (
                             <section key={index} className="product-link">
-                                <Skeleton width={300} height={250} />
+                                <Skeleton width={400} height={500} />
                                 <section className="product">
                                     <section className="product-item-price">
                                         <Skeleton width={100} />
@@ -22,8 +20,6 @@ const ProductCardSkeleton = () => {
                                 </section>
                             </section>
                         ))}
-                </section>
-            </section>
         </section>
     );
 };
