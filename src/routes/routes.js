@@ -16,106 +16,108 @@ import MyAccountPage from "../pages/MyAccountPage/MyAccountPage";
 import Wishlist from "../pages/Wishlist/Wishlist";
 import CartPage from "../pages/CartPage/CartPage";
 
-export default [
-    {
-        path: "/",
-        name: "Home",
-        Component: Home,
-        memberOnly: false,
-    },
-    {
-        path: "/klantenservice",
-        name: "Klantenservice",
-        Component: Customerservice,
-        memberOnly: false,
-    },
-    {
-        path: "/over-ons",
-        name: "Over ons",
-        Component: AboutUs
-    },
-    {
-        path: "/collectie",
-        name: "Collectie",
-        Component: CollectionPage,
-        memberOnly: true
-    },
-    {
-        path: "/collectie/heren",
-        name: "Heren",
-        Component: MensCollection,
-        memberOnly: true,
-    },
-    {
-        path: "/collectie/dames",
-        name: "Dames",
-        Component: WomensCollection,
-        memberOnly: true,
-    },
-    {
-        path: `/collectie/:categoryName/:productId`,
-        name: "Huidig product",
-        Component: ProductDetail,
-        memberOnly: true,
-    },
-    {
-        path: "/login",
-        name: "Login",
-        Component: LoginPage,
-        memberOnly: false,
-    },
-    {
-        path: "/aanmelden",
-        name: "Aanmelden",
-        Component: SignupPage,
-        memberOnly: false,
-    },
-    {
-        path: "/email-register",
-        name: "Registreren",
-        Component: EmailSignUpPage,
-        memberOnly: false,
-    },
-    {
-        path: "/wachtwoord-vergeten",
-        name: "Wachtwoord vergeten",
-        Component: ForgotPasswordPage,
-        memberOnly: false,
-    },
-    {
-        path: "/algemene-voorwaarden",
-        name: "Algemene Voorwaarden",
-        Component: TermsAndConditions,
-        memberOnly: false,
-    },
-    {
-        path: "/privacy",
-        name: "Privacy",
-        Component: PrivacyPage,
-        memberOnly: false,
-    },
-    {
-        path: "/email-is-verzonden",
-        name: "Email is verstuurd",
-        Component: SendSuccessfullyPage,
-        memberOnly: false,
-    },
-    {
-        path: "/mijn-account",
-        name: "Mijn account",
-        Component: MyAccountPage,
-        memberOnly: true,
-    },
-    {
-        path: "/wishlist",
-        name: "Wishlist",
-        Component: Wishlist,
-        memberOnly: true,
-    },
-    {
-        path: "/winkelwagen",
-        name: "Winkelwagen",
-        Component: CartPage,
-        memberOnly: true,
-    }
+const routes = [
+  {
+    path: "/",
+    name: "Home",
+    Component: Home,
+    memberOnly: false,
+  },
+  {
+    path: "/klantenservice",
+    name: "Klantenservice",
+    Component: Customerservice,
+    memberOnly: false,
+  },
+  {
+    path: "/over-ons",
+    name: "Over ons",
+    Component: AboutUs,
+  },
+  {
+    path: "/collectie",
+    name: "Collectie",
+    Component: CollectionPage,
+    memberOnly: true,
+  },
+  {
+    path: "/collectie/heren",
+    name: "Heren",
+    Component: MensCollection,
+    memberOnly: true,
+  },
+  {
+    path: "/collectie/dames",
+    name: "Dames",
+    Component: WomensCollection,
+    memberOnly: true,
+  },
+  {
+    path: `/collectie/:categoryName/:productId`,
+    name: "Huidig product",
+    Component: ProductDetail,
+    memberOnly: true,
+  },
+  {
+    path: "/login",
+    name: "Login",
+    Component: LoginPage,
+    memberOnly: false,
+  },
+  {
+    path: "/aanmelden",
+    name: "Aanmelden",
+    Component: SignupPage,
+    memberOnly: false,
+  },
+  {
+    path: "/email-register",
+    name: "Registreren",
+    Component: EmailSignUpPage,
+    memberOnly: false,
+  },
+  {
+    path: "/wachtwoord-vergeten",
+    name: "Wachtwoord vergeten",
+    Component: ForgotPasswordPage,
+    memberOnly: false,
+  },
+  {
+    path: "/algemene-voorwaarden",
+    name: "Algemene Voorwaarden",
+    Component: TermsAndConditions,
+    memberOnly: false,
+  },
+  {
+    path: "/privacy",
+    name: "Privacy",
+    Component: PrivacyPage,
+    memberOnly: false,
+  },
+  {
+    path: "/email-is-verzonden",
+    name: "Email is verstuurd",
+    Component: SendSuccessfullyPage,
+    memberOnly: false,
+  },
+  {
+    path: "/mijn-account",
+    name: "Mijn account",
+    Component: MyAccountPage,
+    memberOnly: true,
+  },
+  {
+    path: "/wishlist",
+    name: "Wishlist",
+    Component: Wishlist,
+    memberOnly: true,
+  },
+  {
+    path: "/winkelwagen",
+    name: "Winkelwagen",
+    Component: CartPage,
+    memberOnly: true,
+  },
 ];
+
+export default routes;
