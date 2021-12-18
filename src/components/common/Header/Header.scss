@@ -3,6 +3,19 @@
   justify-content: center;
   padding-top: 25px;
   flex: 1 1;
+  margin-bottom: 15px;
+}
+
+.header-menu {
+  display: none;
+}
+
+.mobile-header-menu {
+  position: absolute;
+  right: 20px;
+  font-size: 22px;
+  top: 20px;
+  color: var(--color-primary);
 }
 
 
@@ -21,6 +34,14 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .mobile-header-menu {
+    display: none;
+  }
+
+  .header-menu {
+    display: flex;
   }
 
   .navbar {
