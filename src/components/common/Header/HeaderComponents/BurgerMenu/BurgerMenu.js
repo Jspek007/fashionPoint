@@ -20,7 +20,7 @@ const BurgerMenu = () => {
     <>
       <IconContext.Provider value={{ color: "#000000\\n" }}>
         <section className="navbar">
-          <Link to="#" classname="menu-bars">
+          <Link to="#" className="menu-bars">
             <FaBars onClick={showSideBar} />
           </Link>
         </section>
