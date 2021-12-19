@@ -1,53 +1,87 @@
 .product-detail-container {
   display: flex;
-  margin: 100px 0;
-  height: 500px;
-}
-
-.product-image-container {
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 25%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
 }
 
 .product-image {
-  width: auto;
+  max-height: auto;
+  max-height: 300px;
 }
 
 .product-details {
-  position: relative;
-  padding-left: 35px;
-  margin-right: 25%;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
 }
 
 .product-detail-title {
   font-family: var(--font-family-bold);
-  font-style: italic;
-  font-size: 32px;
-}
-
-.product-detail-description {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-family: var(--font-family-italic);
-  padding-top: 25px;
+  padding-bottom: 10px;
 }
 
 .bottom-detail-container {
   display: flex;
-  position: absolute;
-  bottom: 0;
-}
-
-.product-rating-container {
-  display: flex;
-  flex-direction: column;
-  padding-left: 25px;
   justify-content: center;
+  flex-direction: column;
+  padding: 10px 0;
+  top: 10px;
+  height: 100%;
 }
 
-.rating > span:hover:before {
-  content: "\2605";
-  position: absolute;
+.add-to-cart-container {
+  padding: 10px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+@media screen and (min-width: 1280px) {
+  .product-detail-container {
+    display: flex;
+    margin: 100px 0;
+    height: 500px;
+    flex-direction: inherit;
+  }
+
+  .product-image-container {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 25%;
+  }
+
+  .product-image {
+    width: auto;
+    max-height: auto;
+  }
+
+  .product-details {
+    position: relative;
+    padding-left: 35px;
+    margin-right: 25%;
+  }
+
+  .product-detail-title {
+    font-family: var(--font-family-bold);
+    font-style: italic;
+    font-size: 32px;
+  }
+
+  .product-detail-description {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: var(--font-family-italic);
+    padding-top: 25px;
+  }
+
+  .bottom-detail-container {
+    display: flex;
+    margin-top: 25px;
+  }
 }

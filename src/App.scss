@@ -1,20 +1,18 @@
 @import "../src/assets/fonts/fonts.css";
 
-#root {
-  overflow: hidden;
-}
-
 body {
-    font-family: 'Roboto Standard', Arial, Helvetica, sans-serif;
+  font-family: "Roboto Standard", Arial, Helvetica, sans-serif;
 }
 
-.link, .link:visited, a {
-    text-decoration: none;
-    color: black;
+.link,
+.link:visited,
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .nav-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .loading-spinner {

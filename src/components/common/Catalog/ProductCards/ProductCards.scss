@@ -24,12 +24,19 @@
   flex-direction: column;
 }
 
+.product-item-container .image-container {
+  justify-content: center;
+  display: flex;
+}
+
 .product-item-image {
   width: 125px;
   height: 165px;
 }
 
-.product-link:visited, .product.link:hover, .product-link:focus {
+.product-link:visited,
+.product.link:hover,
+.product-link:focus {
   text-decoration: none;
 }
 
@@ -37,14 +44,12 @@
   font-size: 12px;
   font-family: var(--font-family-italic);
   text-align: start;
-  margin-left: 10px;
 }
 
 .product-item-price {
   font-family: var(--font-family-bold);
   font-style: italic;
   text-align: start;
-  margin-left: 10px;
   width: 100%;
 }
 

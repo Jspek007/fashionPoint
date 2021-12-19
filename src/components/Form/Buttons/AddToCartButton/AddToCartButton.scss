@@ -1,10 +1,10 @@
 .add-to-cart-button {
-  height: 50px;
   background-color: var(--color-primary);
   color: var(--color-secondary);
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  height: 50px;
 }
 
 .product-price,
@@ -16,4 +16,10 @@
 .add-to-cart-message {
   padding-left: 25px;
   font-family: var(--font-family-bold);
+}
+
+@media screen and (min-width: 1280px) {
+  .add-to-cart-button {
+    height: 75px;
+  }
 }
