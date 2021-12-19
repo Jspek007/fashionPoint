@@ -70,6 +70,12 @@ function ProductDetail() {
               alt={productData.title}
             />
           </section>
+          <section className="add-to-cart-container">
+            <AddToCartButton
+              clickHandler={addProductToCart}
+              specificProductData={productData}
+            />
+          </section>
           <section className="product-details">
             <section className="product-detail-title">
               {productData.title}
@@ -77,30 +83,15 @@ function ProductDetail() {
             <section className="product-detail-description">
               {productData.description}
             </section>
-            <section className="bottom-detail-container">
-              <AddToCartButton
-                clickHandler={addProductToCart}
-                specificProductData={productData}
-              />
-              <CartModal show={modal} handleModal={setModal}>
-                <section className="modal-content">
-                  <FaShoppingCart className="modal-icon" />
-                  <SubTitle text="Product is toegevoegd aan uw winkelwagen." />
-                  <Link exact="true" to="/winkelwagen">
-                    <RedirectButton callToAction="Bekijken" primary />
-                  </Link>
-                </section>
-              </CartModal>
-              <section className="product-rating-container">
-                <section className="rating">
-                  <span>☆</span>
-                  <span>☆</span>
-                  <span>☆</span>
-                  <span>☆</span>
-                  <span>☆</span>
-                </section>
+            <CartModal show={modal} handleModal={setModal}>
+              <section className="modal-content">
+                <FaShoppingCart className="modal-icon" />
+                <SubTitle text="Product is toegevoegd aan uw winkelwagen." />
+                <Link exact="true" to="/winkelwagen">
+                  <RedirectButton callToAction="Bekijken" primary />
+                </Link>
               </section>
-            </section>
+            </CartModal>
           </section>
         </section>
       )}

@@ -4,6 +4,7 @@
 
 .category-item.category-item.category-item-right {
   background-image: url(../../../../assets/images/categoryImages/womens-fashion.jpg);
+  margin-top: 15px;
 }
 
 .category-item.category-item.category-item-left {
@@ -14,9 +15,9 @@
 .category-item.category-item.category-item-right {
   background-repeat: no-repeat;
   background-size: cover;
-  filter: grayscale(90%);
   height: 250px;
   width: auto;
+  position: relative;
 }
 
 .category-text {
@@ -60,6 +61,7 @@
     filter: grayscale(60%);
     height: 650px;
     width: 66%;
+    position: absolute;
   }
 
   .category-item.category-item.category-item-right {
