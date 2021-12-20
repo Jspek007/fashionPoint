@@ -4,7 +4,7 @@ import {RedirectButton} from "../../../../Form/Buttons";
 import {useAuth} from "../../../../../contexts/AuthContext";
 import {Link} from "react-router-dom";
 import MinicartMenu from "../../Minicart/MinicartMenu";
-import {FaUser} from "react-icons/fa";
+import {FaShoppingCart, FaUser} from "react-icons/fa";
 
 function HeaderActionMenu() {
 

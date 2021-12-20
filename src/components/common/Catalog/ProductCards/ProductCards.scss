@@ -1,15 +1,15 @@
 .product-container {
   margin-top: 25px;
-  margin-left: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
 }
 
 .product-link {
-  width: 50%;
+  width: 45%;
+  margin: 5px;
   display: flex;
   justify-content: center;
   flex-direction: column;
