@@ -3,6 +3,8 @@ import "./Header.scss";
 import Navigation from "./HeaderComponents/Navigation/Navigation";
 import HeaderActionMenu from "./HeaderComponents/HeaderActionMenu/HeaderActionMenu";
 import BurgerMenu from "./HeaderComponents/BurgerMenu";
+import {Link} from "react-router-dom";
+import {FaShoppingCart} from "react-icons/fa";
 
 function Header() {
 
@@ -16,6 +18,9 @@ function Header() {
                         FashionPoint
                     </a>
                 </section>
+                <Link exact="true" to="/winkelwagen">
+                    <FaShoppingCart className="header-cart-icon" />
+                </Link>
                 <section className="right-header-section">
                     <HeaderActionMenu/>
                 </section>

@@ -77,7 +77,7 @@ const CartPage = () => {
                       </section>
                     </Link>
                   </td>
-                  <td className="table">
+                  <td className="table qty">
                     <CartQtyController
                       cartData={cartItems}
                       updateCart={setCartItems}

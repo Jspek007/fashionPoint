@@ -18,6 +18,12 @@
   color: var(--color-primary);
 }
 
+.header-cart-icon {
+  font-size: 22px;
+  position: absolute;
+  right: 25px;
+}
+
 
 @media screen and (min-width: 1280px) {
   .header-container {
@@ -40,11 +46,7 @@
     display: none;
   }
 
-  .header-menu {
+  .header-menu, .header-cart-icon .navbar {
     display: flex;
-  }
-
-  .navbar {
-    display: none;
   }
 }
