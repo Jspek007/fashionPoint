@@ -54,6 +54,7 @@
     height: auto;
     flex-direction: inherit;
     width: 50%;
+    position: relative;
   }
 
   .product-image-container {
@@ -66,10 +67,12 @@
   }
 
   .add-to-cart-container {
-    position: relative;
-    width: 100%;
+    position: absolute;
     padding: 0;
-    margin-top: 25px;
+    bottom: 0;
+    top: inherit;
+    left: 50%;
+    width: 25%;
   }
 
   .product-details {
