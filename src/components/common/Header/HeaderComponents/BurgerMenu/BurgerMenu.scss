@@ -5,8 +5,6 @@
 }
 
 .menu-bars {
-  margin-left: 15px;
-  font-size: 2rem;
   background: none;
   top: 5px;
   color: var(--color-primary);
@@ -40,6 +38,11 @@
   transition: 350ms;
   top: 0;
   z-index: 200;
+}
+
+.navbar-toggle > .menu-bars {
+  font-size: 2rem;
+  margin: 0 0 15px 15px;
 }
 
 .nav-text {

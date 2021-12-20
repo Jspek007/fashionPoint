@@ -60,6 +60,11 @@
     margin-right: auto;
   }
 
+  .product-item-container {
+    position: relative;
+    height: 570px;
+  }
+
   .product-link {
     display: flex;
     justify-content: center;
@@ -76,15 +81,14 @@
     justify-content: center;
   }
 
-  .image-container {
-    height: 650px;
+  .product-item-image {
+    object-fit: contain;
+    height: 70%;
+    width: 70%;
   }
 
-  .product-item-image {
-    max-width: 100%;
-    height: auto;
-    max-height: 650px;
-    width: auto;
-    position: relative;
+  .product-info {
+    position: absolute;
+    bottom: 100px;
   }
 }
