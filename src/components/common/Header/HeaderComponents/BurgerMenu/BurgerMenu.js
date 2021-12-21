@@ -6,7 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import { SidebarData } from "./SidebarData";
 import { useAuth } from "../../../../../contexts/AuthContext";
-import { useDetectOutsideClick } from "../../../../../helpers/UseDetectOutsideClick/UseDetectOutsideClick";
+import { useDetectOutsideClick } from "../../../../../helpers/useDetectOutsideClick/useDetectOutsideClick";
 
 const BurgerMenu = () => {
   const dropdownRef = useRef(null);

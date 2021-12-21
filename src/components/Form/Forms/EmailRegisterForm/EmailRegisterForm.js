@@ -4,7 +4,7 @@ import {firebaseErrors} from "../../../../utils/firebaseErrors";
 import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import {FaSpinner} from "react-icons/fa";
 import InputField from "../FormComponents/InputField";
-import {HandleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
+import {handleRedirectToOrBack} from "../../../../helpers/handleRedirectToOrBack/handleRedirectToOrBack";
 import {useHistory, useLocation} from "react-router";
 import FormButtonContainer from "../FormComponents/FormButtonContainer";
 import FormErrorContainer from "../FormComponents/FormErrorContainer/FormErrorContainer";
@@ -25,7 +25,7 @@ function EmailRegisterForm() {
         event.preventDefault();
         register(email, password)
             .then(() => {
-                HandleRedirectToOrBack({history, location});
+                handleRedirectToOrBack({history, location});
                 isLoading(false);
             })
             .catch((error) => {

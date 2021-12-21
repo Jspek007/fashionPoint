@@ -65,13 +65,6 @@ function ChangeEmailForm() {
         <MyAccountForm>
             <InputField
                 inputType="text"
-                idValue="current-email"
-                placeholder={checkCurrentEmail()}
-                eventHandler={handleCurrentEmailChange}
-                formSection="my-account"
-            />
-            <InputField
-                inputType="text"
                 idValue="new-email"
                 placeholder="Nieuw email-adress"
                 eventHandler={handleNewEmailChange}

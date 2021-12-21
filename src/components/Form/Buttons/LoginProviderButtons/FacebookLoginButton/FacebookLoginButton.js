@@ -3,7 +3,7 @@ import "./FacebookLoginButton.scss";
 import { FaFacebook } from "react-icons/fa";
 import { useHistory, useLocation } from "react-router";
 import { useAuth } from "../../../../../contexts/AuthContext";
-import { HandleRedirectToOrBack } from "../../../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
+import { handleRedirectToOrBack } from "../../../../../helpers/handleRedirectToOrBack/handleRedirectToOrBack";
 
 function FacebookLoginButton() {
   const history = useHistory();
@@ -15,7 +15,7 @@ function FacebookLoginButton() {
       onClick={() => {
         signInWithFacebook()
           .then(() => {
-            HandleRedirectToOrBack({ history, location });
+            handleRedirectToOrBack({ history, location });
           })
           .catch((e) => console.log(e.message));
       }}
