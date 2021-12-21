@@ -2,7 +2,7 @@ import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import React, {useState} from "react";
 import {useAuth} from "../../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
-import {handleRedirectToOrBack} from "../../../../helpers/handleRedirectToOrBack/handleRedirectToOrBack";
+import {handleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/handleRedirectToOrBack";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
 import {FaSpinner} from "react-icons/fa";
 import InputField from "../FormComponents/InputField";

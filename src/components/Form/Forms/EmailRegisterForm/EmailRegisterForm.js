@@ -4,10 +4,10 @@ import {firebaseErrors} from "../../../../utils/firebaseErrors";
 import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import {FaSpinner} from "react-icons/fa";
 import InputField from "../FormComponents/InputField";
-import {handleRedirectToOrBack} from "../../../../helpers/handleRedirectToOrBack/handleRedirectToOrBack";
 import {useHistory, useLocation} from "react-router";
 import FormButtonContainer from "../FormComponents/FormButtonContainer";
 import FormErrorContainer from "../FormComponents/FormErrorContainer/FormErrorContainer";
+import {handleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/handleRedirectToOrBack";
 
 function EmailRegisterForm() {
 
