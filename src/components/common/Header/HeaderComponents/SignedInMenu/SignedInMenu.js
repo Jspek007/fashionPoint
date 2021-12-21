@@ -3,7 +3,7 @@ import "./SignedInMenu.scss";
 import {useAuth} from "../../../../../contexts/AuthContext";
 import {FaUser} from "react-icons/fa";
 import {Link} from "react-router-dom";
-import {useDetectOutsideClick} from "../../../../../helpers/UseDetectOutsideClick/UseDetectOutsideClick";
+import {useDetectOutsideClick} from "../../../../../helpers/useDetectOutsideClick/useDetectOutsideClick";
 
 function SignedInMenu() {
     const {logout} = useAuth();

@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import "./MinicartMenu.scss";
 import {FaShoppingCart} from "react-icons/fa"
-import {useDetectOutsideClick} from "../../../../../helpers/UseDetectOutsideClick/UseDetectOutsideClick";
+import {useDetectOutsideClick} from "../../../../../helpers/useDetectOutsideClick/useDetectOutsideClick";
 import MinicartItems from "../MinicartItems";
 import {RedirectButton} from "../../../../Form/Buttons";
 import FormButtonContainer from "../../../../Form/Forms/FormComponents/FormButtonContainer";

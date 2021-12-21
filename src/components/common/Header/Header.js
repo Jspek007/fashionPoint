@@ -13,11 +13,9 @@ function Header() {
             <div className="header-container">
                 <BurgerMenu />
                 <Navigation/>
-                <section className="main-header-logo">
                     <a href="/" draggable="false" className="main-header-logo">
                         FashionPoint
                     </a>
-                </section>
                 <Link exact="true" to="/winkelwagen">
                     <FaShoppingCart className="header-cart-icon" />
                 </Link>

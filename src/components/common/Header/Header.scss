@@ -27,8 +27,8 @@
 
 @media screen and (min-width: 1280px) {
   .header-container {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: flex;
+    justify-content: space-between;
     text-align: center;
     align-items: center;
     align-self: center;
@@ -37,16 +37,22 @@
     padding: 16px 25px;
     top: 0;
     flex: 1 1 0;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
   }
+
+  .main-header, .main-header-logo, .right-header-section {
+    width: 33.33333%;
+  }
+
 
   .mobile-header-menu {
     display: none;
   }
 
-  .header-menu, .header-cart-icon .navbar {
+  .header-menu {
     display: flex;
+  }
+
+  .header-cart-icon, .navbar {
+    display: none;
   }
 }

@@ -2,7 +2,7 @@ import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import React, {useState} from "react";
 import {useAuth} from "../../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
-import {HandleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/HandleRedirectToOrBack";
+import {handleRedirectToOrBack} from "../../../../helpers/handleRedirectToOrBack/handleRedirectToOrBack";
 import {firebaseErrors} from "../../../../utils/firebaseErrors";
 import {FaSpinner} from "react-icons/fa";
 import InputField from "../FormComponents/InputField";
@@ -21,7 +21,7 @@ function LoginForm() {
         isLoading(true);
         login(email, password)
             .then(() => {
-                HandleRedirectToOrBack({ history, location })
+                handleRedirectToOrBack({ history, location })
             })
             .catch((error) => {
                 isLoading(false);
