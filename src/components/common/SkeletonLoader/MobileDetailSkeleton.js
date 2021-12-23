@@ -13,9 +13,10 @@ const MobileDetailSkeleton = () => {
                     <Skeleton width={350} height={300} />
                 </section>
                 <section className="product-details">
-                    <section className="product-detail-description">
-                        <Skeleton width={285} height={180} />
-                    </section>
+                    <Skeleton width={350} height={20}/>
+                    <Skeleton width={350} height={20}/>
+                    <Skeleton width={350} height={20}/>
+                    <Skeleton width={350} height={20}/>
                 </section>
                 <section className="add-to-cart-container">
                     <Skeleton width={220} height={50} />
