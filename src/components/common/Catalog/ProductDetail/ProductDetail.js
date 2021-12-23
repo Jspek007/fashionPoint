@@ -89,7 +89,7 @@ function ProductDetail() {
                                     <FaShoppingCart className="modal-icon"/>
                                     <SubTitle text="Product is toegevoegd aan uw winkelwagen."/>
                                     <Link exact="true" to="/winkelwagen">
-                                        <RedirectButton callToAction="Bekijken" primary/>
+                                        <RedirectButton callToAction="Bekijken"/>
                                     </Link>
                                 </section>
                             </CartModal>

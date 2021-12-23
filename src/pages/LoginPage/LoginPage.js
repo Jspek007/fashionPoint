@@ -12,8 +12,8 @@ function LoginPage() {
     <Fragment>
       <section className="login-container">
         <section className="form-header">
-            <Title text="Fijn dat je er weer bent!" />
-            <SubTitle text="Login op je eigen manier" />
+          <Title text="Fijn dat je er weer bent!" />
+          <SubTitle text="Login op je eigen manier" />
         </section>
 
         <section className="login-method-container">
@@ -29,12 +29,17 @@ function LoginPage() {
             <LoginForm />
           </section>
         </section>
-          <p className="alternative-register-container">
-              Wachtwoord vergeten? <Link to="/wachtwoord-vergeten" className="link">&nbsp;&nbsp;Klik hier</Link>
-          </p>
+        <p className="alternative-register-container">
+          Wachtwoord vergeten?{" "}
+          <Link to="/wachtwoord-vergeten" className="link">
+            Klik hier
+          </Link>
+        </p>
         <p className="alternative-register-container">
           Toch nog geen account?{" "}
-          <Link to="/aanmelden" className="link">&nbsp;&nbsp;Aanmelden</Link>
+          <Link to="/aanmelden" className="link">
+            Aanmelden
+          </Link>
         </p>
       </section>
     </Fragment>
