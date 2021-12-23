@@ -3,7 +3,7 @@ import "./GoogleLoginButton.scss";
 import {FcGoogle} from 'react-icons/fc'
 import {useAuth} from "../../../../../contexts/AuthContext";
 import {useHistory, useLocation} from "react-router";
-import {handleRedirectToOrBack} from "../../../../../helpers/HandleRedirectToOrBack/handleRedirectToOrBack";
+import {handleRedirectToOrBack} from "../../../../../helpers/handleRedirectToOrBack/handleRedirectToOrBack";
 
 function GoogleLoginButton() {
     const history = useHistory();

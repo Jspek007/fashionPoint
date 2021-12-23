@@ -7,7 +7,7 @@ import InputField from "../FormComponents/InputField";
 import {useHistory, useLocation} from "react-router";
 import FormButtonContainer from "../FormComponents/FormButtonContainer";
 import FormErrorContainer from "../FormComponents/FormErrorContainer/FormErrorContainer";
-import {handleRedirectToOrBack} from "../../../../helpers/HandleRedirectToOrBack/handleRedirectToOrBack";
+import {handleRedirectToOrBack} from "../../../../helpers/handleRedirectToOrBack/handleRedirectToOrBack";
 
 function EmailRegisterForm() {
 

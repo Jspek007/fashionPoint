@@ -12,18 +12,11 @@ import FormErrorContainer from "../FormComponents/FormErrorContainer/FormErrorCo
 function ChangeEmailForm() {
 
     const auth = useAuth();
-    const [currentEmail, setCurrentEmail] = useState('');
+    const [currentEmail, ] = useState('');
     const [newEmail, setNewEmail] = useState('');
     const [loading, isLoading] = useState(false);
     const [disabled, isDisabled] = useState(true);
     const [error, setError] = useState('');
-
-    const checkCurrentEmail = () => {
-        if (auth.currentUser.email === null) {
-            return "Huidig email-address"
-        }
-        return auth.currentUser.email;
-    }
 
     const validateFormOnChange = () => {
         if (currentEmail === "" || newEmail === "") {
@@ -36,11 +29,6 @@ function ChangeEmailForm() {
     useEffect(() => {
         validateFormOnChange();
     })
-
-    const handleCurrentEmailChange = (event) => {
-        setCurrentEmail(event.target.value);
-        validateFormOnChange();
-    }
 
     const handleNewEmailChange = (event) => {
         setNewEmail(event.target.value);

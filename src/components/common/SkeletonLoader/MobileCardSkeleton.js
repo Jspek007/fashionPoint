@@ -1,29 +1,29 @@
-import React from 'react';
-import Skeleton from "react-loading-skeleton";
-import 'react-loading-skeleton/dist/skeleton.css';
+import React from 'react'
+import Skeleton from 'react-loading-skeleton';
+import "react-loading-skeleton/dist/skeleton.css";
 
-const ProductCardSkeleton = () => {
+const MobileCardSkeleton = () => {
     return (
-        <section className="desktop-loading-cards">
+        <section className="mobile-loading-cards">
             <section className="product-container">
                 {Array(6)
                     .fill()
                     .map((item, index) => (
                         <section key={index} className="product-link">
-                            <Skeleton width={340} height={340} />
+                            <Skeleton width={150} height={165} />
                             <section className="product">
                                 <section className="product-item-price">
-                                    <Skeleton width={100} />
+                                    <Skeleton width={150} height={20} />
                                 </section>
                                 <section className="product-item-title">
-                                    <Skeleton width={300} />
+                                    <Skeleton width={150} height={20} />
                                 </section>
                             </section>
                         </section>
                     ))}
             </section>
         </section>
-    );
-};
+    )
+}
 
-export default ProductCardSkeleton;
+export default MobileCardSkeleton

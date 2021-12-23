@@ -53,7 +53,20 @@
   width: 100%;
 }
 
+.desktop-loading-cards {
+  display: none;
+}
+
 @media screen and (min-width: 1280px) {
+  .desktop-loading-cards {
+    display: inherit;
+  }
+
+  .mobile-loading-cards {
+    display: none;
+  }
+
+
   .product-container {
     width: 60%;
     margin-left: auto;

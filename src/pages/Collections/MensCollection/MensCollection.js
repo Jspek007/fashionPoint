@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {CategoryInformation, CatalogFilter} from "../../../components/common";
+import { CategoryInformation, CatalogFilter } from "../../../components/common";
 import ProductCardSkeleton from "../../../components/common/SkeletonLoader/ProductCardSkeleton";
+import MobileCardSkeleton from "../../../components/common/SkeletonLoader/MobileCardSkeleton";
 
 function MensCollection() {
     const mensCollectionApi =
@@ -27,9 +28,14 @@ function MensCollection() {
 
     return (
         <>
-            <CategoryInformation index={0}/>
-            <CatalogFilter productData={productData}/>
-            {loading && <ProductCardSkeleton />}
+            <CategoryInformation index={0} />
+            <CatalogFilter productData={productData} />
+            {loading && (
+                <>
+                    <ProductCardSkeleton />
+                    <MobileCardSkeleton />
+                </>
+            )}
         </>
     )
 }

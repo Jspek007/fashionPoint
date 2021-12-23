@@ -6,7 +6,7 @@ import {RedirectButton} from "../../../../Form/Buttons";
 import FormButtonContainer from "../../../../Form/Forms/FormComponents/FormButtonContainer";
 import {Link} from "react-router-dom";
 import SubTitle from "../../../Content/TextComponents/SubTitle/SubTitle";
-import {useDetectOutsideClick} from "../../../../../helpers/UseDetectOutsideClick/useDetectOutsideClick";
+import {useDetectOutsideClick} from "../../../../../helpers/useDetectOutsideClick/useDetectOutsideClick";
 
 const MinicartMenu = () => {
 

@@ -46,7 +46,19 @@
   top: 0;
 }
 
+.desktop-detail-skeleton {
+  display: none;
+}
+
 @media screen and (min-width: 1280px) {
+  .desktop-detail-skeleton {
+    display: inherit;
+  }
+
+  .mobile-detail-skeleton {
+    display: none;
+  }
+  
   .product-detail-container {
     display: flex;
     margin: 25px auto;
@@ -70,7 +82,8 @@
     padding: 0;
     bottom: 0;
     top: inherit;
-    left: 50%;
+    right: 15px;
+    width: 50%;
   }
 
   .product-details {

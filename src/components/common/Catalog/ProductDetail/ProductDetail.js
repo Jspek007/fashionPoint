@@ -10,6 +10,7 @@ import {SubTitle} from "../../Content/TextComponents";
 import {FaShoppingCart} from "react-icons/fa";
 import {RedirectButton} from "../../../Form/Buttons";
 import {Link} from "react-router-dom";
+import MobileDetailSkeleton from "../../SkeletonLoader/MobileDetailSkeleton";
 
 function ProductDetail() {
     const [loading, setLoading] = useState(false);
@@ -59,7 +60,12 @@ function ProductDetail() {
 
     return (
         <>
-            {loading && <ProductDetailSkeleton/>}
+            {loading && (
+            <>
+            <MobileDetailSkeleton />
+            <ProductDetailSkeleton/>
+            </>
+            )}
             {!loading && (
                 <>
                     <section className="product-detail-title">

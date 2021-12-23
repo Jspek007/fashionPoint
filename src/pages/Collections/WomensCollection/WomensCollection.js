@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import { CategoryInformation, CatalogFilter } from "../../../components/common";
 import ProductCardSkeleton from "../../../components/common/SkeletonLoader/ProductCardSkeleton";
+import MobileCardSkeleton from '../../../components/common/SkeletonLoader/MobileCardSkeleton';
 
 function WomensCollection() {
 
@@ -28,7 +29,13 @@ function WomensCollection() {
         <>
             <CategoryInformation index={1} />
             <CatalogFilter productData={productData} />
-            {loading && <ProductCardSkeleton />}
+            {loading && (
+            <>
+            <ProductCardSkeleton />
+            <MobileCardSkeleton />
+            </>
+            )}
+            
         </>
     );
 }
