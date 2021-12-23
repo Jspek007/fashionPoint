@@ -7,11 +7,17 @@
   transition: 1s;
 }
 
+.usp__container {
+  opacity: 0;
+  height: auto;
+}
+
 .usp__content-container {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  opacity: 1;
 }
 
 .usp__image {
@@ -22,6 +28,7 @@
 
 .usp__text {
   text-align: center;
+  line-height: 1.5rem;
 }
 
 .usp-container .usp-container-flipped .usp__content-container {
@@ -75,6 +82,10 @@
     height: 350px;
   }
 
+  .usp-container .usp-container-flipped .usp__content-container {
+    flex-direction: inherit;
+  }
+
   .usp__image-container {
     display: flex;
   }
@@ -86,6 +97,5 @@
 
   .usp__text {
     width: 25%;
-    line-height: 1.5rem;
   }
 }
