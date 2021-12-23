@@ -56,6 +56,11 @@ const BurgerMenu = () => {
                 </Link>
               </span>
             )}
+              <span className="menu-about-us">
+                  <Link exact="true" to="/over-ons">
+                      Over ons
+                  </Link>
+              </span>
           </ul>
         </nav>
       </IconContext.Provider>

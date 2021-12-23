@@ -93,7 +93,7 @@ span {
   margin-right: 10px;
 }
 
-.menu-action-logout {
+.menu-action-logout, .menu-about-us {
   display: flex;
   justify-content: center;
   margin-top: 50px;
@@ -101,11 +101,13 @@ span {
   font-family: var(--font-family-bold);
 }
 
-@media only screen and (min-width: 768px) {
+.menu-about-us {
+  text-align: center;
+  font-family: var(--font-family-italic);
+  font-size: 14px;
+  margin-top: 10px;
 }
 
-@media only screen and (min-width: 1024px) {
-}
 
 @media only screen and (min-width: 1201px) {
   .menu-bars {

@@ -1,3 +1,26 @@
+.section-title {
+  font-family: var(--font-family-bold);
+  font-size: 18px;
+}
+
+.grid-row-banner {
+  margin: 10px;
+}
+
+.grid-row-content {
+  display: flex;
+}
+
+.grid-row-image {
+  width: 50%;
+  height: auto;
+}
+
+.grid-row-text {
+  margin: 0 5px;
+}
+
+@media screen and (min-width: 1280px) {
 .grid-row-banner {
   max-width: 65vw;
   height: auto;
@@ -27,6 +50,6 @@
 }
 
 .section-title {
-  font-family: var(--font-family-bold);
   font-size: 24px;
+}
 }

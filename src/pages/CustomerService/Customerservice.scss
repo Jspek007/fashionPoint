@@ -1,6 +1,5 @@
 .page-wrapper {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   align-content: center;
 }
@@ -9,17 +8,16 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.page-content {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 10px 0;
 }
 
 .page-title {
   padding-left: 40px;
+}
+
+@media screen and (min-width: 1280px) {
+    .page-content {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 1 0;
+    }
 }

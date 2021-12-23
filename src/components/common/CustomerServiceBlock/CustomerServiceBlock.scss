@@ -1,14 +1,17 @@
-.section-title {
-  padding-left: 40px;
+.page-title {
+  padding: 10px 0 0 10px;
 }
 
-.question-container {
-  display: flex;
-  width: 100%;
+.customer-service-block {
+  padding-left: 20px;
 }
 
-.customer-questions {
-  width: 100%;
+.subtitle {
+  font-size: 20px;
+}
+
+.question-container > ul {
+  padding-left: 0;
 }
 
 .customer-questions > li {
@@ -16,4 +19,11 @@
   list-style: none;
   padding: 10px 0;
   border-bottom: 1px solid var(--color-accent);
+}
+
+
+@media screen and (min-width: 1280px) {
+    .customer-service-block {
+      width: 45%;
+    }
 }
