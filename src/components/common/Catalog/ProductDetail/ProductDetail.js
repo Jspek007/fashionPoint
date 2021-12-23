@@ -80,12 +80,6 @@ function ProductDetail() {
                                 alt={productData.title}
                             />
                         </section>
-                        <section className="add-to-cart-container">
-                            <AddToCartButton
-                                clickHandler={addProductToCart}
-                                specificProductData={productData}
-                            />
-                        </section>
                         <section className="product-details">
                             <section className="product-detail-description">
                                 {productData.description}
@@ -101,6 +95,12 @@ function ProductDetail() {
                             </CartModal>
                         </section>
                     </section>
+                    <section className="add-to-cart-container">
+                            <AddToCartButton
+                                clickHandler={addProductToCart}
+                                specificProductData={productData}
+                            />
+                        </section>
                 </>
             )}
         </>

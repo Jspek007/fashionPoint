@@ -6,6 +6,18 @@
   display: none;
 }
 
+.main-content-container {
+  position: relative;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.main-content-container-flipped {
+  position: relative;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
 @media screen and (min-width: 1280px) {
   .main-header {
     display: flex;
@@ -71,12 +83,6 @@
     width: 600px;
     height: auto;
     border-radius: 20%;
-  }
-
-  .main-content-container {
-    position: relative;
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
   }
 
   .main-content-container-flipped:after {

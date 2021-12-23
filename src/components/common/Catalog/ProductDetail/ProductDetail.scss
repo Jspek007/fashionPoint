@@ -41,9 +41,8 @@
 
 .add-to-cart-container {
   padding: 10px;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .desktop-detail-skeleton {
@@ -77,15 +76,6 @@
     max-height: 450px;
   }
 
-  .add-to-cart-container {
-    position: absolute;
-    padding: 0;
-    bottom: 0;
-    top: inherit;
-    right: 15px;
-    width: 50%;
-  }
-
   .product-details {
     position: relative;
     padding-left: 35px;
@@ -108,5 +98,9 @@
   .bottom-detail-container {
     display: flex;
     margin-top: 25px;
+  }
+
+  .add-to-cart-container {
+    width: 100%;
   }
 }

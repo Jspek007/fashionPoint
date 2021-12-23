@@ -12,13 +12,13 @@ const MobileDetailSkeleton = () => {
                 <section className="product-image">
                     <Skeleton width={350} height={300} />
                 </section>
-                <section className="add-to-cart-container">
-                    <Skeleton width={220} height={50} />
-                </section>
                 <section className="product-details">
                     <section className="product-detail-description">
                         <Skeleton width={285} height={180} />
                     </section>
+                </section>
+                <section className="add-to-cart-container">
+                    <Skeleton width={220} height={50} />
                 </section>
             </section>
         </section>
