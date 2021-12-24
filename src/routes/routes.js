@@ -15,6 +15,7 @@ import SendSuccessfullyPage from "../pages/SuccessPage/SendSuccessfullyPage";
 import MyAccountPage from "../pages/MyAccountPage/MyAccountPage";
 import Wishlist from "../pages/Wishlist/Wishlist";
 import CartPage from "../pages/CartPage/CartPage";
+import ShippingPage from "../pages/Checkout/ShippingPage/ShippingPage";
 
 const routes = [
   {
@@ -118,6 +119,12 @@ const routes = [
     Component: CartPage,
     memberOnly: true,
   },
+  {
+    path: "/checkout/shipping",
+    name: "Checkout",
+    Component: ShippingPage,
+    memberOnly: true,
+  }
 ];
 
 export default routes;
