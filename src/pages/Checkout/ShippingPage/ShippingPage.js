@@ -1,10 +1,17 @@
-import React from 'react'
+import React from 'react';
+import "./ShippingPage.scss";
+import CheckoutForm from '../../../components/common/Checkout/CheckoutForm';
+import Title from "../../../components/common/Content/TextComponents/Title/Title";
+
 
 const ShippingPage = () => {
     return (
-        <section>
-            Hello World
-        </section>
+        <>
+            <section className="cart-container">
+                <Title text="Adres gegevens" />
+                <CheckoutForm />
+            </section>
+        </>
     )
 }
 
