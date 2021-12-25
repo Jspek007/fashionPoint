@@ -17,6 +17,7 @@ import Wishlist from "../pages/Wishlist/Wishlist";
 import CartPage from "../pages/CartPage/CartPage";
 import ShippingPage from "../pages/Checkout/ShippingPage/ShippingPage";
 import PaymentPage from "../pages/Checkout/PaymentPage/PaymentPage";
+import SuccesPage from "../pages/Checkout/Successpage/SuccesPage";
 
 const routes = [
   {
@@ -131,7 +132,13 @@ const routes = [
     name: "Checkout",
     Component: PaymentPage,
     memberOnly: true,
-  }
+  },
+    {
+        path: "/checkout/success",
+        name: "Checkout",
+        Component: SuccesPage,
+        memberOnly: true,
+    }
 ];
 
 export default routes;
