@@ -40,7 +40,9 @@ const CartPage = () => {
             <Link exact="true" to="/collectie">
               <RedirectButton callToAction="Verder winkelen" />
             </Link>
-            <RedirectButton primary callToAction="Afrekenen" />
+            <Link exact="true" to="/checkout/shipping">
+              <RedirectButton primary callToAction="Afrekenen" />
+            </Link>
           </section>
         </section>
         <table className="cart-item-table">

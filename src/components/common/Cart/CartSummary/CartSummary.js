@@ -3,6 +3,7 @@ import "./CartSummary.scss";
 import {SubTitle} from "../../Content/TextComponents";
 import {RedirectButton} from "../../../Form/Buttons";
 import FormButtonContainer from "../../../Form/Forms/FormComponents/FormButtonContainer";
+import {Link} from "react-router-dom/";
 
 const CartSummary = ({cartData}) => {
 
@@ -52,7 +53,9 @@ const CartSummary = ({cartData}) => {
                     <span>€{getCartTotal().toFixed(2)}</span>
                 </section>
                 <FormButtonContainer>
-                    <RedirectButton primary callToAction="Afrekenen"/>
+                    <Link exact="true" to="/checkout/shipping">
+                        <RedirectButton primary callToAction="Afrekenen"/>
+                    </Link>
                 </FormButtonContainer>
             </section>
         </section>
