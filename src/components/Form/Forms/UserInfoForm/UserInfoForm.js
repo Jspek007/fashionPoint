@@ -3,78 +3,82 @@ import "./UserInfoForm.scss";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 import nl from "date-fns/locale/nl";
+import InputField from "../FormComponents/InputField";
 
 function UserInfoForm() {
     const [startDate, setStartDate] = useState(new Date());
 
     return (
-
-        <section className="form-row">
-            <section className="col-75">
-                <section className="form-container">
-                    <form>
-                        <section className="form-row">
-                            <section className="col-75">
-                                <p>Naam: </p>
-                                <input type="text" name="firstname" placeholder="Voornaam" />
-                                <input type="text" name="lastname" placeholder="Achternaam" />
-                            </section>
-                        </section>
-
-                        <section className="form-row">
-                            <section className="col-75 personal-info">
-                                <section className="dateofbirth-form">
-                                    <p className="dateofbirth-label">Geboortedatum:</p>
-                                    <section className="form-date-picker">
-                                        <DatePicker
-                                        selected={startDate}
-                                        onChange={date => setStartDate(date)}
-                                        locale={nl}
-                                        dateFormat="dd/MM/yyyy"
-                                        maxDate={startDate}
-                                    />
-                                    </section>
-                                </section>
-                                <section className="gender-section">
-                                    <p className="gender-label">Geslacht: </p>
-                                    <select name="gender" id="gender" className="gender-select">
-                                        <option value="male">Man</option>
-                                        <option value="female">Vrouw</option>
-                                        <option value="other-gender">Anders</option>
-                                    </select>
-                                </section>
-                            </section>
-                        </section>
-
-                        <section className="street-info-container">
-                            <section className="street-info">
-                                <section className="street-section">
-                                <p>Straat en huisnummer:  </p>
-                                <input className="street-input" type="text" name="street" placeholder="Straatnaam en huisnummer"/>
-                                </section>
-                            </section>
-                        </section>
-
-                        <section className="form-row">
-                            <section className="col-75 living-area-info">
-                            <section className="postal-info">
-                                <section className="postalcode-input">
-                                    <p>Postcode: </p>
-                                    <input type="text" name="postalcode" placeholder="Postcode" />
-                                </section>
-                                </section>
-                                <section className="city-info">
-                                    <section className="city-input">
-                                        <p>Plaatsnaam: </p>
-                                        <input type="text" name="city" placeholder="Plaatsnaam" />
-                                    </section>
-                                </section>
-                            </section>
-                            </section>
-
-                    </form>
+        <section className="form-container">
+            <form>
+                <section className="form-50">
+                    <label>Voornaam:
+            <InputField
+                            labelName="firstName"
+                            inputType="text"
+                            idValue="firstName"
+                            placeholder="Voornaam"
+                        />
+                    </label>
+                    <label>Achternaam:
+            <InputField
+                            labelName="lastName"
+                            inputType="text"
+                            idValue="lastName"
+                            placeholder="Achternaam"
+                        />
+                    </label>
                 </section>
-            </section>
+                <section className="form-50">
+                    <label for="birth-of-date">Geboortedatum:
+                    <DatePicker
+                            className="form-date-picker"
+                            selected={startDate}
+                            onChange={date => setStartDate(date)}
+                            locale={nl}
+                            dateFormat="dd/MM/yyyy"
+                            maxDate={startDate}
+                        />
+                    </label>
+                    <label for="gender">Geslacht:
+                    <section className="gender-picker-container">
+                            <select name="gender" id="gender" className="gender-select">
+                                <option value="male">Man</option>
+                                <option value="female">Vrouw</option>
+                                <option value="other-gender">Anders</option>
+                            </select>
+                        </section>
+                    </label>
+                </section>
+                <section className="form-100">
+                    <label>Straat en huisnummer:
+                <InputField
+                            labelName="streetInfo"
+                            inputType="text"
+                            idValue="streetInfo"
+                            placeholder="Straatnaam en huisnummer"
+                        />
+                    </label>
+                </section>
+                <section className="form-50">
+                    <label>Postcode:
+                <InputField
+                            labelName="zipCode"
+                            inputType="text"
+                            idValue="zipCode"
+                            placeholder="Postcode"
+                        />
+                    </label>
+                    <label>Plaatsnaam:
+                <InputField
+                            labelName="city"
+                            inputType="text"
+                            idValue="city"
+                            placeholder="Plaatsnaam"
+                        />
+                    </label>
+                </section>
+            </form>
         </section>
     );
 }

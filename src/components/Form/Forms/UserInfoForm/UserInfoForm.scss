@@ -1,73 +1,66 @@
-.form-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.col-75 {
-  flex: 75%;
-}
-
-.col-50 {
-  flex: 50%;
-}
-
-.col-25 {
-  flex: 25%;
-}
-
-.col-25,
-.col-50,
-.col-75 {
-  padding: 0 10px;
-}
-
 .form-container {
-  padding: 5px 20px 15px 20px;
-  max-width: 800px;
-}
-
-.form-row input[type=text] {
-  padding: 10px 20px;
-  margin-right: 20px;
-  width: 35%;
-  border: 1px solid var(--color-dimmed-primary);
-}
-
-.col-75 .personal-info, .col-75 .living-area-info {
   display: flex;
-}
-
-.datepicker-section {
-  display: flex;
+  justify-content: center;
   align-items: center;
+  padding-top: 10px;
 }
 
-.dateofbirth-label {
-  padding-right: 13px;
+.form-container label {
+  padding: 5px 0;
+  font-family: var(--font-family-italic);
 }
 
-.gender-section {
-  width: 50%;
+.form-50 {
   display: flex;
-  flex-direction: column;
+  flex: 1 1 0;
+}
+
+.form-50 fieldset {
+  padding: 10px 5px 10px 0;
+}
+
+.form-100 {
+  display: flex;
+  width: 100%;
+  padding: 0;
+}
+
+.form-100 fieldset {
+  padding: 10px 5px 10px 0;
+}
+
+.form-100 label {
+  width: 100%;
+}
+
+.form-date-picker,
+.gender-select {
+  width: 186.5px;
+  height: 50px;
+  border: 0.5px solid gray;
+  font-size: 18px;
+}
+
+.react-datepicker__input-container {
+  padding-top: 5px;
+}
+
+.gender-picker-container {
+  padding-top: 5px;
+}
+
+label[for="gender"] {
+  width: 100%;
+  height: auto;
+  padding-left: 3px;
+}
+
+label[for="gender"],
+label[for="date-of-birth"] {
+  padding-bottom: 5px;
 }
 
 .gender-select {
-  width: 50%;
-}
-
-.gender-select {
-  height: 37px;
-}
-
-.street-section > input[type=text] {
-  width: 83%;
-}
-
-.street-section {
-  padding: 0 10px;
-}
-
-.gender-section, .city-input {
-  padding-left: 30px;
+  height: 54px;
+  width: 100%;
 }

@@ -23,5 +23,7 @@
 }
 
 @media screen and (min-width: 1280px) {
-
+  .accordion-container {
+    overflow: auto;
+  }
 }
