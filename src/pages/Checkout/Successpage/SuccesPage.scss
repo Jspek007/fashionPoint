@@ -19,3 +19,10 @@
   padding-top: 15px;
   font-family: var(--font-family-italic);
 }
+
+@media screen and (min-width: 1280px) {
+  .checkout-success-image {
+    height: 35vh;
+    width: auto;
+  }
+}
