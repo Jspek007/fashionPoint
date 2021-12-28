@@ -13,7 +13,8 @@
   align-items: center;
 }
 
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -32,7 +33,6 @@
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 
 .slider-image {
   height: 300px;

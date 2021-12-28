@@ -1,29 +1,25 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "../CheckoutPages.scss";
 import CheckoutForm from "../../../components/common/Checkout/CheckoutForm";
 import ProtectedRoute from "../../../routes/ProtectedRoute";
 
 const ShippingPage = () => {
+  const hasCart = () => {
+    return !!localStorage.getItem("currentCart");
+  };
 
-    const hasCart = () => {
-        return !!localStorage.getItem("currentCart");
-    };
-
-    useEffect(() => {
-        hasCart()
-    })
-
+  useEffect(() => {
+    hasCart();
+  });
 
   return (
     <>
-        {hasCart() && (
-            <section className="checkout-container">
-                <CheckoutForm />
-            </section>
-        )}
-        {!hasCart() && (
-            <ProtectedRoute />
-        )}
+      {hasCart() && (
+        <section className="checkout-container">
+          <CheckoutForm />
+        </section>
+      )}
+      {!hasCart() && <ProtectedRoute />}
     </>
   );
 };

@@ -7,7 +7,6 @@ import ApplePay from "../../../assets/images/paymentMethods/ApplePay.svg";
 import GooglePay from "../../../assets/images/paymentMethods/Google_pay.svg";
 import MasterCard from "../../../assets/images/paymentMethods/Mastercard.svg";
 import Paypal from "../../../assets/images/paymentMethods/Paypal.svg";
-import FormButtonContainer from "../../../components/Form/Forms/FormComponents/FormButtonContainer";
 import { RedirectButton } from "../../../components/Form/Buttons";
 import { Link } from "react-router-dom";
 import { SubTitle } from "../../../components/common/Content/TextComponents";

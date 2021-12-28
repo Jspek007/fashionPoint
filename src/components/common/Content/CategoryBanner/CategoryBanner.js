@@ -1,6 +1,6 @@
 import React from "react";
 import "./CategoryBanner.scss";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import CategoryActionButton from "../../../Form/Buttons/CategoryActionButton";
 
 function CategoryBanner() {
@@ -11,7 +11,7 @@ function CategoryBanner() {
           <section className="category-item category-item-left">
             <h2 className="category-text category-text-left" draggable="false">
               Alles voor heren
-                <CategoryActionButton />
+              <CategoryActionButton />
             </h2>
           </section>
         </Link>
@@ -20,7 +20,7 @@ function CategoryBanner() {
           <section className="category-item category-item-right">
             <h2 className="category-text category-text-right" draggable="false">
               Alles voor dames
-                <CategoryActionButton />
+              <CategoryActionButton />
             </h2>
           </section>
         </Link>

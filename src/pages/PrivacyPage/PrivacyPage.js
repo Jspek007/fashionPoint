@@ -27,9 +27,9 @@ function PrivacyPage() {
             werken.
           </p>
           <p>
-            Dit privacybeleid is van toepassing op de diensten van
-            FashionPoint. U dient zich ervan bewust te zijn dat FashionPoint
-            niet verantwoordelijk is voor het privacybeleid van andere sites en
+            Dit privacybeleid is van toepassing op de diensten van FashionPoint.
+            U dient zich ervan bewust te zijn dat FashionPoint niet
+            verantwoordelijk is voor het privacybeleid van andere sites en
             bronnen. Door gebruik te maken van deze website geeft u aan het
             privacy beleid te accepteren.
           </p>
