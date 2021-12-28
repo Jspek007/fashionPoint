@@ -1,4 +1,3 @@
 export const handleRedirectToOrBack = ({ history, location }) => {
-    history.replace(location.state?.from ?? '/');
+  history.replace(location.state?.from ?? "/");
 };
-

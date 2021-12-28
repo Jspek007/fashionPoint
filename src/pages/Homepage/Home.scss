@@ -86,7 +86,7 @@
   }
 
   .main-content-container-flipped:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -97,7 +97,7 @@
   }
 
   .main-content-container-flipped:before {
-    content: '';
+    content: "";
     position: absolute;
     top: -100px;
     left: 0;
@@ -113,5 +113,3 @@
     color: var(--color-primary);
   }
 }
-
-

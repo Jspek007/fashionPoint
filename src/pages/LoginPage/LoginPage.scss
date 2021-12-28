@@ -12,16 +12,17 @@
   margin: 0;
 }
 
-.third-party-methods, .email-form-login {
+.third-party-methods,
+.email-form-login {
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
 }
 
- .email-form-login form {
-   width: 100%;
- }
+.email-form-login form {
+  width: 100%;
+}
 
 .alternative-register-container a {
   font-family: var(--font-family-bold);

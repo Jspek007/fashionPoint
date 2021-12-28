@@ -64,12 +64,12 @@
     width: 45%;
   }
 
-  .banner-text, .banner-paragraph {
+  .banner-text,
+  .banner-paragraph {
     font-family: var(--font-family-italic);
     margin: 0 15px;
     padding: 10px 20px;
   }
-
 
   .full-width-banner-image {
     display: flex;
