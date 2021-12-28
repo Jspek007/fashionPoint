@@ -1,7 +1,7 @@
 .modal-background {
   width: 90vw;
   position: absolute;
-  top: 0;
+  top: 25%;
   left: 20px;
   z-index: 200;
   height: 20vh;
@@ -26,6 +26,7 @@
   align-items: center;
   text-align: center;
   font-family: var(--font-family-bold);
+  padding: 15px;
 }
 
 .modal-footer {

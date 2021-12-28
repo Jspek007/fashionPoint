@@ -25,7 +25,6 @@ function LoginForm() {
             })
             .catch((error) => {
                 isLoading(false);
-                console.log(error.code);
                 setError(firebaseErrors[error.code]);
             })
     }

@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import "./RemoveProductIcon.scss";
-import {RiDeleteBin6Fill} from "react-icons/ri";
+import { RiDeleteBin6Fill } from "react-icons/ri";
 import Modal from "../../Modal/Modal";
-import {RedirectButton} from "../../../Form/Buttons";
+import { RedirectButton } from "../../../Form/Buttons";
 
-const RemoveProductIcon = ({cartData, specificProduct, updateCart}) => {
+const RemoveProductIcon = ({ cartData, specificProduct, updateCart }) => {
 
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -26,17 +26,17 @@ const RemoveProductIcon = ({cartData, specificProduct, updateCart}) => {
     return (
         <>
             {modalOpen && (
-                <Modal ModalTitle="U staat op het punt dit artikel te verwijderen."
-                       ModalBody="Weet u zeker dat u dit artikel wilt verwijderen?"
+                <Modal
+                    ModalBody="Weet u zeker dat u dit artikel wilt verwijderen?"
                 >
                     <RedirectButton clickHandler={() => deRemoveProduct()}
-                                    callToAction="Ja" />
+                        callToAction="Ja" />
                     <RedirectButton clickHandler={() => setModalOpen(false)}
-                                    callToAction="Nee"
-                                    primary />
+                        callToAction="Nee"
+                        primary />
                 </Modal>
             )}
-            <RiDeleteBin6Fill className="cart-icon" onClick={() => setModalOpen(true)}/>
+            <RiDeleteBin6Fill className="cart-icon" onClick={() => setModalOpen(true)} />
         </>
     );
 };

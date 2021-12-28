@@ -8,10 +8,9 @@ import ProductDetail from "../components/common/Catalog/ProductDetail";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import SignupPage from "../pages/SignupPage/SignupPage";
 import EmailSignUpPage from "../pages/SignupPage/EmailSignUpPage";
-import ForgotPasswordPage from "../pages/ForgotPasswordPage/ForgotPasswordPage";
+import ForgotPasswordPage from "../pages/ForgotPassword/ForgotPasswordPage/ForgotPasswordPage";
 import TermsAndConditions from "../pages/TermsAndConditions/TermsAndConditions";
 import PrivacyPage from "../pages/PrivacyPage/PrivacyPage";
-import SendSuccessfullyPage from "../pages/SuccessPage/SendSuccessfullyPage";
 import MyAccountPage from "../pages/MyAccountPage/MyAccountPage";
 import Wishlist from "../pages/Wishlist/Wishlist";
 import CartPage from "../pages/CartPage/CartPage";
@@ -95,12 +94,6 @@ const routes = [
     path: "/privacy",
     name: "Privacy",
     Component: PrivacyPage,
-    memberOnly: false,
-  },
-  {
-    path: "/email-is-verzonden",
-    name: "Email is verstuurd",
-    Component: SendSuccessfullyPage,
     memberOnly: false,
   },
   {
