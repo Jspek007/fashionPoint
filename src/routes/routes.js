@@ -119,19 +119,22 @@ const routes = [
     name: "Checkout",
     Component: ShippingPage,
     memberOnly: true,
+    needsCart: true,
   },
   {
     path: "/checkout/payment",
     name: "Checkout",
     Component: PaymentPage,
     memberOnly: true,
+    needsCart: true,
   },
-    {
-        path: "/checkout/success",
-        name: "Checkout",
-        Component: SuccesPage,
-        memberOnly: true,
-    }
+  {
+    path: "/checkout/success",
+    name: "Checkout",
+    Component: SuccesPage,
+    memberOnly: true,
+    needsCart: true,
+  },
 ];
 
 export default routes;

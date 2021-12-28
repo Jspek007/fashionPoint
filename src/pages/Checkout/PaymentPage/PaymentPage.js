@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect } from "react";
 import Title from "../../../components/common/Content/TextComponents/Title/Title";
 import CheckoutSummary from "../../../components/common/Checkout/CheckoutSummary/CheckoutSummary";
 import CheckoutInputItem from "../../../components/common/Checkout/CheckoutInputs/CheckoutInputItem";
@@ -10,6 +10,8 @@ import Paypal from "../../../assets/images/paymentMethods/Paypal.svg";
 import FormButtonContainer from "../../../components/Form/Forms/FormComponents/FormButtonContainer";
 import { RedirectButton } from "../../../components/Form/Buttons";
 import { Link } from "react-router-dom";
+import { SubTitle } from "../../../components/common/Content/TextComponents";
+import ProtectedRoute from "../../../routes/ProtectedRoute";
 
 const PaymentPage = () => {
   let cartData = JSON.parse(localStorage.getItem("checkoutData"))
@@ -24,55 +26,70 @@ const PaymentPage = () => {
     localStorage.removeItem("shippingMethod");
   };
 
+  const hasCart = () => {
+    return !!localStorage.getItem("currentCart");
+  };
+
+  useEffect(() => {
+    hasCart();
+  });
+
   return (
-    <section className="checkout-container">
-      <Title text="Verzenden naar: " />
-
-      <CheckoutSummary cartData={cartData} shippingMethod={shippingMethod} />
-
-      <Title text="Betaalmethode: " />
-      <section className="inputs-container">
-        <CheckoutInputItem
-          imageSource={Klarna}
-          inputText="Klarna"
-          payment="payment"
-          inputName="payment"
-        />
-        <CheckoutInputItem
-          imageSource={ApplePay}
-          inputText="ApplePay"
-          payment="payment"
-          inputName="payment"
-        />
-        <CheckoutInputItem
-          imageSource={GooglePay}
-          inputText="GooglePay"
-          payment="payment"
-          inputName="payment"
-        />
-        <CheckoutInputItem
-          imageSource={MasterCard}
-          inputText="MasterCard"
-          payment="payment"
-          inputName="payment"
-        />
-        <CheckoutInputItem
-          imageSource={Paypal}
-          inputText="PayPal"
-          payment="payment"
-          inputName="payment"
-        />
-      </section>
-      <FormButtonContainer>
-        <Link exact="true" to="/checkout/success">
-          <RedirectButton
-            callToAction="Afrekenen"
-            primary
-            clickHandler={createOrder}
-          />
-        </Link>
-      </FormButtonContainer>
-    </section>
+    <>
+      {hasCart() && (
+        <section className="checkout-container">
+          <section className="shipping-information">
+            <CheckoutSummary
+              cartData={cartData}
+              shippingMethod={shippingMethod}
+            />
+          </section>
+          <section className="inputs-container">
+            <SubTitle text="Betaalmethode: " />
+            <CheckoutInputItem
+              imageSource={Klarna}
+              inputText="Klarna"
+              payment="payment"
+              inputName="payment"
+            />
+            <CheckoutInputItem
+              imageSource={ApplePay}
+              inputText="ApplePay"
+              payment="payment"
+              inputName="payment"
+            />
+            <CheckoutInputItem
+              imageSource={GooglePay}
+              inputText="GooglePay"
+              payment="payment"
+              inputName="payment"
+            />
+            <CheckoutInputItem
+              imageSource={MasterCard}
+              inputText="MasterCard"
+              payment="payment"
+              inputName="payment"
+            />
+            <CheckoutInputItem
+              imageSource={Paypal}
+              inputText="PayPal"
+              payment="payment"
+              inputName="payment"
+            />
+            <section className="confirm-checkout-container">
+              <Link exact="true" to="/checkout/success">
+                <RedirectButton
+                  callToAction="Afrekenen"
+                  primary
+                  clickHandler={createOrder}
+                />
+              </Link>
+            </section>
+          </section>
+        </section>
+      )}
+      {!hasCart() && <ProtectedRoute />}
+    </>
   );
 };
 

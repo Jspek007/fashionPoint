@@ -1,18 +1,31 @@
-import React from 'react';
+import React, {useEffect} from "react";
 import "../CheckoutPages.scss";
-import CheckoutForm from '../../../components/common/Checkout/CheckoutForm';
-import Title from "../../../components/common/Content/TextComponents/Title/Title";
-
+import CheckoutForm from "../../../components/common/Checkout/CheckoutForm";
+import ProtectedRoute from "../../../routes/ProtectedRoute";
 
 const ShippingPage = () => {
-    return (
-        <>
+
+    const hasCart = () => {
+        return !!localStorage.getItem("currentCart");
+    };
+
+    useEffect(() => {
+        hasCart()
+    })
+
+
+  return (
+    <>
+        {hasCart() && (
             <section className="checkout-container">
-                <Title text="Adres gegevens" />
                 <CheckoutForm />
             </section>
-        </>
-    )
-}
+        )}
+        {!hasCart() && (
+            <ProtectedRoute />
+        )}
+    </>
+  );
+};
 
-export default ShippingPage
+export default ShippingPage;
