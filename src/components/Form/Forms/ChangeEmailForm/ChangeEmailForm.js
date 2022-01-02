@@ -11,14 +11,13 @@ import FormErrorContainer from "../FormComponents/FormErrorContainer/FormErrorCo
 
 function ChangeEmailForm() {
   const auth = useAuth();
-  const [currentEmail] = useState("");
   const [newEmail, setNewEmail] = useState("");
   const [loading, isLoading] = useState(false);
   const [disabled, isDisabled] = useState(true);
   const [error, setError] = useState("");
 
   const validateFormOnChange = () => {
-    if (currentEmail === "" || newEmail === "") {
+    if (newEmail === "") {
       isDisabled(true);
     } else {
       isDisabled(false);
