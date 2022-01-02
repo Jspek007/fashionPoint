@@ -20,6 +20,13 @@
   text-align: center;
 }
 
+.third-party-login-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .email-form-login form {
   width: 100%;
 }

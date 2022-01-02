@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./CheckoutForm.scss";
-import InputField from "../../../Form/Forms/FormComponents/InputField";
-import Subtitle from "../../Content/TextComponents/SubTitle/SubTitle";
-import RedirectButton from "../../../Form/Buttons/RedirectButton/RedirectButton";
+import InputField from "../FormComponents/InputField";
+import Subtitle from "../../../common/Content/TextComponents/SubTitle/SubTitle";
+import RedirectButton from "../../Buttons/RedirectButton/RedirectButton";
 import { Link } from "react-router-dom";
-import Title from "../../Content/TextComponents/Title/Title";
-import CheckoutInputItem from "../CheckoutInputs/CheckoutInputItem";
+import Title from "../../../common/Content/TextComponents/Title/Title";
+import CheckoutInputItem from "../../../common/Checkout/CheckoutInputs/CheckoutInputItem";
 import PostNLImage from "../../../../assets/images/shippingMethods/PostNL_logo.svg.png";
 import DPDImage from "../../../../assets/images/shippingMethods/DPD.jpeg";
 import DHLImage from "../../../../assets/images/shippingMethods/DHL.png";
-import CartSummary from "../../Cart/CartSummary";
+import CartSummary from "../../../common/Cart/CartSummary";
 
 const CheckoutForm = () => {
   const [firstName, setFirstName] = useState("");
@@ -75,8 +75,7 @@ const CheckoutForm = () => {
             idValue="email"
             placeholder="E-mail adres"
             eventHandler={(event) => setEmail(event.target.value)}
-            required
-          />
+            required          />
           <Subtitle text="Postcode" />
           <InputField
             formSection="checkout"
