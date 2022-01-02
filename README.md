@@ -1,4 +1,3 @@
-<!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -21,19 +20,23 @@
 
 ## About The Project
 
+<img src="src/assets/images/readMe/LandingsPage.png" width="800px"/>
+
 FashionPoint has been build as a React Frontend school Project.
 The project is based on the FakeStoreAPI where E-commerce data comes from.
 The idea has been to make an as complete as possible Frontend only E-commerce storeview.
 
-FashionPoint includes the following features:
-
-- Authentication
+- Authentication, this includes:
+  - Login with Google / Facebook
+  - Login with Email
+  - Password reset emails
 - Functional Cart
 - Functional Wishlist
 - Checkout Emulation
 - Category sorter
 - Dynamic breadcrumbs
 - Protected / Private routing
+- Responsive
 
 _Note, all data is stored and manipulated in the localStorage, since there is no backend for this project._
 
@@ -43,7 +46,7 @@ _Note, all data is stored and manipulated in the localStorage, since there is no
 
 This project has been build in:
 
-_Main used technologies_
+_Main technologies used_
 
 - [React.js](https://reactjs.org/)
 - [Create React App](https://create-react-app.dev/)
@@ -107,5 +110,7 @@ Make sure npm is running on your machine.
 Johan Spekman - [LinkedIn](https://www.linkedin.com/in/johan-spekman/) - Johanspekman@gmail.com
 
 Project Link: [https://github.com/Jspek007/fashionPoint](https://github.com/Jspek007/fashionPoint)
+
+## Happy shopping!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
