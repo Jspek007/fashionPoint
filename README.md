@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About The Project
 
-## Available Scripts
+FashionPoint has been build as a React Frontend school Project.
+The project is based on the FakeStoreAPI where E-commerce data comes from.
+The idea has been to make an as complete as possible Frontend only E-commerce storeview.
 
-In the project directory, you can run:
+FashionPoint includes the following features:
 
-### `npm start`
+- Authentication
+- Functional Cart
+- Functional Wishlist
+- Checkout Emulation
+- Category sorter
+- Dynamic breadcrumbs
+- Protected / Private routing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+_Note, all data is stored and manipulated in the localStorage, since there is no backend for this project._
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### `npm test`
+### Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project has been build in:
 
-### `npm run build`
+_Main used technologies_
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [React.js](https://reactjs.org/)
+- [Create React App](https://create-react-app.dev/)
+- [FakeStoreAPI](https://fakestoreapi.com/)
+- [Firebase](https://firebase.google.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_Used NPM packages_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [ReactDatepicker](https://github.com/Hacker0x01/react-datepicker)
+- [Axios](https://github.com/axios/axios)
+- [ReactIcons](https://react-icons.github.io/react-icons/)
+- [ReactIntersectionObserver](https://github.com/thebuilder/react-intersection-observer)
+- [ReactLoadingSkeleton](https://github.com/dvtng/react-loading-skeleton)
 
-### `npm run eject`
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Getting Started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To get FashionPoint up and running, please follow the instructions below.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Prerequisites
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Make sure npm is running on your machine.
 
-## Learn More
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Jspek007/fashionPoint
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Get the secret environment details from the provided documentation
 
-### Code Splitting
+4. Create the .env.local file in the root directory. The file should look like the following:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```js
+   REACT_APP_API_KEY=****************************
+   REACT_APP_AUTH_DOMAIN=****************************
+   REACT_APP_PROJECT_ID=****************************
+   REACT_APP_STORAGE_BUCKET=****************************
+   REACT_APP_MASSAGING_SENDER_ID=****************************
+   REACT_APP_APP_ID=****************************
+   ```
 
-### Analyzing the Bundle Size
+   _Stars will be replaced by the actual value of the field_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. Run `npm start` to start the application.
 
-### Making a Progressive Web App
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contact
 
-### Advanced Configuration
+Johan Spekman - [LinkedIn](https://www.linkedin.com/in/johan-spekman/) - Johanspekman@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Project Link: [https://github.com/Jspek007/fashionPoint](https://github.com/Jspek007/fashionPoint)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#top">back to top</a>)</p>

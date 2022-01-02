@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../CheckoutPages.scss";
-import CheckoutForm from "../../../components/common/Checkout/CheckoutForm";
+import CheckoutForm from "../../../components/Form/Forms/CheckoutForm";
 import ProtectedRoute from "../../../routes/ProtectedRoute";
 
 const ShippingPage = () => {
