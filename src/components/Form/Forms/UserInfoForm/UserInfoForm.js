@@ -12,7 +12,7 @@ function UserInfoForm() {
     <section className="form-container">
       <form>
         <section className="form-50">
-          <label>
+          <label htmlFor="firstName">
             Voornaam:
             <InputField
               labelName="firstName"
@@ -21,7 +21,7 @@ function UserInfoForm() {
               placeholder="Voornaam"
             />
           </label>
-          <label>
+          <label htmlFor="lastName">
             Achternaam:
             <InputField
               labelName="lastName"
@@ -32,7 +32,7 @@ function UserInfoForm() {
           </label>
         </section>
         <section className="form-50">
-          <label for="birth-of-date">
+          <label htmlFor="birth-of-date">
             Geboortedatum:
             <DatePicker
               className="form-date-picker"
@@ -43,7 +43,7 @@ function UserInfoForm() {
               maxDate={startDate}
             />
           </label>
-          <label for="gender">
+          <label htmlFor="gender">
             Geslacht:
             <section className="gender-picker-container">
               <select name="gender" id="gender" className="gender-select">
@@ -55,7 +55,7 @@ function UserInfoForm() {
           </label>
         </section>
         <section className="form-100">
-          <label>
+          <label htmlFor="streetInfo">
             Straat en huisnummer:
             <InputField
               labelName="streetInfo"
@@ -66,7 +66,7 @@ function UserInfoForm() {
           </label>
         </section>
         <section className="form-50">
-          <label>
+          <label htmlFor="zipCode">
             Postcode:
             <InputField
               labelName="zipCode"
@@ -75,7 +75,7 @@ function UserInfoForm() {
               placeholder="Postcode"
             />
           </label>
-          <label>
+          <label htmlFor="city">
             Plaatsnaam:
             <InputField
               labelName="city"

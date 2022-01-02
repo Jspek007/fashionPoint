@@ -20,7 +20,6 @@ const InputField = ({
         placeholder={placeholder}
         onChange={eventHandler}
         value={value}
-        required={required || false}
       />
       {error && <span className="error-message">{error}</span>}
     </fieldset>
