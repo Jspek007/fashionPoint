@@ -103,6 +103,12 @@ Make sure npm is running on your machine.
 
 5. Run `npm start` to start the application.
 
+6. A test user has been made to instatly have an account available: 
+   Username: Testusernovi@gmail.com
+   Password: Test123!
+   
+_Or it is possible to create your own account through the signup section of the application_
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contact
