@@ -1,5 +1,4 @@
 import { React, useEffect } from "react";
-import Title from "../../../components/common/Content/TextComponents/Title/Title";
 import CheckoutSummary from "../../../components/common/Checkout/CheckoutSummary/CheckoutSummary";
 import CheckoutInputItem from "../../../components/common/Checkout/CheckoutInputs/CheckoutInputItem";
 import Klarna from "../../../assets/images/paymentMethods/Klarna.svg";
