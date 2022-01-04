@@ -82,7 +82,7 @@ function ForgotPasswordPage() {
         </form>
         {modalOpen && (
           <Modal
-            ModalBody={`We hebben u een wachtwoord reset email gestuurd.\n Check ook even uw spambox.`}
+            modalBody={`We hebben u een wachtwoord reset email gestuurd.\n Check ook even uw spambox.`}
           >
             <RedirectButton
               clickHandler={() => goToLogin()}

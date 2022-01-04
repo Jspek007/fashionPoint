@@ -35,7 +35,7 @@ function DeleteAccountForm() {
       </p>
 
       {modalOpen && (
-        <Modal ModalBody="Weet u zeker dat u uw account wilt verwijderen? Hiermee zullen al uw gegevens verloren gaan.">
+        <Modal modalBody="Weet u zeker dat u uw account wilt verwijderen? Hiermee zullen al uw gegevens verloren gaan.">
           <RedirectButton
             primary
             callToAction="Ja"

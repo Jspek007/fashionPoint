@@ -9,7 +9,6 @@ const InputField = ({
   eventHandler,
   value,
   formSection,
-  required,
 }) => {
   return (
     <fieldset>
