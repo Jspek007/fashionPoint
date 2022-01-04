@@ -21,7 +21,6 @@ const CheckoutForm = () => {
   const [street, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [error, setSetError] = useState("");
   const [shippingMethod, setShippingMethod] = useState("");
   const [cartItems] = useState(JSON.parse(localStorage.getItem("currentCart")));
 
@@ -75,7 +74,8 @@ const CheckoutForm = () => {
             idValue="email"
             placeholder="E-mail adres"
             eventHandler={(event) => setEmail(event.target.value)}
-            required          />
+            required
+          />
           <Subtitle text="Postcode" />
           <InputField
             formSection="checkout"
