@@ -48,22 +48,6 @@ function ChangeEmailForm() {
     changeEmail();
   };
 
-  const changeEmail = () => {
-    updateEmail(user, newEmail)
-      .then(() => {
-        isLoading(false);
-        setSuccesMessage("Uw email is aangepast.");
-      })
-      .catch((error) => {
-        if (error.code === "auth/requires-recent-login") {
-          setModalOpen(true);
-        } else {
-          setError(firebaseErrors[error.code]);
-          isLoading(false);
-        }
-      });
-  };
-
   const confirmReAuthentication = (event) => {
     event.preventDefault();
     // Get the current user credentials and the old password
@@ -82,6 +66,24 @@ function ChangeEmailForm() {
       });
   };
 
+  const changeEmail = () => {
+    updateEmail(user, newEmail)
+      .then(() => {
+        isLoading(false);
+        setError("");
+        setSuccesMessage("Uw email is aangepast.");
+      })
+      .catch((error) => {
+        if (error.code === "auth/requires-recent-login") {
+          setModalOpen(true);
+        } else {
+          setSuccesMessage("");
+          setError(firebaseErrors[error.code]);
+          isLoading(false);
+        }
+      });
+  };
+
   return (
     <MyAccountForm>
       <InputField
@@ -92,7 +94,8 @@ function ChangeEmailForm() {
         formSection="my-account"
       />
 
-      <FormErrorContainer>{error || succesMessage}</FormErrorContainer>
+      {succesMessage && <span className="succes-message">{succesMessage}</span>}
+      <FormErrorContainer>{error}</FormErrorContainer>
 
       <FormButtonContainer>
         <FunctionalButton
