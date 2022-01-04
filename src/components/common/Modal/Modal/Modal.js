@@ -6,7 +6,7 @@ const Modal = (props) => {
         <section className="modal-background">
             <section className="modal-container">
                 <section className="modal-body">
-                    {props.ModalBody}
+                    {props.modalBody}
                 </section>
                 <section className="modal-footer">
                     {props.children}

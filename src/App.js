@@ -5,7 +5,6 @@ import AuthContextProvider from "./contexts/AuthContext";
 import routes from "./routes/routes";
 import Breadcrumbs from "./components/common/Breadcrumbs/Breadcrumbs";
 import PrivateRoute from "./routes/PrivateRoute";
-import ProtectedRoute from "./routes/ProtectedRoute";
 
 const App = () => (
   <Router>
