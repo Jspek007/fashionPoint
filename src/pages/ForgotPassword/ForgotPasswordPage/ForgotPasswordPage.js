@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./ForgotPasswordPage.scss";
-import FunctionalButton from "../../../components/Form/Buttons/FunctionalButton/FunctionalButton";
+import PrimaryButton from "../../../components/Form/Buttons/PrimaryButton/PrimaryButton";
 import { useAuth } from "../../../contexts/AuthContext";
 import { useHistory } from "react-router";
 import { FaSpinner } from "react-icons/fa";
@@ -11,7 +11,7 @@ import {
   Title,
 } from "../../../components/common/Content/TextComponents";
 import Modal from "../../../components/common/Modal/Modal/Modal";
-import RedirectButton from "../../../components/Form/Buttons/RedirectButton/RedirectButton";
+import SecondaryButton from "../../../components/Form/Buttons/SecondaryButton/SecondaryButton";
 
 function ForgotPasswordPage() {
   const history = useHistory();
@@ -70,25 +70,25 @@ function ForgotPasswordPage() {
             <span className="error-message">{error}</span>
           </section>
           <section className="button-container">
-            <FunctionalButton
+            <PrimaryButton
               clickHandler={submitPasswordResetMail}
               disabled={disabled}
             >
               {loading && <FaSpinner className="loading-spinner" />}
               {loading && <span>Verwerken...</span>}
               {!loading && <span>Resetten</span>}
-            </FunctionalButton>
+            </PrimaryButton>
           </section>
         </form>
         {modalOpen && (
           <Modal
             modalBody={`We hebben u een wachtwoord reset email gestuurd.\n Check ook even uw spambox.`}
           >
-            <RedirectButton
+            <SecondaryButton
               clickHandler={() => goToLogin()}
               callToAction="Inloggen"
             />
-            <RedirectButton
+            <SecondaryButton
               clickHandler={() => setModalOpen(false)}
               callToAction="Sluiten"
             />

@@ -1,6 +1,6 @@
 import React from 'react';
 import {SignedInMenu} from "../../../index";
-import {RedirectButton} from "../../../../Form/Buttons";
+import {SecondaryButton} from "../../../../Form/Buttons";
 import {useAuth} from "../../../../../contexts/AuthContext";
 import {Link} from "react-router-dom";
 import MinicartMenu from "../../Minicart/MinicartMenu";
@@ -28,10 +28,10 @@ function HeaderActionMenu() {
                     </section>
                     <section className="header-menu">
                         <Link exact="true" to="/login">
-                            <RedirectButton callToAction="Inloggen"/>
+                            <SecondaryButton callToAction="Inloggen"/>
                         </Link>
                         <Link exact="true" to="/aanmelden">
-                            <RedirectButton callToAction="Aanmelden" primary/>
+                            <SecondaryButton callToAction="Aanmelden" primary/>
                         </Link>
                     </section>
                 </>

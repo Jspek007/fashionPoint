@@ -8,7 +8,6 @@
 }
 
 .modal-container {
-  height: 100%;
   border-radius: 12px;
   background-color: var(--color-secondary);
   box-shadow: var(--color-dimmed-primary) 0px 5px 15px;
@@ -39,6 +38,15 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+.modal-button-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 35px;
+}
+
+>>>>>>> reauthentication
 @media screen and (min-width: 1280px) {
   .modal-background {
     width: 100vw;
