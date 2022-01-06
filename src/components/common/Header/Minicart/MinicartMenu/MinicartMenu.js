@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import "./MinicartMenu.scss";
 import {FaShoppingCart} from "react-icons/fa"
 import MinicartItems from "../MinicartItems";
-import {SecondaryButton} from "../../../../Form/Buttons";
+import {RedirectButton} from "../../../../Form/Buttons";
 import FormButtonContainer from "../../../../Form/Forms/FormComponents/FormButtonContainer";
 import {Link} from "react-router-dom";
 import SubTitle from "../../../Content/TextComponents/SubTitle/SubTitle";
@@ -43,7 +43,7 @@ const MinicartMenu = () => {
                             <MinicartItems cartData={cartItems}/>
                             <FormButtonContainer>
                                 <Link exact="true" to="/winkelwagen">
-                                    <SecondaryButton primary callToAction="Winkelwagen"/>
+                                    <RedirectButton primary callToAction="Winkelwagen"/>
                                 </Link>
                             </FormButtonContainer>
                         </>

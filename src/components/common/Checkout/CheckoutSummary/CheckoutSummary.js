@@ -1,6 +1,6 @@
 import React from "react";
 import "./CheckoutSummary.scss";
-import { SecondaryButton } from "../../../Form/Buttons";
+import { RedirectButton } from "../../../Form/Buttons";
 import { Link } from "react-router-dom";
 import { SubTitle } from "../../Content/TextComponents";
 
@@ -24,7 +24,7 @@ const CheckoutSummary = (props) => {
           <span>{props.cartData.phoneNumber}</span>
         </section>
         <Link exact="true" to="/checkout/shipping">
-          <SecondaryButton callToAction="Bewerken" />
+          <RedirectButton callToAction="Bewerken" />
         </Link>
       </section>
       <section className="summary-container">
@@ -35,7 +35,7 @@ const CheckoutSummary = (props) => {
           </span>
         </section>
         <Link exact="true" to="/checkout/shipping">
-          <SecondaryButton callToAction="Bewerken" />
+          <RedirectButton callToAction="Bewerken" />
         </Link>
       </section>
     </>

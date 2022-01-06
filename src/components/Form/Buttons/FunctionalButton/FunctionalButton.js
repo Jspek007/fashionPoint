@@ -1,12 +1,12 @@
 import React from "react";
-import "../SecondaryButton/SecondaryButton.scss";
-import "./PrimaryButton.scss";
+import "../RedirectButton/RedirectButton.scss";
+import "./FunctionalButton.scss";
 
-function PrimaryButton(props) {
+function FunctionalButton(props) {
   return (
     <button
       type="submit"
-      className="primary-button"
+      className="functional-button"
       onClick={props.clickHandler}
       disabled={props.disabled || false}
     >
@@ -15,4 +15,4 @@ function PrimaryButton(props) {
   );
 }
 
-export default PrimaryButton;
+export default FunctionalButton;

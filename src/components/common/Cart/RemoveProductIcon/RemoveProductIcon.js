@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./RemoveProductIcon.scss";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import Modal from "../../Modal/Modal";
-import { SecondaryButton } from "../../../Form/Buttons";
+import { RedirectButton } from "../../../Form/Buttons";
 
 const RemoveProductIcon = ({ cartData, specificProduct, updateCart }) => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -28,11 +28,11 @@ const RemoveProductIcon = ({ cartData, specificProduct, updateCart }) => {
     <>
       {modalOpen && (
         <Modal modalBody="Weet u zeker dat u dit artikel wilt verwijderen?">
-          <SecondaryButton
+          <RedirectButton
             clickHandler={() => deRemoveProduct()}
             callToAction="Ja"
           />
-          <SecondaryButton
+          <RedirectButton
             clickHandler={() => setModalOpen(false)}
             callToAction="Nee"
             primary

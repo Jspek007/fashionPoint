@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PrimaryButton from "../../Buttons/PrimaryButton/PrimaryButton";
+import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import { useAuth } from "../../../../contexts/AuthContext";
 import { useHistory } from "react-router";
 import { deleteUser } from "firebase/auth";
@@ -7,7 +7,7 @@ import { FaSpinner } from "react-icons/fa";
 import MyAccountForm from "../FormComponents/MyAccountForm";
 import FormButtonContainer from "../FormComponents/FormButtonContainer";
 import Modal from "../../../common/Modal/Modal";
-import { SecondaryButton } from "../../Buttons";
+import { RedirectButton } from "../../Buttons";
 
 function DeleteAccountForm() {
   const [loading, isLoading] = useState(false);
@@ -36,12 +36,12 @@ function DeleteAccountForm() {
 
       {modalOpen && (
         <Modal modalBody="Weet u zeker dat u uw account wilt verwijderen? Hiermee zullen al uw gegevens verloren gaan.">
-          <SecondaryButton
+          <RedirectButton
             primary
             callToAction="Ja"
             clickHandler={confirmDeleteUser}
           />
-          <SecondaryButton
+          <RedirectButton
             callToAction="Nee"
             clickHandler={() => setModalOpen(false)}
           />
@@ -49,11 +49,11 @@ function DeleteAccountForm() {
       )}
 
       <FormButtonContainer>
-        <PrimaryButton clickHandler={promptUserBeforeDelete}>
+        <FunctionalButton clickHandler={promptUserBeforeDelete}>
           {loading && <FaSpinner className="loading-spinner" />}
           {loading && <span>Uw account wordt verwijderd</span>}
           {!loading && <span>Account verwijderen</span>}
-        </PrimaryButton>
+        </FunctionalButton>
       </FormButtonContainer>
     </MyAccountForm>
   );

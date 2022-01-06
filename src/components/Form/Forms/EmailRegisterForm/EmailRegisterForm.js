@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../../../../contexts/AuthContext";
 import { firebaseErrors } from "../../../../utils/firebaseErrors";
-import PrimaryButton from "../../Buttons/PrimaryButton/PrimaryButton";
+import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
 import { FaSpinner } from "react-icons/fa";
 import InputField from "../FormComponents/InputField";
 import { useHistory, useLocation } from "react-router";
@@ -55,11 +55,11 @@ function EmailRegisterForm() {
       {error && <FormErrorContainer>{error}</FormErrorContainer>}
 
       <FormButtonContainer>
-        <PrimaryButton clickHandler={submitRegister}>
+        <FunctionalButton clickHandler={submitRegister}>
           {loading && <FaSpinner className="loading-spinner" />}
           {loading && <span>Verwerken...</span>}
           {!loading && <span>Registreer</span>}
-        </PrimaryButton>
+        </FunctionalButton>
       </FormButtonContainer>
     </form>
   );

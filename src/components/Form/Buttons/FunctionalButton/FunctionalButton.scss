@@ -1,4 +1,4 @@
-.primary-button {
+.functional-button {
   height: 50px;
   width: 220px;
   font-size: 18px;
@@ -9,7 +9,7 @@
   border-radius: 10px;
 }
 
-.primary-button:disabled {
+.functional-button:disabled {
   background: var(--color-disabled-button);
   cursor: auto;
 }

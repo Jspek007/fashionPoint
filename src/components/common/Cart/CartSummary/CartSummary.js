@@ -1,7 +1,7 @@
 import React from "react";
 import "./CartSummary.scss";
 import { SubTitle } from "../../Content/TextComponents";
-import { SecondaryButton } from "../../../Form/Buttons";
+import { RedirectButton } from "../../../Form/Buttons";
 import FormButtonContainer from "../../../Form/Forms/FormComponents/FormButtonContainer";
 import { Link } from "react-router-dom/";
 
@@ -51,7 +51,7 @@ const CartSummary = ({ cartData }) => {
         </section>
         <FormButtonContainer>
           <Link exact="true" to="/checkout/shipping">
-            <SecondaryButton primary callToAction="Afrekenen" />
+            <RedirectButton primary callToAction="Afrekenen" />
           </Link>
         </FormButtonContainer>
       </section>

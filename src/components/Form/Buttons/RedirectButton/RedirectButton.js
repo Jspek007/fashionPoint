@@ -1,13 +1,13 @@
 import React from "react";
-import "./SecondaryButton.scss";
+import "./RedirectButton.scss";
 
-function SecondaryButton({ primary, callToAction, clickHandler }) {
+function RedirectButton({ primary, callToAction, clickHandler }) {
   const renderContent = () => {
     if (!primary) {
       return (
         <button
           type="button"
-          className="secondary-button"
+          className="user-control-button"
           onClick={clickHandler}
         >
           {callToAction}
@@ -17,7 +17,7 @@ function SecondaryButton({ primary, callToAction, clickHandler }) {
       return (
         <button
           type="button"
-          className="secondary-button-flipped"
+          className="user-control-button-signup"
           onClick={clickHandler}
         >
           {callToAction}
@@ -29,4 +29,4 @@ function SecondaryButton({ primary, callToAction, clickHandler }) {
   return <span>{renderContent()}</span>;
 }
 
-export default SecondaryButton;
+export default RedirectButton;
