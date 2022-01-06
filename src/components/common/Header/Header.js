@@ -6,6 +6,7 @@ import BurgerMenu from "./HeaderComponents/BurgerMenu";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { useAuth } from "../../../contexts/AuthContext";
+import Searchbar from "./HeaderComponents/Searchbar";
 
 
 function Header() {
@@ -26,6 +27,7 @@ function Header() {
                 )}
                 {auth.currentUser && (
                     <>
+                        <Searchbar />
                         <Link exact="true" to="/winkelwagen">
                             <FaShoppingCart className="header-cart-icon" />
                         </Link>

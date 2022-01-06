@@ -1,43 +1,42 @@
-import React from 'react';
-import {SignedInMenu} from "../../../index";
-import {SecondaryButton} from "../../../../Form/Buttons";
-import {useAuth} from "../../../../../contexts/AuthContext";
-import {Link} from "react-router-dom";
-import MinicartMenu from "../../Minicart/MinicartMenu";
-import {FaUser} from "react-icons/fa";
+import React from "react";
+import { SignedInMenu } from "../../../index";
+import { SecondaryButton } from "../../../../Form/Buttons";
+import { useAuth } from "../../../../../contexts/AuthContext";
+import { Link } from "react-router-dom";
+import MinicartMenu from "../Minicart/MinicartMenu";
+import { FaUser } from "react-icons/fa";
 
 function HeaderActionMenu() {
+  const auth = useAuth();
 
-    const auth = useAuth();
-
-    return (
+  return (
+    <>
+      {auth.currentUser && (
         <>
-            {auth.currentUser && (
-                <>
-                    <MinicartMenu/>
-                    <SignedInMenu/>
-                </>
-            )}
-
-            {!auth.currentUser && (
-                <>
-                    <section className="mobile-header-menu">
-                        <Link exact="true" to={"login"}>
-                            <FaUser />
-                        </Link>
-                    </section>
-                    <section className="header-menu">
-                        <Link exact="true" to="/login">
-                            <SecondaryButton callToAction="Inloggen"/>
-                        </Link>
-                        <Link exact="true" to="/aanmelden">
-                            <SecondaryButton callToAction="Aanmelden" primary/>
-                        </Link>
-                    </section>
-                </>
-            )}
+          <MinicartMenu />
+          <SignedInMenu />
         </>
-    )
+      )}
+
+      {!auth.currentUser && (
+        <>
+          <section className="mobile-header-menu">
+            <Link exact="true" to={"login"}>
+              <FaUser />
+            </Link>
+          </section>
+          <section className="header-menu">
+            <Link exact="true" to="/login">
+              <SecondaryButton callToAction="Inloggen" />
+            </Link>
+            <Link exact="true" to="/aanmelden">
+              <SecondaryButton callToAction="Aanmelden" primary />
+            </Link>
+          </section>
+        </>
+      )}
+    </>
+  );
 }
 
 export default HeaderActionMenu;
