@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../../../../contexts/AuthContext";
 import { FaSpinner } from "react-icons/fa";
-import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
+import PrimaryButton from "../../Buttons/PrimaryButton/PrimaryButton";
 import { firebaseErrors } from "../../../../utils/firebaseErrors";
 import InputField from "../FormComponents/InputField";
 import MyAccountForm from "../FormComponents/MyAccountForm";
@@ -13,6 +13,7 @@ import {
   EmailAuthProvider,
   updateEmail,
 } from "firebase/auth";
+import { SecondaryButton } from "../../Buttons";
 
 function ChangeEmailForm() {
   const auth = useAuth();
@@ -42,10 +43,16 @@ function ChangeEmailForm() {
     validateFormOnChange();
   };
 
-  const handleChangeEmailEvent = (event) => {
+  const openChangeEmailModal = (event) => {
     event.preventDefault();
     isLoading(true);
-    changeEmail();
+    setModalOpen(true);
+  };
+
+  const closeChangeEmailModal = (event) => {
+    event.preventDefault();
+    setModalOpen(false);
+    isLoading(false);
   };
 
   const confirmReAuthentication = (event) => {
@@ -61,8 +68,6 @@ function ChangeEmailForm() {
       })
       .catch((error) => {
         setError(firebaseErrors[error.code]);
-        isLoading(false);
-        setModalOpen(false);
       });
   };
 
@@ -70,17 +75,11 @@ function ChangeEmailForm() {
     updateEmail(user, newEmail)
       .then(() => {
         isLoading(false);
-        setError("");
         setSuccesMessage("Uw email is aangepast.");
       })
       .catch((error) => {
-        if (error.code === "auth/requires-recent-login") {
-          setModalOpen(true);
-        } else {
-          setSuccesMessage("");
-          setError(firebaseErrors[error.code]);
-          isLoading(false);
-        }
+        setError(firebaseErrors[error.code]);
+        isLoading(false);
       });
   };
 
@@ -98,14 +97,11 @@ function ChangeEmailForm() {
       <FormErrorContainer>{error}</FormErrorContainer>
 
       <FormButtonContainer>
-        <FunctionalButton
-          clickHandler={handleChangeEmailEvent}
-          disabled={disabled}
-        >
+        <PrimaryButton clickHandler={openChangeEmailModal} disabled={disabled}>
           {loading && <FaSpinner className="loading-spinner" />}
           {loading && <span>Verwerken...</span>}
           {!loading && <span>Email wijzigen</span>}
-        </FunctionalButton>
+        </PrimaryButton>
       </FormButtonContainer>
       {modalOpen && (
         <Modal modalBody="U dient opnieuw in te loggen om uw gegevens te wijzigen">
@@ -118,9 +114,15 @@ function ChangeEmailForm() {
               eventHandler={(event) => setPassword(event.target.value)}
             />
             <FormErrorContainer>{error}</FormErrorContainer>
-            <FunctionalButton clickHandler={confirmReAuthentication} primary>
-              <span>Bevestigen</span>
-            </FunctionalButton>
+            <SecondaryButton
+              clickHandler={confirmReAuthentication}
+              callToAction="Bevestigen"
+              primary
+            />
+            <SecondaryButton
+              clickHandler={closeChangeEmailModal}
+              callToAction="Annuleren"
+            />
           </section>
         </Modal>
       )}

@@ -1,3 +1,3 @@
-import RedirectButton from "./RedirectButton/RedirectButton";
+import SecondaryButton from "./SecondaryButton/SecondaryButton";
 
-export { RedirectButton };
+export { SecondaryButton };

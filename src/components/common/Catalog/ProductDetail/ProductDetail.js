@@ -8,7 +8,7 @@ import ProductDetailSkeleton from "../../SkeletonLoader/ProductDetailSkeleton";
 import CartModal from "../../Modal/CartModal";
 import { SubTitle } from "../../Content/TextComponents";
 import { FaShoppingCart } from "react-icons/fa";
-import { RedirectButton } from "../../../Form/Buttons";
+import { SecondaryButton } from "../../../Form/Buttons";
 import { Link } from "react-router-dom";
 import MobileDetailSkeleton from "../../SkeletonLoader/MobileDetailSkeleton";
 
@@ -89,7 +89,7 @@ function ProductDetail() {
                   <FaShoppingCart className="modal-icon" />
                   <SubTitle text="Product is toegevoegd aan uw winkelwagen." />
                   <Link exact="true" to="/winkelwagen">
-                    <RedirectButton callToAction="Bekijken" />
+                    <SecondaryButton callToAction="Bekijken" />
                   </Link>
                 </section>
               </CartModal>

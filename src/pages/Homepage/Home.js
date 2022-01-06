@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { BrandSlider } from "../../components/common";
 import CategoryBanner from "../../components/common/Content/CategoryBanner";
 import { useAuth } from "../../contexts/AuthContext";
-import { RedirectButton } from "../../components/Form/Buttons";
+import { SecondaryButton } from "../../components/Form/Buttons";
 import UspBanner from "../../components/common/Content/UspBanner/UspBanner";
 import FullWidthBanner from "../../components/common/Content/FullWidthBanner/FullWidthBanner";
 
@@ -32,10 +32,10 @@ function Home() {
             paragraph={"Met kortingen tot wel 50%"}
           >
             <Link exact="true" to="/login">
-              <RedirectButton callToAction="Inloggen" />
+              <SecondaryButton callToAction="Inloggen" />
             </Link>
             <Link exact="true" to="/aanmelden">
-              <RedirectButton callToAction="Meld mij aan" signup />
+              <SecondaryButton callToAction="Meld mij aan" signup />
             </Link>
           </FullWidthBanner>
 

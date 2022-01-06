@@ -4,7 +4,7 @@ import {
   Title,
   SubTitle,
 } from "../../components/common/Content/TextComponents";
-import { RedirectButton } from "../../components/Form/Buttons";
+import { SecondaryButton } from "../../components/Form/Buttons";
 import CartSummary from "../../components/common/Cart/CartSummary";
 import { Link } from "react-router-dom";
 import RemoveProductIcon from "../../components/common/Cart/RemoveProductIcon/RemoveProductIcon";
@@ -26,7 +26,7 @@ const CartPage = () => {
         </section>
         <FormButtonContainer>
           <Link exact="true" to="/collectie">
-            <RedirectButton primary callToAction="Begin met winkelen" />
+            <SecondaryButton primary callToAction="Begin met winkelen" />
           </Link>
         </FormButtonContainer>
       </section>
@@ -38,10 +38,10 @@ const CartPage = () => {
           <SubTitle text="Winkelwagen" />
           <section className="cart-action-buttons">
             <Link exact="true" to="/collectie">
-              <RedirectButton callToAction="Verder winkelen" />
+              <SecondaryButton callToAction="Verder winkelen" />
             </Link>
             <Link exact="true" to="/checkout/shipping">
-              <RedirectButton primary callToAction="Afrekenen" />
+              <SecondaryButton primary callToAction="Afrekenen" />
             </Link>
           </section>
         </section>
