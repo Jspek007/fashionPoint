@@ -36,11 +36,7 @@ function DeleteAccountForm() {
 
       {modalOpen && (
         <Modal modalBody="Weet u zeker dat u uw account wilt verwijderen? Hiermee zullen al uw gegevens verloren gaan.">
-<<<<<<< HEAD
-          <RedirectButton
-=======
           <SecondaryButton
->>>>>>> reauthentication
             primary
             callToAction="Ja"
             clickHandler={confirmDeleteUser}

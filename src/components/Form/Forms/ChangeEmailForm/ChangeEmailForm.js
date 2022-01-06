@@ -13,10 +13,7 @@ import {
   EmailAuthProvider,
   updateEmail,
 } from "firebase/auth";
-<<<<<<< HEAD
-=======
 import { SecondaryButton } from "../../Buttons";
->>>>>>> reauthentication
 
 function ChangeEmailForm() {
   const auth = useAuth();
@@ -46,12 +43,6 @@ function ChangeEmailForm() {
     validateFormOnChange();
   };
 
-<<<<<<< HEAD
-  const handleChangeEmailEvent = (event) => {
-    event.preventDefault();
-    isLoading(true);
-    changeEmail();
-=======
   const openChangeEmailModal = (event) => {
     event.preventDefault();
     isLoading(true);
@@ -62,7 +53,6 @@ function ChangeEmailForm() {
     event.preventDefault();
     setModalOpen(false);
     isLoading(false);
->>>>>>> reauthentication
   };
 
   const confirmReAuthentication = (event) => {
@@ -72,11 +62,6 @@ function ChangeEmailForm() {
 
     // Give the user credentials with the reauthentication to confirm this
     reauthenticateWithCredential(auth.currentUser, credential)
-<<<<<<< HEAD
-      .then(() => {
-        setModalOpen(false);
-        changeEmail();
-=======
       .then(() => {
         setModalOpen(false);
         changeEmail();
@@ -91,30 +76,11 @@ function ChangeEmailForm() {
       .then(() => {
         isLoading(false);
         setSuccesMessage("Uw email is aangepast.");
->>>>>>> reauthentication
       })
       .catch((error) => {
         setError(firebaseErrors[error.code]);
         isLoading(false);
         setModalOpen(false);
-      });
-  };
-
-  const changeEmail = () => {
-    updateEmail(user, newEmail)
-      .then(() => {
-        isLoading(false);
-        setError("");
-        setSuccesMessage("Uw email is aangepast.");
-      })
-      .catch((error) => {
-        if (error.code === "auth/requires-recent-login") {
-          setModalOpen(true);
-        } else {
-          setSuccesMessage("");
-          setError(firebaseErrors[error.code]);
-          isLoading(false);
-        }
       });
   };
 
@@ -132,14 +98,7 @@ function ChangeEmailForm() {
       <FormErrorContainer>{error}</FormErrorContainer>
 
       <FormButtonContainer>
-<<<<<<< HEAD
-        <FunctionalButton
-          clickHandler={handleChangeEmailEvent}
-          disabled={disabled}
-        >
-=======
         <PrimaryButton clickHandler={openChangeEmailModal} disabled={disabled}>
->>>>>>> reauthentication
           {loading && <FaSpinner className="loading-spinner" />}
           {loading && <span>Verwerken...</span>}
           {!loading && <span>Email wijzigen</span>}
@@ -156,11 +115,6 @@ function ChangeEmailForm() {
               eventHandler={(event) => setPassword(event.target.value)}
             />
             <FormErrorContainer>{error}</FormErrorContainer>
-<<<<<<< HEAD
-            <FunctionalButton clickHandler={confirmReAuthentication} primary>
-              <span>Bevestigen</span>
-            </FunctionalButton>
-=======
             <SecondaryButton
               clickHandler={confirmReAuthentication}
               callToAction="Bevestigen"
@@ -170,7 +124,6 @@ function ChangeEmailForm() {
               clickHandler={closeChangeEmailModal}
               callToAction="Annuleren"
             />
->>>>>>> reauthentication
           </section>
         </Modal>
       )}

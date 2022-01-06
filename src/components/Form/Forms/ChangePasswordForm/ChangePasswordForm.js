@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import PrimaryButton from "../../Buttons/PrimaryButton/PrimaryButton";
 import { useAuth } from "../../../../contexts/AuthContext";
-<<<<<<< HEAD
-import { updatePassword } from "firebase/auth";
-=======
 import {
   EmailAuthProvider,
   reauthenticateWithCredential,
   updatePassword,
 } from "firebase/auth";
->>>>>>> reauthentication
 import { FaSpinner } from "react-icons/fa";
 import { firebaseErrors } from "../../../../utils/firebaseErrors";
 import InputField from "../FormComponents/InputField";

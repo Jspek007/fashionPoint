@@ -28,11 +28,7 @@ const RemoveProductIcon = ({ cartData, specificProduct, updateCart }) => {
     <>
       {modalOpen && (
         <Modal modalBody="Weet u zeker dat u dit artikel wilt verwijderen?">
-<<<<<<< HEAD
-          <RedirectButton
-=======
           <SecondaryButton
->>>>>>> reauthentication
             clickHandler={() => deRemoveProduct()}
             callToAction="Ja"
           />
