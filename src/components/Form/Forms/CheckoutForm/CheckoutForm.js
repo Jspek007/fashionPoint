@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./CheckoutForm.scss";
 import InputField from "../FormComponents/InputField";
 import Subtitle from "../../../common/Content/TextComponents/SubTitle/SubTitle";
-import RedirectButton from "../../Buttons/RedirectButton/RedirectButton";
+import SecondaryButton from "../../Buttons/SecondaryButton/SecondaryButton";
 import { Link } from "react-router-dom";
 import Title from "../../../common/Content/TextComponents/Title/Title";
 import CheckoutInputItem from "../../../common/Checkout/CheckoutInputs/CheckoutInputItem";
@@ -161,7 +161,7 @@ const CheckoutForm = () => {
 
         <section className="checkout-cart-button">
           <Link exact="true" to="/checkout/payment">
-            <RedirectButton
+            <SecondaryButton
               callToAction="Volgende"
               primary
               clickHandler={saveCheckoutData}

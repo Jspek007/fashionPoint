@@ -1,4 +1,4 @@
-import FunctionalButton from "../../Buttons/FunctionalButton/FunctionalButton";
+import PrimaryButton from "../../Buttons/PrimaryButton/PrimaryButton";
 import React, { useState } from "react";
 import { useAuth } from "../../../../contexts/AuthContext";
 import { useHistory, useLocation } from "react-router";
@@ -50,11 +50,11 @@ function LoginForm() {
       />
 
       <section className="button-container">
-        <FunctionalButton clickHandler={onSubmitLogin}>
+        <PrimaryButton clickHandler={onSubmitLogin}>
           {loading && <FaSpinner className="loading-spinner" />}
           {loading && <span>U wordt ingelogd</span>}
           {!loading && <span>Inloggen</span>}
-        </FunctionalButton>
+        </PrimaryButton>
       </section>
       <section className="error-container">
         <span className="error-message">{error}</span>
