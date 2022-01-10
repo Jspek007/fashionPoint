@@ -10,11 +10,11 @@ import { useDetectOutsideClick } from "../../../../../helpers/useDetectOutsideCl
 
 const BurgerMenu = () => {
   const dropdownRef = useRef(null);
-  const [sidebar, setSitebar] = useDetectOutsideClick(dropdownRef);
+  const [sidebar, setSidebar] = useDetectOutsideClick(dropdownRef);
   const { logout } = useAuth();
   const auth = useAuth();
 
-  const showSideBar = () => setSitebar(!sidebar);
+  const showSideBar = () => setSidebar(!sidebar);
 
   return (
     <>
