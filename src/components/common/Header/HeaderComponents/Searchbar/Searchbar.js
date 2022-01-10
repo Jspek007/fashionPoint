@@ -7,8 +7,11 @@ import { Link } from "react-router-dom";
 
 const Searchbar = () => {
   const searchbarRef = useRef(null);
-  const showSearchBar = () => setSearchBar(!searchbar);
   const [searchbar, setSearchBar] = useDetectOutsideClick(searchbarRef);
+  const showSearchBar = useCallback(() => {
+    setSearchValue("");
+    setSearchBar(!searchbar);
+  }, [searchbar, setSearchBar]);
   const fullCatalogApi = "https://fakestoreapi.com/products";
   const [catalog, setCatalog] = useState([]);
   const [searchValue, setSearchValue] = useState("");
@@ -17,13 +20,12 @@ const Searchbar = () => {
     axios.get(fullCatalogApi).then((res) => {
       setCatalog(res.data);
     });
-    console.log(catalog);
   }, []);
 
-  const handleSearchRedirect = () => {
+  const handleSearchRedirect = useCallback(() => {
     showSearchBar();
     setSearchValue("");
-  };
+  }, [showSearchBar]);
 
   const handleSearchValue = (event) => {
     let userInput = event.target.value;
@@ -32,59 +34,60 @@ const Searchbar = () => {
 
   return (
     <>
-      <section className="menu-container-search">
+      <section className="menu-container-search" onClick={showSearchBar}>
         <section className="menu-trigger">
           <span>
-            <GoSearch className="search-icon" onClick={showSearchBar} />
+            <GoSearch className="search-icon" />
           </span>
         </section>
       </section>
 
-      <section
-        className={
-          searchbar ? "searchbar-container active" : "searchbar-container"
-        }
-        ref={searchbarRef}
-      >
-        <input
-          type="text"
-          className={searchbar ? "searchbar active" : "searchbar"}
-          placeholder="Zoek naar producten..."
-          onChange={handleSearchValue}
-        />
-        <section className="searchbar-item-container">
-          {searchValue !== "" &&
-            catalog
-              .filter((item) => {
-                if (!searchValue) return true;
-                if (
-                  (item.title &&
-                    item.title.toLowerCase().includes(searchValue)) ||
-                  (item.description && item.description.includes(searchValue))
-                ) {
-                  return true;
-                }
-              })
-              .map((item) => (
-                <>
-                  {!searchValue && <h1>Hello</h1>}
-                  <section className="search-item">
+      {searchbar && (
+        <section className="searchbar-container" ref={searchbarRef}>
+          <input
+            type="text"
+            className={searchbar ? "searchbar active" : "searchbar"}
+            placeholder="Zoek naar producten..."
+            onChange={handleSearchValue}
+            autoFocus
+          />
+          <section className="searchbar-item-container">
+            {searchValue !== "" &&
+              catalog
+                .filter((item) => {
+                  if (
+                    (item.title &&
+                      item.title.toLowerCase().includes(searchValue)) ||
+                    (item.description && item.description.includes(searchValue))
+                  ) {
+                    return true;
+                  }
+                  return false;
+                })
+                .map((item) => (
+                  <>
                     <Link
                       exact="true"
                       to={`/collectie/${item.category}/${item.id}`}
                       onClick={handleSearchRedirect}
+                      key={item}
                     >
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="search-image"
-                      />
+                      <section className="search-item">
+                        <section className="search-image-container">
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className="search-image"
+                          />
+                        </section>
+                        <span className="search-item-name">{item.title}</span>
+                      </section>
                     </Link>
-                  </section>
-                </>
-              ))}
+                  </>
+                ))}
+          </section>
         </section>
-      </section>
+      )}
     </>
   );
 };

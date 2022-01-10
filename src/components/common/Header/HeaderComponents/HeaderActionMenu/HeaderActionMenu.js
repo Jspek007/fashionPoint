@@ -5,6 +5,7 @@ import { useAuth } from "../../../../../contexts/AuthContext";
 import { Link } from "react-router-dom";
 import MinicartMenu from "../Minicart/MinicartMenu";
 import { FaUser } from "react-icons/fa";
+import Searchbar from "../Searchbar";
 
 function HeaderActionMenu() {
   const auth = useAuth();
@@ -13,6 +14,7 @@ function HeaderActionMenu() {
     <>
       {auth.currentUser && (
         <>
+          <Searchbar />
           <MinicartMenu />
           <SignedInMenu />
         </>
