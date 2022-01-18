@@ -5,7 +5,6 @@ import FashionImage from "../../assets/images/contentImages/fashionContent.jpg";
 import PriceImage from "../../assets/images/contentImages/contentImageDiscounts.jpeg";
 import MemberExclusive from "../../assets/images/contentImages/memberExclusive.jpg";
 import { Link } from "react-router-dom";
-import { BrandSlider } from "../../components/common";
 import CategoryBanner from "../../components/common/Content/CategoryBanner";
 import { useAuth } from "../../contexts/AuthContext";
 import { SecondaryButton } from "../../components/Form/Buttons";
@@ -17,12 +16,7 @@ function Home() {
 
   return (
     <>
-      {auth.currentUser && (
-        <>
-          <CategoryBanner />
-          <BrandSlider />
-        </>
-      )}
+      {auth.currentUser && <CategoryBanner />}
 
       {!auth.currentUser && (
         <>
