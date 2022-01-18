@@ -15,6 +15,7 @@
       </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
   </ol>
 </details>
 
@@ -108,6 +109,16 @@ Make sure npm is running on your machine.
    Password: Test123!
    
 _Or it is possible to create your own account through the signup section of the application_
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Roadmap
+
+- [x] Add ReadMe with installation instructions
+- [x] Implement searchbar
+- [ ] Implement layered navigation
+- [ ] Security enhancements
+- [ ] Checkout optimalisation
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
