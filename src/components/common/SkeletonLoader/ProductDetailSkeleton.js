@@ -11,7 +11,7 @@ const ProductDetailSkeleton = () => {
         </section>
         <section className="product-detail-container">
           <section className="product-image-container">
-            <Skeleton width={450} height={450} />
+            <Skeleton width={450} height={350} />
           </section>
           <section className="product-details">
             <section className="product-detail-title">

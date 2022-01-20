@@ -83,6 +83,7 @@ export default function AuthContextProvider({ children }) {
     forgotPassword,
     resetPassword,
   };
+
   return (
     <AuthContext.Provider value={value}>
       {loading ? (
