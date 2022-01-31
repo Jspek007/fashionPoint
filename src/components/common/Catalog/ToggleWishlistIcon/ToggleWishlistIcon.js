@@ -25,7 +25,7 @@ function ToggleWishlistIcon({ productData }) {
     checkItemInWishlist();
   }, [checkItemInWishlist]);
 
-  const addProductToLocalStorage = () => {
+  const addProductToWishlist = () => {
     wishlistArray = JSON.parse(localStorage.getItem("wishlist"))
       ? JSON.parse(localStorage.getItem("wishlist"))
       : [];
@@ -42,7 +42,7 @@ function ToggleWishlistIcon({ productData }) {
     setInWishlist(true);
   };
 
-  const removeProductFromLocalStorage = () => {
+  const removeProductFromWishlist = () => {
     wishlistArray = JSON.parse(localStorage.getItem("wishlist"))
       ? JSON.parse(localStorage.getItem("wishlist"))
       : [];
@@ -59,15 +59,12 @@ function ToggleWishlistIcon({ productData }) {
   return (
     <section className="wishlist-icon-container">
       {!inWishlist && (
-        <FaRegHeart
-          className="wishlist-icon"
-          onClick={addProductToLocalStorage}
-        />
+        <FaRegHeart className="wishlist-icon" onClick={addProductToWishlist} />
       )}
       {inWishlist && (
         <FaHeart
           className="wishlist-icon"
-          onClick={removeProductFromLocalStorage}
+          onClick={removeProductFromWishlist}
         />
       )}
     </section>

@@ -1,13 +1,38 @@
 import React, { Fragment } from "react";
-import LoginForm from "../../components/Form/Forms/LoginForm";
+import LoginForm from "../../components/form/Forms/LoginForm";
 import "./LoginPage.scss";
-import FacebookLoginButton from "../../components/Form/Buttons/LoginProviderButtons/FacebookLoginButton";
-import GoogleLoginButton from "../../components/Form/Buttons/LoginProviderButtons/GoogleLoginButton/GoogleLoginButton";
 import { Link } from "react-router-dom";
 import Title from "../../components/common/Content/TextComponents/Title/Title";
 import SubTitle from "../../components/common/Content/TextComponents/SubTitle/SubTitle";
+import {useHistory, useLocation} from "react-router";
+import {useAuth} from "../../contexts/AuthContext";
+import {handleRedirectToOrBack} from "../../helpers/handleRedirectToOrBack/handleRedirectToOrBack";
+import LoginProviderButton from "../../components/form/Buttons/LoginProviderButton/LoginProviderButton";
+import {FaFacebook} from "react-icons/fa";
+import {FcGoogle} from "react-icons/fc";
 
 function LoginPage() {
+
+    const history = useHistory();
+    const location = useLocation();
+    const {signInWithFacebook, signInWithGoogle} = useAuth();
+
+    const facebookLogin = () => {
+        signInWithFacebook()
+            .then(() => {
+                handleRedirectToOrBack({history, location});
+            })
+            .catch((e) => console.log(e.message));
+    }
+
+    const googleLogin = () => {
+        signInWithGoogle()
+            .then(() => {
+                handleRedirectToOrBack({history, location});
+            })
+            .catch((e) => console.log(e.message));
+    }
+
   return (
     <Fragment>
       <section className="login-container">
@@ -20,8 +45,20 @@ function LoginPage() {
           <section className="third-party-methods">
             <SubTitle text="Kies voor eenvoud" />
             <section className="third-party-login-buttons">
-              <FacebookLoginButton />
-              <GoogleLoginButton />
+                <LoginProviderButton
+                    provider="facebook"
+                    clickHandler={facebookLogin}
+                >
+                    <FaFacebook className="button-icon"/>
+                    Facebook
+                </LoginProviderButton>
+                <LoginProviderButton
+                    provider="google"
+                    clickHandler={googleLogin}
+                >
+                    <FcGoogle className="button-icon" />
+                    Google
+                </LoginProviderButton>
             </section>
           </section>
           <section className="email-form-login">

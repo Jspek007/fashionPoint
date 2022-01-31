@@ -1,8 +1,8 @@
 import React from "react";
 import "./CartSummary.scss";
 import { SubTitle } from "../../Content/TextComponents";
-import { SecondaryButton } from "../../../Form/Buttons";
-import FormButtonContainer from "../../../Form/Forms/FormComponents/FormButtonContainer";
+import { SecondaryButton } from "../../../form/Buttons";
+import FormButtonContainer from "../../../form/Forms/FormComponents/FormButtonContainer";
 import { Link } from "react-router-dom/";
 
 const CartSummary = ({ cartData }) => {

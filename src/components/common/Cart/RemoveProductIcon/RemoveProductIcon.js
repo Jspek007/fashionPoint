@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./RemoveProductIcon.scss";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import Modal from "../../Modal/Modal";
-import { SecondaryButton } from "../../../Form/Buttons";
+import { SecondaryButton } from "../../../form/Buttons";
 
 const RemoveProductIcon = ({ cartData, specificProduct, updateCart }) => {
   const [modalOpen, setModalOpen] = useState(false);

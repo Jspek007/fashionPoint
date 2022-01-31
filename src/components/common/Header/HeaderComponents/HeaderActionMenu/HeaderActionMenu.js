@@ -1,6 +1,6 @@
 import React from "react";
 import { SignedInMenu } from "../../../index";
-import { SecondaryButton } from "../../../../Form/Buttons";
+import { SecondaryButton } from "../../../../form/Buttons";
 import { useAuth } from "../../../../../contexts/AuthContext";
 import { Link } from "react-router-dom";
 import MinicartMenu from "../Minicart/MinicartMenu";

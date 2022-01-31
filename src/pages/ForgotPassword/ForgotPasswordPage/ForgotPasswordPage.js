@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./ForgotPasswordPage.scss";
-import PrimaryButton from "../../../components/Form/Buttons/PrimaryButton/PrimaryButton";
+import PrimaryButton from "../../../components/form/Buttons/PrimaryButton/PrimaryButton";
 import { useAuth } from "../../../contexts/AuthContext";
 import { useHistory } from "react-router";
 import { FaSpinner } from "react-icons/fa";
 import { firebaseErrors } from "../../../utils/firebaseErrors";
-import InputField from "../../../components/Form/Forms/FormComponents/InputField";
+import InputField from "../../../components/form/Forms/FormComponents/InputField";
 import {
   SubTitle,
   Title,
 } from "../../../components/common/Content/TextComponents";
 import Modal from "../../../components/common/Modal/Modal/Modal";
-import SecondaryButton from "../../../components/Form/Buttons/SecondaryButton/SecondaryButton";
+import SecondaryButton from "../../../components/form/Buttons/SecondaryButton/SecondaryButton";
 
 function ForgotPasswordPage() {
   const history = useHistory();

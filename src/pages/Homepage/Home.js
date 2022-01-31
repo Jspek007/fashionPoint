@@ -7,7 +7,7 @@ import MemberExclusive from "../../assets/images/contentImages/memberExclusive.j
 import { Link } from "react-router-dom";
 import CategoryBanner from "../../components/common/Content/CategoryBanner";
 import { useAuth } from "../../contexts/AuthContext";
-import { SecondaryButton } from "../../components/Form/Buttons";
+import { SecondaryButton } from "../../components/form/Buttons";
 import UspBanner from "../../components/common/Content/UspBanner/UspBanner";
 import FullWidthBanner from "../../components/common/Content/FullWidthBanner/FullWidthBanner";
 
