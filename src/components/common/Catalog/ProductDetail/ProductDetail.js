@@ -11,7 +11,7 @@ import { SecondaryButton } from "../../../form/Buttons";
 import { Link } from "react-router-dom";
 import MobileDetailSkeleton from "../../SkeletonLoader/MobileDetailSkeleton";
 import { useCart } from "../../../../contexts/CartContext";
-import PrimaryButton from "../../../form/Buttons/PrimaryButton/PrimaryButton";
+import {PrimaryButton} from "../../../form/Buttons";
 
 function ProductDetail() {
   const [loading, setLoading] = useState(false);

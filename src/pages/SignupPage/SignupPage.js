@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import "./SignupPage.scss";
 import Title from "../../components/common/Content/TextComponents/Title/Title";
 import SubTitle from "../../components/common/Content/TextComponents/SubTitle/SubTitle";
-import LoginProviderButton from "../../components/form/Buttons/LoginProviderButton/LoginProviderButton";
+import {LoginProviderButton} from "../../components/form/Buttons";
 import {FiMail} from "react-icons/fi";
 import {FaFacebook} from "react-icons/fa";
 import {useHistory, useLocation} from "react-router";

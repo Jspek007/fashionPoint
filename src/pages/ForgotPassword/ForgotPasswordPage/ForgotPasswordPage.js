@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./ForgotPasswordPage.scss";
-import PrimaryButton from "../../../components/form/Buttons/PrimaryButton/PrimaryButton";
+import {PrimaryButton} from "../../../components/form/Buttons";
 import { useAuth } from "../../../contexts/AuthContext";
 import { useHistory } from "react-router";
 import { FaSpinner } from "react-icons/fa";

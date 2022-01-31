@@ -7,7 +7,7 @@ import SubTitle from "../../components/common/Content/TextComponents/SubTitle/Su
 import {useHistory, useLocation} from "react-router";
 import {useAuth} from "../../contexts/AuthContext";
 import {handleRedirectToOrBack} from "../../helpers/handleRedirectToOrBack/handleRedirectToOrBack";
-import LoginProviderButton from "../../components/form/Buttons/LoginProviderButton/LoginProviderButton";
+import {LoginProviderButton} from "../../components/form/Buttons";
 import {FaFacebook} from "react-icons/fa";
 import {FcGoogle} from "react-icons/fc";
 
