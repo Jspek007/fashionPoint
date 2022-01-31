@@ -1,19 +1,27 @@
-.facebook-button-login {
+.login-button {
   height: 55px;
   width: 250px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   border: none;
   border-radius: 25px;
   font-size: 18px;
-  margin-bottom: 15px;
-  background-color: hsl(220, 46%, 48%);
-  color: var(--color-secondary);
   cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 15px;
 }
 
-.facebook-button-icon {
+.login-button.facebook {
+  background-color: hsl(220, 46%, 48%);
+  color: var(--color-secondary);
+}
+
+.button-icon {
   font-size: 40px;
-  padding-right: 20px;
+  padding-right: 10px;
+}
+
+.login-button.facebook .button-icon {
+  padding-right: 0;
 }

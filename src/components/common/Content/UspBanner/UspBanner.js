@@ -41,14 +41,14 @@ const UspBanner = ({ imageSrc, textTitle, seoText, flipped }) => {
   };
 
   return (
-    <div
+    <section
       className={
         inView ? "usp-container usp__container--zoom" : "usp__container"
       }
       ref={ref}
     >
       {renderContent()}
-    </div>
+    </section>
   );
 };
 

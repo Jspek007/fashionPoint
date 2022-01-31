@@ -1,6 +1,6 @@
 import React from "react";
 import "./CheckoutSummary.scss";
-import { SecondaryButton } from "../../../Form/Buttons";
+import { SecondaryButton } from "../../../form/Buttons";
 import { Link } from "react-router-dom";
 import { SubTitle } from "../../Content/TextComponents";
 

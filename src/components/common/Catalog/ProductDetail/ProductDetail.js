@@ -2,23 +2,24 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
 import "./ProductDetail.scss";
-import AddToCartButton from "../../../Form/Buttons/AddToCartButton";
 import ToggleWishlistIcon from "../ToggleWishlistIcon";
 import ProductDetailSkeleton from "../../SkeletonLoader/ProductDetailSkeleton";
 import CartModal from "../../Modal/CartModal";
 import { SubTitle } from "../../Content/TextComponents";
 import { FaShoppingCart } from "react-icons/fa";
-import { SecondaryButton } from "../../../Form/Buttons";
+import { SecondaryButton } from "../../../form/Buttons";
 import { Link } from "react-router-dom";
 import MobileDetailSkeleton from "../../SkeletonLoader/MobileDetailSkeleton";
+import { useCart } from "../../../../contexts/CartContext";
+import PrimaryButton from "../../../form/Buttons/PrimaryButton/PrimaryButton";
 
 function ProductDetail() {
   const [loading, setLoading] = useState(false);
   const [productData, setProductData] = useState([]);
   const { productId } = useParams();
   const getSingleProductApi = `https://fakestoreapi.com/products/${productId}`;
-  let cartArray = localStorage.getItem("currentCart");
   const [modal, setModal] = useState(false);
+  const { cart } = useCart();
 
   useEffect(() => {
     const fetchSpecificProduct = async () => {
@@ -36,11 +37,7 @@ function ProductDetail() {
   }, [getSingleProductApi]);
 
   const addProductToCart = () => {
-    cartArray = JSON.parse(localStorage.getItem("currentCart"))
-      ? JSON.parse(localStorage.getItem("currentCart"))
-      : [];
-
-    let objectIndex = cartArray.findIndex((obj) => obj.id === productData.id);
+    let objectIndex = cart.findIndex((obj) => obj.id === productData.id);
     if (objectIndex === -1) {
       let newCartProduct = {
         title: productData.title,
@@ -49,11 +46,11 @@ function ProductDetail() {
         id: productData.id,
         qty: 1,
       };
-      cartArray.push(newCartProduct);
-      localStorage.setItem("currentCart", JSON.stringify(cartArray));
+      cart.push(newCartProduct);
+      localStorage.setItem("currentCart", JSON.stringify(cart));
     } else {
-      cartArray[objectIndex].qty++;
-      localStorage.setItem("currentCart", JSON.stringify(cartArray));
+      cart[objectIndex].qty++;
+      localStorage.setItem("currentCart", JSON.stringify(cart));
     }
     setModal(true);
   };
@@ -96,10 +93,13 @@ function ProductDetail() {
             </section>
           </section>
           <section className="add-to-cart-container">
-            <AddToCartButton
+            <PrimaryButton
               clickHandler={addProductToCart}
-              specificProductData={productData}
-            />
+              buttonType={"add_to_cart"}
+            >
+                <span className="product-price">€{productData.price}</span>
+                <span className="add-to-cart-message">In winkelwagen</span>
+            </PrimaryButton>
           </section>
         </>
       )}

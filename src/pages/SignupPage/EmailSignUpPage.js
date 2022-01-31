@@ -4,7 +4,7 @@ import "./EmailSignUpPage.scss";
 import { Link } from "react-router-dom";
 import Title from "../../components/common/Content/TextComponents/Title/Title";
 import SubTitle from "../../components/common/Content/TextComponents/SubTitle/SubTitle";
-import EmailRegisterForm from "../../components/Form/Forms/EmailRegisterForm";
+import EmailRegisterForm from "../../components/form/Forms/EmailRegisterForm";
 
 function EmailSignUpPage() {
   return (

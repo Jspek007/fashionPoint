@@ -4,11 +4,11 @@ import {
   Title,
   SubTitle,
 } from "../../components/common/Content/TextComponents";
-import { SecondaryButton } from "../../components/Form/Buttons";
+import { SecondaryButton } from "../../components/form/Buttons";
 import CartSummary from "../../components/common/Cart/CartSummary";
 import { Link } from "react-router-dom";
 import RemoveProductIcon from "../../components/common/Cart/RemoveProductIcon/RemoveProductIcon";
-import FormButtonContainer from "../../components/Form/Forms/FormComponents/FormButtonContainer";
+import FormButtonContainer from "../../components/form/Forms/FormComponents/FormButtonContainer";
 import CartQtyController from "../../components/common/Cart/CartQtyController";
 
 const CartPage = () => {
