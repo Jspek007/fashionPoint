@@ -50,7 +50,7 @@ function ChangePasswordForm() {
     setModalOpen(true);
   };
 
-  const closeAuthenticationModal = (event) => {
+  const closeAuthenticationModal = () => {
     setModalOpen(false);
     isLoading(false);
   };
