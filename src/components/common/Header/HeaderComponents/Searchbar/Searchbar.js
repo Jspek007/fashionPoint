@@ -4,6 +4,7 @@ import { GoSearch } from "react-icons/go";
 import { useDetectOutsideClick } from "../../../../../helpers/useDetectOutsideClick/useDetectOutsideClick";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { FaSpinner } from "react-icons/fa";
 
 const Searchbar = () => {
   const searchbarRef = useRef(null);
@@ -15,10 +16,13 @@ const Searchbar = () => {
   const fullCatalogApi = "https://fakestoreapi.com/products";
   const [catalog, setCatalog] = useState([]);
   const [searchValue, setSearchValue] = useState("");
+  const [loading, isLoading] = useState(false);
 
   useEffect(() => {
+    isLoading(true);
     axios.get(fullCatalogApi).then((res) => {
       setCatalog(res.data);
+      isLoading(false);
     });
   }, []);
 
@@ -58,7 +62,7 @@ const Searchbar = () => {
                   if (
                     (item.title &&
                       item.title.toLowerCase().includes(searchValue)) ||
-                    (item.description && item.description.includes(searchValue))
+                    (item.description && item.description.toLowerCase().includes(searchValue))
                   ) {
                     return true;
                   }
@@ -66,6 +70,9 @@ const Searchbar = () => {
                 })
                 .map((item) => (
                   <>
+                    {loading && (
+                      <FaSpinner className="loading-spinner" />
+                    )}
                     <Link
                       exact="true"
                       to={`/collectie/${item.category}/${item.id}`}
