@@ -6,7 +6,7 @@ function PrimaryButton(props) {
   return (
     <button
       type="submit"
-      className={`primary-button ${props.buttonType}`}
+      className={`primary-button ${props.buttonType || ""}`}
       onClick={props.clickHandler}
       disabled={props.disabled || false}
     >

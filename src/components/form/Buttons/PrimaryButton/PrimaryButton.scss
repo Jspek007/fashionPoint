@@ -15,7 +15,8 @@
 }
 
 // Styling for the add to cart button
-.primary-button, .add_to_cart {
+.primary-button,
+.add_to_cart {
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -33,8 +34,9 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .primary-button, .add_to_cart {
+  .primary-button,
+  .add_to_cart {
     height: 50px;
-    width: 50%;
+    width: 75%;
   }
 }
