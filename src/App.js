@@ -6,6 +6,7 @@ import routes from "./routes/routes";
 import Breadcrumbs from "./components/common/Breadcrumbs/Breadcrumbs";
 import PrivateRoute from "./routes/PrivateRoute";
 import CartContextProvider from "./contexts/CartContext";
+import NotFound from "./pages/NotFound/NotFound";
 
 
 const App = () => (

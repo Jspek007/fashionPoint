@@ -17,6 +17,7 @@ import CartPage from "../pages/CartPage/CartPage";
 import ShippingPage from "../pages/Checkout/ShippingPage/ShippingPage";
 import PaymentPage from "../pages/Checkout/PaymentPage/PaymentPage";
 import SuccesPage from "../pages/Checkout/Successpage/SuccesPage";
+import NotFound from "../pages/NotFound/NotFound";
 
 const routes = [
   {
@@ -132,6 +133,10 @@ const routes = [
     Component: SuccesPage,
     memberOnly: true,
   },
+    {
+        name: "NotFound",
+        Component: NotFound,
+    }
 ];
 
 export default routes;
