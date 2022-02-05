@@ -10,7 +10,7 @@ const NotFound = () => {
         <section className="not-found-container">
             <img src={NotFoundImage} alt="Page not found" className="not-found-image"/>
             <Title text="Woopsie.. We hebben uw wens helaas niet kunnen vinden!"/>
-            <SubTitle text="We sturen u graag terug naar onze winkel."/>
+            <SubTitle text="Onderstaande button zet u weer op het juiste spoor!"/>
             <section className="not-found-redirect">
                 <Link exact to="/">
                     <PrimaryButton buttonType="not-found">
